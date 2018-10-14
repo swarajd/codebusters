@@ -1,7 +1,7 @@
 {
-  "name": "hyperapp-one",
-  "version": "1.0.1",
-  "description": "Minimal web app",
+  "name": "codebustersv2",
+  "version": "2.0.0",
+  "description": "practice app for codebusters",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -10,7 +10,7 @@
     "deploy": "./scripts/gh_pages.sh",
     "test": "jest --coverage --no-cache"
   },
-  "author": "Regis Boudinot (selfup)",
+  "author": "Swaraj Dhumne",
   "license": "MIT",
   "dependencies": {
     "hyperapp": "^1.2.9",
