@@ -55,8 +55,8 @@ test('monoalphabetic cipher', () => {
 
         asdf -> NCYO
     */
-    // let result = ciphers.monoalphabetic('asdf', 'k1', 'codebust');
-    // expect(result).toEqual('NCYO');
+    let result = ciphers.monoalphabetic('asdf', 'k1', 'codebust');
+    expect(result).toEqual('NCYO');
 
     /*
         setting: k1
@@ -67,7 +67,7 @@ test('monoalphabetic cipher', () => {
         rest of letters are: acfghijklmnpqrvxyz (length 18)
         random = 0.5 so placement is at index 9
 
-        plaintext  = acfghijklwodebustmnpqrvxyz
+        plaintext = acfghijklwodebustmnpqrvxyz
 
         random = 0.5 so rotation is 13
         initial letters = abcdefghijklmnopqrstuvwxyz
@@ -90,10 +90,35 @@ test('monoalphabetic cipher', () => {
 
         asdf -> PEAR
     */
-   let result = ciphers.monoalphabetic('asdf', 'k1', 'wodebust');
-   expect(result).toEqual('PEAR');
+    result = ciphers.monoalphabetic('asdf', 'k1', 'wodebust');
+    expect(result).toEqual('PEAR');
 
-    // const k1ResultRepeat = ciphers.monoalphabetic('asdf', 'k1', 'codebusters');
+    /*
+        setting: k1
+        keyword: repeating characters
+        rotation: not required
+
+        keyword: codebusters
+        deduped: codebustr
+        rest of letters are: acfghijklmnpqvxyz (length 17)
+        random = 0.5 so placement is at index 8
+
+        plaintext = afghijklcodebustrmnpqvxyz
+
+        random = 0.5 so rotation is 13
+        initial letters = abcdefghijklmnopqrstuvwxyz
+        rotating yields
+        
+        ciphertext = nopqrstuvwxyzabcdefghijklm
+
+        P = afghijklcodebustrmnpqvxyz
+        C = nopqrstuvwxyzabcdefghijklm
+
+        asdf -> NBXO
+        
+    */
+    result = ciphers.monoalphabetic('asdf', 'k1', 'codebusters');
+    expect(result).toEqual('NBXO');
     // const k1ResultNoPlace = ciphers.monoalphabetic('asdf', 'k1', 'codebust')
 
     // const k2ResultNoRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebust');
