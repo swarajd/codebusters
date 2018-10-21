@@ -110,13 +110,12 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
         const place = Math.floor(Math.random() * restOfLetters.length);
 
         // generate the plaintext
-        const plaintext = restOfLetters.slice(0, place)
-                .concat(keyword.split(''))
-                .concat(restOfLetters.slice(place));
+        const plaintext = letters;
 
         // generate the ciphertext
         const rotation = Math.floor(Math.random() * 26);
-        let ciphertext = rotateArray(letters, rotation);
+        let ciphertext = keyword.split('').concat(restOfLetters);
+        ciphertext = rotateArray(ciphertext, rotation);
 
         // if a letter maps to itself, rotate until it doesn't
         while (hasCollision(plaintext, ciphertext)) {
