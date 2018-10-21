@@ -4,20 +4,33 @@ const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
 global.Math = mockMath;
 
+
+/*
+    The caesar cipher works as follows:
+
+    P = abcdefghijklmnopqrstuvwxyz
+    C = nopqrstuvwxyzabcdefghijklm
+*/
 test('caesar cipher', () => {
-    const noSpaceResult = ciphers.caesar('abcxyz');
 
-    expect(noSpaceResult).toEqual('NOPKLM');
+    // no spaces/special characters in the text
+    let result = ciphers.caesar('abcxyz');
+    expect(result).toEqual('NOPKLM');
 
-    const spaceResult = ciphers.caesar('et tu brute');
-
-    expect(spaceResult).toEqual('RG GH OEHGR');
+    // there are spaces in the text
+    result = ciphers.caesar('et tu brute');
+    expect(result).toEqual('RG GH OEHGR');
 })
 
-test('atbash cipher', () => {
-    const atbashResult = ciphers.atbash('ATBASH cipher');
+/*
+    The atbash cipher works as follows:
 
-    expect(atbashResult).toEqual('ZGYZHS XRKSVI');
+    P = abcdefghijklmnopqrstuvwxyz
+    C = zyxwvutsrqponmlkjihgfedcba
+*/
+test('atbash cipher', () => {
+    let result = ciphers.atbash('ATBASH cipher');
+    expect(result).toEqual('ZGYZHS XRKSVI');
 })
 
 test('monoalphabetic cipher', () => {
@@ -151,7 +164,7 @@ test('monoalphabetic cipher', () => {
     result = ciphers.monoalphabetic('asdf', 'k1', 'vodebusters');
     expect(result).toEqual('OCYQ');
 
-    
+
     // const k2ResultNoRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebust');
     // const k2ResultRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebusters');
 
