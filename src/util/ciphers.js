@@ -37,12 +37,12 @@ const shiftText = (text, n=0) => {
 const dedupe = word => {
     const letterSet = new Set();
     const result = [];
-    for (character of word) {
-        if (!letterSet.has(character)) {
-            letterSet.add(character);
-            result.push(character);
+    word.forEach(ch => {
+        if (!letterSet.has(ch)) {
+            letterSet.add(ch);
+            result.push(ch);
         }
-    }
+    });
     return result.join('');
 }
 
