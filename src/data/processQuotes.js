@@ -20,7 +20,7 @@ let readFileLines = (contents) => {
 let jsonifyQuotes = (quotes) => {
     return {
         'quotes': quotes.map(q => ({
-            'text': q,
+            'text': q.toUpperCase(),
             'length': q.length
         }))
     }

@@ -1,1391 +1,1391 @@
 {
   "quotes": [
     {
-      "text": "Don't worry about what anybody else is going to do. The best way to\npredict the future is to invent it.\n-- Alan Kay",
+      "text": "DON'T WORRY ABOUT WHAT ANYBODY ELSE IS GOING TO DO. THE BEST WAY TO\nPREDICT THE FUTURE IS TO INVENT IT.\n-- ALAN KAY",
       "length": 115
     },
     {
-      "text": "Premature optimization is the root of all evil (or at least most of it)\nin programming.\n-- Donald Knuth",
+      "text": "PREMATURE OPTIMIZATION IS THE ROOT OF ALL EVIL (OR AT LEAST MOST OF IT)\nIN PROGRAMMING.\n-- DONALD KNUTH",
       "length": 103
     },
     {
-      "text": "Lisp has jokingly been called \"the most intelligent way to misuse a\ncomputer\". I think that description is a great compliment because it\ntransmits the full flavor of liberation: it has assisted a number of our\nmost gifted fellow humans in thinking previously impossible thoughts.\n-- Edsger Dijkstra, CACM, 15:10",
+      "text": "LISP HAS JOKINGLY BEEN CALLED \"THE MOST INTELLIGENT WAY TO MISUSE A\nCOMPUTER\". I THINK THAT DESCRIPTION IS A GREAT COMPLIMENT BECAUSE IT\nTRANSMITS THE FULL FLAVOR OF LIBERATION: IT HAS ASSISTED A NUMBER OF OUR\nMOST GIFTED FELLOW HUMANS IN THINKING PREVIOUSLY IMPOSSIBLE THOUGHTS.\n-- EDSGER DIJKSTRA, CACM, 15:10",
       "length": 311
     },
     {
-      "text": "Keep away from people who try to belittle your ambitions. Small people\nalways do that, but the really great make you feel that you, too, can\nbecome great.\n-- Mark Twain",
+      "text": "KEEP AWAY FROM PEOPLE WHO TRY TO BELITTLE YOUR AMBITIONS. SMALL PEOPLE\nALWAYS DO THAT, BUT THE REALLY GREAT MAKE YOU FEEL THAT YOU, TOO, CAN\nBECOME GREAT.\n-- MARK TWAIN",
       "length": 168
     },
     {
-      "text": "What Paul does, and does very well, is to take ideas and concepts that\nare beautiful in the abstract, and brings them down to a real world\nlevel. That's a rare talent to find in writing these days.\n-- Jeff \"hemos\" Bates, Director, OSDN; Co-evolver, Slashdot",
+      "text": "WHAT PAUL DOES, AND DOES VERY WELL, IS TO TAKE IDEAS AND CONCEPTS THAT\nARE BEAUTIFUL IN THE ABSTRACT, AND BRINGS THEM DOWN TO A REAL WORLD\nLEVEL. THAT'S A RARE TALENT TO FIND IN WRITING THESE DAYS.\n-- JEFF \"HEMOS\" BATES, DIRECTOR, OSDN; CO-EVOLVER, SLASHDOT",
       "length": 257
     },
     {
-      "text": "Since programmers create programs out of nothing, imagination is our\nonly limitation. Thus, in the world of programming, the hero is the one\nwho has great vision. Paul Graham is one of our contemporary heroes. He\nhas the ability to embrace the vision, and to express it plainly. His\nworks are my favorites, especially the ones describing language design.\nHe explains secrets of programming, languages, and human nature that can\nonly be learned from the hacker experience. This book shows you his\ngreat vision, and tells you the truth about the nature of hacking.\n-- Yukihiro \"Matz\" Matsumoto, creator of Ruby",
+      "text": "SINCE PROGRAMMERS CREATE PROGRAMS OUT OF NOTHING, IMAGINATION IS OUR\nONLY LIMITATION. THUS, IN THE WORLD OF PROGRAMMING, THE HERO IS THE ONE\nWHO HAS GREAT VISION. PAUL GRAHAM IS ONE OF OUR CONTEMPORARY HEROES. HE\nHAS THE ABILITY TO EMBRACE THE VISION, AND TO EXPRESS IT PLAINLY. HIS\nWORKS ARE MY FAVORITES, ESPECIALLY THE ONES DESCRIBING LANGUAGE DESIGN.\nHE EXPLAINS SECRETS OF PROGRAMMING, LANGUAGES, AND HUMAN NATURE THAT CAN\nONLY BE LEARNED FROM THE HACKER EXPERIENCE. THIS BOOK SHOWS YOU HIS\nGREAT VISION, AND TELLS YOU THE TRUTH ABOUT THE NATURE OF HACKING.\n-- YUKIHIRO \"MATZ\" MATSUMOTO, CREATOR OF RUBY",
       "length": 608
     },
     {
-      "text": "To follow the path:\n    look to the master,\n    follow the master,\n    walk with the master,\n    see through the master,\n    become the master.\n-- Modern zen Poem",
+      "text": "TO FOLLOW THE PATH:\n    LOOK TO THE MASTER,\n    FOLLOW THE MASTER,\n    WALK WITH THE MASTER,\n    SEE THROUGH THE MASTER,\n    BECOME THE MASTER.\n-- MODERN ZEN POEM",
       "length": 162
     },
     {
-      "text": "No problem should ever have to be solved twice.\n-- Eric S. Raymond, How to become a hacker",
+      "text": "NO PROBLEM SHOULD EVER HAVE TO BE SOLVED TWICE.\n-- ERIC S. RAYMOND, HOW TO BECOME A HACKER",
       "length": 90
     },
     {
-      "text": "Attitude is no substitute for competence.\n-- Eric S. Raymond, How to become a hacker",
+      "text": "ATTITUDE IS NO SUBSTITUTE FOR COMPETENCE.\n-- ERIC S. RAYMOND, HOW TO BECOME A HACKER",
       "length": 84
     },
     {
-      "text": "It is said that the real winner is the one who lives in today but able\nto see tomorrow.\n-- Juan Meng, Reviewing \"The future of ideas\" by Lawrence Lessig",
+      "text": "IT IS SAID THAT THE REAL WINNER IS THE ONE WHO LIVES IN TODAY BUT ABLE\nTO SEE TOMORROW.\n-- JUAN MENG, REVIEWING \"THE FUTURE OF IDEAS\" BY LAWRENCE LESSIG",
       "length": 152
     },
     {
-      "text": "Fools ignore complexity. Pragmatists suffer it. Some can avoid it.\nGeniuses remove it.\n-- Alan J. Perlis (Epigrams in programming)",
+      "text": "FOOLS IGNORE COMPLEXITY. PRAGMATISTS SUFFER IT. SOME CAN AVOID IT.\nGENIUSES REMOVE IT.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMING)",
       "length": 130
     },
     {
-      "text": "A year spent in artificial intelligence is enough to make one believe in\nGod.\n-- Alan J. Perlis (Epigrams in programming)",
+      "text": "A YEAR SPENT IN ARTIFICIAL INTELLIGENCE IS ENOUGH TO MAKE ONE BELIEVE IN\nGOD.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMING)",
       "length": 121
     },
     {
-      "text": "Dealing with failure is easy: Work hard to improve. Success is also easy\nto handle: You've solved the wrong problem. Work hard to improve.\n-- Alan J. Perlis (Epigrams in programmi ng)",
+      "text": "DEALING WITH FAILURE IS EASY: WORK HARD TO IMPROVE. SUCCESS IS ALSO EASY\nTO HANDLE: YOU'VE SOLVED THE WRONG PROBLEM. WORK HARD TO IMPROVE.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMI NG)",
       "length": 183
     },
     {
-      "text": "Within a computer natural language is unnatural.\n-- Alan J. Perlis (Epigrams in programming)",
+      "text": "WITHIN A COMPUTER NATURAL LANGUAGE IS UNNATURAL.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMING)",
       "length": 92
     },
     {
-      "text": "You think you know when you learn, are more sure when you can write,\neven more when you can teach, but certain when you can program.\n-- Alan J. Perlis (Epigrams in programming)",
+      "text": "YOU THINK YOU KNOW WHEN YOU LEARN, ARE MORE SURE WHEN YOU CAN WRITE,\nEVEN MORE WHEN YOU CAN TEACH, BUT CERTAIN WHEN YOU CAN PROGRAM.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMING)",
       "length": 176
     },
     {
-      "text": "Adapting old programs to fit new machines usually means adapting new\nmachines to behave like old ones.\n-- Alan J. Perlis (Epigrams in programming)",
+      "text": "ADAPTING OLD PROGRAMS TO FIT NEW MACHINES USUALLY MEANS ADAPTING NEW\nMACHINES TO BEHAVE LIKE OLD ONES.\n-- ALAN J. PERLIS (EPIGRAMS IN PROGRAMMING)",
       "length": 146
     },
     {
-      "text": "A little learning is a dangerous thing.\n-- Alexander Pope",
+      "text": "A LITTLE LEARNING IS A DANGEROUS THING.\n-- ALEXANDER POPE",
       "length": 57
     },
     {
-      "text": "Computer science education cannot make anybody an expert programmer any\nmore than studying brushes and pigment can make somebody an expert\npainter.\n-- Eric Raymond",
+      "text": "COMPUTER SCIENCE EDUCATION CANNOT MAKE ANYBODY AN EXPERT PROGRAMMER ANY\nMORE THAN STUDYING BRUSHES AND PIGMENT CAN MAKE SOMEBODY AN EXPERT\nPAINTER.\n-- ERIC RAYMOND",
       "length": 163
     },
     {
-      "text": "Einstein argued that there must be simplified explanations of nature,\nbecause God is not capricious or arbitrary.\n-- Frederick P. Brooks, No Sliver Bullet.",
+      "text": "EINSTEIN ARGUED THAT THERE MUST BE SIMPLIFIED EXPLANATIONS OF NATURE,\nBECAUSE GOD IS NOT CAPRICIOUS OR ARBITRARY.\n-- FREDERICK P. BROOKS, NO SLIVER BULLET.",
       "length": 155
     },
     {
-      "text": "Students should be evaluated on how well they can achieve the goals they\nstrived to achieve within a realistic context. Students need to learn to\ndo things, not know things.\n-- Roger Schank, Engines for Education",
+      "text": "STUDENTS SHOULD BE EVALUATED ON HOW WELL THEY CAN ACHIEVE THE GOALS THEY\nSTRIVED TO ACHIEVE WITHIN A REALISTIC CONTEXT. STUDENTS NEED TO LEARN TO\nDO THINGS, NOT KNOW THINGS.\n-- ROGER SCHANK, ENGINES FOR EDUCATION",
       "length": 212
     },
     {
-      "text": "We remember what we learn when we care about performing better and when\nwe believe that what we have been asked to do is representative of\nreality.\n-- Roger Schank, Engines for Education",
+      "text": "WE REMEMBER WHAT WE LEARN WHEN WE CARE ABOUT PERFORMING BETTER AND WHEN\nWE BELIEVE THAT WHAT WE HAVE BEEN ASKED TO DO IS REPRESENTATIVE OF\nREALITY.\n-- ROGER SCHANK, ENGINES FOR EDUCATION",
       "length": 186
     },
     {
-      "text": "There really is no learning without doing.\n-- Roger Schank, Engines for Education",
+      "text": "THERE REALLY IS NO LEARNING WITHOUT DOING.\n-- ROGER SCHANK, ENGINES FOR EDUCATION",
       "length": 81
     },
     {
-      "text": "We really have to get over the idea that some stuff is just worth\nknowing even if you never do anything with it. Human memories happily\nerase stuff that has no purpose, so why try to fill up children's heads\nwith such stuff?\n-- Roger Schank, Engines for Education",
+      "text": "WE REALLY HAVE TO GET OVER THE IDEA THAT SOME STUFF IS JUST WORTH\nKNOWING EVEN IF YOU NEVER DO ANYTHING WITH IT. HUMAN MEMORIES HAPPILY\nERASE STUFF THAT HAS NO PURPOSE, SO WHY TRY TO FILL UP CHILDREN'S HEADS\nWITH SUCH STUFF?\n-- ROGER SCHANK, ENGINES FOR EDUCATION",
       "length": 263
     },
     {
-      "text": "La tactique, c'est ce que vous faites quand il y a quelque chose à\nfaire; la stratégie, c'est ce que vous faites quand il n'y a rien à\nfaire.\n-- Xavier Tartacover",
+      "text": "LA TACTIQUE, C'EST CE QUE VOUS FAITES QUAND IL Y A QUELQUE CHOSE À\nFAIRE; LA STRATÉGIE, C'EST CE QUE VOUS FAITES QUAND IL N'Y A RIEN À\nFAIRE.\n-- XAVIER TARTACOVER",
       "length": 162
     },
     {
-      "text": "The only problems we can really solve in a satisfactory manner are those\nthat finally admit a nicely factored solution.\n-- E. W. Dijkstra, The humble programmer",
+      "text": "THE ONLY PROBLEMS WE CAN REALLY SOLVE IN A SATISFACTORY MANNER ARE THOSE\nTHAT FINALLY ADMIT A NICELY FACTORED SOLUTION.\n-- E. W. DIJKSTRA, THE HUMBLE PROGRAMMER",
       "length": 160
     },
     {
-      "text": "The best way to learn to live with our limitations is to know them.\n--E. W. Dijkstra, The humble programmer",
+      "text": "THE BEST WAY TO LEARN TO LIVE WITH OUR LIMITATIONS IS TO KNOW THEM.\n--E. W. DIJKSTRA, THE HUMBLE PROGRAMMER",
       "length": 107
     },
     {
-      "text": "This challenge, viz. the confrontation with the programming task, is so\nunique that this novel experience can teach us a lot about ourselves. It\nshould deepen our understanding of the processes of design and creation,\nit should give us better control over the task of organizing our\nthoughts. If it did not do so, to my taste we should no deserve the\ncomputer at all!  It has allready taught us a few lessons, and the one I\nhave chosen to stress in this talk is the following. We shall do a much\nbetter programming job, provided that we approach the task with a full\nappreciation of its tremenduous difficulty, provided that we stick to\nmodest and elegant programming languages, provided that we respect the\nintrinsec limitations of the human mind and approach the task as Very\nHumble Programmers.\n-- E. W. Dijkstra, The humble programmer",
+      "text": "THIS CHALLENGE, VIZ. THE CONFRONTATION WITH THE PROGRAMMING TASK, IS SO\nUNIQUE THAT THIS NOVEL EXPERIENCE CAN TEACH US A LOT ABOUT OURSELVES. IT\nSHOULD DEEPEN OUR UNDERSTANDING OF THE PROCESSES OF DESIGN AND CREATION,\nIT SHOULD GIVE US BETTER CONTROL OVER THE TASK OF ORGANIZING OUR\nTHOUGHTS. IF IT DID NOT DO SO, TO MY TASTE WE SHOULD NO DESERVE THE\nCOMPUTER AT ALL!  IT HAS ALLREADY TAUGHT US A FEW LESSONS, AND THE ONE I\nHAVE CHOSEN TO STRESS IN THIS TALK IS THE FOLLOWING. WE SHALL DO A MUCH\nBETTER PROGRAMMING JOB, PROVIDED THAT WE APPROACH THE TASK WITH A FULL\nAPPRECIATION OF ITS TREMENDUOUS DIFFICULTY, PROVIDED THAT WE STICK TO\nMODEST AND ELEGANT PROGRAMMING LANGUAGES, PROVIDED THAT WE RESPECT THE\nINTRINSEC LIMITATIONS OF THE HUMAN MIND AND APPROACH THE TASK AS VERY\nHUMBLE PROGRAMMERS.\n-- E. W. DIJKSTRA, THE HUMBLE PROGRAMMER",
       "length": 838
     },
     {
-      "text": "Ce n'est que par les relations qu'on entretient entre nos différentes\nconnaissances qu'elles nous restent accessibles.\n-- Shnuup, sur l'hypertexte (SELFHTML -> Introduction -> Definitions sur l'hypertexte)",
+      "text": "CE N'EST QUE PAR LES RELATIONS QU'ON ENTRETIENT ENTRE NOS DIFFÉRENTES\nCONNAISSANCES QU'ELLES NOUS RESTENT ACCESSIBLES.\n-- SHNUUP, SUR L'HYPERTEXTE (SELFHTML -> INTRODUCTION -> DEFINITIONS SUR L'HYPERTEXTE)",
       "length": 205
     },
     {
-      "text": "We now come to the decisive step of mathematical abstraction: we forget\nabout what the symbols stand for. ...[The mathematician] need not be\nidle; there are many operations which he may carry out with these\nsymbols, without ever having to look at the things they stand for.\n-- Hermann Weyl, The Mathematical Way of Thinking",
+      "text": "WE NOW COME TO THE DECISIVE STEP OF MATHEMATICAL ABSTRACTION: WE FORGET\nABOUT WHAT THE SYMBOLS STAND FOR. ...[THE MATHEMATICIAN] NEED NOT BE\nIDLE; THERE ARE MANY OPERATIONS WHICH HE MAY CARRY OUT WITH THESE\nSYMBOLS, WITHOUT EVER HAVING TO LOOK AT THE THINGS THEY STAND FOR.\n-- HERMANN WEYL, THE MATHEMATICAL WAY OF THINKING",
       "length": 323
     },
     {
-      "text": "An expert is, according to my working definition \"someone who doesn't\nneed to look up answers to easy questions\".\n-- Eric Lippert.",
+      "text": "AN EXPERT IS, ACCORDING TO MY WORKING DEFINITION \"SOMEONE WHO DOESN'T\nNEED TO LOOK UP ANSWERS TO EASY QUESTIONS\".\n-- ERIC LIPPERT.",
       "length": 130
     },
     {
-      "text": "The programmer must seek both perfection of part and adequacy of\ncollection.\n-- Alan J. Perlis",
+      "text": "THE PROGRAMMER MUST SEEK BOTH PERFECTION OF PART AND ADEQUACY OF\nCOLLECTION.\n-- ALAN J. PERLIS",
       "length": 94
     },
     {
-      "text": "Thus, programs must be written for people to read, and only incidentally\nfor machines to execute.\n-- Alan J. Perlis",
+      "text": "THUS, PROGRAMS MUST BE WRITTEN FOR PEOPLE TO READ, AND ONLY INCIDENTALLY\nFOR MACHINES TO EXECUTE.\n-- ALAN J. PERLIS",
       "length": 115
     },
     {
-      "text": "We control complexity by building abstractions that hide details when\nappropriate. We control complexity by establishing conventional\ninterfaces that enable us to construct systems by combining standard,\nwell-understood pieces in a ``mix and match'' way. We control complexity\nby establishing new languages for describing a design, each of which\nemphasizes particular aspects of the design and deemphasizes others.\n-- Alan J. Perlis",
+      "text": "WE CONTROL COMPLEXITY BY BUILDING ABSTRACTIONS THAT HIDE DETAILS WHEN\nAPPROPRIATE. WE CONTROL COMPLEXITY BY ESTABLISHING CONVENTIONAL\nINTERFACES THAT ENABLE US TO CONSTRUCT SYSTEMS BY COMBINING STANDARD,\nWELL-UNDERSTOOD PIECES IN A ``MIX AND MATCH'' WAY. WE CONTROL COMPLEXITY\nBY ESTABLISHING NEW LANGUAGES FOR DESCRIBING A DESIGN, EACH OF WHICH\nEMPHASIZES PARTICULAR ASPECTS OF THE DESIGN AND DEEMPHASIZES OTHERS.\n-- ALAN J. PERLIS",
       "length": 432
     },
     {
-      "text": "The acts of the mind, wherein it exerts its power over simple ideas, are\nchiefly these three: 1. Combining several simple ideas into one compound\none, and thus all complex ideas are made. 2. The second is bringing two\nideas, whether simple or complex, together, and setting them by one\nanother so as to take a view of them at once, without uniting them into\none, by which it gets all its ideas of relations. 3. The third is\nseparating them from all other ideas that accompany them in their real\nexistence: this is called abstraction, and thus all its general ideas\nare made.\n-- John Locke, An Essay Concerning Human Understanding (1690)",
+      "text": "THE ACTS OF THE MIND, WHEREIN IT EXERTS ITS POWER OVER SIMPLE IDEAS, ARE\nCHIEFLY THESE THREE: 1. COMBINING SEVERAL SIMPLE IDEAS INTO ONE COMPOUND\nONE, AND THUS ALL COMPLEX IDEAS ARE MADE. 2. THE SECOND IS BRINGING TWO\nIDEAS, WHETHER SIMPLE OR COMPLEX, TOGETHER, AND SETTING THEM BY ONE\nANOTHER SO AS TO TAKE A VIEW OF THEM AT ONCE, WITHOUT UNITING THEM INTO\nONE, BY WHICH IT GETS ALL ITS IDEAS OF RELATIONS. 3. THE THIRD IS\nSEPARATING THEM FROM ALL OTHER IDEAS THAT ACCOMPANY THEM IN THEIR REAL\nEXISTENCE: THIS IS CALLED ABSTRACTION, AND THUS ALL ITS GENERAL IDEAS\nARE MADE.\n-- JOHN LOCKE, AN ESSAY CONCERNING HUMAN UNDERSTANDING (1690)",
       "length": 636
     },
     {
-      "text": "Lisp programmers know the value of everything but the cost of nothing.\n-- Alan J. Perlis",
+      "text": "LISP PROGRAMMERS KNOW THE VALUE OF EVERYTHING BUT THE COST OF NOTHING.\n-- ALAN J. PERLIS",
       "length": 88
     },
     {
-      "text": "An interpreter raises the machine to the level of the user program; a\ncompiler lowers the user program to the level of the machine language.\n-- SICP",
+      "text": "AN INTERPRETER RAISES THE MACHINE TO THE LEVEL OF THE USER PROGRAM; A\nCOMPILER LOWERS THE USER PROGRAM TO THE LEVEL OF THE MACHINE LANGUAGE.\n-- SICP",
       "length": 148
     },
     {
-      "text": "Everything should be made as simple as possible, but no simpler.\n-- Albert Einstein",
+      "text": "EVERYTHING SHOULD BE MADE AS SIMPLE AS POSSIBLE, BUT NO SIMPLER.\n-- ALBERT EINSTEIN",
       "length": 83
     },
     {
-      "text": "The great dividing line between success and failure can be expressed in\nfive words: \"I did not have time.\"\n-- WestHost weekly newsletter 14 Feb 2003",
+      "text": "THE GREAT DIVIDING LINE BETWEEN SUCCESS AND FAILURE CAN BE EXPRESSED IN\nFIVE WORDS: \"I DID NOT HAVE TIME.\"\n-- WESTHOST WEEKLY NEWSLETTER 14 FEB 2003",
       "length": 148
     },
     {
-      "text": "When your enemy is making a very serious mistake, don't be impolite and\ndisturb him.\n-- Napoleon Bonaparte (allegedly)",
+      "text": "WHEN YOUR ENEMY IS MAKING A VERY SERIOUS MISTAKE, DON'T BE IMPOLITE AND\nDISTURB HIM.\n-- NAPOLEON BONAPARTE (ALLEGEDLY)",
       "length": 118
     },
     {
-      "text": "A charlatan makes obscure what is clear; a thinker makes clear what is\nobscure.\n-- Hugh Kingsmill",
+      "text": "A CHARLATAN MAKES OBSCURE WHAT IS CLEAR; A THINKER MAKES CLEAR WHAT IS\nOBSCURE.\n-- HUGH KINGSMILL",
       "length": 97
     },
     {
-      "text": "There are two ways of constructing a software design; one way is to make\nit so simple that there are obviously no deficiencies, and the other way\nis to make it so complicated that there are no obvious deficiencies. The\nfirst method is far more difficult.\n-- C. A. R. Hoare",
+      "text": "THERE ARE TWO WAYS OF CONSTRUCTING A SOFTWARE DESIGN; ONE WAY IS TO MAKE\nIT SO SIMPLE THAT THERE ARE OBVIOUSLY NO DEFICIENCIES, AND THE OTHER WAY\nIS TO MAKE IT SO COMPLICATED THAT THERE ARE NO OBVIOUS DEFICIENCIES. THE\nFIRST METHOD IS FAR MORE DIFFICULT.\n-- C. A. R. HOARE",
       "length": 272
     },
     {
-      "text": "And if you go too far up, abstraction-wise, you run out of oxygen.\nSometimes smart thinkers just don't know when to stop, and they create\nthese absurd, all-encompassing, high-level pictures of the universe that\nare all good and fine, but don't actually mean anything at all.\n-- Joel Spolsky\t\t",
+      "text": "AND IF YOU GO TOO FAR UP, ABSTRACTION-WISE, YOU RUN OUT OF OXYGEN.\nSOMETIMES SMART THINKERS JUST DON'T KNOW WHEN TO STOP, AND THEY CREATE\nTHESE ABSURD, ALL-ENCOMPASSING, HIGH-LEVEL PICTURES OF THE UNIVERSE THAT\nARE ALL GOOD AND FINE, BUT DON'T ACTUALLY MEAN ANYTHING AT ALL.\n-- JOEL SPOLSKY\t\t",
       "length": 292
     },
     {
-      "text": "The three chief virtues of a programmer are: Laziness, Impatience and\nHubris.\n-- Larry Wall (Programming Perl)",
+      "text": "THE THREE CHIEF VIRTUES OF A PROGRAMMER ARE: LAZINESS, IMPATIENCE AND\nHUBRIS.\n-- LARRY WALL (PROGRAMMING PERL)",
       "length": 110
     },
     {
-      "text": "All non-trivial abstractions, to some degree, are leaky.\n-- Joel Spolsky (The Law of Leaky Abstractions)",
+      "text": "ALL NON-TRIVIAL ABSTRACTIONS, TO SOME DEGREE, ARE LEAKY.\n-- JOEL SPOLSKY (THE LAW OF LEAKY ABSTRACTIONS)",
       "length": 104
     },
     {
-      "text": "XML wasn't designed to be edited by humans on a regular basis.\n-- Guido van Rossum",
+      "text": "XML WASN'T DESIGNED TO BE EDITED BY HUMANS ON A REGULAR BASIS.\n-- GUIDO VAN ROSSUM",
       "length": 82
     },
     {
-      "text": "Premature abstraction is an equally grevious sin as premature\noptimization.\n-- Keith Devens",
+      "text": "PREMATURE ABSTRACTION IS AN EQUALLY GREVIOUS SIN AS PREMATURE\nOPTIMIZATION.\n-- KEITH DEVENS",
       "length": 91
     },
     {
-      "text": "You can have premature generalization as well as premature optimization.\n-- Bjarne Stroustrup",
+      "text": "YOU CAN HAVE PREMATURE GENERALIZATION AS WELL AS PREMATURE OPTIMIZATION.\n-- BJARNE STROUSTRUP",
       "length": 93
     },
     {
-      "text": "He causes his sun to rise on the evil and the good, and sends rain on\nthe righteous and the unrighteous.\n-- Matthew 5:45",
+      "text": "HE CAUSES HIS SUN TO RISE ON THE EVIL AND THE GOOD, AND SENDS RAIN ON\nTHE RIGHTEOUS AND THE UNRIGHTEOUS.\n-- MATTHEW 5:45",
       "length": 120
     },
     {
-      "text": "A language that doesn't affect the way you think about programming, is\nnot worth knowing.\n-- Alan Perlis",
+      "text": "A LANGUAGE THAT DOESN'T AFFECT THE WAY YOU THINK ABOUT PROGRAMMING, IS\nNOT WORTH KNOWING.\n-- ALAN PERLIS",
       "length": 104
     },
     {
-      "text": "Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir\nde la faire plus courte. (I have made this letter so long only because I\ndid not have the leisure to make it shorter.)\n-- Blaise Pascal (Lettres Provinciales)",
+      "text": "JE N'AI FAIT CELLE-CI PLUS LONGUE QUE PARCE QUE JE N'AI PAS EU LE LOISIR\nDE LA FAIRE PLUS COURTE. (I HAVE MADE THIS LETTER SO LONG ONLY BECAUSE I\nDID NOT HAVE THE LEISURE TO MAKE IT SHORTER.)\n-- BLAISE PASCAL (LETTRES PROVINCIALES)",
       "length": 231
     },
     {
-      "text": "Men never do evil so completely and cheerfully as when they do it from\nreligious conviction.\n-- Blaise Pascal (attributed)",
+      "text": "MEN NEVER DO EVIL SO COMPLETELY AND CHEERFULLY AS WHEN THEY DO IT FROM\nRELIGIOUS CONVICTION.\n-- BLAISE PASCAL (ATTRIBUTED)",
       "length": 122
     },
     {
-      "text": "Everybody makes their own fun. If you don't make it yourself, it ain't\nfun -- it's entertainment.\n-- David Mamet (as relayed by Joss Whedon)",
+      "text": "EVERYBODY MAKES THEIR OWN FUN. IF YOU DON'T MAKE IT YOURSELF, IT AIN'T\nFUN -- IT'S ENTERTAINMENT.\n-- DAVID MAMET (AS RELAYED BY JOSS WHEDON)",
       "length": 140
     },
     {
-      "text": "If we wish to count lines of code, we should not regard them as *lines\nproduced* but as *lines spent*.\n-- Edsger Dijkstra\t\t",
+      "text": "IF WE WISH TO COUNT LINES OF CODE, WE SHOULD NOT REGARD THEM AS *LINES\nPRODUCED* BUT AS *LINES SPENT*.\n-- EDSGER DIJKSTRA\t\t",
       "length": 123
     },
     {
-      "text": "Sometimes a man with too broad a perspective reveals himself as having\nno real perspective at all. A man who tries too hard to see every side\nmay be a man who is trying to avoid choosing any side. A man who tries\ntoo hard to seek a deeper truth may be trying to hide from the truth he\nalready knows.  That is not a sign of intellectual sophistication and\n\"great thinking\". It is a demonstration of moral degeneracy and\ncowardice.\n-- Steven Den Beste",
+      "text": "SOMETIMES A MAN WITH TOO BROAD A PERSPECTIVE REVEALS HIMSELF AS HAVING\nNO REAL PERSPECTIVE AT ALL. A MAN WHO TRIES TOO HARD TO SEE EVERY SIDE\nMAY BE A MAN WHO IS TRYING TO AVOID CHOOSING ANY SIDE. A MAN WHO TRIES\nTOO HARD TO SEEK A DEEPER TRUTH MAY BE TRYING TO HIDE FROM THE TRUTH HE\nALREADY KNOWS.  THAT IS NOT A SIGN OF INTELLECTUAL SOPHISTICATION AND\n\"GREAT THINKING\". IT IS A DEMONSTRATION OF MORAL DEGENERACY AND\nCOWARDICE.\n-- STEVEN DEN BESTE",
       "length": 449
     },
     {
-      "text": "Omit needless words.\n-- William Strunk, Jr. (The Elements of Style)",
+      "text": "OMIT NEEDLESS WORDS.\n-- WILLIAM STRUNK, JR. (THE ELEMENTS OF STYLE)",
       "length": 67
     },
     {
-      "text": "I have never met a man so ignorant that I couldn't learn something from\nhim.\n-- Galileo Galilei",
+      "text": "I HAVE NEVER MET A MAN SO IGNORANT THAT I COULDN'T LEARN SOMETHING FROM\nHIM.\n-- GALILEO GALILEI",
       "length": 95
     },
     {
-      "text": "A society that puts equality -- in the sense of equality of outcome --\nahead of freedom will end up with neither equality nor freedom. The use\nof force to achieve equality will destroy freedom, and the force,\nintroduced for good purposes, will end up in the hands of people who use\nit to promote their own interests.\n-- Milton Friedman (Thomas Sowell: A Conflict of Visions, p130)",
+      "text": "A SOCIETY THAT PUTS EQUALITY -- IN THE SENSE OF EQUALITY OF OUTCOME --\nAHEAD OF FREEDOM WILL END UP WITH NEITHER EQUALITY NOR FREEDOM. THE USE\nOF FORCE TO ACHIEVE EQUALITY WILL DESTROY FREEDOM, AND THE FORCE,\nINTRODUCED FOR GOOD PURPOSES, WILL END UP IN THE HANDS OF PEOPLE WHO USE\nIT TO PROMOTE THEIR OWN INTERESTS.\n-- MILTON FRIEDMAN (THOMAS SOWELL: A CONFLICT OF VISIONS, P130)",
       "length": 380
     },
     {
-      "text": "Philosophy: the finding of bad reasons for what one believes by\ninstinct.\n-- Brave New World (paraphrased)",
+      "text": "PHILOSOPHY: THE FINDING OF BAD REASONS FOR WHAT ONE BELIEVES BY\nINSTINCT.\n-- BRAVE NEW WORLD (PARAPHRASED)",
       "length": 106
     },
     {
-      "text": "Of all tyrannies a tyranny sincerely exercised for the good of its\nvictims may be the most oppressive. It may be better to live under\nrobber barons than under omnipotent moral busybodies, The robber baron's\ncruelty may sometimes sleep, his cupidity may at some point be satiated;\nbut those who torment us for own good will torment us without end, for\nthey do so with the approval of their own conscience.\n-- C.S. Lewis",
+      "text": "OF ALL TYRANNIES A TYRANNY SINCERELY EXERCISED FOR THE GOOD OF ITS\nVICTIMS MAY BE THE MOST OPPRESSIVE. IT MAY BE BETTER TO LIVE UNDER\nROBBER BARONS THAN UNDER OMNIPOTENT MORAL BUSYBODIES, THE ROBBER BARON'S\nCRUELTY MAY SOMETIMES SLEEP, HIS CUPIDITY MAY AT SOME POINT BE SATIATED;\nBUT THOSE WHO TORMENT US FOR OWN GOOD WILL TORMENT US WITHOUT END, FOR\nTHEY DO SO WITH THE APPROVAL OF THEIR OWN CONSCIENCE.\n-- C.S. LEWIS",
       "length": 418
     },
     {
-      "text": "Fools! Don't they know that tears are a woman's most effective weapon?\n-- Catwoman (The Batman TV Series, episode 83)",
+      "text": "FOOLS! DON'T THEY KNOW THAT TEARS ARE A WOMAN'S MOST EFFECTIVE WEAPON?\n-- CATWOMAN (THE BATMAN TV SERIES, EPISODE 83)",
       "length": 117
     },
     {
-      "text": "It's like a condom; I'd rather have it and not need it than need it and\nnot have it.\n-- some chick in Alien vs. Predator, when asked why she\nalways carries a gun",
+      "text": "IT'S LIKE A CONDOM; I'D RATHER HAVE IT AND NOT NEED IT THAN NEED IT AND\nNOT HAVE IT.\n-- SOME CHICK IN ALIEN VS. PREDATOR, WHEN ASKED WHY SHE\nALWAYS CARRIES A GUN",
       "length": 161
     },
     {
-      "text": "C++ is history repeated as tragedy. Java is history repeated as farce.\n-- Scott McKay",
+      "text": "C++ IS HISTORY REPEATED AS TRAGEDY. JAVA IS HISTORY REPEATED AS FARCE.\n-- SCOTT MCKAY",
       "length": 85
     },
     {
-      "text": "Simplicity takes effort-- genius, even.\n-- Paul Graham",
+      "text": "SIMPLICITY TAKES EFFORT-- GENIUS, EVEN.\n-- PAUL GRAHAM",
       "length": 54
     },
     {
-      "text": "Show, don't tell.\n-- unknown",
+      "text": "SHOW, DON'T TELL.\n-- UNKNOWN",
       "length": 28
     },
     {
-      "text": "In God I trust; I will not be afraid. What can mortal man do to me?\n-- David (Psalm 56:4)",
+      "text": "IN GOD I TRUST; I WILL NOT BE AFRAID. WHAT CAN MORTAL MAN DO TO ME?\n-- DAVID (PSALM 56:4)",
       "length": 89
     },
     {
-      "text": "Linux is only free if your time has no value.\n-- Jamie Zawinski",
+      "text": "LINUX IS ONLY FREE IF YOUR TIME HAS NO VALUE.\n-- JAMIE ZAWINSKI",
       "length": 63
     },
     {
-      "text": "Code is poetry.\n-- wordpress.org",
+      "text": "CODE IS POETRY.\n-- WORDPRESS.ORG",
       "length": 32
     },
     {
-      "text": "If you choose not to decide, you still have made a choice.\n-- Rush (Freewill)",
+      "text": "IF YOU CHOOSE NOT TO DECIDE, YOU STILL HAVE MADE A CHOICE.\n-- RUSH (FREEWILL)",
       "length": 77
     },
     {
-      "text": "Civilization advances by extending the number of important operations\nwhich we can perform without thinking about them.\n-- Alfred North Whitehead (Introduction to Mathematics)\t\t",
+      "text": "CIVILIZATION ADVANCES BY EXTENDING THE NUMBER OF IMPORTANT OPERATIONS\nWHICH WE CAN PERFORM WITHOUT THINKING ABOUT THEM.\n-- ALFRED NORTH WHITEHEAD (INTRODUCTION TO MATHEMATICS)\t\t",
       "length": 177
     },
     {
-      "text": "The function of wisdom is to discriminate between good and evil.\n-- Cicero",
+      "text": "THE FUNCTION OF WISDOM IS TO DISCRIMINATE BETWEEN GOOD AND EVIL.\n-- CICERO",
       "length": 74
     },
     {
-      "text": "The reason to do animation is caricature. Good caricature picks out the\nessense of the statement and removes everything else. It's not simply\nabout reproducing reality; It's about bumping it up.\n-- Brad Bird, writer and director, The Incredibles",
+      "text": "THE REASON TO DO ANIMATION IS CARICATURE. GOOD CARICATURE PICKS OUT THE\nESSENSE OF THE STATEMENT AND REMOVES EVERYTHING ELSE. IT'S NOT SIMPLY\nABOUT REPRODUCING REALITY; IT'S ABOUT BUMPING IT UP.\n-- BRAD BIRD, WRITER AND DIRECTOR, THE INCREDIBLES",
       "length": 245
     },
     {
-      "text": "Mistakes were made.\n-- Ronald Reagan",
+      "text": "MISTAKES WERE MADE.\n-- RONALD REAGAN",
       "length": 36
     },
     {
-      "text": "I would rather be an optimist and be wrong than a pessimist who proves\nto be right. The former sometimes wins, but never the latter.\n-- \"Hoots\"",
+      "text": "I WOULD RATHER BE AN OPTIMIST AND BE WRONG THAN A PESSIMIST WHO PROVES\nTO BE RIGHT. THE FORMER SOMETIMES WINS, BUT NEVER THE LATTER.\n-- \"HOOTS\"",
       "length": 143
     },
     {
-      "text": "What is truth?\n-- Pontius Pilate",
+      "text": "WHAT IS TRUTH?\n-- PONTIUS PILATE",
       "length": 32
     },
     {
-      "text": "Life moves pretty fast. If you don't stop and look around once in a\nwhile, you could miss it.\n-- Ferris Bueller",
+      "text": "LIFE MOVES PRETTY FAST. IF YOU DON'T STOP AND LOOK AROUND ONCE IN A\nWHILE, YOU COULD MISS IT.\n-- FERRIS BUELLER",
       "length": 111
     },
     {
-      "text": "Lisp is worth learning for the profound enlightenment experience you\nwill have when you finally get it; that experience will make you a\nbetter programmer for the rest of your days, even if you never actually\nuse Lisp itself a lot.\n-- Eric S. Raymond",
+      "text": "LISP IS WORTH LEARNING FOR THE PROFOUND ENLIGHTENMENT EXPERIENCE YOU\nWILL HAVE WHEN YOU FINALLY GET IT; THAT EXPERIENCE WILL MAKE YOU A\nBETTER PROGRAMMER FOR THE REST OF YOUR DAYS, EVEN IF YOU NEVER ACTUALLY\nUSE LISP ITSELF A LOT.\n-- ERIC S. RAYMOND",
       "length": 249
     },
     {
-      "text": "Any sufficiently complicated C or Fortran program contains an ad hoc,\ninformally specified, bug-ridden, slow implementation of half of Common\nLisp.\n-- Philip Greenspun (Greenspun's Tenth Rule)",
+      "text": "ANY SUFFICIENTLY COMPLICATED C OR FORTRAN PROGRAM CONTAINS AN AD HOC,\nINFORMALLY SPECIFIED, BUG-RIDDEN, SLOW IMPLEMENTATION OF HALF OF COMMON\nLISP.\n-- PHILIP GREENSPUN (GREENSPUN'S TENTH RULE)",
       "length": 192
     },
     {
-      "text": "I was talking recently to a friend who teaches at MIT. His field is hot\nnow and every year he is inundated by applications from would-be\ngraduate students. \"A lot of them seem smart,\" he said. \"What I can't\ntell is whether they have any kind of taste.\"\n-- Paul Graham",
+      "text": "I WAS TALKING RECENTLY TO A FRIEND WHO TEACHES AT MIT. HIS FIELD IS HOT\nNOW AND EVERY YEAR HE IS INUNDATED BY APPLICATIONS FROM WOULD-BE\nGRADUATE STUDENTS. \"A LOT OF THEM SEEM SMART,\" HE SAID. \"WHAT I CAN'T\nTELL IS WHETHER THEY HAVE ANY KIND OF TASTE.\"\n-- PAUL GRAHAM",
       "length": 267
     },
     {
-      "text": "The direct pursuit of happiness is a recipe for an unhappy life.\n-- Donald Campbell",
+      "text": "THE DIRECT PURSUIT OF HAPPINESS IS A RECIPE FOR AN UNHAPPY LIFE.\n-- DONALD CAMPBELL",
       "length": 83
     },
     {
-      "text": "It's no trick for talented people to be interesting, but it's a gift to\nbe interested. We want an organization filled with interested people.\n-- Randy S. Nelson (dean of Pixar University)",
+      "text": "IT'S NO TRICK FOR TALENTED PEOPLE TO BE INTERESTING, BUT IT'S A GIFT TO\nBE INTERESTED. WE WANT AN ORGANIZATION FILLED WITH INTERESTED PEOPLE.\n-- RANDY S. NELSON (DEAN OF PIXAR UNIVERSITY)",
       "length": 187
     },
     {
-      "text": "Why teach drawing to accountants? Because drawing class doesn't just\nteach people to draw. It teaches them to be more observant. There's no\ncompany on earth that wouldn't benefit from having people become more\nobservant.\n-- Randy S. Nelson (dean of Pixar University)",
+      "text": "WHY TEACH DRAWING TO ACCOUNTANTS? BECAUSE DRAWING CLASS DOESN'T JUST\nTEACH PEOPLE TO DRAW. IT TEACHES THEM TO BE MORE OBSERVANT. THERE'S NO\nCOMPANY ON EARTH THAT WOULDN'T BENEFIT FROM HAVING PEOPLE BECOME MORE\nOBSERVANT.\n-- RANDY S. NELSON (DEAN OF PIXAR UNIVERSITY)",
       "length": 266
     },
     {
-      "text": "All problems in computer science can be solved by another level of\nindirection.\n-- Butler Lampson\t",
+      "text": "ALL PROBLEMS IN COMPUTER SCIENCE CAN BE SOLVED BY ANOTHER LEVEL OF\nINDIRECTION.\n-- BUTLER LAMPSON\t",
       "length": 98
     },
     {
-      "text": "A designer knows he has arrived at perfection not when there is no\nlonguer anything to add, but when there is no longuer anything to take\naway.\n-- Antoine de St Exupery.",
+      "text": "A DESIGNER KNOWS HE HAS ARRIVED AT PERFECTION NOT WHEN THERE IS NO\nLONGUER ANYTHING TO ADD, BUT WHEN THERE IS NO LONGUER ANYTHING TO TAKE\nAWAY.\n-- ANTOINE DE ST EXUPERY.",
       "length": 169
     },
     {
-      "text": "For the things we have to learn before we can do them, we learn by doing\nthem.\n-- Aristotle.",
+      "text": "FOR THE THINGS WE HAVE TO LEARN BEFORE WE CAN DO THEM, WE LEARN BY DOING\nTHEM.\n-- ARISTOTLE.",
       "length": 92
     },
     {
-      "text": "There are many ways to avoid success in life, but the most sure-fire\njust might be procrastination.\n-- Hara Estroff Marano.",
+      "text": "THERE ARE MANY WAYS TO AVOID SUCCESS IN LIFE, BUT THE MOST SURE-FIRE\nJUST MIGHT BE PROCRASTINATION.\n-- HARA ESTROFF MARANO.",
       "length": 123
     },
     {
-      "text": "PI seconds is a nanocentury.\n-- [fact]",
+      "text": "PI SECONDS IS A NANOCENTURY.\n-- [FACT]",
       "length": 38
     },
     {
-      "text": "A non negative binary integer value x is a power of 2 iff (x & (x-1)) is\n0 using 2's complement arithmetic.\n-- [fact]",
+      "text": "A NON NEGATIVE BINARY INTEGER VALUE X IS A POWER OF 2 IFF (X & (X-1)) IS\n0 USING 2'S COMPLEMENT ARITHMETIC.\n-- [FACT]",
       "length": 117
     },
     {
-      "text": "While I’ve always appreciated beautiful code, I share Jonathan’s concern\nabout studying it too much. I think studying beauty in music and\npainting has led us to modern classical music and painting that the\nmajority of us just don’t get. Beauty can be seen when it emerges, but\nisn’t something to strive for in isolation of a larger context. In the\nsoftware world, the larger context would be the utility of the software\nto the end user.\n-- [A comment on a blog]",
+      "text": "WHILE I’VE ALWAYS APPRECIATED BEAUTIFUL CODE, I SHARE JONATHAN’S CONCERN\nABOUT STUDYING IT TOO MUCH. I THINK STUDYING BEAUTY IN MUSIC AND\nPAINTING HAS LED US TO MODERN CLASSICAL MUSIC AND PAINTING THAT THE\nMAJORITY OF US JUST DON’T GET. BEAUTY CAN BE SEEN WHEN IT EMERGES, BUT\nISN’T SOMETHING TO STRIVE FOR IN ISOLATION OF A LARGER CONTEXT. IN THE\nSOFTWARE WORLD, THE LARGER CONTEXT WOULD BE THE UTILITY OF THE SOFTWARE\nTO THE END USER.\n-- [A COMMENT ON A BLOG]",
       "length": 461
     },
     {
-      "text": "Dont give users the opportunity to lock themselves.\n-- unknown",
+      "text": "DONT GIVE USERS THE OPPORTUNITY TO LOCK THEMSELVES.\n-- UNKNOWN",
       "length": 62
     },
     {
-      "text": "Any fool can make the simple complex, only a smart person can make the\ncomplex simple.\n-- unknown",
+      "text": "ANY FOOL CAN MAKE THE SIMPLE COMPLEX, ONLY A SMART PERSON CAN MAKE THE\nCOMPLEX SIMPLE.\n-- UNKNOWN",
       "length": 97
     },
     {
-      "text": "To do something well you have to love it. So to the extent you can\npreserve hacking as something you love, you're likely to do it well. Try\nto keep the sense of wonder you had about programming at age 14. If\nyou're worried that your current job is rotting your brain, it probably\nis.\n-- Paul Graham.",
+      "text": "TO DO SOMETHING WELL YOU HAVE TO LOVE IT. SO TO THE EXTENT YOU CAN\nPRESERVE HACKING AS SOMETHING YOU LOVE, YOU'RE LIKELY TO DO IT WELL. TRY\nTO KEEP THE SENSE OF WONDER YOU HAD ABOUT PROGRAMMING AT AGE 14. IF\nYOU'RE WORRIED THAT YOUR CURRENT JOB IS ROTTING YOUR BRAIN, IT PROBABLY\nIS.\n-- PAUL GRAHAM.",
       "length": 299
     },
     {
-      "text": "- If you give him a penny for his thoughts, you'd get change.\n- Not the sharpest knife in the drawer.\n- A prime candidate for natural deselection.\n-- [Ideas for flamewars]",
+      "text": "- IF YOU GIVE HIM A PENNY FOR HIS THOUGHTS, YOU'D GET CHANGE.\n- NOT THE SHARPEST KNIFE IN THE DRAWER.\n- A PRIME CANDIDATE FOR NATURAL DESELECTION.\n-- [IDEAS FOR FLAMEWARS]",
       "length": 171
     },
     {
-      "text": "What I didn't understand was that the value of some new acquisition\nwasn't the difference between its retail price and what I paid for it.\nIt was the value I derived from it. Stuff is an extremely illiquid\nasset. Unless you have some plan for selling that valuable thing you got\nso cheaply, what difference does it make what it's \"worth?\" The only way\nyou're ever going to extract any value from it is to use it. And if you\ndon't have any immediate use for it, you probably never will.\n-- Paul Graham",
+      "text": "WHAT I DIDN'T UNDERSTAND WAS THAT THE VALUE OF SOME NEW ACQUISITION\nWASN'T THE DIFFERENCE BETWEEN ITS RETAIL PRICE AND WHAT I PAID FOR IT.\nIT WAS THE VALUE I DERIVED FROM IT. STUFF IS AN EXTREMELY ILLIQUID\nASSET. UNLESS YOU HAVE SOME PLAN FOR SELLING THAT VALUABLE THING YOU GOT\nSO CHEAPLY, WHAT DIFFERENCE DOES IT MAKE WHAT IT'S \"WORTH?\" THE ONLY WAY\nYOU'RE EVER GOING TO EXTRACT ANY VALUE FROM IT IS TO USE IT. AND IF YOU\nDON'T HAVE ANY IMMEDIATE USE FOR IT, YOU PROBABLY NEVER WILL.\n-- PAUL GRAHAM",
       "length": 500
     },
     {
-      "text": "Only bad designers blame their failings on the users.\n-- unknown",
+      "text": "ONLY BAD DESIGNERS BLAME THEIR FAILINGS ON THE USERS.\n-- UNKNOWN",
       "length": 64
     },
     {
-      "text": "Humans aren't rational -- they rationalize. And I don't just mean \"some\nof them\" or \"other people\". I'm talking about everyone. We have a \"logic\nengine\" in our brains, but for the most part, it's not the one in the\ndriver's seat -- instead it operates after the fact, generating\nrationalizations and excuses for our behavior.\n-- Paul Buchheit",
+      "text": "HUMANS AREN'T RATIONAL -- THEY RATIONALIZE. AND I DON'T JUST MEAN \"SOME\nOF THEM\" OR \"OTHER PEOPLE\". I'M TALKING ABOUT EVERYONE. WE HAVE A \"LOGIC\nENGINE\" IN OUR BRAINS, BUT FOR THE MOST PART, IT'S NOT THE ONE IN THE\nDRIVER'S SEAT -- INSTEAD IT OPERATES AFTER THE FACT, GENERATING\nRATIONALIZATIONS AND EXCUSES FOR OUR BEHAVIOR.\n-- PAUL BUCHHEIT",
       "length": 342
     },
     {
-      "text": "What do Americans look for in a car? I've heard many answers when I've\nasked this question. The answers include excellent safety ratings, great\ngas mileage, handling, and cornering ability, among others. I don't\nbelieve any of these. That's because the first principle of the Culture\nCode is that the only effective way to understand what people truly mean\nis to ignore what they say. This is not to suggest that people\nintentionally lie or misrepresent themselves. What it means is that,\nwhen asked direct questions about their interests and preferences,\npeople tend to give answers they believe the questioner wants to hear.\nAgain, this is not because they intend to mislead. It is because people\nrespond to these questions with their cortexes, the parts of their\nbrains that control intelligence rather than emotion or instinct. They\nponder a question, they process a question, and when they deliver an\nanswer, it is the product of deliberation. They believe they are telling\nthe truth. A lie detector would confirm this. In most cases, however,\nthey aren't saying what they mean.\n-- The culture code.",
+      "text": "WHAT DO AMERICANS LOOK FOR IN A CAR? I'VE HEARD MANY ANSWERS WHEN I'VE\nASKED THIS QUESTION. THE ANSWERS INCLUDE EXCELLENT SAFETY RATINGS, GREAT\nGAS MILEAGE, HANDLING, AND CORNERING ABILITY, AMONG OTHERS. I DON'T\nBELIEVE ANY OF THESE. THAT'S BECAUSE THE FIRST PRINCIPLE OF THE CULTURE\nCODE IS THAT THE ONLY EFFECTIVE WAY TO UNDERSTAND WHAT PEOPLE TRULY MEAN\nIS TO IGNORE WHAT THEY SAY. THIS IS NOT TO SUGGEST THAT PEOPLE\nINTENTIONALLY LIE OR MISREPRESENT THEMSELVES. WHAT IT MEANS IS THAT,\nWHEN ASKED DIRECT QUESTIONS ABOUT THEIR INTERESTS AND PREFERENCES,\nPEOPLE TEND TO GIVE ANSWERS THEY BELIEVE THE QUESTIONER WANTS TO HEAR.\nAGAIN, THIS IS NOT BECAUSE THEY INTEND TO MISLEAD. IT IS BECAUSE PEOPLE\nRESPOND TO THESE QUESTIONS WITH THEIR CORTEXES, THE PARTS OF THEIR\nBRAINS THAT CONTROL INTELLIGENCE RATHER THAN EMOTION OR INSTINCT. THEY\nPONDER A QUESTION, THEY PROCESS A QUESTION, AND WHEN THEY DELIVER AN\nANSWER, IT IS THE PRODUCT OF DELIBERATION. THEY BELIEVE THEY ARE TELLING\nTHE TRUTH. A LIE DETECTOR WOULD CONFIRM THIS. IN MOST CASES, HOWEVER,\nTHEY AREN'T SAYING WHAT THEY MEAN.\n-- THE CULTURE CODE.",
       "length": 1104
     },
     {
-      "text": "When all you have is a hammer, everything looks like a nail.\n-- unknown",
+      "text": "WHEN ALL YOU HAVE IS A HAMMER, EVERYTHING LOOKS LIKE A NAIL.\n-- UNKNOWN",
       "length": 71
     },
     {
-      "text": "Good coders code, great reuse.\n-- http://www.catonmat.net",
+      "text": "GOOD CODERS CODE, GREAT REUSE.\n-- HTTP://WWW.CATONMAT.NET",
       "length": 57
     },
     {
-      "text": "The lesson of the story might appear to be that self-interested and\nambitious people in power are often the cause of wastefulness in\ndeveloping countries. But self-interested and ambitious people are in\npositions of power, great and small, all over the world. In many places,\nthey are restrained by the law, the press, and democratic opposition.\nCameroon's tragedy is that there is nothing to hold self-interest in\ncheck.\n-- Tim Harford",
+      "text": "THE LESSON OF THE STORY MIGHT APPEAR TO BE THAT SELF-INTERESTED AND\nAMBITIOUS PEOPLE IN POWER ARE OFTEN THE CAUSE OF WASTEFULNESS IN\nDEVELOPING COUNTRIES. BUT SELF-INTERESTED AND AMBITIOUS PEOPLE ARE IN\nPOSITIONS OF POWER, GREAT AND SMALL, ALL OVER THE WORLD. IN MANY PLACES,\nTHEY ARE RESTRAINED BY THE LAW, THE PRESS, AND DEMOCRATIC OPPOSITION.\nCAMEROON'S TRAGEDY IS THAT THERE IS NOTHING TO HOLD SELF-INTEREST IN\nCHECK.\n-- TIM HARFORD",
       "length": 436
     },
     {
-      "text": "To solve your problems you must learn new skills, adapt new thought\npatterns, and become a different person than you were before that\nproblem.  God has crafted you for success. In the middle of every\nadversity lie your best opportunities. Discover it, build upon it and\nmove forward in your journey to live an extraordinary life.  You owe it\nto yourself to live a great life. Don’t let negative thoughts pull you\ndown. Be grateful and open to learn and grow.\n-- http://secretsofstudying.com/",
+      "text": "TO SOLVE YOUR PROBLEMS YOU MUST LEARN NEW SKILLS, ADAPT NEW THOUGHT\nPATTERNS, AND BECOME A DIFFERENT PERSON THAN YOU WERE BEFORE THAT\nPROBLEM.  GOD HAS CRAFTED YOU FOR SUCCESS. IN THE MIDDLE OF EVERY\nADVERSITY LIE YOUR BEST OPPORTUNITIES. DISCOVER IT, BUILD UPON IT AND\nMOVE FORWARD IN YOUR JOURNEY TO LIVE AN EXTRAORDINARY LIFE.  YOU OWE IT\nTO YOURSELF TO LIVE A GREAT LIFE. DON’T LET NEGATIVE THOUGHTS PULL YOU\nDOWN. BE GRATEFUL AND OPEN TO LEARN AND GROW.\n-- HTTP://SECRETSOFSTUDYING.COM/",
       "length": 491
     },
     {
-      "text": "If there is a will, there is a way.\n-- unknown",
+      "text": "IF THERE IS A WILL, THERE IS A WAY.\n-- UNKNOWN",
       "length": 46
     },
     {
-      "text": "Having large case statements in an object-oriented language is a sure\nsign your design is flawed.\n-- [Fixing architecture flaws in Rails' ORM]",
+      "text": "HAVING LARGE CASE STATEMENTS IN AN OBJECT-ORIENTED LANGUAGE IS A SURE\nSIGN YOUR DESIGN IS FLAWED.\n-- [FIXING ARCHITECTURE FLAWS IN RAILS' ORM]",
       "length": 142
     },
     {
-      "text": "Being a programmer is the same way. The only way to be a good programmer\nis to write code. When you realize you haven't been writing much code\nlately, and it seems like all you do is brag about code you wrote in the\npast, and people start looking at you funny while you're shooting your\nmouth off, realize it's because they know. They might not even know they\nknow, but they know. So, yes, doing what you love brings success, and by\nall means, throw yourself a nice big party, buy yourself a nice car,\nsoak up the adulation of an adoring crowd. Then shut the fuck up and get\nback to work.\n-- Sincerity Theory",
+      "text": "BEING A PROGRAMMER IS THE SAME WAY. THE ONLY WAY TO BE A GOOD PROGRAMMER\nIS TO WRITE CODE. WHEN YOU REALIZE YOU HAVEN'T BEEN WRITING MUCH CODE\nLATELY, AND IT SEEMS LIKE ALL YOU DO IS BRAG ABOUT CODE YOU WROTE IN THE\nPAST, AND PEOPLE START LOOKING AT YOU FUNNY WHILE YOU'RE SHOOTING YOUR\nMOUTH OFF, REALIZE IT'S BECAUSE THEY KNOW. THEY MIGHT NOT EVEN KNOW THEY\nKNOW, BUT THEY KNOW. SO, YES, DOING WHAT YOU LOVE BRINGS SUCCESS, AND BY\nALL MEANS, THROW YOURSELF A NICE BIG PARTY, BUY YOURSELF A NICE CAR,\nSOAK UP THE ADULATION OF AN ADORING CROWD. THEN SHUT THE FUCK UP AND GET\nBACK TO WORK.\n-- SINCERITY THEORY",
       "length": 608
     },
     {
-      "text": "Another feature about this guy is his low threshold of boredom. He'll\npick up on a task and work frantically at it, accomplishing wonders in a\nshort time and then get bored and drop it before its properly finished.\nHe'll do nothing but strum his guitar and lie around in bed for several\ndays after.  Thats also part of the pattern too; periods of frenetic\nactivity followed by periods of melancholia, withdrawal and inactivity.\nThis is a bipolar personality.\n-- The bipolar lisp programmer",
+      "text": "ANOTHER FEATURE ABOUT THIS GUY IS HIS LOW THRESHOLD OF BOREDOM. HE'LL\nPICK UP ON A TASK AND WORK FRANTICALLY AT IT, ACCOMPLISHING WONDERS IN A\nSHORT TIME AND THEN GET BORED AND DROP IT BEFORE ITS PROPERLY FINISHED.\nHE'LL DO NOTHING BUT STRUM HIS GUITAR AND LIE AROUND IN BED FOR SEVERAL\nDAYS AFTER.  THATS ALSO PART OF THE PATTERN TOO; PERIODS OF FRENETIC\nACTIVITY FOLLOWED BY PERIODS OF MELANCHOLIA, WITHDRAWAL AND INACTIVITY.\nTHIS IS A BIPOLAR PERSONALITY.\n-- THE BIPOLAR LISP PROGRAMMER",
       "length": 489
     },
     {
-      "text": "My dream is that people adopt it on its own merits. We're not trying to\nbend Ruby on Rails to fit the enterprise, we're encouraging enterprises\nto bend to Ruby on Rails. Come if you like it, stay away if you don't.\nWe're not going head over heels to accommodate the enterprise or to lure\nthem away from Java. That's how you end up with Java, if you start\nbending to special interest groups.\n-- David Heinemeier Hansson (Ruby On Rails' creator)",
+      "text": "MY DREAM IS THAT PEOPLE ADOPT IT ON ITS OWN MERITS. WE'RE NOT TRYING TO\nBEND RUBY ON RAILS TO FIT THE ENTERPRISE, WE'RE ENCOURAGING ENTERPRISES\nTO BEND TO RUBY ON RAILS. COME IF YOU LIKE IT, STAY AWAY IF YOU DON'T.\nWE'RE NOT GOING HEAD OVER HEELS TO ACCOMMODATE THE ENTERPRISE OR TO LURE\nTHEM AWAY FROM JAVA. THAT'S HOW YOU END UP WITH JAVA, IF YOU START\nBENDING TO SPECIAL INTEREST GROUPS.\n-- DAVID HEINEMEIER HANSSON (RUBY ON RAILS' CREATOR)",
       "length": 443
     },
     {
-      "text": "New eyes have X-ray vision.  [someone that hasn't written it is more\nlikely to spot the bug. \"someone\" can be you after a break]\n-- William S. Annis",
+      "text": "NEW EYES HAVE X-RAY VISION.  [SOMEONE THAT HASN'T WRITTEN IT IS MORE\nLIKELY TO SPOT THE BUG. \"SOMEONE\" CAN BE YOU AFTER A BREAK]\n-- WILLIAM S. ANNIS",
       "length": 148
     },
     {
-      "text": "So - what are the most important problems in software engineering? I’d\nanswer “dealing with complexity”.\n-- Mark Chu-Carroll",
+      "text": "SO - WHAT ARE THE MOST IMPORTANT PROBLEMS IN SOFTWARE ENGINEERING? I’D\nANSWER “DEALING WITH COMPLEXITY”.\n-- MARK CHU-CARROLL",
       "length": 124
     },
     {
-      "text": "So the mere constraint of staying in regular contact with us will push\nyou to make things happen, because otherwise you'll be embarrassed to\ntell us that you haven't done anything new since the last time we\ntalked.\n-- Paul Graham (a talk at Y Combinator, for startup creators).",
+      "text": "SO THE MERE CONSTRAINT OF STAYING IN REGULAR CONTACT WITH US WILL PUSH\nYOU TO MAKE THINGS HAPPEN, BECAUSE OTHERWISE YOU'LL BE EMBARRASSED TO\nTELL US THAT YOU HAVEN'T DONE ANYTHING NEW SINCE THE LAST TIME WE\nTALKED.\n-- PAUL GRAHAM (A TALK AT Y COMBINATOR, FOR STARTUP CREATORS).",
       "length": 277
     },
     {
-      "text": "The choice of the university is mostly important for the piece of paper\nyou get at the end. The education you get depends on you.\n-- Andreas Zwinkau",
+      "text": "THE CHOICE OF THE UNIVERSITY IS MOSTLY IMPORTANT FOR THE PIECE OF PAPER\nYOU GET AT THE END. THE EDUCATION YOU GET DEPENDS ON YOU.\n-- ANDREAS ZWINKAU",
       "length": 148
     },
     {
-      "text": "Remember that you are humans in the first place and only after that\nprogrammers.\n-- Alexandru Vancea",
+      "text": "REMEMBER THAT YOU ARE HUMANS IN THE FIRST PLACE AND ONLY AFTER THAT\nPROGRAMMERS.\n-- ALEXANDRU VANCEA",
       "length": 100
     },
     {
-      "text": "Humans differ from animals to the degree that they are not merely an end\nresult of their conditioning, but are able to reflect on their\nexperiences and strategies, and apply insight to make changes in the way\nthey live to modify the outcome.\n-- SlideTrombone (comment on \"Programming can ruin your life\")",
+      "text": "HUMANS DIFFER FROM ANIMALS TO THE DEGREE THAT THEY ARE NOT MERELY AN END\nRESULT OF THEIR CONDITIONING, BUT ARE ABLE TO REFLECT ON THEIR\nEXPERIENCES AND STRATEGIES, AND APPLY INSIGHT TO MAKE CHANGES IN THE WAY\nTHEY LIVE TO MODIFY THE OUTCOME.\n-- SLIDETROMBONE (COMMENT ON \"PROGRAMMING CAN RUIN YOUR LIFE\")",
       "length": 304
     },
     {
-      "text": "As builders and creators finding the perfect solution should not be our\nmain goal. We should find the perfect problem.\n-- Isaac (blog comment)",
+      "text": "AS BUILDERS AND CREATORS FINDING THE PERFECT SOLUTION SHOULD NOT BE OUR\nMAIN GOAL. WE SHOULD FIND THE PERFECT PROBLEM.\n-- ISAAC (BLOG COMMENT)",
       "length": 142
     },
     {
-      "text": "Just like carpentry, measure twice cut once.\n-- Super-sizing YouTube with Python (Mike Solomon, mike@youtube.com)",
+      "text": "JUST LIKE CARPENTRY, MEASURE TWICE CUT ONCE.\n-- SUPER-SIZING YOUTUBE WITH PYTHON (MIKE SOLOMON, MIKE@YOUTUBE.COM)",
       "length": 113
     },
     {
-      "text": "The good thing about reinventing the wheel is that you get a round one.\n-- Douglas Crockford (Author of JSON and JsLint)",
+      "text": "THE GOOD THING ABOUT REINVENTING THE WHEEL IS THAT YOU GET A ROUND ONE.\n-- DOUGLAS CROCKFORD (AUTHOR OF JSON AND JSLINT)",
       "length": 120
     },
     {
-      "text": "I feel it is everybodies obligation to reach for the best in themselves\nand use that for the interest of mankind.\n-- Corneluis (comment on 'Are you going to change the world? (Really?)')",
+      "text": "I FEEL IT IS EVERYBODIES OBLIGATION TO REACH FOR THE BEST IN THEMSELVES\nAND USE THAT FOR THE INTEREST OF MANKIND.\n-- CORNELUIS (COMMENT ON 'ARE YOU GOING TO CHANGE THE WORLD? (REALLY?)')",
       "length": 186
     },
     {
-      "text": "Abstraction is a form of data compression: absolutely necessary, because\nhuman short-term memory is so small, but the critically important aspect\nof abstraction is the algorithm that gets you from the name back to the\n\"uncompressed\" details.\n-- Bruce Wilder (blog post comment)",
+      "text": "ABSTRACTION IS A FORM OF DATA COMPRESSION: ABSOLUTELY NECESSARY, BECAUSE\nHUMAN SHORT-TERM MEMORY IS SO SMALL, BUT THE CRITICALLY IMPORTANT ASPECT\nOF ABSTRACTION IS THE ALGORITHM THAT GETS YOU FROM THE NAME BACK TO THE\n\"UNCOMPRESSED\" DETAILS.\n-- BRUCE WILDER (BLOG POST COMMENT)",
       "length": 277
     },
     {
-      "text": "Have you ever noticed that when you sit down to write something, half\nthe ideas that end up in it are ones you thought of while writing it?\nThe same thing happens with software. Working to implement one idea\ngives you more ideas.\n-- Paul Graham, The other road ahead.",
+      "text": "HAVE YOU EVER NOTICED THAT WHEN YOU SIT DOWN TO WRITE SOMETHING, HALF\nTHE IDEAS THAT END UP IN IT ARE ONES YOU THOUGHT OF WHILE WRITING IT?\nTHE SAME THING HAPPENS WITH SOFTWARE. WORKING TO IMPLEMENT ONE IDEA\nGIVES YOU MORE IDEAS.\n-- PAUL GRAHAM, THE OTHER ROAD AHEAD.",
       "length": 267
     },
     {
-      "text": "In general, we can think of data as defined by some collection of\nselectors and constructors, together with specified conditions that\nthese procedures must fulfill in order to be a valid representation.\n-- SICP, What is meant by data?",
+      "text": "IN GENERAL, WE CAN THINK OF DATA AS DEFINED BY SOME COLLECTION OF\nSELECTORS AND CONSTRUCTORS, TOGETHER WITH SPECIFIED CONDITIONS THAT\nTHESE PROCEDURES MUST FULFILL IN ORDER TO BE A VALID REPRESENTATION.\n-- SICP, WHAT IS MEANT BY DATA?",
       "length": 234
     },
     {
-      "text": "Resume writing is just like dating, or applying for a bank loan, in that\nnobody wants you if you're desperate.\n-- Steve Yegge.",
+      "text": "RESUME WRITING IS JUST LIKE DATING, OR APPLYING FOR A BANK LOAN, IN THAT\nNOBODY WANTS YOU IF YOU'RE DESPERATE.\n-- STEVE YEGGE.",
       "length": 126
     },
     {
-      "text": "Mastering isn’t a survival instinct; it’s an urge to excel. Mastering is\none of the experiences that delineates us from animals. It is striving\nto be more tomorrow than we are today; to perfectly pitch the ball over\nhome plate; to craft the perfect sentence in an article; to open the\noven and feel the warm, richly-scented cloud telling you dinner is going\nto be absolutely extraordinary. We humans crave perfection, to be\nmasters of our domain, to distinguish ourselves by sheer skill and\nprowess.\n-- Joesgoals.com",
+      "text": "MASTERING ISN’T A SURVIVAL INSTINCT; IT’S AN URGE TO EXCEL. MASTERING IS\nONE OF THE EXPERIENCES THAT DELINEATES US FROM ANIMALS. IT IS STRIVING\nTO BE MORE TOMORROW THAN WE ARE TODAY; TO PERFECTLY PITCH THE BALL OVER\nHOME PLATE; TO CRAFT THE PERFECT SENTENCE IN AN ARTICLE; TO OPEN THE\nOVEN AND FEEL THE WARM, RICHLY-SCENTED CLOUD TELLING YOU DINNER IS GOING\nTO BE ABSOLUTELY EXTRAORDINARY. WE HUMANS CRAVE PERFECTION, TO BE\nMASTERS OF OUR DOMAIN, TO DISTINGUISH OURSELVES BY SHEER SKILL AND\nPROWESS.\n-- JOESGOALS.COM",
       "length": 516
     },
     {
-      "text": "It(mastering)’s knowing what you are doing.\n-- Joesgoals.com",
+      "text": "IT(MASTERING)’S KNOWING WHAT YOU ARE DOING.\n-- JOESGOALS.COM",
       "length": 60
     },
     {
-      "text": "Well then. How could you possibly live without automated refactoring\ntools? How else could you coordinate the caterpillar-like motions of all\nJava’s identical tiny legs, its thousands of similar parts?\nI’ll tell you how:\nRuby is a butterfly.\n-- Stevey, Refactoring Trilogy, Part 1.",
+      "text": "WELL THEN. HOW COULD YOU POSSIBLY LIVE WITHOUT AUTOMATED REFACTORING\nTOOLS? HOW ELSE COULD YOU COORDINATE THE CATERPILLAR-LIKE MOTIONS OF ALL\nJAVA’S IDENTICAL TINY LEGS, ITS THOUSANDS OF SIMILAR PARTS?\nI’LL TELL YOU HOW:\nRUBY IS A BUTTERFLY.\n-- STEVEY, REFACTORING TRILOGY, PART 1.",
       "length": 281
     },
     {
-      "text": "You will never become a Great Programmer until you acknowledge that you\nwill always be a Terrible Programmer.\nYou will remain a Great Programmer for only as long as you acknowledge\nthat you are still a Terrible Programmer.\n-- Marc (http://kickin-the-darkness.blogspot.com/)",
+      "text": "YOU WILL NEVER BECOME A GREAT PROGRAMMER UNTIL YOU ACKNOWLEDGE THAT YOU\nWILL ALWAYS BE A TERRIBLE PROGRAMMER.\nYOU WILL REMAIN A GREAT PROGRAMMER FOR ONLY AS LONG AS YOU ACKNOWLEDGE\nTHAT YOU ARE STILL A TERRIBLE PROGRAMMER.\n-- MARC (HTTP://KICKIN-THE-DARKNESS.BLOGSPOT.COM/)",
       "length": 273
     },
     {
-      "text": "If I tell you I'm good, you would probably think I'm boasting. If I tell\nyou I'm no good, you know I'm lying.\n-- Bruce Lee",
+      "text": "IF I TELL YOU I'M GOOD, YOU WOULD PROBABLY THINK I'M BOASTING. IF I TELL\nYOU I'M NO GOOD, YOU KNOW I'M LYING.\n-- BRUCE LEE",
       "length": 122
     },
     {
-      "text": "Let me try to get this straight: Lisp is a language for describing\nalgorithms. This was JohnMcCarthy's original purpose, anyway: to build\nsomething more convenient than a Turing machine. Lisp is not about file,\nsocket or GUI programming - Lisp is about expressive power. (For\nexample, you can design multiple object systems for Lisp, in Lisp. Or\nimplement the now-fashionable AOP. Or do arbitrary transformations on\nparsed source code.) If you don't value expressive power, Lisp ain't for\nyou. I, personally, would prefer Lisp to not become mainstream: this\nwould necessarily involve a dumbing down.\n-- VladimirSlepnev",
+      "text": "LET ME TRY TO GET THIS STRAIGHT: LISP IS A LANGUAGE FOR DESCRIBING\nALGORITHMS. THIS WAS JOHNMCCARTHY'S ORIGINAL PURPOSE, ANYWAY: TO BUILD\nSOMETHING MORE CONVENIENT THAN A TURING MACHINE. LISP IS NOT ABOUT FILE,\nSOCKET OR GUI PROGRAMMING - LISP IS ABOUT EXPRESSIVE POWER. (FOR\nEXAMPLE, YOU CAN DESIGN MULTIPLE OBJECT SYSTEMS FOR LISP, IN LISP. OR\nIMPLEMENT THE NOW-FASHIONABLE AOP. OR DO ARBITRARY TRANSFORMATIONS ON\nPARSED SOURCE CODE.) IF YOU DON'T VALUE EXPRESSIVE POWER, LISP AIN'T FOR\nYOU. I, PERSONALLY, WOULD PREFER LISP TO NOT BECOME MAINSTREAM: THIS\nWOULD NECESSARILY INVOLVE A DUMBING DOWN.\n-- VLADIMIRSLEPNEV",
       "length": 618
     },
     {
-      "text": "Je ne vous impose aucune contrainte, aucune limite. Surprenez-moi,\nétonnez-moi, défiez-moi, défiez-vous vous-même. Vous avez le choix: vous\npouvez rester dans l'ombre ou en sortir en étant parmis les trop rares\nexceptions à avoir réussi. L'heure est venue d'aller bien au delà de\nvotre potentiel. L'heure est venue maintenant de descendre vraiment en\nvous. L'heure est venue de démontrer pourquoi vous êtes l'élite, les\nquelques élus, les rares lueurs qui offrent à cette compagnie son\ncaractère exceptionnel, sa luminescence.\n-- Le PDG de NURV, dans \"Anti-trust\".",
+      "text": "JE NE VOUS IMPOSE AUCUNE CONTRAINTE, AUCUNE LIMITE. SURPRENEZ-MOI,\nÉTONNEZ-MOI, DÉFIEZ-MOI, DÉFIEZ-VOUS VOUS-MÊME. VOUS AVEZ LE CHOIX: VOUS\nPOUVEZ RESTER DANS L'OMBRE OU EN SORTIR EN ÉTANT PARMIS LES TROP RARES\nEXCEPTIONS À AVOIR RÉUSSI. L'HEURE EST VENUE D'ALLER BIEN AU DELÀ DE\nVOTRE POTENTIEL. L'HEURE EST VENUE MAINTENANT DE DESCENDRE VRAIMENT EN\nVOUS. L'HEURE EST VENUE DE DÉMONTRER POURQUOI VOUS ÊTES L'ÉLITE, LES\nQUELQUES ÉLUS, LES RARES LUEURS QUI OFFRENT À CETTE COMPAGNIE SON\nCARACTÈRE EXCEPTIONNEL, SA LUMINESCENCE.\n-- LE PDG DE NURV, DANS \"ANTI-TRUST\".",
       "length": 564
     },
     {
-      "text": "If something isn’t working, you need to look back and figure out what\ngot you excited in the first place.\n-- David Gorman (ImThere.com)",
+      "text": "IF SOMETHING ISN’T WORKING, YOU NEED TO LOOK BACK AND FIGURE OUT WHAT\nGOT YOU EXCITED IN THE FIRST PLACE.\n-- DAVID GORMAN (IMTHERE.COM)",
       "length": 135
     },
     {
-      "text": "Opportunities that present themselves to you are the consequence -- at\nleast partially -- of being in the right place at the right time. They\ntend to present themselves when you're not expecting it -- and often\nwhen you are engaged in other activities that would seem to preclude you\nfrom pursuing them. And they come and go quickly -- if you don't jump\nall over an opportunity, someone else generally will and it will vanish.\n-- Marc Andreessen (http://blog.pmarca.com/)",
+      "text": "OPPORTUNITIES THAT PRESENT THEMSELVES TO YOU ARE THE CONSEQUENCE -- AT\nLEAST PARTIALLY -- OF BEING IN THE RIGHT PLACE AT THE RIGHT TIME. THEY\nTEND TO PRESENT THEMSELVES WHEN YOU'RE NOT EXPECTING IT -- AND OFTEN\nWHEN YOU ARE ENGAGED IN OTHER ACTIVITIES THAT WOULD SEEM TO PRECLUDE YOU\nFROM PURSUING THEM. AND THEY COME AND GO QUICKLY -- IF YOU DON'T JUMP\nALL OVER AN OPPORTUNITY, SOMEONE ELSE GENERALLY WILL AND IT WILL VANISH.\n-- MARC ANDREESSEN (HTTP://BLOG.PMARCA.COM/)",
       "length": 471
     },
     {
-      "text": "Pay attention to opportunity cost at all times. Doing one thing means\nnot doing other things. This is a form of risk that is very easy to\nignore, to your detriment.\n-- Marc Andreessen (http://blog.pmarca.com/)",
+      "text": "PAY ATTENTION TO OPPORTUNITY COST AT ALL TIMES. DOING ONE THING MEANS\nNOT DOING OTHER THINGS. THIS IS A FORM OF RISK THAT IS VERY EASY TO\nIGNORE, TO YOUR DETRIMENT.\n-- MARC ANDREESSEN (HTTP://BLOG.PMARCA.COM/)",
       "length": 209
     },
     {
-      "text": "Seize any opportunity, or anything that looks like opportunity. They are\nrare, much rarer than you think...\n-- Nassim Nicholas Taleb, \"The Black Swan\".",
+      "text": "SEIZE ANY OPPORTUNITY, OR ANYTHING THAT LOOKS LIKE OPPORTUNITY. THEY ARE\nRARE, MUCH RARER THAN YOU THINK...\n-- NASSIM NICHOLAS TALEB, \"THE BLACK SWAN\".",
       "length": 151
     },
     {
-      "text": "I think that a lot of programmers are ignoring an important point when\npeople talk about reducing code repetition on large projects.\nPart of the idea is that large projects are intrinsically *wrong*. That\nyou should be looking at making a number of smaller projects that are\ncomposable, even if you never end up reusing one of those smaller\nprojects elsewhere.\n-- Dan Nugent",
+      "text": "I THINK THAT A LOT OF PROGRAMMERS ARE IGNORING AN IMPORTANT POINT WHEN\nPEOPLE TALK ABOUT REDUCING CODE REPETITION ON LARGE PROJECTS.\nPART OF THE IDEA IS THAT LARGE PROJECTS ARE INTRINSICALLY *WRONG*. THAT\nYOU SHOULD BE LOOKING AT MAKING A NUMBER OF SMALLER PROJECTS THAT ARE\nCOMPOSABLE, EVEN IF YOU NEVER END UP REUSING ONE OF THOSE SMALLER\nPROJECTS ELSEWHERE.\n-- DAN NUGENT",
       "length": 374
     },
     {
-      "text": "We tend to seek easy, single-factor explanations of success. For most\nimportant things, though, success actually requires avoiding many\nseparate causes of failure.\n-- Jared Diamond",
+      "text": "WE TEND TO SEEK EASY, SINGLE-FACTOR EXPLANATIONS OF SUCCESS. FOR MOST\nIMPORTANT THINGS, THOUGH, SUCCESS ACTUALLY REQUIRES AVOIDING MANY\nSEPARATE CAUSES OF FAILURE.\n-- JARED DIAMOND",
       "length": 180
     },
     {
-      "text": "Things which matter most must never be at the mercy of things which\nmatter least.\n-- Johann Wolfgang Von Goethe (1749-1832)",
+      "text": "THINGS WHICH MATTER MOST MUST NEVER BE AT THE MERCY OF THINGS WHICH\nMATTER LEAST.\n-- JOHANN WOLFGANG VON GOETHE (1749-1832)",
       "length": 123
     },
     {
-      "text": "I think the root of your mistake is saying that macros don't scale to\nlarger groups. The real truth is that macros don't scale to stupider\ngroups.\n-- Paul Graham, on the Lightweight Languages mailing list.",
+      "text": "I THINK THE ROOT OF YOUR MISTAKE IS SAYING THAT MACROS DON'T SCALE TO\nLARGER GROUPS. THE REAL TRUTH IS THAT MACROS DON'T SCALE TO STUPIDER\nGROUPS.\n-- PAUL GRAHAM, ON THE LIGHTWEIGHT LANGUAGES MAILING LIST.",
       "length": 205
     },
     {
-      "text": "Argue with idiots, and you become an idiot.\nIf you compete with slaves you become a slave.\n-- Paul Graham and Norbert Weiner, respectively",
+      "text": "ARGUE WITH IDIOTS, AND YOU BECOME AN IDIOT.\nIF YOU COMPETE WITH SLAVES YOU BECOME A SLAVE.\n-- PAUL GRAHAM AND NORBERT WEINER, RESPECTIVELY",
       "length": 138
     },
     {
-      "text": "Always dive down into a problem and get your hands on the deepest issue\nbehind the problem. All other considerations are to dismissed as\n\"engineering details\"; they can be sorted out after the basic problem\nhas been solved.\n-- Chris Crawford",
+      "text": "ALWAYS DIVE DOWN INTO A PROBLEM AND GET YOUR HANDS ON THE DEEPEST ISSUE\nBEHIND THE PROBLEM. ALL OTHER CONSIDERATIONS ARE TO DISMISSED AS\n\"ENGINEERING DETAILS\"; THEY CAN BE SORTED OUT AFTER THE BASIC PROBLEM\nHAS BEEN SOLVED.\n-- CHRIS CRAWFORD",
       "length": 241
     },
     {
-      "text": "Don't have good ideas if you aren't willing to be responsible for them.\n-- Alan Perlis",
+      "text": "DON'T HAVE GOOD IDEAS IF YOU AREN'T WILLING TO BE RESPONSIBLE FOR THEM.\n-- ALAN PERLIS",
       "length": 86
     },
     {
-      "text": "It is impossible to sharpen a pencil with a blunt axe. It is equally\nvain to try to do it with ten blunt axes instead. \n-- Edsger Dijkstra",
+      "text": "IT IS IMPOSSIBLE TO SHARPEN A PENCIL WITH A BLUNT AXE. IT IS EQUALLY\nVAIN TO TRY TO DO IT WITH TEN BLUNT AXES INSTEAD. \n-- EDSGER DIJKSTRA",
       "length": 138
     },
     {
-      "text": "If we wish to count lines of code, we should not regard them as lines\nproduced but as lines spent.\n-- Edsger Dijkstra",
+      "text": "IF WE WISH TO COUNT LINES OF CODE, WE SHOULD NOT REGARD THEM AS LINES\nPRODUCED BUT AS LINES SPENT.\n-- EDSGER DIJKSTRA",
       "length": 117
     },
     {
-      "text": "The most damaging phrase in the language is, It's always been done that\nway.\n-- Rear Admiral Grace Hopper",
+      "text": "THE MOST DAMAGING PHRASE IN THE LANGUAGE IS, IT'S ALWAYS BEEN DONE THAT\nWAY.\n-- REAR ADMIRAL GRACE HOPPER",
       "length": 105
     },
     {
-      "text": "Getting back to failing early, I've learned it's important to completely\nfail. Get fired. Shoot the project, then burn its corpse. Melt the CVS\nrepository and microwave the backup CDs. When things go wrong, I've\noften tried to play the hero from start to finish. Guess what? Some\nprojects are doomed no matter what. Some need skills I don't possess.\nAnd some need a fresh face.\n-- Reginald Braithwaite",
+      "text": "GETTING BACK TO FAILING EARLY, I'VE LEARNED IT'S IMPORTANT TO COMPLETELY\nFAIL. GET FIRED. SHOOT THE PROJECT, THEN BURN ITS CORPSE. MELT THE CVS\nREPOSITORY AND MICROWAVE THE BACKUP CDS. WHEN THINGS GO WRONG, I'VE\nOFTEN TRIED TO PLAY THE HERO FROM START TO FINISH. GUESS WHAT? SOME\nPROJECTS ARE DOOMED NO MATTER WHAT. SOME NEED SKILLS I DON'T POSSESS.\nAND SOME NEED A FRESH FACE.\n-- REGINALD BRAITHWAITE",
       "length": 401
     },
     {
-      "text": "The only thing a man should ever be 100% convinced of is his own\nignorance.\n-- DJ MacLean",
+      "text": "THE ONLY THING A MAN SHOULD EVER BE 100% CONVINCED OF IS HIS OWN\nIGNORANCE.\n-- DJ MACLEAN",
       "length": 89
     },
     {
-      "text": "The best people and organizations have the attitude of wisdom: The\ncourage to act on what they know right now and the humility to change\ncourse when they find better evidence.\nThe quest for management magic and breakthrough ideas is overrated;\nbeing a master of the obvious is underrated.\nJim Maloney is right: Work is an overrated activity\n-- Bob Sutton",
+      "text": "THE BEST PEOPLE AND ORGANIZATIONS HAVE THE ATTITUDE OF WISDOM: THE\nCOURAGE TO ACT ON WHAT THEY KNOW RIGHT NOW AND THE HUMILITY TO CHANGE\nCOURSE WHEN THEY FIND BETTER EVIDENCE.\nTHE QUEST FOR MANAGEMENT MAGIC AND BREAKTHROUGH IDEAS IS OVERRATED;\nBEING A MASTER OF THE OBVIOUS IS UNDERRATED.\nJIM MALONEY IS RIGHT: WORK IS AN OVERRATED ACTIVITY\n-- BOB SUTTON",
       "length": 354
     },
     {
-      "text": "In theory, there’s no difference between theory and practice. But in\npractice, there is.\n-- Albert Einstein",
+      "text": "IN THEORY, THERE’S NO DIFFERENCE BETWEEN THEORY AND PRACTICE. BUT IN\nPRACTICE, THERE IS.\n-- ALBERT EINSTEIN",
       "length": 107
     },
     {
-      "text": "Act from reason, and failure makes you rethink and study harder.\nAct from faith, and failure makes you blame someone and push harder.\n--  Erik Naggum",
+      "text": "ACT FROM REASON, AND FAILURE MAKES YOU RETHINK AND STUDY HARDER.\nACT FROM FAITH, AND FAILURE MAKES YOU BLAME SOMEONE AND PUSH HARDER.\n--  ERIK NAGGUM",
       "length": 149
     },
     {
-      "text": "Measure everything you can about the product, and you'll start seeing\npatterns.\n-- Max Levchin, PayPal founder, Talk at StartupSchool2007",
+      "text": "MEASURE EVERYTHING YOU CAN ABOUT THE PRODUCT, AND YOU'LL START SEEING\nPATTERNS.\n-- MAX LEVCHIN, PAYPAL FOUNDER, TALK AT STARTUPSCHOOL2007",
       "length": 137
     },
     {
-      "text": "Something Confusing about \"Hard\":\nIt's tempting to think that if it's hard, then it's valuable.\nMost valuable things are hard.\nMost hard things are completely useless -- (picture of someone smashing\ntheir head through concrete blocks kung-fu style).\nHard DOES NOT EQUATE TO BEING valuable.\nRemember Friendster back in the day?\nYou'd sign in, invite friends, have 25 friends, go to their profile, and\nthen it'd show how you were connected to each one.\nThat's an impressive [some geeky CS jargon] Cone traversal of a tree -\n100 million string comparisons per page -- it won't scale.\nUsed to take a minute per page to load, and Friendster died a painful\ndeath.\nMySpace -- not interested in solving problems\nThey use the shortcut of \"Miss Fitzpatrick is in your extended network\"\n(i.e. even when you're not even signed up for MySpace)\nThey didn't solve the hard problem. But they make the more relevant\nassumption that you want to be connected to hot women. [LOL]\nShows Alexa graph showing that in early 2005 Myspace took off, and\nquickly bypassed Friendster and never looked back.\n-- Max Levchin, PayPal founder, Talk at StartupSchool2007",
+      "text": "SOMETHING CONFUSING ABOUT \"HARD\":\nIT'S TEMPTING TO THINK THAT IF IT'S HARD, THEN IT'S VALUABLE.\nMOST VALUABLE THINGS ARE HARD.\nMOST HARD THINGS ARE COMPLETELY USELESS -- (PICTURE OF SOMEONE SMASHING\nTHEIR HEAD THROUGH CONCRETE BLOCKS KUNG-FU STYLE).\nHARD DOES NOT EQUATE TO BEING VALUABLE.\nREMEMBER FRIENDSTER BACK IN THE DAY?\nYOU'D SIGN IN, INVITE FRIENDS, HAVE 25 FRIENDS, GO TO THEIR PROFILE, AND\nTHEN IT'D SHOW HOW YOU WERE CONNECTED TO EACH ONE.\nTHAT'S AN IMPRESSIVE [SOME GEEKY CS JARGON] CONE TRAVERSAL OF A TREE -\n100 MILLION STRING COMPARISONS PER PAGE -- IT WON'T SCALE.\nUSED TO TAKE A MINUTE PER PAGE TO LOAD, AND FRIENDSTER DIED A PAINFUL\nDEATH.\nMYSPACE -- NOT INTERESTED IN SOLVING PROBLEMS\nTHEY USE THE SHORTCUT OF \"MISS FITZPATRICK IS IN YOUR EXTENDED NETWORK\"\n(I.E. EVEN WHEN YOU'RE NOT EVEN SIGNED UP FOR MYSPACE)\nTHEY DIDN'T SOLVE THE HARD PROBLEM. BUT THEY MAKE THE MORE RELEVANT\nASSUMPTION THAT YOU WANT TO BE CONNECTED TO HOT WOMEN. [LOL]\nSHOWS ALEXA GRAPH SHOWING THAT IN EARLY 2005 MYSPACE TOOK OFF, AND\nQUICKLY BYPASSED FRIENDSTER AND NEVER LOOKED BACK.\n-- MAX LEVCHIN, PAYPAL FOUNDER, TALK AT STARTUPSCHOOL2007",
       "length": 1135
     },
     {
-      "text": "Quality of the people is better than the quality of the business idea.\nCrappy people can screw up the best idea in the world.\n-- Hadi Partovi & Ali Partovi (iLike.com), Talk at StartupSchool2007",
+      "text": "QUALITY OF THE PEOPLE IS BETTER THAN THE QUALITY OF THE BUSINESS IDEA.\nCRAPPY PEOPLE CAN SCREW UP THE BEST IDEA IN THE WORLD.\n-- HADI PARTOVI & ALI PARTOVI (ILIKE.COM), TALK AT STARTUPSCHOOL2007",
       "length": 194
     },
     {
-      "text": "The only constant in the world of hi-tech is change.\n-- Mark Ward",
+      "text": "THE ONLY CONSTANT IN THE WORLD OF HI-TECH IS CHANGE.\n-- MARK WARD",
       "length": 65
     },
     {
-      "text": "Write it properly first. It's easier to make a correct program fast,\nthan to make a fast program correct.\n-- http://www.cpax.org.uk/prg/",
+      "text": "WRITE IT PROPERLY FIRST. IT'S EASIER TO MAKE A CORRECT PROGRAM FAST,\nTHAN TO MAKE A FAST PROGRAM CORRECT.\n-- HTTP://WWW.CPAX.ORG.UK/PRG/",
       "length": 136
     },
     {
-      "text": "J'ai toujours préféré la folie des passions à la sagesse de\nl'indifférence.\n-- Anatole France",
+      "text": "J'AI TOUJOURS PRÉFÉRÉ LA FOLIE DES PASSIONS À LA SAGESSE DE\nL'INDIFFÉRENCE.\n-- ANATOLE FRANCE",
       "length": 93
     },
     {
-      "text": "You can’t get to version 500 if you don’t start with a version 1.\n-- BetterExplained.com",
+      "text": "YOU CAN’T GET TO VERSION 500 IF YOU DON’T START WITH A VERSION 1.\n-- BETTEREXPLAINED.COM",
       "length": 88
     },
     {
-      "text": "The wonderful and frustrating thing about understanding yourself is that\nnobody can do it for you.\n-- BetterExplained.com",
+      "text": "THE WONDERFUL AND FRUSTRATING THING ABOUT UNDERSTANDING YOURSELF IS THAT\nNOBODY CAN DO IT FOR YOU.\n-- BETTEREXPLAINED.COM",
       "length": 121
     },
     {
-      "text": "When you have eliminated the impossible, whatever remains, however\nimprobable, must be the truth.\n-- Sherlock Holmes",
+      "text": "WHEN YOU HAVE ELIMINATED THE IMPOSSIBLE, WHATEVER REMAINS, HOWEVER\nIMPROBABLE, MUST BE THE TRUTH.\n-- SHERLOCK HOLMES",
       "length": 116
     },
     {
-      "text": "In order to understand what another person is saying, you must assume\nthat it is true and try to find out what it could be true of.\n-- George Miller",
+      "text": "IN ORDER TO UNDERSTAND WHAT ANOTHER PERSON IS SAYING, YOU MUST ASSUME\nTHAT IT IS TRUE AND TRY TO FIND OUT WHAT IT COULD BE TRUE OF.\n-- GEORGE MILLER",
       "length": 148
     },
     {
-      "text": "A journey of a thousand miles must begin with a single step.\n-- Lao­Tzu",
+      "text": "A JOURNEY OF A THOUSAND MILES MUST BEGIN WITH A SINGLE STEP.\n-- LAO­TZU",
       "length": 71
     },
     {
-      "text": "C’s great for what it’s great for.\n-- Ben Hoyts (micropledge)",
+      "text": "C’S GREAT FOR WHAT IT’S GREAT FOR.\n-- BEN HOYTS (MICROPLEDGE)",
       "length": 61
     },
     {
-      "text": "There is one meaning [for static in C]: a global variable that is\ninvisible outside the current scope, be it a function or a file.\n-- Paolo Bonzini",
+      "text": "THERE IS ONE MEANING [FOR STATIC IN C]: A GLOBAL VARIABLE THAT IS\nINVISIBLE OUTSIDE THE CURRENT SCOPE, BE IT A FUNCTION OR A FILE.\n-- PAOLO BONZINI",
       "length": 147
     },
     {
-      "text": "Processors don't get better so that they can have more free time.\nProcessors get better so _you_ can have more free time.\n-- LeCamarade (freeshells.ch)",
+      "text": "PROCESSORS DON'T GET BETTER SO THAT THEY CAN HAVE MORE FREE TIME.\nPROCESSORS GET BETTER SO _YOU_ CAN HAVE MORE FREE TIME.\n-- LECAMARADE (FREESHELLS.CH)",
       "length": 151
     },
     {
-      "text": "The venerable master Qc Na was walking with his student, Anton.  Hoping to\nprompt the master into a discussion, Anton said \"Master, I have heard that\nobjects are a very good thing - is this true?\"  Qc Na looked pityingly at\nhis student and replied, \"Foolish pupil - objects are merely a poor man's\nclosures.\"\n    Chastised, Anton took his leave from his master and returned to his cell,\nintent on studying closures.  He carefully read the entire \"Lambda: The\nUltimate...\" series of papers and its cousins, and implemented a small\nScheme interpreter with a closure-based object system.  He learned much, and\nlooked forward to informing his master of his progress.\n    On his next walk with Qc Na, Anton attempted to impress his master by\nsaying \"Master, I have diligently studied the matter, and now understand\nthat objects are truly a poor man's closures.\"  Qc Na responded by hitting\nAnton with his stick, saying \"When will you learn? Closures are a poor man's\nobject.\"  At that moment, Anton became enlightened.\n-- Anton van Straaten (Na = Norman Adams, Qa = Christian Queinnec)",
+      "text": "THE VENERABLE MASTER QC NA WAS WALKING WITH HIS STUDENT, ANTON.  HOPING TO\nPROMPT THE MASTER INTO A DISCUSSION, ANTON SAID \"MASTER, I HAVE HEARD THAT\nOBJECTS ARE A VERY GOOD THING - IS THIS TRUE?\"  QC NA LOOKED PITYINGLY AT\nHIS STUDENT AND REPLIED, \"FOOLISH PUPIL - OBJECTS ARE MERELY A POOR MAN'S\nCLOSURES.\"\n    CHASTISED, ANTON TOOK HIS LEAVE FROM HIS MASTER AND RETURNED TO HIS CELL,\nINTENT ON STUDYING CLOSURES.  HE CAREFULLY READ THE ENTIRE \"LAMBDA: THE\nULTIMATE...\" SERIES OF PAPERS AND ITS COUSINS, AND IMPLEMENTED A SMALL\nSCHEME INTERPRETER WITH A CLOSURE-BASED OBJECT SYSTEM.  HE LEARNED MUCH, AND\nLOOKED FORWARD TO INFORMING HIS MASTER OF HIS PROGRESS.\n    ON HIS NEXT WALK WITH QC NA, ANTON ATTEMPTED TO IMPRESS HIS MASTER BY\nSAYING \"MASTER, I HAVE DILIGENTLY STUDIED THE MATTER, AND NOW UNDERSTAND\nTHAT OBJECTS ARE TRULY A POOR MAN'S CLOSURES.\"  QC NA RESPONDED BY HITTING\nANTON WITH HIS STICK, SAYING \"WHEN WILL YOU LEARN? CLOSURES ARE A POOR MAN'S\nOBJECT.\"  AT THAT MOMENT, ANTON BECAME ENLIGHTENED.\n-- ANTON VAN STRAATEN (NA = NORMAN ADAMS, QA = CHRISTIAN QUEINNEC)",
       "length": 1080
     },
     {
-      "text": "Understanding why C++ is the way it is helps a programmer use it well. A deep\nunderstanding of a tool is essential for an expert craftsman.\n-- Bjarne Stroustrap",
+      "text": "UNDERSTANDING WHY C++ IS THE WAY IT IS HELPS A PROGRAMMER USE IT WELL. A DEEP\nUNDERSTANDING OF A TOOL IS ESSENTIAL FOR AN EXPERT CRAFTSMAN.\n-- BJARNE STROUSTRAP",
       "length": 160
     },
     {
-      "text": "No art, however minor, demands less than total dedication if you want to\nexcel in it.\n-- Alberti",
+      "text": "NO ART, HOWEVER MINOR, DEMANDS LESS THAN TOTAL DEDICATION IF YOU WANT TO\nEXCEL IN IT.\n-- ALBERTI",
       "length": 96
     },
     {
-      "text": "The minute you put the blame on someone else you’ve switch things from\nbeing a problem you can control to a problem outside of your control.\n-- engtech (internetducttape.com)",
+      "text": "THE MINUTE YOU PUT THE BLAME ON SOMEONE ELSE YOU’VE SWITCH THINGS FROM\nBEING A PROBLEM YOU CAN CONTROL TO A PROBLEM OUTSIDE OF YOUR CONTROL.\n-- ENGTECH (INTERNETDUCTTAPE.COM)",
       "length": 174
     },
     {
-      "text": "State is the root of all evil. In particular functions with side effects\nshould be avoided.\n-- OO Sucks (bluetail.com)",
+      "text": "STATE IS THE ROOT OF ALL EVIL. IN PARTICULAR FUNCTIONS WITH SIDE EFFECTS\nSHOULD BE AVOIDED.\n-- OO SUCKS (BLUETAIL.COM)",
       "length": 118
     },
     {
-      "text": "Ils ne sont pas forts parce qu'ils sont forts. Ils sont forts parce que\nnous sommes faibles.\n-- Ragala Khalid",
+      "text": "ILS NE SONT PAS FORTS PARCE QU'ILS SONT FORTS. ILS SONT FORTS PARCE QUE\nNOUS SOMMES FAIBLES.\n-- RAGALA KHALID",
       "length": 109
     },
     {
-      "text": "It is better to be quiet and thought a fool than to open your mouth and\nremove all doubt.\n-- WikiHow",
+      "text": "IT IS BETTER TO BE QUIET AND THOUGHT A FOOL THAN TO OPEN YOUR MOUTH AND\nREMOVE ALL DOUBT.\n-- WIKIHOW",
       "length": 100
     },
     {
-      "text": "A tail call allows a function to return the result of another function\nwithout leaving an entry on the stack. Tail recursion is a specific case\nof tail calling.\n-- ASPN : Python Cookbook : Explicit Tail Call",
+      "text": "A TAIL CALL ALLOWS A FUNCTION TO RETURN THE RESULT OF ANOTHER FUNCTION\nWITHOUT LEAVING AN ENTRY ON THE STACK. TAIL RECURSION IS A SPECIFIC CASE\nOF TAIL CALLING.\n-- ASPN : PYTHON COOKBOOK : EXPLICIT TAIL CALL",
       "length": 207
     },
     {
-      "text": "Simplicity means the achievement of maximum effect with minimum means.\n-- Dr. Koichi Kawana",
+      "text": "SIMPLICITY MEANS THE ACHIEVEMENT OF MAXIMUM EFFECT WITH MINIMUM MEANS.\n-- DR. KOICHI KAWANA",
       "length": 91
     },
     {
-      "text": "Normality is the route to nowhere.\n-- Ridderstrale & Nordstorm, Funky Business",
+      "text": "NORMALITY IS THE ROUTE TO NOWHERE.\n-- RIDDERSTRALE & NORDSTORM, FUNKY BUSINESS",
       "length": 78
     },
     {
-      "text": "The problem is that Microsoft just has no taste. And I don't mean that\nin a small way, I mean that in a big way.\n-- Steve Jobs",
+      "text": "THE PROBLEM IS THAT MICROSOFT JUST HAS NO TASTE. AND I DON'T MEAN THAT\nIN A SMALL WAY, I MEAN THAT IN A BIG WAY.\n-- STEVE JOBS",
       "length": 126
     },
     {
-      "text": "Do you want to sell sugared water all your life or do you want to change\nthe world?\n-- Steve Jobs, to John Sculley (former Pepsi executive)",
+      "text": "DO YOU WANT TO SELL SUGARED WATER ALL YOUR LIFE OR DO YOU WANT TO CHANGE\nTHE WORLD?\n-- STEVE JOBS, TO JOHN SCULLEY (FORMER PEPSI EXECUTIVE)",
       "length": 139
     },
     {
-      "text": "1 - Creativity and innovation always build on the past.\n2 - The past always tries to control the creativity that builds on it.\n3 - Free societies enable the future by limiting the past.\n4 - Ours is less and less a free society.\n-- Lawrence Lessig, Free Culture.",
+      "text": "1 - CREATIVITY AND INNOVATION ALWAYS BUILD ON THE PAST.\n2 - THE PAST ALWAYS TRIES TO CONTROL THE CREATIVITY THAT BUILDS ON IT.\n3 - FREE SOCIETIES ENABLE THE FUTURE BY LIMITING THE PAST.\n4 - OURS IS LESS AND LESS A FREE SOCIETY.\n-- LAWRENCE LESSIG, FREE CULTURE.",
       "length": 261
     },
     {
-      "text": "Good work is no done by ‘humble’ men.\n-- H. Hardy, A mathematician's apology.",
+      "text": "GOOD WORK IS NO DONE BY ‘HUMBLE’ MEN.\n-- H. HARDY, A MATHEMATICIAN'S APOLOGY.",
       "length": 77
     },
     {
-      "text": "Simplicity and pragmatism beat complexity and theory any day.\n-- Dennis (blog comment)",
+      "text": "SIMPLICITY AND PRAGMATISM BEAT COMPLEXITY AND THEORY ANY DAY.\n-- DENNIS (BLOG COMMENT)",
       "length": 86
     },
     {
-      "text": "The proof is by reductio ad absurdum, and reductio ad absurdum, which\nEuclid loved so much, is one of a mathematician’s finest weapons. It is\na far finer gambit than any chess gambit: a chess player may offer the\nsacrifice of a pawn or even a piece, but a mathematician offers the\ngame.\n-- G. H. Hardy",
+      "text": "THE PROOF IS BY REDUCTIO AD ABSURDUM, AND REDUCTIO AD ABSURDUM, WHICH\nEUCLID LOVED SO MUCH, IS ONE OF A MATHEMATICIAN’S FINEST WEAPONS. IT IS\nA FAR FINER GAMBIT THAN ANY CHESS GAMBIT: A CHESS PLAYER MAY OFFER THE\nSACRIFICE OF A PAWN OR EVEN A PIECE, BUT A MATHEMATICIAN OFFERS THE\nGAME.\n-- G. H. HARDY",
       "length": 301
     },
     {
-      "text": "Remember, always be yourself ... unless you suck!\n-- Joss Whedon",
+      "text": "REMEMBER, ALWAYS BE YOURSELF ... UNLESS YOU SUCK!\n-- JOSS WHEDON",
       "length": 64
     },
     {
-      "text": "All great things require great dedication.\n-- Chuck Norris(?)",
+      "text": "ALL GREAT THINGS REQUIRE GREAT DEDICATION.\n-- CHUCK NORRIS(?)",
       "length": 61
     },
     {
-      "text": "I'm always happy to trade performance for readability as long as the\nformer isn't already scarce.\n-- Crayz (Commentor on blog.raganwald.com)",
+      "text": "I'M ALWAYS HAPPY TO TRADE PERFORMANCE FOR READABILITY AS LONG AS THE\nFORMER ISN'T ALREADY SCARCE.\n-- CRAYZ (COMMENTOR ON BLOG.RAGANWALD.COM)",
       "length": 140
     },
     {
-      "text": "You have to write for your audience. I would never write (1..5).map\n&'*2' in Java when I could write\nListFactoryFactory.getListFactoryFromResource(\n    new ResourceName('com.javax.magnitudes.integers').\nsetLowerBound(1).setUpperBound(5).setStep(1).applyFunctor(\n    new Functor () { public void eval (x) { return x * 2; } }))\nI'm simplifying, of course, I've left out the security and logging\nwrappers.\n-- Reginald Braithwait",
+      "text": "YOU HAVE TO WRITE FOR YOUR AUDIENCE. I WOULD NEVER WRITE (1..5).MAP\n&'*2' IN JAVA WHEN I COULD WRITE\nLISTFACTORYFACTORY.GETLISTFACTORYFROMRESOURCE(\n    NEW RESOURCENAME('COM.JAVAX.MAGNITUDES.INTEGERS').\nSETLOWERBOUND(1).SETUPPERBOUND(5).SETSTEP(1).APPLYFUNCTOR(\n    NEW FUNCTOR () { PUBLIC VOID EVAL (X) { RETURN X * 2; } }))\nI'M SIMPLIFYING, OF COURSE, I'VE LEFT OUT THE SECURITY AND LOGGING\nWRAPPERS.\n-- REGINALD BRAITHWAIT",
       "length": 425
     },
     {
-      "text": "The definition of insanity is doing the same thing over and over again\nand expecting different results.\n-- Benjamin Franklin",
+      "text": "THE DEFINITION OF INSANITY IS DOING THE SAME THING OVER AND OVER AGAIN\nAND EXPECTING DIFFERENT RESULTS.\n-- BENJAMIN FRANKLIN",
       "length": 124
     },
     {
-      "text": "A no uttered from the deepest conviction is better than a yes merely\nuttered to please or what is worse, to avoid trouble.\n-- Mahatma Gandhi",
+      "text": "A NO UTTERED FROM THE DEEPEST CONVICTION IS BETTER THAN A YES MERELY\nUTTERED TO PLEASE OR WHAT IS WORSE, TO AVOID TROUBLE.\n-- MAHATMA GANDHI",
       "length": 140
     },
     {
-      "text": "I think it is wise, and only honest, to warn you that my goal is\nimmodest. It is not my purpose to \"transfer knowledge\" to you that,\nsubsequently, you can forget again. My purpose is no less than to\neffectuate in each of you a noticeable, irreversable change. I want you\nto gain, for the rest of your lives, the insight that beautiful proofs\nare not \"found\" by trial anf error but are the result of a consciously\napplied design discipline. I want you to raise your quality standards. I\nmean, if 10 years from now, when you are doing something quick and\ndirty, you suddenly visualize that I am looking over your shoulders and\nsay to yourself \"Dijkstra would not have liked this\", well, that would\nbe enough immortality for me.\n-- E. W. Dijkstra",
+      "text": "I THINK IT IS WISE, AND ONLY HONEST, TO WARN YOU THAT MY GOAL IS\nIMMODEST. IT IS NOT MY PURPOSE TO \"TRANSFER KNOWLEDGE\" TO YOU THAT,\nSUBSEQUENTLY, YOU CAN FORGET AGAIN. MY PURPOSE IS NO LESS THAN TO\nEFFECTUATE IN EACH OF YOU A NOTICEABLE, IRREVERSABLE CHANGE. I WANT YOU\nTO GAIN, FOR THE REST OF YOUR LIVES, THE INSIGHT THAT BEAUTIFUL PROOFS\nARE NOT \"FOUND\" BY TRIAL ANF ERROR BUT ARE THE RESULT OF A CONSCIOUSLY\nAPPLIED DESIGN DISCIPLINE. I WANT YOU TO RAISE YOUR QUALITY STANDARDS. I\nMEAN, IF 10 YEARS FROM NOW, WHEN YOU ARE DOING SOMETHING QUICK AND\nDIRTY, YOU SUDDENLY VISUALIZE THAT I AM LOOKING OVER YOUR SHOULDERS AND\nSAY TO YOURSELF \"DIJKSTRA WOULD NOT HAVE LIKED THIS\", WELL, THAT WOULD\nBE ENOUGH IMMORTALITY FOR ME.\n-- E. W. DIJKSTRA",
       "length": 743
     },
     {
-      "text": "The general principle for complexity design is this: Think locally, act\nlocally.\n-- Richard P. Gabriel & Ron Goldman, Mob Software: The Erotic Life of Code",
+      "text": "THE GENERAL PRINCIPLE FOR COMPLEXITY DESIGN IS THIS: THINK LOCALLY, ACT\nLOCALLY.\n-- RICHARD P. GABRIEL & RON GOLDMAN, MOB SOFTWARE: THE EROTIC LIFE OF CODE",
       "length": 155
     },
     {
-      "text": "Programming is the art of figuring out what you want so precisely that\neven a machine can do it.\n-- Some guy who isn't famous",
+      "text": "PROGRAMMING IS THE ART OF FIGURING OUT WHAT YOU WANT SO PRECISELY THAT\nEVEN A MACHINE CAN DO IT.\n-- SOME GUY WHO ISN'T FAMOUS",
       "length": 125
     },
     {
-      "text": "Hence my urgent advice to all of you to reject the morals of the\nbestseller society and to find, to start with, your reward in your own\nfun. This is quite feasible, for the challenge of simplification is so\nfascinating that, if we do our job properly, we shall have the greatest\nfun in the world.\n-- E. W. Dijkstra, On the nature of computing science.",
+      "text": "HENCE MY URGENT ADVICE TO ALL OF YOU TO REJECT THE MORALS OF THE\nBESTSELLER SOCIETY AND TO FIND, TO START WITH, YOUR REWARD IN YOUR OWN\nFUN. THIS IS QUITE FEASIBLE, FOR THE CHALLENGE OF SIMPLIFICATION IS SO\nFASCINATING THAT, IF WE DO OUR JOB PROPERLY, WE SHALL HAVE THE GREATEST\nFUN IN THE WORLD.\n-- E. W. DIJKSTRA, ON THE NATURE OF COMPUTING SCIENCE.",
       "length": 351
     },
     {
-      "text": "Remember: you are alone. Every time you can get help from someone,\nit is an opportunity: you should eagerly size it. But then, promptly\nreturn to normal mode: you are alone and you must be prepared to solve\nevery problem yourself.\n-- Eric KEDJI",
+      "text": "REMEMBER: YOU ARE ALONE. EVERY TIME YOU CAN GET HELP FROM SOMEONE,\nIT IS AN OPPORTUNITY: YOU SHOULD EAGERLY SIZE IT. BUT THEN, PROMPTLY\nRETURN TO NORMAL MODE: YOU ARE ALONE AND YOU MUST BE PREPARED TO SOLVE\nEVERY PROBLEM YOURSELF.\n-- ERIC KEDJI",
       "length": 244
     },
     {
-      "text": "Making All Software Into Tools Reduces Risk.\n-- smoothspan.com",
+      "text": "MAKING ALL SOFTWARE INTO TOOLS REDUCES RISK.\n-- SMOOTHSPAN.COM",
       "length": 62
     },
     {
-      "text": "Some may say Ruby is a bad rip-off of Lisp or Smalltalk, and I admit\nthat. But it is nicer to ordinary people.\n-- Matz, LL2",
+      "text": "SOME MAY SAY RUBY IS A BAD RIP-OFF OF LISP OR SMALLTALK, AND I ADMIT\nTHAT. BUT IT IS NICER TO ORDINARY PEOPLE.\n-- MATZ, LL2",
       "length": 123
     },
     {
-      "text": "C and Lisp stand at opposite ends of the spectrum; they're each great at\nwhat the other one sucks at.\n-- Steve Yegge, Tour de Babel.",
+      "text": "C AND LISP STAND AT OPPOSITE ENDS OF THE SPECTRUM; THEY'RE EACH GREAT AT\nWHAT THE OTHER ONE SUCKS AT.\n-- STEVE YEGGE, TOUR DE BABEL.",
       "length": 132
     },
     {
-      "text": "Two people should stay together if together they are better people than\nthey would be individually.\n-- ?",
+      "text": "TWO PEOPLE SHOULD STAY TOGETHER IF TOGETHER THEY ARE BETTER PEOPLE THAN\nTHEY WOULD BE INDIVIDUALLY.\n-- ?",
       "length": 104
     },
     {
-      "text": "To the optimist, the glass is half full. To the pessimist, the glass is\nhalf empty. To the engineer, the glass is twice as big as it needs to\nbe.\n-- author unknown (quoted in `Robust Systems', Gerald Jay Suseman)",
+      "text": "TO THE OPTIMIST, THE GLASS IS HALF FULL. TO THE PESSIMIST, THE GLASS IS\nHALF EMPTY. TO THE ENGINEER, THE GLASS IS TWICE AS BIG AS IT NEEDS TO\nBE.\n-- AUTHOR UNKNOWN (QUOTED IN `ROBUST SYSTEMS', GERALD JAY SUSEMAN)",
       "length": 212
     },
     {
-      "text": "It is practically impossible to teach good programming to students that\nhave had a prior exposure to BASIC: as potential programmers they are\nmentally mutilated beyond hope of regeneration.\n-- Edsger Dijkstra",
+      "text": "IT IS PRACTICALLY IMPOSSIBLE TO TEACH GOOD PROGRAMMING TO STUDENTS THAT\nHAVE HAD A PRIOR EXPOSURE TO BASIC: AS POTENTIAL PROGRAMMERS THEY ARE\nMENTALLY MUTILATED BEYOND HOPE OF REGENERATION.\n-- EDSGER DIJKSTRA",
       "length": 208
     },
     {
-      "text": "Whatever is worth doing at all, is worth doing well.\n-- Earl of Chesterfield",
+      "text": "WHATEVER IS WORTH DOING AT ALL, IS WORTH DOING WELL.\n-- EARL OF CHESTERFIELD",
       "length": 76
     },
     {
-      "text": "Rules of Optimization:\nRule 1: Don’t do it.\nRule 2 (for experts only): Don’t do it yet.\n-- M.A. Jackson",
+      "text": "RULES OF OPTIMIZATION:\nRULE 1: DON’T DO IT.\nRULE 2 (FOR EXPERTS ONLY): DON’T DO IT YET.\n-- M.A. JACKSON",
       "length": 103
     },
     {
-      "text": "More computing sins are committed in the name of efficiency (without\nnecessarily achieving it) than for any other single reason - including\nblind stupidity.\n-- W.A. Wulf",
+      "text": "MORE COMPUTING SINS ARE COMMITTED IN THE NAME OF EFFICIENCY (WITHOUT\nNECESSARILY ACHIEVING IT) THAN FOR ANY OTHER SINGLE REASON - INCLUDING\nBLIND STUPIDITY.\n-- W.A. WULF",
       "length": 169
     },
     {
-      "text": "We should forget about small efficiencies, say about 97% of the time:\npremature optimization is the root of all evil.\n-- Donald Knuth",
+      "text": "WE SHOULD FORGET ABOUT SMALL EFFICIENCIES, SAY ABOUT 97% OF THE TIME:\nPREMATURE OPTIMIZATION IS THE ROOT OF ALL EVIL.\n-- DONALD KNUTH",
       "length": 133
     },
     {
-      "text": "The best is the enemy of the good.\n-- Voltaire",
+      "text": "THE BEST IS THE ENEMY OF THE GOOD.\n-- VOLTAIRE",
       "length": 46
     },
     {
-      "text": "The job of a leader today is not to create followers. It’s to create\nmore leaders.\n-- Ralph Nader",
+      "text": "THE JOB OF A LEADER TODAY IS NOT TO CREATE FOLLOWERS. IT’S TO CREATE\nMORE LEADERS.\n-- RALPH NADER",
       "length": 97
     },
     {
-      "text": "The president was visiting NASA headquarters and stopped to talk to a\nman who was holding a mop. “And what do you do?” he asked. The man, a\njanitor, replied, “I’m helping to put a man on the moon, sir.”\n-- The little book of leadership",
+      "text": "THE PRESIDENT WAS VISITING NASA HEADQUARTERS AND STOPPED TO TALK TO A\nMAN WHO WAS HOLDING A MOP. “AND WHAT DO YOU DO?” HE ASKED. THE MAN, A\nJANITOR, REPLIED, “I’M HELPING TO PUT A MAN ON THE MOON, SIR.”\n-- THE LITTLE BOOK OF LEADERSHIP",
       "length": 235
     },
     {
-      "text": "Only make new mistakes.\n-- Phil Dourado",
+      "text": "ONLY MAKE NEW MISTAKES.\n-- PHIL DOURADO",
       "length": 39
     },
     {
-      "text": "You can recognize truth by its beauty and simplicity. When you get it\nright, it is obvious that it is right.\n-- Richard Feynman",
+      "text": "YOU CAN RECOGNIZE TRUTH BY ITS BEAUTY AND SIMPLICITY. WHEN YOU GET IT\nRIGHT, IT IS OBVIOUS THAT IT IS RIGHT.\n-- RICHARD FEYNMAN",
       "length": 127
     },
     {
-      "text": "Talkers are no good doers.\n-- William Shakespeare, \"Henry VI\"",
+      "text": "TALKERS ARE NO GOOD DOERS.\n-- WILLIAM SHAKESPEARE, \"HENRY VI\"",
       "length": 61
     },
     {
-      "text": "Photography is painting with light.\n-- Eric Hamilton",
+      "text": "PHOTOGRAPHY IS PAINTING WITH LIGHT.\n-- ERIC HAMILTON",
       "length": 52
     },
     {
-      "text": "Good artists copy. Great artists steal.\n-- Pablo Picasso",
+      "text": "GOOD ARTISTS COPY. GREAT ARTISTS STEAL.\n-- PABLO PICASSO",
       "length": 56
     },
     {
-      "text": "A guideline in the process of stepwise refinement should be the\nprinciple to decompose decisions as much as possible, to untangle\naspects which are only seemingly interdependent, and to defer those\ndecisions which concern details of representation as long as possible.\n-- Niklaus Wirth",
+      "text": "A GUIDELINE IN THE PROCESS OF STEPWISE REFINEMENT SHOULD BE THE\nPRINCIPLE TO DECOMPOSE DECISIONS AS MUCH AS POSSIBLE, TO UNTANGLE\nASPECTS WHICH ARE ONLY SEEMINGLY INTERDEPENDENT, AND TO DEFER THOSE\nDECISIONS WHICH CONCERN DETAILS OF REPRESENTATION AS LONG AS POSSIBLE.\n-- NIKLAUS WIRTH",
       "length": 285
     },
     {
-      "text": "Vigorous writing is concise. A sentence should contain no unnecessary\nwords, a paragraph no unnecessary sentences, for the same reason that a\ndrawing should have no unnecessary lines and a machine no unnecessary\nparts. This requires not that the writer make all sentences short or\navoid all detail and treat subjects only in outline, but that every word\ntell.\n-- William Strunk, Jr. (The Elements of Style)",
+      "text": "VIGOROUS WRITING IS CONCISE. A SENTENCE SHOULD CONTAIN NO UNNECESSARY\nWORDS, A PARAGRAPH NO UNNECESSARY SENTENCES, FOR THE SAME REASON THAT A\nDRAWING SHOULD HAVE NO UNNECESSARY LINES AND A MACHINE NO UNNECESSARY\nPARTS. THIS REQUIRES NOT THAT THE WRITER MAKE ALL SENTENCES SHORT OR\nAVOID ALL DETAIL AND TREAT SUBJECTS ONLY IN OUTLINE, BUT THAT EVERY WORD\nTELL.\n-- WILLIAM STRUNK, JR. (THE ELEMENTS OF STYLE)",
       "length": 406
     },
     {
-      "text": "The problem is that small examples fail to convince, and large examples\nare too big to follow.\n-- Steve Yegge.",
+      "text": "THE PROBLEM IS THAT SMALL EXAMPLES FAIL TO CONVINCE, AND LARGE EXAMPLES\nARE TOO BIG TO FOLLOW.\n-- STEVE YEGGE.",
       "length": 110
     },
     {
-      "text": "We are the sum of our behaviours; excellence therefore is not an act but\na habit.\n-- Aristotle.",
+      "text": "WE ARE THE SUM OF OUR BEHAVIOURS; EXCELLENCE THEREFORE IS NOT AN ACT BUT\nA HABIT.\n-- ARISTOTLE.",
       "length": 95
     },
     {
-      "text": "The purpose of abstraction is not to be vague, but to create a new\nsemantic level in which one can be absolutely precise.\n-- Edsger Dijkstra",
+      "text": "THE PURPOSE OF ABSTRACTION IS NOT TO BE VAGUE, BUT TO CREATE A NEW\nSEMANTIC LEVEL IN WHICH ONE CAN BE ABSOLUTELY PRECISE.\n-- EDSGER DIJKSTRA",
       "length": 140
     },
     {
-      "text": "Every man prefers belief to the exercise of judgment.\n-- Seneca",
+      "text": "EVERY MAN PREFERS BELIEF TO THE EXERCISE OF JUDGMENT.\n-- SENECA",
       "length": 63
     },
     {
-      "text": "It’s hard to grasp abstractions if you don’t understand what they’re\nabstracting away from.\n-- Nathan Weizenbaum",
+      "text": "IT’S HARD TO GRASP ABSTRACTIONS IF YOU DON’T UNDERSTAND WHAT THEY’RE\nABSTRACTING AWAY FROM.\n-- NATHAN WEIZENBAUM",
       "length": 112
     },
     {
-      "text": "That is one of the most distinctive differences between school and the\nreal world: there is no reward for putting in a good effort. In fact,\nthe whole concept of a \"good effort\" is a fake idea adults invented to\nencourage kids. It is not found in nature.\n-- Paul Graham",
+      "text": "THAT IS ONE OF THE MOST DISTINCTIVE DIFFERENCES BETWEEN SCHOOL AND THE\nREAL WORLD: THERE IS NO REWARD FOR PUTTING IN A GOOD EFFORT. IN FACT,\nTHE WHOLE CONCEPT OF A \"GOOD EFFORT\" IS A FAKE IDEA ADULTS INVENTED TO\nENCOURAGE KIDS. IT IS NOT FOUND IN NATURE.\n-- PAUL GRAHAM",
       "length": 269
     },
     {
-      "text": "I find that the harder I work, the more luck I seem to have.\n-- Thomas Jefferson",
+      "text": "I FIND THAT THE HARDER I WORK, THE MORE LUCK I SEEM TO HAVE.\n-- THOMAS JEFFERSON",
       "length": 80
     },
     {
-      "text": "Don't stay in bed, unless you can make money in bed.\n-- George Burns",
+      "text": "DON'T STAY IN BED, UNLESS YOU CAN MAKE MONEY IN BED.\n-- GEORGE BURNS",
       "length": 68
     },
     {
-      "text": "If everything seems under control, you're not going fast enough.\n-- Mario Andretti",
+      "text": "IF EVERYTHING SEEMS UNDER CONTROL, YOU'RE NOT GOING FAST ENOUGH.\n-- MARIO ANDRETTI",
       "length": 82
     },
     {
-      "text": "Chance favors the prepared mind.\n-- Louis Pasteur",
+      "text": "CHANCE FAVORS THE PREPARED MIND.\n-- LOUIS PASTEUR",
       "length": 49
     },
     {
-      "text": "Controlling complexity is the essence of computer programming.\n-- Brian Kernigan",
+      "text": "CONTROLLING COMPLEXITY IS THE ESSENCE OF COMPUTER PROGRAMMING.\n-- BRIAN KERNIGAN",
       "length": 80
     },
     {
-      "text": "The function of good software is to make the complex appear to be\nsimple.\n-- Grady Booch",
+      "text": "THE FUNCTION OF GOOD SOFTWARE IS TO MAKE THE COMPLEX APPEAR TO BE\nSIMPLE.\n-- GRADY BOOCH",
       "length": 88
     },
     {
-      "text": "Programmers are in a race with the Universe to create bigger and better\nidiot-proof programs, while the Universe is trying to create bigger and\nbetter idiots.  So far the Universe is winning.\n-- Rich Cook",
+      "text": "PROGRAMMERS ARE IN A RACE WITH THE UNIVERSE TO CREATE BIGGER AND BETTER\nIDIOT-PROOF PROGRAMS, WHILE THE UNIVERSE IS TRYING TO CREATE BIGGER AND\nBETTER IDIOTS.  SO FAR THE UNIVERSE IS WINNING.\n-- RICH COOK",
       "length": 204
     },
     {
-      "text": "A hacker on a roll may be able to produce–in a period of a few\nmonths–something that a small development group (say, 7-8 people) would\nhave a hard time getting together over a year.  IBM used to report that\ncertain programmers might be as much as 100 times as productive as other\nworkers, or more.\n-- Peter Seebach",
+      "text": "A HACKER ON A ROLL MAY BE ABLE TO PRODUCE–IN A PERIOD OF A FEW\nMONTHS–SOMETHING THAT A SMALL DEVELOPMENT GROUP (SAY, 7-8 PEOPLE) WOULD\nHAVE A HARD TIME GETTING TOGETHER OVER A YEAR.  IBM USED TO REPORT THAT\nCERTAIN PROGRAMMERS MIGHT BE AS MUCH AS 100 TIMES AS PRODUCTIVE AS OTHER\nWORKERS, OR MORE.\n-- PETER SEEBACH",
       "length": 314
     },
     {
-      "text": "The best programmers are not marginally better than merely good ones.\nThey are an order-of-magnitude better, measured by whatever standard:\nconceptual creativity, speed, ingenuity of design, or problem-solving\nability.\n-- Randall E. Stross",
+      "text": "THE BEST PROGRAMMERS ARE NOT MARGINALLY BETTER THAN MERELY GOOD ONES.\nTHEY ARE AN ORDER-OF-MAGNITUDE BETTER, MEASURED BY WHATEVER STANDARD:\nCONCEPTUAL CREATIVITY, SPEED, INGENUITY OF DESIGN, OR PROBLEM-SOLVING\nABILITY.\n-- RANDALL E. STROSS",
       "length": 239
     },
     {
-      "text": "A great lathe operator commands several times the wage of an average\nlathe operator, but a great writer of software code is worth 10,000\ntimes the price of an average software writer.\n-- Bill Gates",
+      "text": "A GREAT LATHE OPERATOR COMMANDS SEVERAL TIMES THE WAGE OF AN AVERAGE\nLATHE OPERATOR, BUT A GREAT WRITER OF SOFTWARE CODE IS WORTH 10,000\nTIMES THE PRICE OF AN AVERAGE SOFTWARE WRITER.\n-- BILL GATES",
       "length": 197
     },
     {
-      "text": "Measuring programming progress by lines of code is like measuring\naircraft building progress by weight.\n-- Bill Gates",
+      "text": "MEASURING PROGRAMMING PROGRESS BY LINES OF CODE IS LIKE MEASURING\nAIRCRAFT BUILDING PROGRESS BY WEIGHT.\n-- BILL GATES",
       "length": 117
     },
     {
-      "text": "First learn computer science and all the theory.  Next develop a\nprogramming style.  Then forget all that and just hack.\n-- George Carrette",
+      "text": "FIRST LEARN COMPUTER SCIENCE AND ALL THE THEORY.  NEXT DEVELOP A\nPROGRAMMING STYLE.  THEN FORGET ALL THAT AND JUST HACK.\n-- GEORGE CARRETTE",
       "length": 139
     },
     {
-      "text": "To iterate is human, to recurse divine.\n-- L. Peter Deutsch",
+      "text": "TO ITERATE IS HUMAN, TO RECURSE DIVINE.\n-- L. PETER DEUTSCH",
       "length": 59
     },
     {
-      "text": "The best thing about a boolean is even if you are wrong, you are only\noff by a bit.\n-- Anonymous",
+      "text": "THE BEST THING ABOUT A BOOLEAN IS EVEN IF YOU ARE WRONG, YOU ARE ONLY\nOFF BY A BIT.\n-- ANONYMOUS",
       "length": 96
     },
     {
-      "text": "Should array indices start at 0 or 1?  My compromise of 0.5 was rejected\nwithout, I thought, proper consideration.\n-- Stan Kelly-Bootle",
+      "text": "SHOULD ARRAY INDICES START AT 0 OR 1?  MY COMPROMISE OF 0.5 WAS REJECTED\nWITHOUT, I THOUGHT, PROPER CONSIDERATION.\n-- STAN KELLY-BOOTLE",
       "length": 135
     },
     {
-      "text": "The use of COBOL cripples the mind; its teaching should therefore be\nregarded as a criminal offense.\n-- E.W. Dijkstra",
+      "text": "THE USE OF COBOL CRIPPLES THE MIND; ITS TEACHING SHOULD THEREFORE BE\nREGARDED AS A CRIMINAL OFFENSE.\n-- E.W. DIJKSTRA",
       "length": 117
     },
     {
-      "text": "It is practically impossible to teach good programming style to students\nthat have had prior exposure to BASIC.  As potential programmers, they\nare mentally mutilated beyond hope of regeneration.\n-- E. W. Dijkstra",
+      "text": "IT IS PRACTICALLY IMPOSSIBLE TO TEACH GOOD PROGRAMMING STYLE TO STUDENTS\nTHAT HAVE HAD PRIOR EXPOSURE TO BASIC.  AS POTENTIAL PROGRAMMERS, THEY\nARE MENTALLY MUTILATED BEYOND HOPE OF REGENERATION.\n-- E. W. DIJKSTRA",
       "length": 213
     },
     {
-      "text": "One of the main causes of the fall of the Roman Empire was that–lacking\nzero–they had no way to indicate successful termination of their C\nprograms.\n-- Robert Firth",
+      "text": "ONE OF THE MAIN CAUSES OF THE FALL OF THE ROMAN EMPIRE WAS THAT–LACKING\nZERO–THEY HAD NO WAY TO INDICATE SUCCESSFUL TERMINATION OF THEIR C\nPROGRAMS.\n-- ROBERT FIRTH",
       "length": 164
     },
     {
-      "text": "Saying that Java is nice because it works on all OSes is like saying\nthat anal sex is nice because it works on all genders.\n-- Alanna",
+      "text": "SAYING THAT JAVA IS NICE BECAUSE IT WORKS ON ALL OSES IS LIKE SAYING\nTHAT ANAL SEX IS NICE BECAUSE IT WORKS ON ALL GENDERS.\n-- ALANNA",
       "length": 133
     },
     {
-      "text": "If Java had true garbage collection, most programs would delete\nthemselves upon execution.\n-- Robert Sewell",
+      "text": "IF JAVA HAD TRUE GARBAGE COLLECTION, MOST PROGRAMS WOULD DELETE\nTHEMSELVES UPON EXECUTION.\n-- ROBERT SEWELL",
       "length": 107
     },
     {
-      "text": "Software is like sex: It’s better when it’s free.\n-- Linus Torvalds",
+      "text": "SOFTWARE IS LIKE SEX: IT’S BETTER WHEN IT’S FREE.\n-- LINUS TORVALDS",
       "length": 67
     },
     {
-      "text": "Any code of your own that you haven’t looked at for six or more months\nmight as well have been written by someone else.\n-- Eagleson’s Law",
+      "text": "ANY CODE OF YOUR OWN THAT YOU HAVEN’T LOOKED AT FOR SIX OR MORE MONTHS\nMIGHT AS WELL HAVE BEEN WRITTEN BY SOMEONE ELSE.\n-- EAGLESON’S LAW",
       "length": 137
     },
     {
-      "text": "Good programmers use their brains, but good guidelines save us having to\nthink out every case.\n-- Francis Glassborow",
+      "text": "GOOD PROGRAMMERS USE THEIR BRAINS, BUT GOOD GUIDELINES SAVE US HAVING TO\nTHINK OUT EVERY CASE.\n-- FRANCIS GLASSBOROW",
       "length": 116
     },
     {
-      "text": "Considering the current sad state of our computer programs, software\ndevelopment is clearly still a black art, and cannot yet be called an\nengineering discipline.\n-- Bill Clinton",
+      "text": "CONSIDERING THE CURRENT SAD STATE OF OUR COMPUTER PROGRAMS, SOFTWARE\nDEVELOPMENT IS CLEARLY STILL A BLACK ART, AND CANNOT YET BE CALLED AN\nENGINEERING DISCIPLINE.\n-- BILL CLINTON",
       "length": 178
     },
     {
-      "text": "If debugging is the process of removing bugs, then programming must be\nthe process of putting them in.\n-- Edsger W. Dijkstra",
+      "text": "IF DEBUGGING IS THE PROCESS OF REMOVING BUGS, THEN PROGRAMMING MUST BE\nTHE PROCESS OF PUTTING THEM IN.\n-- EDSGER W. DIJKSTRA",
       "length": 124
     },
     {
-      "text": "Always code as if the guy who ends up maintaining your code will be a\nviolent psychopath who knows where you live.\n-- Martin Golding",
+      "text": "ALWAYS CODE AS IF THE GUY WHO ENDS UP MAINTAINING YOUR CODE WILL BE A\nVIOLENT PSYCHOPATH WHO KNOWS WHERE YOU LIVE.\n-- MARTIN GOLDING",
       "length": 132
     },
     {
-      "text": "Everything that can be invented has been invented.\n-- Charles H. Duell, Commissioner, U.S. Office of Patents, 1899",
+      "text": "EVERYTHING THAT CAN BE INVENTED HAS BEEN INVENTED.\n-- CHARLES H. DUELL, COMMISSIONER, U.S. OFFICE OF PATENTS, 1899",
       "length": 114
     },
     {
-      "text": "I think there’s a world market for about 5 computers.\n-- Thomas J. Watson, Chairman of the Board, IBM, circa 1948",
+      "text": "I THINK THERE’S A WORLD MARKET FOR ABOUT 5 COMPUTERS.\n-- THOMAS J. WATSON, CHAIRMAN OF THE BOARD, IBM, CIRCA 1948",
       "length": 113
     },
     {
-      "text": "It would appear that we have reached the limits of what it is possible\nto achieve with computer technology, although one should be careful with\nsuch statements, as they tend to sound pretty silly in 5 years. \n-- John Von Neumann, circa 1949",
+      "text": "IT WOULD APPEAR THAT WE HAVE REACHED THE LIMITS OF WHAT IT IS POSSIBLE\nTO ACHIEVE WITH COMPUTER TECHNOLOGY, ALTHOUGH ONE SHOULD BE CAREFUL WITH\nSUCH STATEMENTS, AS THEY TEND TO SOUND PRETTY SILLY IN 5 YEARS. \n-- JOHN VON NEUMANN, CIRCA 1949",
       "length": 240
     },
     {
-      "text": "But what is it good for?\n-- Engineer at the Advanced Computing Systems Division of IBM,\ncommenting on the microchip, 1968",
+      "text": "BUT WHAT IS IT GOOD FOR?\n-- ENGINEER AT THE ADVANCED COMPUTING SYSTEMS DIVISION OF IBM,\nCOMMENTING ON THE MICROCHIP, 1968",
       "length": 121
     },
     {
-      "text": "There is no reason for any individual to have a computer in his home.\n-- Ken Olson, President, Digital Equipment Corporation, 1977",
+      "text": "THERE IS NO REASON FOR ANY INDIVIDUAL TO HAVE A COMPUTER IN HIS HOME.\n-- KEN OLSON, PRESIDENT, DIGITAL EQUIPMENT CORPORATION, 1977",
       "length": 130
     },
     {
-      "text": "640K ought to be enough for anybody.\n-- Bill Gates, 1981",
+      "text": "640K OUGHT TO BE ENOUGH FOR ANYBODY.\n-- BILL GATES, 1981",
       "length": 56
     },
     {
-      "text": "Windows NT addresses 2 Gigabytes of RAM, which is more than any\napplication will ever need.\n-- Microsoft, on the development of Windows NT, 1992",
+      "text": "WINDOWS NT ADDRESSES 2 GIGABYTES OF RAM, WHICH IS MORE THAN ANY\nAPPLICATION WILL EVER NEED.\n-- MICROSOFT, ON THE DEVELOPMENT OF WINDOWS NT, 1992",
       "length": 144
     },
     {
-      "text": "We will never become a truly paper-less society until the Palm Pilot\nfolks come out with WipeMe 1.0.\n-- Andy Pierson",
+      "text": "WE WILL NEVER BECOME A TRULY PAPER-LESS SOCIETY UNTIL THE PALM PILOT\nFOLKS COME OUT WITH WIPEME 1.0.\n-- ANDY PIERSON",
       "length": 116
     },
     {
-      "text": "If it keeps up, man will atrophy all his limbs but the push-button\nfinger.\n-- Frank Lloyd Wright",
+      "text": "IF IT KEEPS UP, MAN WILL ATROPHY ALL HIS LIMBS BUT THE PUSH-BUTTON\nFINGER.\n-- FRANK LLOYD WRIGHT",
       "length": 96
     },
     {
-      "text": "Functional programming is like describing your problem to a\nmathematician.  Imperative programming is like giving instructions to\nan idiot.\n-- arcus, #scheme on Freenode",
+      "text": "FUNCTIONAL PROGRAMMING IS LIKE DESCRIBING YOUR PROBLEM TO A\nMATHEMATICIAN.  IMPERATIVE PROGRAMMING IS LIKE GIVING INSTRUCTIONS TO\nAN IDIOT.\n-- ARCUS, #SCHEME ON FREENODE",
       "length": 169
     },
     {
-      "text": "Its a shame that the students of our generation grew up with windows and\nmice because that tainted our mindset not to think in terms of powerful\ntools. Some of us are just so tainted that we will never recover.\n-- Jeffrey Mark Siskind <qobi@research.nj.nec.com> in comp.lang.lisp",
+      "text": "ITS A SHAME THAT THE STUDENTS OF OUR GENERATION GREW UP WITH WINDOWS AND\nMICE BECAUSE THAT TAINTED OUR MINDSET NOT TO THINK IN TERMS OF POWERFUL\nTOOLS. SOME OF US ARE JUST SO TAINTED THAT WE WILL NEVER RECOVER.\n-- JEFFREY MARK SISKIND <QOBI@RESEARCH.NJ.NEC.COM> IN COMP.LANG.LISP",
       "length": 279
     },
     {
-      "text": "Lisp is a programmable programming language.\n-- John Foderaro",
+      "text": "LISP IS A PROGRAMMABLE PROGRAMMING LANGUAGE.\n-- JOHN FODERARO",
       "length": 61
     },
     {
-      "text": "I guess, when you're drunk, every woman looks beautiful and every\nlanguage looks (like) a Lisp :)\n-- Lament, #scheme@freenode.net",
+      "text": "I GUESS, WHEN YOU'RE DRUNK, EVERY WOMAN LOOKS BEAUTIFUL AND EVERY\nLANGUAGE LOOKS (LIKE) A LISP :)\n-- LAMENT, #SCHEME@FREENODE.NET",
       "length": 129
     },
     {
-      "text": "Many of life's failures are people who did not realize how close they\nwere to success when they gave up.\n-- Thomas Edison",
+      "text": "MANY OF LIFE'S FAILURES ARE PEOPLE WHO DID NOT REALIZE HOW CLOSE THEY\nWERE TO SUCCESS WHEN THEY GAVE UP.\n-- THOMAS EDISON",
       "length": 121
     },
     {
-      "text": "You must always work not just within but below your means. If you can\nhandle three elements, handle only two. If you can handle ten, then\nhandle five. In that way the ones you do handle, you handle with more\nease, more mastery and you create a feeling of strength in reserve.\n-- Pablo Picasso",
+      "text": "YOU MUST ALWAYS WORK NOT JUST WITHIN BUT BELOW YOUR MEANS. IF YOU CAN\nHANDLE THREE ELEMENTS, HANDLE ONLY TWO. IF YOU CAN HANDLE TEN, THEN\nHANDLE FIVE. IN THAT WAY THE ONES YOU DO HANDLE, YOU HANDLE WITH MORE\nEASE, MORE MASTERY AND YOU CREATE A FEELING OF STRENGTH IN RESERVE.\n-- PABLO PICASSO",
       "length": 292
     },
     {
-      "text": "When you’ve got the code all ripped apart, it’s like a car that’s all\ndisassembled. You’ve got all the parts tying all over your garage and\nyou have to replace the broken part or the car will never run. It’s not\nfun until the code gets back to the baseline again.\n-- Gary Kildall (inventor of CP/M, one of the first OS for the micro).",
+      "text": "WHEN YOU’VE GOT THE CODE ALL RIPPED APART, IT’S LIKE A CAR THAT’S ALL\nDISASSEMBLED. YOU’VE GOT ALL THE PARTS TYING ALL OVER YOUR GARAGE AND\nYOU HAVE TO REPLACE THE BROKEN PART OR THE CAR WILL NEVER RUN. IT’S NOT\nFUN UNTIL THE CODE GETS BACK TO THE BASELINE AGAIN.\n-- GARY KILDALL (INVENTOR OF CP/M, ONE OF THE FIRST OS FOR THE MICRO).",
       "length": 334
     },
     {
-      "text": "Well, if you talk about programming to a group of programmers who use\nthe same language, they can become almost evangelistic about the\nlanguage. They form a tight-knit community, hold to certain beliefs, and\nfollow certain rules in their programming. It’s like a church with a\nprogramming language for a Bible.\n-- Gary Kildall (inventor of CP/M, one of the first OS for the micro).",
+      "text": "WELL, IF YOU TALK ABOUT PROGRAMMING TO A GROUP OF PROGRAMMERS WHO USE\nTHE SAME LANGUAGE, THEY CAN BECOME ALMOST EVANGELISTIC ABOUT THE\nLANGUAGE. THEY FORM A TIGHT-KNIT COMMUNITY, HOLD TO CERTAIN BELIEFS, AND\nFOLLOW CERTAIN RULES IN THEIR PROGRAMMING. IT’S LIKE A CHURCH WITH A\nPROGRAMMING LANGUAGE FOR A BIBLE.\n-- GARY KILDALL (INVENTOR OF CP/M, ONE OF THE FIRST OS FOR THE MICRO).",
       "length": 381
     },
     {
-      "text": "It’s a problem if the design doesn’t let you add features at a later\ndate. If you have to redo a program, the hours you spend can cause you\nto lose your competitive edge. A flexible program demonstrates the\ndifference between a good designer and someone who is just getting a\npiece of code out.\n-- Gary Kildall (inventor of CP/M, one of the first OS for the micro).",
+      "text": "IT’S A PROBLEM IF THE DESIGN DOESN’T LET YOU ADD FEATURES AT A LATER\nDATE. IF YOU HAVE TO REDO A PROGRAM, THE HOURS YOU SPEND CAN CAUSE YOU\nTO LOSE YOUR COMPETITIVE EDGE. A FLEXIBLE PROGRAM DEMONSTRATES THE\nDIFFERENCE BETWEEN A GOOD DESIGNER AND SOMEONE WHO IS JUST GETTING A\nPIECE OF CODE OUT.\n-- GARY KILDALL (INVENTOR OF CP/M, ONE OF THE FIRST OS FOR THE MICRO).",
       "length": 365
     },
     {
-      "text": "[How friendly will this machine be?] Well, I don’t think it’s a matter\nof friendliness, because ultimately if the program is going to\naccomplish anything of value, it will probably be relatively complex.\n-- Gary Kildall (inventor of CP/M, one of the first OS for the micro).",
+      "text": "[HOW FRIENDLY WILL THIS MACHINE BE?] WELL, I DON’T THINK IT’S A MATTER\nOF FRIENDLINESS, BECAUSE ULTIMATELY IF THE PROGRAM IS GOING TO\nACCOMPLISH ANYTHING OF VALUE, IT WILL PROBABLY BE RELATIVELY COMPLEX.\n-- GARY KILDALL (INVENTOR OF CP/M, ONE OF THE FIRST OS FOR THE MICRO).",
       "length": 274
     },
     {
-      "text": "Some people suggest that machines would be friendlier if input could be\nin a natural language. But natural language is probably the worst kind\nof input because it can be quite ambiguous. The process of retrieving\ninformation from the computer would be so time-consuming that you would\nbe better off spending that time getting the information directly from\nan expert.\n-- Gary Kildall (inventor of CP/M, one of the first OS for the micro).",
+      "text": "SOME PEOPLE SUGGEST THAT MACHINES WOULD BE FRIENDLIER IF INPUT COULD BE\nIN A NATURAL LANGUAGE. BUT NATURAL LANGUAGE IS PROBABLY THE WORST KIND\nOF INPUT BECAUSE IT CAN BE QUITE AMBIGUOUS. THE PROCESS OF RETRIEVING\nINFORMATION FROM THE COMPUTER WOULD BE SO TIME-CONSUMING THAT YOU WOULD\nBE BETTER OFF SPENDING THAT TIME GETTING THE INFORMATION DIRECTLY FROM\nAN EXPERT.\n-- GARY KILDALL (INVENTOR OF CP/M, ONE OF THE FIRST OS FOR THE MICRO).",
       "length": 437
     },
     {
-      "text": "The only way of discovering the limits of the possible is to venture a\nlittle way past them into the impossible.\n-- Arthur C. Clarke",
+      "text": "THE ONLY WAY OF DISCOVERING THE LIMITS OF THE POSSIBLE IS TO VENTURE A\nLITTLE WAY PAST THEM INTO THE IMPOSSIBLE.\n-- ARTHUR C. CLARKE",
       "length": 132
     },
     {
-      "text": "Any sufficiently advanced technology is undistinguishable from magic.\n-- Arthur C. Clarke",
+      "text": "ANY SUFFICIENTLY ADVANCED TECHNOLOGY IS UNDISTINGUISHABLE FROM MAGIC.\n-- ARTHUR C. CLARKE",
       "length": 89
     },
     {
-      "text": "That is the inevitable human response. We’re reluctant to believe that\ngreat discoveries are in the air. We want to believe that great\ndiscoveries are in our heads—and to each party in the multiple the\npresence of the other party is invariably cause for suspicion.\n-- Malcolm Gladwell, Who says big ideas are rare? ",
+      "text": "THAT IS THE INEVITABLE HUMAN RESPONSE. WE’RE RELUCTANT TO BELIEVE THAT\nGREAT DISCOVERIES ARE IN THE AIR. WE WANT TO BELIEVE THAT GREAT\nDISCOVERIES ARE IN OUR HEADS—AND TO EACH PARTY IN THE MULTIPLE THE\nPRESENCE OF THE OTHER PARTY IS INVARIABLY CAUSE FOR SUSPICION.\n-- MALCOLM GLADWELL, WHO SAYS BIG IDEAS ARE RARE? ",
       "length": 315
     },
     {
-      "text": "Good ideas are out there for anyone with the wit and the will to find\nthem.\n-- Malcolm Gladwell, Who says big ideas are rare?",
+      "text": "GOOD IDEAS ARE OUT THERE FOR ANYONE WITH THE WIT AND THE WILL TO FIND\nTHEM.\n-- MALCOLM GLADWELL, WHO SAYS BIG IDEAS ARE RARE?",
       "length": 125
     },
     {
-      "text": "A person won't become proficient at something until he or she has done\nit many times. In other words., if you want someone to be really good at\nbuilding a software system, he or she will have to have built 10 or more\nsystems of that type.\n-- Philip Greenspun",
+      "text": "A PERSON WON'T BECOME PROFICIENT AT SOMETHING UNTIL HE OR SHE HAS DONE\nIT MANY TIMES. IN OTHER WORDS., IF YOU WANT SOMEONE TO BE REALLY GOOD AT\nBUILDING A SOFTWARE SYSTEM, HE OR SHE WILL HAVE TO HAVE BUILT 10 OR MORE\nSYSTEMS OF THAT TYPE.\n-- PHILIP GREENSPUN",
       "length": 258
     },
     {
-      "text": "A person won't retain proficiency at a task unless he or she has at one\ntime learned to perform that task very rapidly. Learning research\ndemonstrates that the skills of people who become accurate but not fast\ndeteriorate much sooner than the skills of people who become both\naccurate and fast.\n-- Philip Greenspun",
+      "text": "A PERSON WON'T RETAIN PROFICIENCY AT A TASK UNLESS HE OR SHE HAS AT ONE\nTIME LEARNED TO PERFORM THAT TASK VERY RAPIDLY. LEARNING RESEARCH\nDEMONSTRATES THAT THE SKILLS OF PEOPLE WHO BECOME ACCURATE BUT NOT FAST\nDETERIORATE MUCH SOONER THAN THE SKILLS OF PEOPLE WHO BECOME BOTH\nACCURATE AND FAST.\n-- PHILIP GREENSPUN",
       "length": 314
     },
     {
-      "text": "Training research shows that if you get speed now you can get quality\nlater. But if you don't get speed you will never get quality in the long\nrun.\n-- Philip Greenspun",
+      "text": "TRAINING RESEARCH SHOWS THAT IF YOU GET SPEED NOW YOU CAN GET QUALITY\nLATER. BUT IF YOU DON'T GET SPEED YOU WILL NEVER GET QUALITY IN THE LONG\nRUN.\n-- PHILIP GREENSPUN",
       "length": 167
     },
     {
-      "text": "Beware of bugs in the above code; I have only proved it correct, not\ntried it.\n-- Donald Knuth",
+      "text": "BEWARE OF BUGS IN THE ABOVE CODE; I HAVE ONLY PROVED IT CORRECT, NOT\nTRIED IT.\n-- DONALD KNUTH",
       "length": 94
     },
     {
-      "text": "Wear your best for your execution and stand dignified. Your last\nrecourse against randomness is how you act — if you can’t control\noutcomes, you can control the elegance of your behaviour. You will\nalways have the last word.\n-- Nassim Taleb",
+      "text": "WEAR YOUR BEST FOR YOUR EXECUTION AND STAND DIGNIFIED. YOUR LAST\nRECOURSE AGAINST RANDOMNESS IS HOW YOU ACT — IF YOU CAN’T CONTROL\nOUTCOMES, YOU CAN CONTROL THE ELEGANCE OF YOUR BEHAVIOUR. YOU WILL\nALWAYS HAVE THE LAST WORD.\n-- NASSIM TALEB",
       "length": 240
     },
     {
-      "text": "The human brain starts working the moment you are born and never stops\nuntil you stand up to speak in public.\n-- Anonymous",
+      "text": "THE HUMAN BRAIN STARTS WORKING THE MOMENT YOU ARE BORN AND NEVER STOPS\nUNTIL YOU STAND UP TO SPEAK IN PUBLIC.\n-- ANONYMOUS",
       "length": 122
     },
     {
-      "text": "The trouble with the world is that the stupid are always cocksure and\nthe intelligent are always filled with doubt.\n-- Bertrand Russell",
+      "text": "THE TROUBLE WITH THE WORLD IS THAT THE STUPID ARE ALWAYS COCKSURE AND\nTHE INTELLIGENT ARE ALWAYS FILLED WITH DOUBT.\n-- BERTRAND RUSSELL",
       "length": 135
     },
     {
-      "text": "Simple, clear purpose and principles give rise to complex, intelligent\nbehavior. Complex rules and regulations give rise to simple, stupid\nbehavior.\n-- Dee Hock, Birth of the Chaordic Age",
+      "text": "SIMPLE, CLEAR PURPOSE AND PRINCIPLES GIVE RISE TO COMPLEX, INTELLIGENT\nBEHAVIOR. COMPLEX RULES AND REGULATIONS GIVE RISE TO SIMPLE, STUPID\nBEHAVIOR.\n-- DEE HOCK, BIRTH OF THE CHAORDIC AGE",
       "length": 187
     },
     {
-      "text": "C++ is like teenage sex: Everybody is talking about it all the time,\nonly few are really doing it.\n-- unknown",
+      "text": "C++ IS LIKE TEENAGE SEX: EVERYBODY IS TALKING ABOUT IT ALL THE TIME,\nONLY FEW ARE REALLY DOING IT.\n-- UNKNOWN",
       "length": 109
     },
     {
-      "text": "Functional programming is to algorithms as the ubiquitous little black\ndress is to women's fashion.\n-- Mark Tarver (of \"The bipolar Lisp programmer\" fame)",
+      "text": "FUNCTIONAL PROGRAMMING IS TO ALGORITHMS AS THE UBIQUITOUS LITTLE BLACK\nDRESS IS TO WOMEN'S FASHION.\n-- MARK TARVER (OF \"THE BIPOLAR LISP PROGRAMMER\" FAME)",
       "length": 154
     },
     {
-      "text": "Java and C++ make you think that the new ideas are like the old ones.\nJava is the most distressing thing to hit computing since MS-DOS.\n-- Alan Kay",
+      "text": "JAVA AND C++ MAKE YOU THINK THAT THE NEW IDEAS ARE LIKE THE OLD ONES.\nJAVA IS THE MOST DISTRESSING THING TO HIT COMPUTING SINCE MS-DOS.\n-- ALAN KAY",
       "length": 147
     },
     {
-      "text": "For complex systems, the compiler and development environment need to be\nin the same language that its supporting. It's the only way to grow\ncode.\n-- Alan Kay",
+      "text": "FOR COMPLEX SYSTEMS, THE COMPILER AND DEVELOPMENT ENVIRONMENT NEED TO BE\nIN THE SAME LANGUAGE THAT ITS SUPPORTING. IT'S THE ONLY WAY TO GROW\nCODE.\n-- ALAN KAY",
       "length": 158
     },
     {
-      "text": "Simple things should be simple. Complex things should be possible.\n-- Alan Kay",
+      "text": "SIMPLE THINGS SHOULD BE SIMPLE. COMPLEX THINGS SHOULD BE POSSIBLE.\n-- ALAN KAY",
       "length": 78
     },
     {
-      "text": "I invented the term Object-Oriented, and I can tell you I did not have\nC++ in mind.\n-- Alan Kay",
+      "text": "I INVENTED THE TERM OBJECT-ORIENTED, AND I CAN TELL YOU I DID NOT HAVE\nC++ IN MIND.\n-- ALAN KAY",
       "length": 95
     },
     {
-      "text": "All creativity is an extended form of a joke.\n-- Alan Kay",
+      "text": "ALL CREATIVITY IS AN EXTENDED FORM OF A JOKE.\n-- ALAN KAY",
       "length": 57
     },
     {
-      "text": "If you don't fail at least 90 percent of the time, you're not aiming\nhigh enough.\n-- Alan Kay",
+      "text": "IF YOU DON'T FAIL AT LEAST 90 PERCENT OF THE TIME, YOU'RE NOT AIMING\nHIGH ENOUGH.\n-- ALAN KAY",
       "length": 93
     },
     {
-      "text": "Revolutions come from standing on the shoulders of giants and facing in\na better direction.\n-- Alan Kay",
+      "text": "REVOLUTIONS COME FROM STANDING ON THE SHOULDERS OF GIANTS AND FACING IN\nA BETTER DIRECTION.\n-- ALAN KAY",
       "length": 103
     },
     {
-      "text": "Ce n’est que par les beaux sentiments qu’on parvient à la fortune !\n-- Charles Baudelaire, Conseils aux jeunes littérateurs.",
+      "text": "CE N’EST QUE PAR LES BEAUX SENTIMENTS QU’ON PARVIENT À LA FORTUNE !\n-- CHARLES BAUDELAIRE, CONSEILS AUX JEUNES LITTÉRATEURS.",
       "length": 124
     },
     {
-      "text": "La haine est une liqueur précieuse, un poison plus cher que celui des\nBorgia, - car il est fait avec notre sang, notre santé, notre sommeil,\net les deux tiers de notre amour! Il faut en être avare!\n-- Charles Baudelaire, Conseils aux jeunes littérateurs.",
+      "text": "LA HAINE EST UNE LIQUEUR PRÉCIEUSE, UN POISON PLUS CHER QUE CELUI DES\nBORGIA, - CAR IL EST FAIT AVEC NOTRE SANG, NOTRE SANTÉ, NOTRE SOMMEIL,\nET LES DEUX TIERS DE NOTRE AMOUR! IL FAUT EN ÊTRE AVARE!\n-- CHARLES BAUDELAIRE, CONSEILS AUX JEUNES LITTÉRATEURS.",
       "length": 254
     },
     {
-      "text": "L’art qui satisfait le besoin le plus impérieux sera toujours le plus\nhonoré.\n-- Charles Baudelaire, Conseils aux jeunes littérateurs.",
+      "text": "L’ART QUI SATISFAIT LE BESOIN LE PLUS IMPÉRIEUX SERA TOUJOURS LE PLUS\nHONORÉ.\n-- CHARLES BAUDELAIRE, CONSEILS AUX JEUNES LITTÉRATEURS.",
       "length": 134
     },
     {
-      "text": "If it looks like a duck, walks like a duck, and quacks like a duck, it's\na duck.\n-- Official definition of \"duck typing\"",
+      "text": "IF IT LOOKS LIKE A DUCK, WALKS LIKE A DUCK, AND QUACKS LIKE A DUCK, IT'S\nA DUCK.\n-- OFFICIAL DEFINITION OF \"DUCK TYPING\"",
       "length": 120
     },
     {
-      "text": "In OO, it's the data that is the \"important\" thing: you define the class\nwhich contains member data, and only incidentally contains code for\nmanipulating the object. In FP, it's the code that's important: you\ndefine a function which contains code for working with the data, and\nonly incidentally define what the data is.\n-- almkgor, on reddit",
+      "text": "IN OO, IT'S THE DATA THAT IS THE \"IMPORTANT\" THING: YOU DEFINE THE CLASS\nWHICH CONTAINS MEMBER DATA, AND ONLY INCIDENTALLY CONTAINS CODE FOR\nMANIPULATING THE OBJECT. IN FP, IT'S THE CODE THAT'S IMPORTANT: YOU\nDEFINE A FUNCTION WHICH CONTAINS CODE FOR WORKING WITH THE DATA, AND\nONLY INCIDENTALLY DEFINE WHAT THE DATA IS.\n-- ALMKGOR, ON REDDIT",
       "length": 342
     },
     {
-      "text": "Des mots simples, quand ils sont bien utilisés, font faire à des gens\nordinaires des choses extraordinaires.\n-- Khaled TANGAO",
+      "text": "DES MOTS SIMPLES, QUAND ILS SONT BIEN UTILISÉS, FONT FAIRE À DES GENS\nORDINAIRES DES CHOSES EXTRAORDINAIRES.\n-- KHALED TANGAO",
       "length": 125
     },
     {
-      "text": "It was Edison who said ‘1% inspiration, 99% perspiration’. That may have\nbeen true a hundred years ago. These days it's ‘0.01% inspiration,\n99.99% perspiration’, and the inspiration is the easy part.\n-- Linux Torvalds",
+      "text": "IT WAS EDISON WHO SAID ‘1% INSPIRATION, 99% PERSPIRATION’. THAT MAY HAVE\nBEEN TRUE A HUNDRED YEARS AGO. THESE DAYS IT'S ‘0.01% INSPIRATION,\n99.99% PERSPIRATION’, AND THE INSPIRATION IS THE EASY PART.\n-- LINUX TORVALDS",
       "length": 217
     },
     {
-      "text": "The greatest challenge to any thinker is stating the problem in a way\nthat will allow a solution.\n-- Bertrand Russell",
+      "text": "THE GREATEST CHALLENGE TO ANY THINKER IS STATING THE PROBLEM IN A WAY\nTHAT WILL ALLOW A SOLUTION.\n-- BERTRAND RUSSELL",
       "length": 117
     },
     {
-      "text": "No matter how much you plan you’re likely to get half wrong anyway. So\ndon’t do the ‘paralysis through analysis’ thing. That only slows\nprogress and saps morale.\n-- 37 Signal, Getting real",
+      "text": "NO MATTER HOW MUCH YOU PLAN YOU’RE LIKELY TO GET HALF WRONG ANYWAY. SO\nDON’T DO THE ‘PARALYSIS THROUGH ANALYSIS’ THING. THAT ONLY SLOWS\nPROGRESS AND SAPS MORALE.\n-- 37 SIGNAL, GETTING REAL",
       "length": 188
     },
     {
-      "text": "[Innovation] comes from saying no to 1,000 things to make sure we don’t\nget on the wrong track or try to do too much. We’re always thinking\nabout new markets we could enter, but it’s only by saying no that you\ncan concentrate on the things that are really important.\n-- Steve Jobs",
+      "text": "[INNOVATION] COMES FROM SAYING NO TO 1,000 THINGS TO MAKE SURE WE DON’T\nGET ON THE WRONG TRACK OR TRY TO DO TOO MUCH. WE’RE ALWAYS THINKING\nABOUT NEW MARKETS WE COULD ENTER, BUT IT’S ONLY BY SAYING NO THAT YOU\nCAN CONCENTRATE ON THE THINGS THAT ARE REALLY IMPORTANT.\n-- STEVE JOBS",
       "length": 280
     },
     {
-      "text": "The ability to simplify means to eliminate the unnecessary so that the\nnecessary may speak.\n-- Hans Hofmann",
+      "text": "THE ABILITY TO SIMPLIFY MEANS TO ELIMINATE THE UNNECESSARY SO THAT THE\nNECESSARY MAY SPEAK.\n-- HANS HOFMANN",
       "length": 107
     },
     {
-      "text": "However beautiful the strategy, you should occasionally look at the\nresults.\n-- Winston Churchill",
+      "text": "HOWEVER BEAUTIFUL THE STRATEGY, YOU SHOULD OCCASIONALLY LOOK AT THE\nRESULTS.\n-- WINSTON CHURCHILL",
       "length": 97
     },
     {
-      "text": "Genius is 1% inspiration and 99% perspiration.\n-- Thomas Edison",
+      "text": "GENIUS IS 1% INSPIRATION AND 99% PERSPIRATION.\n-- THOMAS EDISON",
       "length": 63
     },
     {
-      "text": "I’d rather write programs to write programs than write programs.\n-- Richard Sites",
+      "text": "I’D RATHER WRITE PROGRAMS TO WRITE PROGRAMS THAN WRITE PROGRAMS.\n-- RICHARD SITES",
       "length": 81
     },
     {
-      "text": "Heureux l'étudiant qui comme la Rivière peut suivre son cours sans\nquitter son lit...\n-- Sebastien, sur commentcamarche.net",
+      "text": "HEUREUX L'ÉTUDIANT QUI COMME LA RIVIÈRE PEUT SUIVRE SON COURS SANS\nQUITTER SON LIT...\n-- SEBASTIEN, SUR COMMENTCAMARCHE.NET",
       "length": 123
     },
     {
-      "text": "Side projects are less masturbatory than reading RSS, often more\nuseful than MobileMe, more educational than the comments on Reddit,\nand usually more fun than listening to keynotes.\n-- Chris Wanstrath",
+      "text": "SIDE PROJECTS ARE LESS MASTURBATORY THAN READING RSS, OFTEN MORE\nUSEFUL THAN MOBILEME, MORE EDUCATIONAL THAN THE COMMENTS ON REDDIT,\nAND USUALLY MORE FUN THAN LISTENING TO KEYNOTES.\n-- CHRIS WANSTRATH",
       "length": 200
     },
     {
-      "text": ":nunmap can also be used outside of a monastery.\n-- Vim user manual",
+      "text": ":NUNMAP CAN ALSO BE USED OUTSIDE OF A MONASTERY.\n-- VIM USER MANUAL",
       "length": 67
     },
     {
-      "text": "I had to learn how to teach less, so that more could be learned.\n-- Tim Gallwey, The inner game of work",
+      "text": "I HAD TO LEARN HOW TO TEACH LESS, SO THAT MORE COULD BE LEARNED.\n-- TIM GALLWEY, THE INNER GAME OF WORK",
       "length": 103
     },
     {
-      "text": "Workers of the world, the chains that bind you are not held in place by\na ruling class, a \"superior\" race, by society, the state, or a leader.\nThey are held in place by none other than yourself. Those who seek to\nexploit are not themselves free, for they place no value in freedom. Who\nis it that really employs you and commands you to pick up your daily\nload? And who is it that you allow to pass judgment on the adequacy of\nyour toil? Who have you empowered to dangle the carrot before you and\nthreaten with disapproval? Who, when you wake each morning, sends you\noff to what you call your work?\nIs there an \"I want to\" behind all your \"I have to,\" or have you been so\nlong forgotten to yourself that \"I want\" exists only as an idea in your\nhead? If you have disconnected from your soul's desire and are drowning\nin an ocean of \"have to,\" then rise up and overthrow your master. Begin\nthe journey toward emancipation.  Work only in such a way that you are\ntruly self-employed.\n-- Tim Gallwey, The inner game of work",
+      "text": "WORKERS OF THE WORLD, THE CHAINS THAT BIND YOU ARE NOT HELD IN PLACE BY\nA RULING CLASS, A \"SUPERIOR\" RACE, BY SOCIETY, THE STATE, OR A LEADER.\nTHEY ARE HELD IN PLACE BY NONE OTHER THAN YOURSELF. THOSE WHO SEEK TO\nEXPLOIT ARE NOT THEMSELVES FREE, FOR THEY PLACE NO VALUE IN FREEDOM. WHO\nIS IT THAT REALLY EMPLOYS YOU AND COMMANDS YOU TO PICK UP YOUR DAILY\nLOAD? AND WHO IS IT THAT YOU ALLOW TO PASS JUDGMENT ON THE ADEQUACY OF\nYOUR TOIL? WHO HAVE YOU EMPOWERED TO DANGLE THE CARROT BEFORE YOU AND\nTHREATEN WITH DISAPPROVAL? WHO, WHEN YOU WAKE EACH MORNING, SENDS YOU\nOFF TO WHAT YOU CALL YOUR WORK?\nIS THERE AN \"I WANT TO\" BEHIND ALL YOUR \"I HAVE TO,\" OR HAVE YOU BEEN SO\nLONG FORGOTTEN TO YOURSELF THAT \"I WANT\" EXISTS ONLY AS AN IDEA IN YOUR\nHEAD? IF YOU HAVE DISCONNECTED FROM YOUR SOUL'S DESIRE AND ARE DROWNING\nIN AN OCEAN OF \"HAVE TO,\" THEN RISE UP AND OVERTHROW YOUR MASTER. BEGIN\nTHE JOURNEY TOWARD EMANCIPATION.  WORK ONLY IN SUCH A WAY THAT YOU ARE\nTRULY SELF-EMPLOYED.\n-- TIM GALLWEY, THE INNER GAME OF WORK",
       "length": 1017
     },
     {
-      "text": "The Work Begins Anew, The Hope Rises Again, And The Dream Lives On.\n-- Ted Kennedy",
+      "text": "THE WORK BEGINS ANEW, THE HOPE RISES AGAIN, AND THE DREAM LIVES ON.\n-- TED KENNEDY",
       "length": 82
     },
     {
-      "text": "The hardest part of design ... is keeping features out.\n-- Donald Norman ",
+      "text": "THE HARDEST PART OF DESIGN ... IS KEEPING FEATURES OUT.\n-- DONALD NORMAN ",
       "length": 73
     },
     {
-      "text": "Before software can be reusable it first has to be usable.\n-- Ralph Johnson ",
+      "text": "BEFORE SOFTWARE CAN BE REUSABLE IT FIRST HAS TO BE USABLE.\n-- RALPH JOHNSON ",
       "length": 76
     },
     {
-      "text": "The opposite of love is not hate, it is indifference.\n-- Elie Wiesel",
+      "text": "THE OPPOSITE OF LOVE IS NOT HATE, IT IS INDIFFERENCE.\n-- ELIE WIESEL",
       "length": 68
     },
     {
-      "text": "- Gbi de fer\n- Howa!\n- On va en France\n- Non, je vais pas!\n- Pourquoi?\n- Parce ki y a pas agouti là-bas!\n-- Gbi de fer",
+      "text": "- GBI DE FER\n- HOWA!\n- ON VA EN FRANCE\n- NON, JE VAIS PAS!\n- POURQUOI?\n- PARCE KI Y A PAS AGOUTI LÀ-BAS!\n-- GBI DE FER",
       "length": 118
     },
     {
-      "text": "Ecoute, crois en ton projet... Implique toi à fond... Trouve des aspects\ninnovants pour te distinguer des autres. Tu verras que tu te feras\nremarquer très facilement...\n-- Khaled Tangao",
+      "text": "ECOUTE, CROIS EN TON PROJET... IMPLIQUE TOI À FOND... TROUVE DES ASPECTS\nINNOVANTS POUR TE DISTINGUER DES AUTRES. TU VERRAS QUE TU TE FERAS\nREMARQUER TRÈS FACILEMENT...\n-- KHALED TANGAO",
       "length": 185
     },
     {
-      "text": "Perpetual optimism is a force multiplier.\n-- Colin Powell",
+      "text": "PERPETUAL OPTIMISM IS A FORCE MULTIPLIER.\n-- COLIN POWELL",
       "length": 57
     },
     {
-      "text": "Be the change you want to see in the world.\n-- Mahatma Gandhi",
+      "text": "BE THE CHANGE YOU WANT TO SEE IN THE WORLD.\n-- MAHATMA GANDHI",
       "length": 61
     },
     {
-      "text": "The art of getting someone else to do something you want done because he\nwants to do it [Leadership].\n-- Dwight D. Enseinhover.",
+      "text": "THE ART OF GETTING SOMEONE ELSE TO DO SOMETHING YOU WANT DONE BECAUSE HE\nWANTS TO DO IT [LEADERSHIP].\n-- DWIGHT D. ENSEINHOVER.",
       "length": 127
     },
     {
-      "text": "No one is all evil. Everybody has a good side. If you keep waiting, it\nwill comme up.\n-- Randy Pausch",
+      "text": "NO ONE IS ALL EVIL. EVERYBODY HAS A GOOD SIDE. IF YOU KEEP WAITING, IT\nWILL COMME UP.\n-- RANDY PAUSCH",
       "length": 101
     },
     {
-      "text": "Experience is what you get when you don't get what you want.\n-- Cited by Randy Pausch",
+      "text": "EXPERIENCE IS WHAT YOU GET WHEN YOU DON'T GET WHAT YOU WANT.\n-- CITED BY RANDY PAUSCH",
       "length": 85
     },
     {
-      "text": "Luck is where preparation meets opportunity.\n-- Randy Pausch",
+      "text": "LUCK IS WHERE PREPARATION MEETS OPPORTUNITY.\n-- RANDY PAUSCH",
       "length": 60
     },
     {
-      "text": "Bonne bosse et reste le boss.\n-- Darryl Amedon",
+      "text": "BONNE BOSSE ET RESTE LE BOSS.\n-- DARRYL AMEDON",
       "length": 46
     },
     {
-      "text": "The greatest of all weaknesses is the fear of appearing weak.\n-- J. B. Bossuet, Politics from Holy Writ, 1709",
+      "text": "THE GREATEST OF ALL WEAKNESSES IS THE FEAR OF APPEARING WEAK.\n-- J. B. BOSSUET, POLITICS FROM HOLY WRIT, 1709",
       "length": 109
     },
     {
-      "text": "It's easier to ask forgiveness than it is to get permission.\n-- Rear Admiral Dr. Grace Hopper",
+      "text": "IT'S EASIER TO ASK FORGIVENESS THAN IT IS TO GET PERMISSION.\n-- REAR ADMIRAL DR. GRACE HOPPER",
       "length": 93
     },
     {
-      "text": "An investment in knowledge always pays the best interest.\n-- Benjamin Franklin",
+      "text": "AN INVESTMENT IN KNOWLEDGE ALWAYS PAYS THE BEST INTEREST.\n-- BENJAMIN FRANKLIN",
       "length": 78
     },
     {
-      "text": "Natives who beat drums to drive off evil spirits are objects of scorn to\nsmart Americans who blow horns to break up traffic jams.\n-- Mary Ellen Kelly",
+      "text": "NATIVES WHO BEAT DRUMS TO DRIVE OFF EVIL SPIRITS ARE OBJECTS OF SCORN TO\nSMART AMERICANS WHO BLOW HORNS TO BREAK UP TRAFFIC JAMS.\n-- MARY ELLEN KELLY",
       "length": 149
     },
     {
-      "text": "A CS professor once explained recursion as follows:\nA child couldn't sleep, so her mother told her a story about a little frog,\n    who couldn't sleep, so the frog's mother told her a story about a little bear,\n         who couldn't sleep, so the bear's mother told her a story about a little weasel...\n            who fell asleep.\n        ...and the little bear fell asleep;\n    ...and the little frog fell asleep;\n...and the child fell asleep.\n-- everything2.com",
+      "text": "A CS PROFESSOR ONCE EXPLAINED RECURSION AS FOLLOWS:\nA CHILD COULDN'T SLEEP, SO HER MOTHER TOLD HER A STORY ABOUT A LITTLE FROG,\n    WHO COULDN'T SLEEP, SO THE FROG'S MOTHER TOLD HER A STORY ABOUT A LITTLE BEAR,\n         WHO COULDN'T SLEEP, SO THE BEAR'S MOTHER TOLD HER A STORY ABOUT A LITTLE WEASEL...\n            WHO FELL ASLEEP.\n        ...AND THE LITTLE BEAR FELL ASLEEP;\n    ...AND THE LITTLE FROG FELL ASLEEP;\n...AND THE CHILD FELL ASLEEP.\n-- EVERYTHING2.COM",
       "length": 464
     },
     {
-      "text": "Never do the impossible. People will expect you to do it forever after.\n-- pigsandfishes.com",
+      "text": "NEVER DO THE IMPOSSIBLE. PEOPLE WILL EXPECT YOU TO DO IT FOREVER AFTER.\n-- PIGSANDFISHES.COM",
       "length": 92
     },
     {
-      "text": "Hire people smarter than you.  Work with people smarter than you.\nListen to them. Let them lead you. Take the blame for all failures,\ngive away the credit for all successes.\n-- How to fail: 25 secrets learned through failure",
+      "text": "HIRE PEOPLE SMARTER THAN YOU.  WORK WITH PEOPLE SMARTER THAN YOU.\nLISTEN TO THEM. LET THEM LEAD YOU. TAKE THE BLAME FOR ALL FAILURES,\nGIVE AWAY THE CREDIT FOR ALL SUCCESSES.\n-- HOW TO FAIL: 25 SECRETS LEARNED THROUGH FAILURE",
       "length": 224
     },
     {
-      "text": "Give up control. You never really had it anyway.\n-- How to fail: 25 secrets learned through failure",
+      "text": "GIVE UP CONTROL. YOU NEVER REALLY HAD IT ANYWAY.\n-- HOW TO FAIL: 25 SECRETS LEARNED THROUGH FAILURE",
       "length": 99
     },
     {
-      "text": "Ne te mets pas de limite, la vie se chargera de la mettre a ta place.\n-- Darryl AMEDON",
+      "text": "NE TE METS PAS DE LIMITE, LA VIE SE CHARGERA DE LA METTRE A TA PLACE.\n-- DARRYL AMEDON",
       "length": 86
     },
     {
-      "text": "Only two things are infinite, the universe and human stupidity. And I'm not so\nsure about the former.\n-- Albert Einstein",
+      "text": "ONLY TWO THINGS ARE INFINITE, THE UNIVERSE AND HUMAN STUPIDITY. AND I'M NOT SO\nSURE ABOUT THE FORMER.\n-- ALBERT EINSTEIN",
       "length": 120
     },
     {
-      "text": "The important thing is not to stop questioning.\n-- Albert Einstein",
+      "text": "THE IMPORTANT THING IS NOT TO STOP QUESTIONING.\n-- ALBERT EINSTEIN",
       "length": 66
     },
     {
-      "text": "Do not accept anything because it comes from the mouth of a respected person.\n-- Buddha",
+      "text": "DO NOT ACCEPT ANYTHING BECAUSE IT COMES FROM THE MOUTH OF A RESPECTED PERSON.\n-- BUDDHA",
       "length": 87
     },
     {
-      "text": "Work as intensely as you play and play as intensely as you work.\n-- Eric S. Raymond, How To Be A Hacker",
+      "text": "WORK AS INTENSELY AS YOU PLAY AND PLAY AS INTENSELY AS YOU WORK.\n-- ERIC S. RAYMOND, HOW TO BE A HACKER",
       "length": 103
     },
     {
-      "text": "A witty saying proves nothing\n-- Voltaire",
+      "text": "A WITTY SAYING PROVES NOTHING\n-- VOLTAIRE",
       "length": 41
     },
     {
-      "text": "Sound methodology can empower and liberate the creative mind; it cannot inflame\nor inspire the drudge.\n-- Frederick P. Brooks, No Sliver Bullet.",
+      "text": "SOUND METHODOLOGY CAN EMPOWER AND LIBERATE THE CREATIVE MIND; IT CANNOT INFLAME\nOR INSPIRE THE DRUDGE.\n-- FREDERICK P. BROOKS, NO SLIVER BULLET.",
       "length": 144
     },
     {
-      "text": "La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa\ncorrection.\n-- Daniel Lovewin (Guillaume Kpotufe)",
+      "text": "LA CONNAISSANCE D'UN DÉFAUT NE L'ENLÈVE PAS, ELLE NOUS TORTURE JUSQU'À SA\nCORRECTION.\n-- DANIEL LOVEWIN (GUILLAUME KPOTUFE)",
       "length": 123
     },
     {
-      "text": "Je crois au flooding.\n-- Karim BAINA (en parlant du dailogue avec les administrations)",
+      "text": "JE CROIS AU FLOODING.\n-- KARIM BAINA (EN PARLANT DU DAILOGUE AVEC LES ADMINISTRATIONS)",
       "length": 86
     },
     {
-      "text": "Il y a très loin de la velléité à la volnt, de la volonté à la résolution, de la\nrésolution au choix des moyens, du choix ds moyens à lapplication.\n-- Jean-François Paul de Gondi de Retz",
+      "text": "IL Y A TRÈS LOIN DE LA VELLÉITÉ À LA VOLNT, DE LA VOLONTÉ À LA RÉSOLUTION, DE LA\nRÉSOLUTION AU CHOIX DES MOYENS, DU CHOIX DS MOYENS À LAPPLICATION.\n-- JEAN-FRANÇOIS PAUL DE GONDI DE RETZ",
       "length": 186
     },
     {
-      "text": "Do not spoil what you have by desiring what you have not; but remember that what\nyou now have was once among the things only hoped for.\n-- Greek philosopher Epicurus",
+      "text": "DO NOT SPOIL WHAT YOU HAVE BY DESIRING WHAT YOU HAVE NOT; BUT REMEMBER THAT WHAT\nYOU NOW HAVE WAS ONCE AMONG THE THINGS ONLY HOPED FOR.\n-- GREEK PHILOSOPHER EPICURUS",
       "length": 165
     },
     {
-      "text": "Nobody can make you feel inferior without your consent.\n-- Eleanor Roosevelt",
+      "text": "NOBODY CAN MAKE YOU FEEL INFERIOR WITHOUT YOUR CONSENT.\n-- ELEANOR ROOSEVELT",
       "length": 76
     },
     {
-      "text": "If you tell the truth, you don't have to remember anything.\n-- Mark Twain",
+      "text": "IF YOU TELL THE TRUTH, YOU DON'T HAVE TO REMEMBER ANYTHING.\n-- MARK TWAIN",
       "length": 73
     },
     {
-      "text": "You know you're in love when you can't fall asleep because reality is finally\nbetter than your dreams.\n-- Dr. Seuss",
+      "text": "YOU KNOW YOU'RE IN LOVE WHEN YOU CAN'T FALL ASLEEP BECAUSE REALITY IS FINALLY\nBETTER THAN YOUR DREAMS.\n-- DR. SEUSS",
       "length": 115
     },
     {
-      "text": "The opposite of love is not hate, it's indifference.\n-- Elie Wiesel",
+      "text": "THE OPPOSITE OF LOVE IS NOT HATE, IT'S INDIFFERENCE.\n-- ELIE WIESEL",
       "length": 67
     },
     {
-      "text": "Life is what happens to you while you're busy making other plans.\n-- John Lennon",
+      "text": "LIFE IS WHAT HAPPENS TO YOU WHILE YOU'RE BUSY MAKING OTHER PLANS.\n-- JOHN LENNON",
       "length": 80
     },
     {
-      "text": "Whenever you find yourself on the side of the majority, it is time to pause and\nreflect.\n-- Mark Twain",
+      "text": "WHENEVER YOU FIND YOURSELF ON THE SIDE OF THE MAJORITY, IT IS TIME TO PAUSE AND\nREFLECT.\n-- MARK TWAIN",
       "length": 102
     },
     {
-      "text": "To be yourself in a world that is constantly trying to make you something else\nis the greatest accomplishment.\n-- Ralph Waldo Emerson",
+      "text": "TO BE YOURSELF IN A WORLD THAT IS CONSTANTLY TRYING TO MAKE YOU SOMETHING ELSE\nIS THE GREATEST ACCOMPLISHMENT.\n-- RALPH WALDO EMERSON",
       "length": 133
     },
     {
-      "text": "It is not a lack of love, but a lack of friendship that makes unhappy marriages.\n-- Friedrich Nietzsche",
+      "text": "IT IS NOT A LACK OF LOVE, BUT A LACK OF FRIENDSHIP THAT MAKES UNHAPPY MARRIAGES.\n-- FRIEDRICH NIETZSCHE",
       "length": 103
     },
     {
-      "text": "In terms of energy, it's better to make a wrong choice than none at all.\n-- George Leonard, Mastery.",
+      "text": "IN TERMS OF ENERGY, IT'S BETTER TO MAKE A WRONG CHOICE THAN NONE AT ALL.\n-- GEORGE LEONARD, MASTERY.",
       "length": 100
     },
     {
-      "text": "Courage is grace under pressure.\n-- Ernest Hemingway",
+      "text": "COURAGE IS GRACE UNDER PRESSURE.\n-- ERNEST HEMINGWAY",
       "length": 52
     },
     {
-      "text": "Actually, the essence of boredom is to be found in the obsessive search for\nnovelty. Satisfaction lies in mindful repetition, the discovery of endless\nrichness in subtle variations on familiar themes.\n-- George Leonard, Mastery.",
+      "text": "ACTUALLY, THE ESSENCE OF BOREDOM IS TO BE FOUND IN THE OBSESSIVE SEARCH FOR\nNOVELTY. SATISFACTION LIES IN MINDFUL REPETITION, THE DISCOVERY OF ENDLESS\nRICHNESS IN SUBTLE VARIATIONS ON FAMILIAR THEMES.\n-- GEORGE LEONARD, MASTERY.",
       "length": 228
     },
     {
-      "text": "Before enlightenment, chop wood and carry water.\nAfter enlightenment, chop wood and carry water.\n-- Ancient Eastern adage",
+      "text": "BEFORE ENLIGHTENMENT, CHOP WOOD AND CARRY WATER.\nAFTER ENLIGHTENMENT, CHOP WOOD AND CARRY WATER.\n-- ANCIENT EASTERN ADAGE",
       "length": 121
     },
     {
-      "text": "Acknowledging the negative doesn't mean sniveling [whining, complaining]; it\nmeans facing the truth and then moving on.\n-- George Leonard, Mastery.",
+      "text": "ACKNOWLEDGING THE NEGATIVE DOESN'T MEAN SNIVELING [WHINING, COMPLAINING]; IT\nMEANS FACING THE TRUTH AND THEN MOVING ON.\n-- GEORGE LEONARD, MASTERY.",
       "length": 147
     },
     {
-      "text": "Whatever you can do, or dream you can, begin it. Boldness has genius, power, and\nmagic in it.\n-- Goethe",
+      "text": "WHATEVER YOU CAN DO, OR DREAM YOU CAN, BEGIN IT. BOLDNESS HAS GENIUS, POWER, AND\nMAGIC IN IT.\n-- GOETHE",
       "length": 103
     },
     {
-      "text": "What we choose to fight is so tiny!\nWhat fights us is so great!\n...\nWhen we win it's with small things,\nand the triumph itself makes us small.\n...\nWinning does not tempt that man.\nThis is how he grows: by being defeated, decisively,\nby constantly greater beings. \n-- Rainer Maria Rilke, The Man Watching.",
+      "text": "WHAT WE CHOOSE TO FIGHT IS SO TINY!\nWHAT FIGHTS US IS SO GREAT!\n...\nWHEN WE WIN IT'S WITH SMALL THINGS,\nAND THE TRIUMPH ITSELF MAKES US SMALL.\n...\nWINNING DOES NOT TEMPT THAT MAN.\nTHIS IS HOW HE GROWS: BY BEING DEFEATED, DECISIVELY,\nBY CONSTANTLY GREATER BEINGS. \n-- RAINER MARIA RILKE, THE MAN WATCHING.",
       "length": 304
     },
     {
-      "text": "We fail to realize that mastery is not about perfection. It's about a process,\na journey. The master is the one who stays on the path day after day, year after\nyear. The master is the one who is willing to try, and fail, and try again, for\nas long as he or she lives.\n-- George Leonard, Mastery.",
+      "text": "WE FAIL TO REALIZE THAT MASTERY IS NOT ABOUT PERFECTION. IT'S ABOUT A PROCESS,\nA JOURNEY. THE MASTER IS THE ONE WHO STAYS ON THE PATH DAY AFTER DAY, YEAR AFTER\nYEAR. THE MASTER IS THE ONE WHO IS WILLING TO TRY, AND FAIL, AND TRY AGAIN, FOR\nAS LONG AS HE OR SHE LIVES.\n-- GEORGE LEONARD, MASTERY.",
       "length": 295
     },
     {
-      "text": "Are you willing to wear your white belt?\n-- George Leonard, Mastery.",
+      "text": "ARE YOU WILLING TO WEAR YOUR WHITE BELT?\n-- GEORGE LEONARD, MASTERY.",
       "length": 68
     }
   ]
