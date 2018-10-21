@@ -17,9 +17,9 @@ const atBashMap = (() => {
     let result = {};
     letters.forEach((letter, i) => result[letter] = reverseLetters[i]);
     return result;
-})()
+})();
 
-const isLetter = c => /[A-Z]/.test(c)
+const isLetter = c => /[A-Z]/.test(c);
 
 const shiftChar = (c, n=0) => {
     if (isLetter(c)) {
@@ -55,12 +55,12 @@ const caesar = text => {
 }
 
 const atbash = text => {
-    return text.toUpperCase().split('').map(c => atBashMap[c]).join('')
+    return text.toUpperCase().split('').map(c => atBashMap[c]).join('');
 }
 
 const monoalphabetic = (text, setting='random', word='')  => {
     if ((setting === 'k1' || setting === 'k2') && word == '') {
-        throw "phrase missing for k1/k2 alphabet"
+        throw "phrase missing for k1/k2 alphabet";
     }
     return text;
 }
