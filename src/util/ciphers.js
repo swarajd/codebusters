@@ -34,10 +34,10 @@ const shiftText = (text, n=0) => {
     return text.toUpperCase().split('').map(c => shiftChar(c, n)).join('')
 }
 
-const dedupe = word => {
+const dedupe = keyword => {
     const letterSet = new Set();
     const result = [];
-    word.split('').forEach(ch => {
+    keyword.split('').forEach(ch => {
         if (!letterSet.has(ch)) {
             letterSet.add(ch);
             result.push(ch);
@@ -58,10 +58,23 @@ const atbash = text => {
     return text.toUpperCase().split('').map(c => atBashMap[c]).join('');
 }
 
-const monoalphabetic = (text, setting='random', word='')  => {
-    if ((setting === 'k1' || setting === 'k2') && word == '') {
+const monoalphabetic = (text, setting='random', keyword='', forceplace=false, place=0)  => {
+    // if the alphabet is a k variant, a word is required
+    if ((setting === 'k1' || setting === 'k2') && keyword == '') {
         throw "phrase missing for k1/k2 alphabet";
     }
+
+    // handle the k1 case, where the keyword is in the plaintext alphabet
+    if (setting === 'k1') {
+        
+    }
+
+    // handle the k2 case, where the keyword is in the ciphertext alphabet
+    if (setting === 'k2') {
+
+    }
+
+
     return text;
 }
 
