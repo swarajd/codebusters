@@ -37,7 +37,7 @@ const shiftText = (text, n=0) => {
 const dedupe = word => {
     const letterSet = new Set();
     const result = [];
-    word.forEach(ch => {
+    word.split('').forEach(ch => {
         if (!letterSet.has(ch)) {
             letterSet.add(ch);
             result.push(ch);
