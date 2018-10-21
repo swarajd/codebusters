@@ -54,118 +54,115 @@ test('monoalphabetic cipher', () => {
         keyword: no repeated characters
         rotation: none required
 
-        keyword = codebust
-        rest of letters are = afghijklmnpqrvwxyz (length 18)
-        random = 0.5 so placement is at index 9
+        plaintext = abcdefghijklmnopqrstuvwxyz
 
-        plaintext = afghijklmcodebustnpqrvwxyz
-
+        keyword = cryptogm
+        rest of letters are = abdefhijklnqsuvwxz
+        initial letters = cryptogmabdefhijklnqsuvwxz
         random = 0.5 so rotation is 13
-        initial letters = abcdefghijklmnopqrstuvwxyz
         rotating yields
         
-        ciphertext = nopqrstuvwxyzabcdefghijklm
+        ciphertext = hijklnqsuvwxzcryptogmabdef
 
-        P = afghijklmcodebustnpqrvwxyz
-        C = nopqrstuvwxyzabcdefghijklm
+        P = abcdefghijklmnopqrstuvwxyz
+        C = hijklnqsuvwxzcryptogmabdef
 
-        asdf -> NCYO
+        asdf -> LTPR
     */
-    let result = ciphers.monoalphabetic('asdf', 'k1', 'codebust');
-    expect(result).toEqual('NCYO');
+    let result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogm');
+    expect(result).toEqual('HOKN');
 
     /*
         setting: k1
         keyword: no repeated characters
         rotation: required 
 
+        plaintext = abcdefghijklmnopqrstuvwxyz
+
         keyword = wodebust
-        rest of letters are = acfghijklmnpqrvxyz (length 18)
-        random = 0.5 so placement is at index 9
-
-        plaintext = acfghijklwodebustmnpqrvxyz
-
+        rest of letters are = acfghijklmnpqrvxyz
         random = 0.5 so rotation is 13
-        initial letters = abcdefghijklmnopqrstuvwxyz
+        initial letters = wodebustacfghijklmnpqrvxyz
         rotating yields
         
-        ciphertext = nopqrstuvwxyzabcdefghijklm
+        ciphertext = ijklmnpqrvxyzwodebustacfgh
 
-        P = acfghijklwodebustmnpqrvxyz
-        C = nopqrstuvwxyzabcdefghijklm
+        P = abcdefghijklmnopqrstuvwxyz
+        C = ijklmnpqrvxyzwodebustacfgh
 
-        rotation required (w), so we rotate one to the left
+        rotation required (o), rotate one to the left
 
-        P = acfghijklwodebustmnpqrvxyz
-        C = opqrstuvwxyzabcdefghijklmn
+        P = abcdefghijklmnopqrstuvwxyz
+        C = jklmnpqrvxyzwodebustacfghi
 
-        once again rotation required (b), so we rotate one to the left
+        rotation required (t), rotate one to the left
 
-        P = acfghijklwodebustmnpqrvxyz
-        C = pqrstuvwxyzabcdefghijklmno
+        P = abcdefghijklmnopqrstuvwxyz
+        C = klmnpqrvxyzwodebustacfghij
 
-        asdf -> PEAR
+        asdf -> KTNQ
     */
     result = ciphers.monoalphabetic('asdf', 'k1', 'wodebust');
-    expect(result).toEqual('PEAR');
+    expect(result).toEqual('KTNQ');
 
     /*
         setting: k1
         keyword: repeating characters
         rotation: not required
 
-        keyword = codebusters
-        deduped = codebustr
-        rest of letters are = afghijklmnpqvwxyz (length 17)
-        random = 0.5 so placement is at index 8
+        plaintext = abcdefghijklmnopqrstuvwxyz
 
-        plaintext = afghijklcodebustrmnpqvwxyz
-
+        keyword = cryptogram
+        deduped = cryptogam
+        rest of letters are = bdefhijklnqsuvwxz
         random = 0.5 so rotation is 13
-        initial letters = abcdefghijklmnopqrstuvwxyz
+        initial letters = cryptogambdefhijklnqsuvwxz
         rotating yields
         
-        ciphertext = nopqrstuvwxyzabcdefghijklm
+        ciphertext = hijklnqsuvwxzcryptogambdef
 
-        P = afghijklcodebustrmnpqvwxyz
-        C = nopqrstuvwxyzabcdefghijklm
+        P = abcdefghijklmnopqrstuvwxyz
+        C = hijklnqsuvwxzcryptogambdef
 
-        asdf -> NBXO
+        asdf -> HOKN
         
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'codebusters');
-    expect(result).toEqual('NBXO');
+    result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogram');
+    expect(result).toEqual('HOKN');
 
     /*
         setting: k1
         keyword: repeated characters
         rotation: required 
 
-        keyword = vodebusters
-        deduped = vodebustr
-        rest of letters are = acfghijklmnpqwxyz (length 17)
-        random = 0.5 so placement is at index 8
+        plaintext = abcdefghijklmnopqrstuvwxyz
 
-        plaintext = acfghijkvodebustrlmnpqwxyz
-
+        keyword = codebusters
+        deduped = codebustr
+        rest of letters are = afghijklmnpqvwxyz (length 17)
         random = 0.5 so rotation is 13
-        initial letters = abcdefghijklmnopqrstuvwxyz
+        initial letters = codebustrafghijklmnpqvwxyz
         rotating yields
 
-        ciphertext = nopqrstuvwxyzabcdefghijklm
+        ciphertext = ijklmnpqvwxyzcodebustrafgh
         
-        P = acfghijkvodebustrlmnpqwxyz
-        C = nopqrstuvwxyzabcdefghijklm
+        P = abcdefghijklmnopqrstuvwxyz
+        C = ijklmnpqvwxyzcodebustrafgh
 
-        rotation required (v), so we rotate one to the left
+        rotation required (o), rotate one to the left
 
-        P = acfghijkvodebustrlmnpqwxyz
-        C = opqrstuvwxyzabcdefghijklmn
+        P = abcdefghijklmnopqrstuvwxyz
+        C = jklmnpqvwxyzcodebustrafghi
 
-        asdf -> OCYQ
+        rotation required (t), rotate one to the left
+
+        P = abcdefghijklmnopqrstuvwxyz
+        C = klmnpqvwxyzcodebustrafghij
+
+        asdf -> KTNQ
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'vodebusters');
-    expect(result).toEqual('OCYQ');
+    result = ciphers.monoalphabetic('asdf', 'k1', 'codebusters');
+    expect(result).toEqual('KTNQ');
 
 
     // const k2ResultNoRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebust');
