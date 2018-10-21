@@ -56,6 +56,27 @@ const extractLetters = keyword => {
     return result;
 }
 
+const rotateArray = (arr, n) => {
+    return arr.slice(n, arr.length).concat(arr.slice(0, n));
+}
+
+const hasCollision = (plaintextArr, ciphertextArr) => {
+    for (let i = 0; i < plaintextArr.length; i++) {
+        if (plaintextArr[i] === ciphertextArr[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+const generateDict = (plaintextArr, ciphertextArr) => {
+    const result = {};
+    for (let i = 0; i < plaintextArr.length; i++) {
+        result[plaintextArr[i]] = ciphertextArr[i];
+    }
+    return result;
+}
+
 /*
     CIPHER SECTION
 */
@@ -68,30 +89,47 @@ const atbash = text => {
     return text.toUpperCase().split('').map(c => atBashMap.hasOwnProperty(c) ? atBashMap[c] : c).join('');
 }
 
-const monoalphabetic = (text, setting='random', keyword='', place, map)  => {
+const monoalphabetic = (text, setting='random', keyword='')  => {
+
     // if the alphabet is a k variant, a word is required
     if (setting === 'k1' || setting === 'k2') {
         if (keyword == '') {
             throw "phrase missing for k1/k2 alphabet";
         } else {
+            // remove all the duplicate letters from the keyword
             keyword = dedupe(keyword).toUpperCase();
         }
     }
 
     // handle the k1 case, where the keyword is in the plaintext alphabet
     if (setting === 'k1') {
+        // generate a list of letters that exclude the letters from the keyword
         const restOfLetters = extractLetters(keyword);
-        if (place === undefined) {
-            place = Math.floor(Math.random() * restOfLetters.length);
-        } else {
-            if (place < 0 || place >= keyword.length) {
-                throw "invalid place for keyword";
-            }
-        }
-        const newLetters = restOfLetters.slice(0, place)
+
+        // instantiate the index at which to insert the keyword
+        const place = Math.floor(Math.random() * restOfLetters.length);
+
+        // generate the plaintext
+        const plaintext = restOfLetters.slice(0, place)
                 .concat(keyword.split(''))
                 .concat(restOfLetters.slice(place));
-        return text;
+
+        // generate the ciphertext
+        const rotation = Math.floor(Math.random() * 26);
+        let ciphertext = rotateArray(letters, rotation);
+
+        // if a letter maps to itself, rotate until it doesn't
+        while (hasCollision(plaintext, ciphertext)) {
+            ciphertext = rotateArray(ciphertext, 1);
+        }
+
+        // generate the dict to map from one letter to the next
+        const cipherDict = generateDict(plaintext, ciphertext);
+
+        // encrypt the text
+        const encrypted = text.toUpperCase().split('').map(c => cipherDict[c]).join('');
+
+        return encrypted;
     }
 
     // handle the k2 case, where the keyword is in the ciphertext alphabet
