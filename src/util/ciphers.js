@@ -55,7 +55,7 @@ const caesar = text => {
 }
 
 const atbash = text => {
-    return text.toUpperCase().split('').map(c => atBashMap[c]).join('');
+    return text.toUpperCase().split('').map(c => atBashMap.hasOwnProperty(c) ? atBashMap[c] : c).join('');
 }
 
 const monoalphabetic = (text, setting='random', keyword='', forceplace=false, place=0)  => {
@@ -66,7 +66,7 @@ const monoalphabetic = (text, setting='random', keyword='', forceplace=false, pl
 
     // handle the k1 case, where the keyword is in the plaintext alphabet
     if (setting === 'k1') {
-        
+
     }
 
     // handle the k2 case, where the keyword is in the ciphertext alphabet
