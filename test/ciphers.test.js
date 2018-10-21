@@ -34,12 +34,15 @@ test('atbash cipher', () => {
 })
 
 test('monoalphabetic cipher', () => {
+
+    // if the setting is k1/k2, there must be a phrase
     try {
         ciphers.monoalphabetic('asdf', 'k1');
     } catch (e) {
         expect(e).toEqual("phrase missing for k1/k2 alphabet");
     }
 
+    // the cipher type must be either 'k1', 'k2', or 'random'
     try {
         ciphers.monoalphabetic('asdf', 'what');
     } catch (e) {
