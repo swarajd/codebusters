@@ -69,10 +69,39 @@ const hasCollision = (plaintextArr, ciphertextArr) => {
     return false;
 }
 
-const generateDict = (plaintextArr, ciphertextArr) => {
+const zipArray = (plaintextArr, ciphertextArr) => {
     const result = {};
     for (let i = 0; i < plaintextArr.length; i++) {
         result[plaintextArr[i]] = ciphertextArr[i];
+    }
+    return result;
+}
+
+const generateK1Dict = (keyword) => {
+    // generate a list of letters that exclude the letters from the keyword
+    const restOfLetters = extractLetters(keyword);
+
+    // generate the plaintext
+    const plaintext = letters;
+
+    // generate the ciphertext
+    const rotation = Math.floor(Math.random() * 26);
+    let ciphertext = keyword.split('').concat(restOfLetters);
+    ciphertext = rotateArray(ciphertext, rotation);
+
+    // if a letter maps to itself, rotate until it doesn't
+    while (hasCollision(plaintext, ciphertext)) {
+        ciphertext = rotateArray(ciphertext, 1);
+    }
+
+    // return the dict to map from one letter to the next
+    return zipArray(plaintext, ciphertext);
+}
+
+const flipDict = dict => {
+    const result = {};
+    for (let key in dict) {
+        result[dict[key]] = key;
     }
     return result;
 }
@@ -103,27 +132,8 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
 
     // handle the k1 case, where the keyword is in the plaintext alphabet
     if (setting === 'k1') {
-        // generate a list of letters that exclude the letters from the keyword
-        const restOfLetters = extractLetters(keyword);
-
-        // instantiate the index at which to insert the keyword
-        const place = Math.floor(Math.random() * restOfLetters.length);
-
-        // generate the plaintext
-        const plaintext = letters;
-
-        // generate the ciphertext
-        const rotation = Math.floor(Math.random() * 26);
-        let ciphertext = keyword.split('').concat(restOfLetters);
-        ciphertext = rotateArray(ciphertext, rotation);
-
-        // if a letter maps to itself, rotate until it doesn't
-        while (hasCollision(plaintext, ciphertext)) {
-            ciphertext = rotateArray(ciphertext, 1);
-        }
-
-        // generate the dict to map from one letter to the next
-        const cipherDict = generateDict(plaintext, ciphertext);
+        // generate the map from one alphabet to another
+        const cipherDict = generateK1Dict(keyword);
 
         // encrypt the text
         const encrypted = text.toUpperCase().split('').map(c => cipherDict[c]).join('');
@@ -133,7 +143,14 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
 
     // handle the k2 case, where the keyword is in the ciphertext alphabet
     if (setting === 'k2') {
-        return text;
+
+        // generate the map from one alphabet to another
+        const cipherDict = flipDict(generateK1Dict(keyword));
+
+        // encrypt the text
+        const encrypted = text.toUpperCase().split('').map(c => cipherDict[c]).join('');
+
+        return encrypted;
     }
 
     // handle the random monoalphabetic cipher
