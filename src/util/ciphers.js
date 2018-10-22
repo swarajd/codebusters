@@ -136,7 +136,11 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
         const cipherDict = generateK1Dict(keyword);
 
         // encrypt the text
-        const encrypted = text.toUpperCase().split('').map(c => cipherDict[c]).join('');
+        const encrypted = text
+            .toUpperCase()
+            .split('')
+            .map(c => cipherDict[c])
+            .join('');
 
         return encrypted;
     }
@@ -148,7 +152,11 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
         const cipherDict = flipDict(generateK1Dict(keyword));
 
         // encrypt the text
-        const encrypted = text.toUpperCase().split('').map(c => cipherDict[c]).join('');
+        const encrypted = text
+            .toUpperCase()
+            .split('')
+            .map(c => cipherDict[c])
+            .join('');
 
         return encrypted;
     }

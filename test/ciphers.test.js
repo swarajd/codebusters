@@ -52,7 +52,7 @@ test('monoalphabetic cipher', () => {
     /*
         setting: k1
         keyword: no repeated characters
-        rotation: none required
+        rotation: not required
 
         plaintext = abcdefghijklmnopqrstuvwxyz
 
@@ -67,7 +67,7 @@ test('monoalphabetic cipher', () => {
         P = abcdefghijklmnopqrstuvwxyz
         C = hijklnqsuvwxzcryptogmabdef
 
-        asdf -> LTPR
+        asdf -> HOKN
     */
     let result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogm');
     expect(result).toEqual('HOKN');
@@ -165,8 +165,67 @@ test('monoalphabetic cipher', () => {
     expect(result).toEqual('KTNQ');
 
 
-    // const k2ResultNoRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebust');
-    // const k2ResultRepeat = ciphers.monoalphabetic('asdf', 'k2', 'codebusters');
+    /*
+        setting: k2
+        keyword: no repeated characters
+        rotation: not required 
+
+        inverted map from the k1 test case above
+
+        P = hijklnqsuvwxzcryptogmabdef
+        C = abcdefghijklmnopqrstuvwxyz
+
+        asdf -> VHXZ
+    */
+    result = ciphers.monoalphabetic('asdf', 'k2', 'cryptogm');
+    expect(result).toEqual('VHXZ');
+
+    /*
+        setting: k2
+        keyword: no repeated characters
+        rotation: required 
+
+        inverted map from the k1 test case above
+
+        P = klmnpqrvxyzwodebustacfghij
+        C = abcdefghijklmnopqrstuvwxyz
+
+        asdf -> TRNV
+    */
+    result = ciphers.monoalphabetic('asdf', 'k2', 'wodebust');
+    expect(result).toEqual('TRNV');
+
+    /*
+
+        setting: k2
+        keyword: repeated characters
+        rotation: not required 
+
+        inverted map from the k1 test case above
+
+        P = hijklnqsuvwxzcryptogambdef
+        C = abcdefghijklmnopqrstuvwxyz
+
+        asdf -> UHXZ
+    */
+   result = ciphers.monoalphabetic('asdf', 'k2', 'cryptogram');
+   expect(result).toEqual('UHXZ');
+
+   /*
+
+        setting: k2
+        keyword: repeated characters
+        rotation: required 
+
+        inverted map from the k1 test case above
+
+        P = klmnpqvwxyzcodebustrafghij
+        C = abcdefghijklmnopqrstuvwxyz
+
+        asdf -> URNV
+    */
+   result = ciphers.monoalphabetic('asdf', 'k2', 'codebusters');
+   expect(result).toEqual('URNV');
 
     // const randomResultNoRepeat = ciphers.monoalphabetic('asdf');
 
