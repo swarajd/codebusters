@@ -49,6 +49,8 @@ test('monoalphabetic cipher', () => {
         expect(e).toEqual("invalid cipher type");
     }
 
+    let result;
+
     /*
         setting: k1
         keyword: no repeated characters
@@ -69,7 +71,7 @@ test('monoalphabetic cipher', () => {
 
         asdf -> HOKN
     */
-    let result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogm');
+    result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogm');
     expect(result).toEqual('HOKN');
 
     /*
