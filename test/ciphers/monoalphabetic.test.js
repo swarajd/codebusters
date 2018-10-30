@@ -1,55 +1,34 @@
-import ciphers from './../src/util/ciphers.js'
+import { monoalphabetic } from './../../src/util/ciphers.js'
 
 const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
 global.Math = mockMath;
 
 
-/*
-    The caesar cipher works as follows:
-
-    P = abcdefghijklmnopqrstuvwxyz
-    C = nopqrstuvwxyzabcdefghijklm
-*/
-test('caesar cipher', () => {
-
-    // no spaces/special characters in the text
-    let result = ciphers.caesar('abcxyz');
-    expect(result).toEqual('NOPKLM');
-
-    // there are spaces in the text
-    result = ciphers.caesar('et tu brute');
-    expect(result).toEqual('RG GH OEHGR');
-})
-
-/*
-    The atbash cipher works as follows:
-
-    P = abcdefghijklmnopqrstuvwxyz
-    C = zyxwvutsrqponmlkjihgfedcba
-*/
-test('atbash cipher', () => {
-    let result = ciphers.atbash('ATBASH cipher');
-    expect(result).toEqual('ZGYZHS XRKSVI');
-})
-
-test('monoalphabetic cipher', () => {
+describe('validation', () => {
 
     // if the setting is k1/k2, there must be a phrase
-    try {
-        ciphers.monoalphabetic('asdf', 'k1');
-    } catch (e) {
-        expect(e).toEqual("phrase missing for k1/k2 alphabet");
-    }
+    test('if k1/k2, must have phrase', () => {
+        try {
+            monoalphabetic('asdf', 'k1');
+        } catch (e) {
+            expect(e).toEqual("phrase missing for k1/k2 alphabet");
+        }
+    })
+    
 
     // the cipher type must be either 'k1', 'k2', or 'random'
-    try {
-        ciphers.monoalphabetic('asdf', 'what');
-    } catch (e) {
-        expect(e).toEqual("invalid cipher type");
-    }
+    test('type must be k1/k2/random', () => {
+        try {
+            monoalphabetic('asdf', 'what');
+        } catch (e) {
+            expect(e).toEqual("invalid cipher type");
+        }
+    })
 
-    let result;
+})
+
+describe('k1 alphabet', () => {
 
     /*
         setting: k1
@@ -71,8 +50,10 @@ test('monoalphabetic cipher', () => {
 
         asdf -> HOKN
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogm');
-    expect(result).toEqual('HOKN');
+    test('no repeated characters, rotation not required', () => {
+        let result = monoalphabetic('asdf', 'k1', 'cryptogm');
+        expect(result).toEqual('HOKN');
+    })
 
     /*
         setting: k1
@@ -104,8 +85,10 @@ test('monoalphabetic cipher', () => {
 
         asdf -> KTNQ
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'wodebust');
-    expect(result).toEqual('KTNQ');
+    test('no repeated characters, rotation required', () => {
+        let result = monoalphabetic('asdf', 'k1', 'wodebust');
+        expect(result).toEqual('KTNQ');
+    })
 
     /*
         setting: k1
@@ -129,8 +112,10 @@ test('monoalphabetic cipher', () => {
         asdf -> HOKN
         
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'cryptogram');
-    expect(result).toEqual('HOKN');
+    test('repeated characters, rotation not required', () => {
+        let result = monoalphabetic('asdf', 'k1', 'cryptogram');
+        expect(result).toEqual('HOKN');
+    })
 
     /*
         setting: k1
@@ -163,10 +148,15 @@ test('monoalphabetic cipher', () => {
 
         asdf -> KTNQ
     */
-    result = ciphers.monoalphabetic('asdf', 'k1', 'codebusters');
-    expect(result).toEqual('KTNQ');
+    test('repeated characters, rotation required', () => {
+        let result = monoalphabetic('asdf', 'k1', 'codebusters');
+        expect(result).toEqual('KTNQ');
+    })
 
 
+})
+
+describe('k2 alphabet', () => {
     /*
         setting: k2
         keyword: no repeated characters
@@ -179,8 +169,10 @@ test('monoalphabetic cipher', () => {
 
         asdf -> VHXZ
     */
-    result = ciphers.monoalphabetic('asdf', 'k2', 'cryptogm');
-    expect(result).toEqual('VHXZ');
+    test('no repeated characters, rotation not required', () => {
+        let result = monoalphabetic('asdf', 'k2', 'cryptogm');
+        expect(result).toEqual('VHXZ');
+    })
 
     /*
         setting: k2
@@ -194,8 +186,10 @@ test('monoalphabetic cipher', () => {
 
         asdf -> TRNV
     */
-    result = ciphers.monoalphabetic('asdf', 'k2', 'wodebust');
-    expect(result).toEqual('TRNV');
+    test('no repeated characters, rotation required', () => {
+        let result = monoalphabetic('asdf', 'k2', 'wodebust');
+        expect(result).toEqual('TRNV');
+    })
 
     /*
 
@@ -210,25 +204,32 @@ test('monoalphabetic cipher', () => {
 
         asdf -> UHXZ
     */
-   result = ciphers.monoalphabetic('asdf', 'k2', 'cryptogram');
-   expect(result).toEqual('UHXZ');
+    test('repeated characters, rotation not required', () => {
+        let result = monoalphabetic('asdf', 'k2', 'cryptogram');
+        expect(result).toEqual('UHXZ');
+    })
+    
 
-   /*
+    /*
+ 
+         setting: k2
+         keyword: repeated characters
+         rotation: required 
+ 
+         inverted map from the k1 test case above
+ 
+         P = klmnpqvwxyzcodebustrafghij
+         C = abcdefghijklmnopqrstuvwxyz
+ 
+         asdf -> URNV
+     */
+    test('repeated characters, rotation required', () => {
+        let result = monoalphabetic('asdf', 'k2', 'codebusters');
+        expect(result).toEqual('URNV');
+    })
 
-        setting: k2
-        keyword: repeated characters
-        rotation: required 
+})
 
-        inverted map from the k1 test case above
-
-        P = klmnpqvwxyzcodebustrafghij
-        C = abcdefghijklmnopqrstuvwxyz
-
-        asdf -> URNV
-    */
-   result = ciphers.monoalphabetic('asdf', 'k2', 'codebusters');
-   expect(result).toEqual('URNV');
-
-    // const randomResultNoRepeat = ciphers.monoalphabetic('asdf');
-
+describe('random alphabet', () => {
+    // const randomResultNoRepeat = monoalphabetic('asdf');
 })
