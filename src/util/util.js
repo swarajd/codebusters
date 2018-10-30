@@ -106,6 +106,18 @@ const flipDict = dict => {
     return result;
 }
 
+const dValues = (() => {
+    const result = new Array(26);
+    result[0] = 0;
+    result[1] = 1;
+    for (let i = 2; i < letters.length; i++) {
+        result[i] = (i - 1) * (result[i - 1] + result[i - 2]);
+    }
+    return result;
+})();
+
+
+
 
 module.exports = {
     atBashMap,
