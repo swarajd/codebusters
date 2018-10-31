@@ -77,6 +77,10 @@ const zipArray = (plaintextArr, ciphertextArr) => {
     return result;
 }
 
+const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const generateK1Dict = (keyword) => {
     // generate a list of letters that exclude the letters from the keyword
     const restOfLetters = extractLetters(keyword);
@@ -85,7 +89,7 @@ const generateK1Dict = (keyword) => {
     const plaintext = letters;
 
     // generate the ciphertext
-    const rotation = Math.floor(Math.random() * 26);
+    const rotation = getRandomInt(0, 25);
     let ciphertext = keyword.split('').concat(restOfLetters);
     ciphertext = rotateArray(ciphertext, rotation);
 
@@ -107,16 +111,59 @@ const flipDict = dict => {
 }
 
 const dValues = (() => {
-    const result = new Array(26);
-    result[0] = 0;
-    result[1] = 1;
-    for (let i = 2; i < letters.length; i++) {
+    const result = new Array(letters.length + 1);
+    result[0] = 1;
+    result[1] = 0;
+    for (let i = 2; i < letters.length + 1; i++) {
         result[i] = (i - 1) * (result[i - 1] + result[i - 2]);
     }
     return result;
 })();
 
+const swap = (arr, i, j) => {
+    const tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+}
 
+const randomDerangement = (arr) => {
+    const A = arr.slice();
+    const mark = new Array(A.length);
+    mark.fill(false);
+    let i = A.length - 1;
+    let u = A.length;
+
+    while (u >= 2) {
+        if (!mark[i]) {
+            let j = getRandomInt(0, i - 1);
+            let marked = mark[j];
+            while (marked) {
+                j = getRandomInt(0, i - 1);
+                marked = mark[j];
+            }
+            swap(A, i, j);
+            let p = Math.random();
+            let uVal = (u - 1) * dValues[u - 2] / dValues[u];
+            if (p < uVal) {
+                mark[j] = true;
+                u = u - 1;
+                // console.log(u, i);
+            }
+            u = u - 1;
+            // console.log(u, i);
+        }
+        i = i - 1;
+        // console.log(u, i);
+    }
+    return A;
+}
+
+const randomDerangementDict = () => {
+    return zipArray(
+        letters,
+        randomDerangement(letters)
+    );
+}
 
 
 module.exports = {
@@ -126,5 +173,6 @@ module.exports = {
     extractLetters,
     zipArray,
     generateK1Dict,
-    flipDict
+    flipDict,
+    randomDerangementDict
 }

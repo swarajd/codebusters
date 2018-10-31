@@ -1,4 +1,3 @@
-const ciphers = require('./ciphers');
+const util = require('./util.js')
 
-
-console.log(ciphers.dedupe('aaaabbbccc'));
+console.log(util.randomDerangementDict());
