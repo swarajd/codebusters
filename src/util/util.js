@@ -13,7 +13,7 @@ const letters = (() => {
 const reverseLetters = letters.slice().reverse();
 
 // create a map that goes from A->Z, B->Y, ... Y->B, Z->A
-const atBashMap = (() => {
+const atBashDict = (() => {
     const result = {};
     letters.forEach((letter, i) => result[letter] = reverseLetters[i]);
     return result;
@@ -165,9 +165,8 @@ const randomDerangementDict = () => {
     );
 }
 
-
 module.exports = {
-    atBashMap,
+    atBashDict,
     shiftText,
     dedupe,
     extractLetters,
