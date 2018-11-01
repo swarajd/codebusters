@@ -4,7 +4,7 @@
 */
 
 import {
-    atBashMap,
+    atBashDict,
     shiftText,
     dedupe,
     generateK1Dict,
@@ -20,7 +20,7 @@ const caesar = text => {
 }
 
 const atbash = text => {
-    return text.toUpperCase().split('').map(c => atBashMap.hasOwnProperty(c) ? atBashMap[c] : c).join('');
+    return text.toUpperCase().split('').map(c => atBashDict.hasOwnProperty(c) ? atBashDict[c] : c).join('');
 }
 
 const monoalphabetic = (text, setting='random', keyword='')  => {
