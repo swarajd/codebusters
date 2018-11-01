@@ -27,7 +27,7 @@ global.Math = mockMath;
 */
 test('no repeated characters, rotation not required', () => {
     let result = monoalphabetic('asdf', 'k1', 'cryptogm');
-    expect(result).toEqual('HOKN');
+    expect(result.ciphertext).toEqual('HOKN');
 })
 
 /*
@@ -62,7 +62,7 @@ test('no repeated characters, rotation not required', () => {
 */
 test('no repeated characters, rotation required', () => {
     let result = monoalphabetic('asdf', 'k1', 'wodebust');
-    expect(result).toEqual('KTNQ');
+    expect(result.ciphertext).toEqual('KTNQ');
 })
 
 /*
@@ -89,7 +89,7 @@ test('no repeated characters, rotation required', () => {
 */
 test('repeated characters, rotation not required', () => {
     let result = monoalphabetic('asdf', 'k1', 'cryptogram');
-    expect(result).toEqual('HOKN');
+    expect(result.ciphertext).toEqual('HOKN');
 })
 
 /*
@@ -125,6 +125,6 @@ test('repeated characters, rotation not required', () => {
 */
 test('repeated characters, rotation required', () => {
     let result = monoalphabetic('asdf', 'k1', 'codebusters');
-    expect(result).toEqual('KTNQ');
+    expect(result.ciphertext).toEqual('KTNQ');
 })
 

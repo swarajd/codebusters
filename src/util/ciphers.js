@@ -4,6 +4,8 @@
 */
 
 import {
+    letters,
+    zipArray,
     atBashDict,
     shiftText,
     dedupe,
@@ -16,11 +18,25 @@ import {
 */
 
 const caesar = text => {
-    return shiftText(text, 13);
+    return {
+        plaintext: text,
+        ciphertext: shiftText(text, 13),
+        solution: zipArray(
+            letters,
+            shiftText(letters.join(''), 13).split('')
+        )
+    }
 }
 
 const atbash = text => {
-    return text.toUpperCase().split('').map(c => atBashDict.hasOwnProperty(c) ? atBashDict[c] : c).join('');
+    return {
+        plaintext: text,
+        ciphertext: text.toUpperCase()
+            .split('')
+            .map(c => atBashDict.hasOwnProperty(c) ? atBashDict[c] : c)
+            .join(''),
+        solution: atBashDict
+    };
 }
 
 const monoalphabetic = (text, setting='random', keyword='')  => {
@@ -47,7 +63,11 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
             .map(c => cipherDict[c])
             .join('');
 
-        return encrypted;
+        return {
+            plaintext: text,
+            ciphertext: encrypted,
+            solution: cipherDict
+        }
     }
 
     // handle the k2 case, where the keyword is in the ciphertext alphabet
@@ -63,7 +83,11 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
             .map(c => cipherDict[c])
             .join('');
 
-        return encrypted;
+        return {
+            plaintext: text,
+            ciphertext: encrypted,
+            solution: cipherDict
+        }
     }
 
     // handle the random monoalphabetic cipher

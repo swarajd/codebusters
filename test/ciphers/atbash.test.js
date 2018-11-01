@@ -8,5 +8,5 @@ import { atbash } from './../../src/util/ciphers.js'
 */
 test('atbash cipher', () => {
     let result = atbash('ATBASH cipher');
-    expect(result).toEqual('ZGYZHS XRKSVI');
+    expect(result.ciphertext).toEqual('ZGYZHS XRKSVI');
 })

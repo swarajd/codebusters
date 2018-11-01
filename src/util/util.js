@@ -166,6 +166,7 @@ const randomDerangementDict = () => {
 }
 
 module.exports = {
+    letters,
     atBashDict,
     shiftText,
     dedupe,

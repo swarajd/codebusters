@@ -10,9 +10,9 @@ test('caesar cipher', () => {
 
     // no spaces/special characters in the text
     let result = caesar('abcxyz');
-    expect(result).toEqual('NOPKLM');
+    expect(result.ciphertext).toEqual('NOPKLM');
 
     // there are spaces in the text
     result = caesar('et tu brute');
-    expect(result).toEqual('RG GH OEHGR');
+    expect(result.ciphertext).toEqual('RG GH OEHGR');
 })
