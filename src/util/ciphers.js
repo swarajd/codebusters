@@ -10,7 +10,8 @@ import {
     shiftText,
     dedupe,
     generateK1Dict,
-    flipDict
+    flipDict,
+    randomDerangementDict
 } from './util.js'
 
 /*
@@ -39,11 +40,16 @@ const atbash = text => {
     };
 }
 
-const monoalphabetic = (text, setting='random', keyword='')  => {
+const monoalphabetic = (text, setting, keyword)  => {
+
+    if (!(setting === 'k1' || setting === 'k2' || setting === 'random')) {
+        // setting should be k1, k2, or random
+        throw "invalid cipher type";
+    }
 
     // if the alphabet is a k variant, a word is required
     if (setting === 'k1' || setting === 'k2') {
-        if (keyword == '') {
+        if (keyword == undefined) {
             throw "phrase missing for k1/k2 alphabet";
         } else {
             // remove all the duplicate letters from the keyword
@@ -51,52 +57,39 @@ const monoalphabetic = (text, setting='random', keyword='')  => {
         }
     }
 
+    let cipherDict;
+
     // handle the k1 case, where the keyword is in the plaintext alphabet
     if (setting === 'k1') {
         // generate the map from one alphabet to another
-        const cipherDict = generateK1Dict(keyword);
-
-        // encrypt the text
-        const encrypted = text
-            .toUpperCase()
-            .split('')
-            .map(c => cipherDict[c])
-            .join('');
-
-        return {
-            plaintext: text,
-            ciphertext: encrypted,
-            solution: cipherDict
-        }
+        cipherDict = generateK1Dict(keyword);
     }
 
     // handle the k2 case, where the keyword is in the ciphertext alphabet
     if (setting === 'k2') {
-
         // generate the map from one alphabet to another
-        const cipherDict = flipDict(generateK1Dict(keyword));
-
-        // encrypt the text
-        const encrypted = text
-            .toUpperCase()
-            .split('')
-            .map(c => cipherDict[c])
-            .join('');
-
-        return {
-            plaintext: text,
-            ciphertext: encrypted,
-            solution: cipherDict
-        }
+        cipherDict = flipDict(generateK1Dict(keyword));
     }
 
     // handle the random monoalphabetic cipher
     if (setting === 'random') {
-        return text;
+        // generate the map from one alphabet to another
+        cipherDict = randomDerangementDict();
     }
 
-    // we exhausted our ciphers, if it's not one of the above throw an error
-    throw "invalid cipher type";
+    // encrypt the text
+    const encrypted = text
+        .toUpperCase()
+        .split('')
+        .map(c => cipherDict.hasOwnProperty(c) ? cipherDict[c] : c)
+        .join('');
+
+    return {
+        plaintext: text,
+        ciphertext: encrypted,
+        solution: cipherDict
+    }
+
 }
 
 /*
