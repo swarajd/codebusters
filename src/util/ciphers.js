@@ -5,13 +5,15 @@
 
 import {
     letters,
-    zipArray,
+    zipToDict,
     atBashDict,
     shiftText,
     dedupe,
     generateK1Dict,
     flipDict,
-    randomDerangementDict
+    randomDerangementDict,
+    addLetters,
+    extendKey
 } from './util.js'
 
 /*
@@ -22,7 +24,7 @@ const caesar = text => {
     return {
         plaintext: text,
         ciphertext: shiftText(text, 13),
-        solution: zipArray(
+        solution: zipToDict(
             letters,
             shiftText(letters.join(''), 13).split('')
         )
@@ -92,6 +94,26 @@ const monoalphabetic = (text, setting, keyword)  => {
 
 }
 
+const vigenere = (text, key) => {
+
+    if (key === undefined) {
+        throw "key missing for vigenere cipher";
+    }
+
+    const extendedKey = extendKey(key, text.length);
+
+    let ciphertext = text
+        .split('')
+        .map((l, i) => addLetters(l, extendedKey[i]))
+        .join('');
+
+    return {
+        plaintext: text,
+        ciphertext: ciphertext,
+        solution: key
+    }
+}
+
 /*
     EXPORT SECTION
 */
@@ -99,5 +121,6 @@ const monoalphabetic = (text, setting, keyword)  => {
 module.exports = {
     caesar,
     atbash,
-    monoalphabetic
+    monoalphabetic,
+    vigenere
 }

@@ -69,7 +69,7 @@ const hasCollision = (plaintextArr, ciphertextArr) => {
     return false;
 }
 
-const zipArray = (plaintextArr, ciphertextArr) => {
+const zipToDict = (plaintextArr, ciphertextArr) => {
     const result = {};
     for (let i = 0; i < plaintextArr.length; i++) {
         result[plaintextArr[i]] = ciphertextArr[i];
@@ -99,7 +99,7 @@ const generateK1Dict = (keyword) => {
     }
 
     // return the dict to map from one letter to the next
-    return zipArray(plaintext, ciphertext);
+    return zipToDict(plaintext, ciphertext);
 }
 
 const flipDict = dict => {
@@ -159,10 +159,45 @@ const randomDerangement = (arr) => {
 }
 
 const randomDerangementDict = () => {
-    return zipArray(
+    return zipToDict(
         letters,
         randomDerangement(letters)
     );
+}
+
+const mod = (n, m) => ((n % m) + m) % m;
+
+/*
+    assuming both letters are capitalized, 
+    adding them and returning the 'sum'
+*/
+const addLetters = (a, b) => {
+    const aNum = a.charCodeAt(0) - 65;
+    const bNum = b.charCodeAt(0) - 65;
+
+    const sum = mod(aNum + bNum, 26);
+
+    return String.fromCharCode(sum + 65);
+}
+
+const subtractLetters = (a, b) => {
+    const aNum = a.charCodeAt(0) - 65;
+    const bNum = b.charCodeAt(0) - 65;
+
+    const difference = mod(aNum - bNum, 26);
+
+    return String.fromCharCode(difference + 65);
+}
+
+const extendKey = (key, strLen) => {
+    if (key.length > strLen) {
+        throw "string too short to extend key";
+    }
+    const keyLen = key.length;
+    const quotient = Math.floor(strLen/keyLen);
+    const remainder = strLen % keyLen;
+
+    return key.repeat(quotient) + key.substring(0, remainder);
 }
 
 module.exports = {
@@ -171,8 +206,11 @@ module.exports = {
     shiftText,
     dedupe,
     extractLetters,
-    zipArray,
+    zipToDict,
     generateK1Dict,
     flipDict,
-    randomDerangementDict
+    randomDerangementDict,
+    addLetters,
+    subtractLetters,
+    extendKey
 }
