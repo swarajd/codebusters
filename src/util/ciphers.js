@@ -13,7 +13,8 @@ import {
     flipDict,
     randomDerangementDict,
     addLetters,
-    extendKey
+    extendKey,
+    baconianDict
 } from './util.js'
 
 /*
@@ -114,6 +115,18 @@ const vigenere = (text, key) => {
     }
 }
 
+const baconian = (text) => {
+    return {
+        plaintext: text,
+        ciphertext: text
+            .toUpperCase()
+            .split('')
+            .map(letter => baconianDict[letter])
+            .join(''),
+        solution: 'baconian'
+    }
+}
+
 /*
     EXPORT SECTION
 */
@@ -122,5 +135,6 @@ module.exports = {
     caesar,
     atbash,
     monoalphabetic,
-    vigenere
+    vigenere,
+    baconian
 }

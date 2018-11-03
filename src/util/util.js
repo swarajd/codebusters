@@ -200,6 +200,22 @@ const extendKey = (key, strLen) => {
     return key.repeat(quotient) + key.substring(0, remainder);
 }
 
+const baconianDict = (() => {
+    const baconianArr = letters
+        .map((_, i) => i)
+        .map(num => num
+            .toString(2)
+            .padStart(5, '0'))
+        .map(binStr => binStr
+            .split('')
+            .map(chr => chr === '1' ? 'B' : 'A')
+            .join('')
+        );
+    
+    const baconianDict = zipToDict(letters, baconianArr);
+    return baconianDict;
+})();
+
 module.exports = {
     letters,
     atBashDict,
@@ -212,5 +228,6 @@ module.exports = {
     randomDerangementDict,
     addLetters,
     subtractLetters,
-    extendKey
+    extendKey,
+    baconianDict
 }
