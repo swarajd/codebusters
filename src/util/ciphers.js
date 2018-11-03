@@ -5,6 +5,7 @@
 
 import {
     letters,
+    isLetter,
     zipToDict,
     atBashDict,
     shiftText,
@@ -14,7 +15,9 @@ import {
     randomDerangementDict,
     addLetters,
     extendKey,
-    baconianDict
+    baconianDict,
+    areCoprime,
+    affineLetter
 } from './util.js'
 
 /*
@@ -35,7 +38,8 @@ const caesar = text => {
 const atbash = text => {
     return {
         plaintext: text,
-        ciphertext: text.toUpperCase()
+        ciphertext: text
+            .toUpperCase()
             .split('')
             .map(c => atBashDict.hasOwnProperty(c) ? atBashDict[c] : c)
             .join(''),
@@ -104,6 +108,7 @@ const vigenere = (text, key) => {
     const extendedKey = extendKey(key, text.length);
 
     let ciphertext = text
+        .toUpperCase()
         .split('')
         .map((l, i) => addLetters(l, extendedKey[i]))
         .join('');
@@ -128,9 +133,20 @@ const baconian = (text) => {
 }
 
 const affine = (text, a, b) => {
+
+    if (!areCoprime(a, letters.length)) {
+        throw "invalid value for 'a'";
+    }
+
+    const ciphertext = text
+        .toUpperCase()
+        .split('')
+        .map(letter => isLetter(letter) ? affineLetter(letter, a, b) : letter)
+        .join('');
+
     return {
         plaintext: text,
-        ciphertext: text,
+        ciphertext: ciphertext,
         solution: {
             a,
             b

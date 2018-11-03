@@ -207,8 +207,27 @@ const baconianDict = (() => {
     return baconianDict;
 })();
 
+const gcd = (a, b) => {
+    if (!b) {
+        return a;
+    }
+
+    return gcd(b, a % b);
+}
+
+const areCoprime = (a, b) => {
+    return gcd(a, b) === 1;
+}
+
+const affineLetter = (letter, a, b) => {
+    const letterNum = letter.charCodeAt(0) - 65;
+    const affined = mod(letterNum * a + b, letters.length);
+    return String.fromCharCode(affined + 65);
+}
+
 module.exports = {
     letters,
+    isLetter,
     atBashDict,
     shiftText,
     dedupe,
@@ -219,5 +238,7 @@ module.exports = {
     randomDerangementDict,
     addLetters,
     extendKey,
-    baconianDict
+    baconianDict,
+    areCoprime,
+    affineLetter
 }
