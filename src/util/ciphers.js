@@ -127,6 +127,17 @@ const baconian = (text) => {
     }
 }
 
+const affine = (text, a, b) => {
+    return {
+        plaintext: text,
+        ciphertext: text,
+        solution: {
+            a,
+            b
+        }
+    }
+}
+
 /*
     EXPORT SECTION
 */
@@ -136,5 +147,6 @@ module.exports = {
     atbash,
     monoalphabetic,
     vigenere,
-    baconian
+    baconian,
+    affine
 }
