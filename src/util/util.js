@@ -180,15 +180,6 @@ const addLetters = (a, b) => {
     return String.fromCharCode(sum + 65);
 }
 
-const subtractLetters = (a, b) => {
-    const aNum = a.charCodeAt(0) - 65;
-    const bNum = b.charCodeAt(0) - 65;
-
-    const difference = mod(aNum - bNum, 26);
-
-    return String.fromCharCode(difference + 65);
-}
-
 const extendKey = (key, strLen) => {
     if (key.length > strLen) {
         throw "string too short to extend key";
@@ -227,7 +218,6 @@ module.exports = {
     flipDict,
     randomDerangementDict,
     addLetters,
-    subtractLetters,
     extendKey,
     baconianDict
 }

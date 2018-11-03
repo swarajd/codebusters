@@ -1,5 +1,5 @@
 import { vigenere } from './../../src/util/ciphers.js'
-import { addLetters, subtractLetters, extendKey } from './../../src/util/util.js'
+import { addLetters, extendKey } from './../../src/util/util.js'
 
 test('key should be provided', () => {
     try {
@@ -29,30 +29,6 @@ describe('addition of letters', () => {
 
     test('12 + 14 = 26 - 26 = 0', () => {
         expect(addLetters('M', 'O')).toEqual('A');
-    });
-
-});
-
-describe('subtraction of letters', () => {
-
-    test('0 - 0 = 0', () => {
-        expect(subtractLetters('A', 'A')).toEqual('A');
-    });
-
-    test('1 - 1 = 0', () => {
-        expect(subtractLetters('B', 'B')).toEqual('A');
-    });
-
-    test('8 - 5 = 3', () => {
-        expect(subtractLetters('I', 'F')).toEqual('D');
-    });
-
-    test('7 - 18 = -11 + 26 = 15', () => {
-        expect(subtractLetters('H', 'S')).toEqual('P');
-    });
-
-    test('0 - 14 = -14 + 26 = 12', () => {
-        expect(subtractLetters('A', 'O')).toEqual('M');
     });
 
 });
