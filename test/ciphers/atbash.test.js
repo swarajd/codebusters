@@ -1,4 +1,4 @@
-import { atbash } from './../../src/util/ciphers.js'
+import { atbash } from "./../../src/util/ciphers.js";
 
 /*
     The atbash cipher works as follows:
@@ -6,7 +6,7 @@ import { atbash } from './../../src/util/ciphers.js'
     P = abcdefghijklmnopqrstuvwxyz
     C = zyxwvutsrqponmlkjihgfedcba
 */
-test('atbash cipher', () => {
-    let result = atbash('ATBASH cipher');
-    expect(result.ciphertext).toEqual('ZGYZHS XRKSVI');
-})
+test("atbash cipher", () => {
+  let result = atbash("ATBASH cipher");
+  expect(result.ciphertext).toEqual("ZGYZHS XRKSVI");
+});

@@ -1,3 +1,3 @@
-const util = require('./util.js')
+const util = require("./util.js");
 
 console.log(util.randomDerangementDict());
