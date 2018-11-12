@@ -1,5 +1,5 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const webpack = require('webpack');
@@ -12,7 +12,7 @@ const plugins = [
   new ScriptExtHtmlWebpackPlugin({
     defaultAttribute: 'defer',
   }),
-  new ExtractTextPlugin({
+  new MiniCssExtractPlugin({
     filename: './[name].[hash].css',
     allChunks: true,
   }),
@@ -20,6 +20,7 @@ const plugins = [
 ];
 
 module.exports = () => ({
+  mode: 'development',
   entry: [
     './src/index.js',
     './styles/app.css',
@@ -40,9 +41,10 @@ module.exports = () => ({
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader?importLoaders=1',
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?importLoaders=1',
+        ]
       },
     ],
   },

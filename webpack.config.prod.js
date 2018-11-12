@@ -1,7 +1,6 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const webpack = require('webpack');
@@ -17,13 +16,11 @@ const plugins = [
   new ScriptExtHtmlWebpackPlugin({
     defaultAttribute: 'defer',
   }),
-  new ExtractTextPlugin({
+  new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
     allChunks: true,
   }),
-  new UglifyJsPlugin(),
   new MinifyPlugin(),
-  new webpack.optimize.ModuleConcatenationPlugin(),
 ];
 
 module.exports = () => ({
@@ -46,9 +43,10 @@ module.exports = () => ({
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader?importLoaders=1',
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?importLoaders=1'
+        ]
       },
     ],
   },
