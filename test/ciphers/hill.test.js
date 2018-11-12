@@ -1,7 +1,9 @@
 import { 
     matrixMultiply,
     modMatrix,
-    transpose
+    transpose,
+    generateRandomInvertibleMatrix,
+    isInvertible
 } from './../../src/util/util.js'
 
 import { hill } from './../../src/util/ciphers.js'
@@ -69,8 +71,8 @@ test('mod matrix', () => {
         [15],
         [14],
         [7]
-    ])
-})
+    ]);
+});
 
 test('transpose matrix', () => {
     const A = [
@@ -98,7 +100,7 @@ test('3x3 hill cipher', () => {
     const result = hill(text, matrix);
 
     expect(result.ciphertext).toEqual("POH");
-})
+});
 
 test("3x3 hill with 4 letter plaintext error", () => {
     const text = "PSAT";
@@ -113,4 +115,18 @@ test("3x3 hill with 4 letter plaintext error", () => {
     } catch (e) {
         expect(e).toEqual("please provide a plaintext that can be cleanly divided into " + matrix.length + " parts");
     }
-})
+});
+
+test("randomly generated hill cipher 3x3 matrix", () => {
+    const size   = 3;
+    const matrix = generateRandomInvertibleMatrix(size);
+
+    expect(isInvertible(matrix, size)).toBe(true);
+});
+
+test("randomly generated hill cipher 2x2 matrix", () => {
+    const size   = 2;
+    const matrix = generateRandomInvertibleMatrix(size);
+
+    expect(isInvertible(matrix, size)).toBe(true);
+});
