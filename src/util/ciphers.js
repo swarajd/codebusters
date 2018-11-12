@@ -181,6 +181,14 @@ const hill = (text, matrix) => {
   };
 };
 
+const RSA = (text, keypair) => {
+  return {
+    plaintext: text,
+    ciphertext: text,
+    solution: keypair
+  };
+};
+
 /*
     EXPORT SECTION
 */
@@ -192,5 +200,6 @@ module.exports = {
   vigenere,
   baconian,
   affine,
-  hill
+  hill,
+  RSA
 };
