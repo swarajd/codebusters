@@ -260,14 +260,28 @@ const isInvertible = (mtx, size) => {
     if (size == 2) {
         return ((mtx[0][0] * mtx[1][1]) - (mtx[0][1] * mtx[1][0])) != 0
     } else if (size == 3) {
-
+        return (mtx[0][0] * ((mtx[1][1] * mtx[2][2]) - (mtx[1][2] * mtx[2][1]))) - 
+               (mtx[0][1] * ((mtx[1][0] * mtx[2][2]) - (mtx[1][2] * mtx[2][0]))) + 
+               (mtx[0][2] * ((mtx[1][0] * mtx[2][1]) - (mtx[1][1] * mtx[2][0]))) != 0
     } else {
         throw "this size: " + size + " is unsupported"
     }
 }
 
 const generateRandomInvertibleMatrix = (size) => {
-    return [];
+    const result = Array(size)
+                    .fill(0)
+                    .map(x => Array(size).fill(0));
+
+    do {
+        for (let i = 0; i < size; i++) {
+            for (let j = 0; j < size; j++) {
+                result[i][j] = getRandomInt(0, 100);
+            }
+        }
+    } while (!isInvertible(result, size));
+    
+    return result;
 }
 
 const transpose = (matrix) => {
