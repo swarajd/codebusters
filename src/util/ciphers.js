@@ -5,6 +5,7 @@
 
 import {
     letters,
+    letterDict,
     isLetter,
     zipToDict,
     atBashDict,
@@ -17,7 +18,10 @@ import {
     extendKey,
     baconianDict,
     areCoprime,
-    affineLetter
+    affineLetter,
+    matrixMultiply,
+    modMatrix,
+    transpose
 } from './util.js'
 
 /*
@@ -154,6 +158,38 @@ const affine = (text, a, b) => {
     }
 }
 
+const hill = (text, matrix) => {
+
+    if (text.length % matrix.length != 0) {
+        throw "please provide a plaintext that can be cleanly divided into " + matrix.length + " parts"
+    }
+
+    const chunks = [];
+    for (let i = 0; i < text.length; i += matrix.length) {
+        chunks.push(text.substring(i, i + matrix.length));
+    }
+
+    const ciphertext = chunks.map(chunk => chunk.split(''))
+        .map(splitChunk => [splitChunk.map(letter => letterDict[letter])])
+        .map(transpose)
+        .map(transposedChunk => {
+            return modMatrix(
+                matrixMultiply(matrix, transposedChunk), 
+                letters.length
+            );
+        })
+        .map(transpose)
+        .map(splitChunk => splitChunk[0].map(num => letters[num]))
+        .map(chunk => chunk.join(''))
+        .join('');
+
+    return {
+        plaintext: text,
+        ciphertext: ciphertext,
+        solution: matrix
+    }
+}
+
 /*
     EXPORT SECTION
 */
@@ -164,5 +200,6 @@ module.exports = {
     monoalphabetic,
     vigenere,
     baconian,
-    affine
+    affine,
+    hill
 }

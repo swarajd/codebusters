@@ -10,6 +10,14 @@ const letters = (() => {
     return letters;
 })();
 
+const letterDict = (() => {
+    const res = {}
+    for (let i = 0; i < letters.length; i++) {
+        res[letters[i]] = i;
+    }
+    return res;
+})();
+
 const reverseLetters = letters.slice().reverse();
 
 // create a map that goes from A->Z, B->Y, ... Y->B, Z->A
@@ -225,8 +233,64 @@ const affineLetter = (letter, a, b) => {
     return String.fromCharCode(affined + 65);
 }
 
+const matrixMultiply = (A, B) => {
+    if (A[0].length != B.length) {
+        throw "incompatible matrices"
+    }
+
+    const result = Array(A.length)
+                    .fill(0)
+                    .map(x => Array(B[0].length).fill(0));
+
+    for (let i = 0; i < A.length; i++) {
+        for (let j = 0; j < B[0].length; j++) {
+            for (let k = 0; k < A[0].length; k++) {
+                result[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    return result
+} 
+
+const modMatrix = (mtx, n) => {
+    return mtx.map(row => row.map(i => mod(i, n)));
+}
+
+const isInvertible = (mtx, size) => {
+    if (size == 2) {
+        return ((mtx[0][0] * mtx[1][1]) - (mtx[0][1] * mtx[1][0])) != 0
+    } else if (size == 3) {
+
+    } else {
+        throw "this size: " + size + " is unsupported"
+    }
+}
+
+const generateRandomInvertibleMatrix = (size) => {
+    return [];
+}
+
+const transpose = (matrix) => {
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+
+    const result = Array(cols)
+                    .fill(0)
+                    .map(x => Array(rows.length).fill(0));
+    
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            result[j][i] = matrix[i][j];
+        }
+    }
+
+    return result;
+
+}
+
 module.exports = {
     letters,
+    letterDict,
     isLetter,
     atBashDict,
     shiftText,
@@ -240,5 +304,9 @@ module.exports = {
     extendKey,
     baconianDict,
     areCoprime,
-    affineLetter
+    affineLetter,
+    generateRandomInvertibleMatrix,
+    matrixMultiply,
+    modMatrix,
+    transpose,
 }
