@@ -130,3 +130,19 @@ test("randomly generated hill cipher 2x2 matrix", () => {
 
     expect(isInvertible(matrix, size)).toBe(true);
 });
+
+test("checking for invertibility on a 4x4 matrix", () => {
+    const size   = 4;
+    const matrix = [
+        [1,  2 , 3 , 4 ],
+        [5,  6 , 7 , 8 ],
+        [9,  10, 11, 12],
+        [13, 14, 15, 16]
+    ];
+
+    try {
+        isInvertible(matrix, size);
+    } catch(e) {
+        expect(e).toEqual("this size: " + size + " is unsupported");
+    }
+})
