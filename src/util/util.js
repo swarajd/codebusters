@@ -256,16 +256,25 @@ const modMatrix = (mtx, n) => {
     return mtx.map(row => row.map(i => mod(i, n)));
 }
 
+const invertibleValues = Set(1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25);
+
 const isInvertible = (mtx, size) => {
+    let determinant;
+
     if (size == 2) {
-        return ((mtx[0][0] * mtx[1][1]) - (mtx[0][1] * mtx[1][0])) != 0
+        determinant = ((mtx[0][0] * mtx[1][1]) - (mtx[0][1] * mtx[1][0]));
     } else if (size == 3) {
-        return (mtx[0][0] * ((mtx[1][1] * mtx[2][2]) - (mtx[1][2] * mtx[2][1]))) - 
+        determinant = (mtx[0][0] * ((mtx[1][1] * mtx[2][2]) - (mtx[1][2] * mtx[2][1]))) - 
                (mtx[0][1] * ((mtx[1][0] * mtx[2][2]) - (mtx[1][2] * mtx[2][0]))) + 
-               (mtx[0][2] * ((mtx[1][0] * mtx[2][1]) - (mtx[1][1] * mtx[2][0]))) != 0
+               (mtx[0][2] * ((mtx[1][0] * mtx[2][1]) - (mtx[1][1] * mtx[2][0])));
     } else {
         throw "this size: " + size + " is unsupported"
     }
+
+    determinant = mod(determinant, letters.length);
+
+    return invertibleValues.has(determinant);
+
 }
 
 const generateRandomInvertibleMatrix = (size) => {
@@ -276,7 +285,7 @@ const generateRandomInvertibleMatrix = (size) => {
     do {
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
-                result[i][j] = getRandomInt(0, 100);
+                result[i][j] = getRandomInt(0, 25);
             }
         }
     } while (!isInvertible(result, size));
