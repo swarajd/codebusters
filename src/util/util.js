@@ -256,7 +256,7 @@ const modMatrix = (mtx, n) => {
     return mtx.map(row => row.map(i => mod(i, n)));
 }
 
-const invertibleValues = Set(1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25);
+const invertibleValues = new Set([1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25]);
 
 const isInvertible = (mtx, size) => {
     let determinant;
@@ -328,6 +328,7 @@ module.exports = {
     baconianDict,
     areCoprime,
     affineLetter,
+    isInvertible,
     generateRandomInvertibleMatrix,
     matrixMultiply,
     modMatrix,
