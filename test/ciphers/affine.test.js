@@ -12,3 +12,8 @@ test("affine cipher without proper a", () => {
     expect(e).toEqual("invalid value for 'a'");
   }
 });
+
+test("affine cipher with proper a & b, and ciphertext has spaces", () => {
+  let result = affine("defend the east wall of the castle", 5, 7);
+  expect(result.ciphertext).toEqual("WBGBUW YQB BHTY NHKK ZG YQB RHTYKB");
+});

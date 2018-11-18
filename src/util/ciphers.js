@@ -19,8 +19,10 @@ import {
   areCoprime,
   affineLetter,
   matrixMultiply,
+  mod,
   modMatrix,
-  transpose
+  transpose,
+  modPow
 } from "./util.js";
 
 /*
@@ -181,9 +183,38 @@ const hill = (text, matrix) => {
   };
 };
 
-const RSA = (text, keypair) => {
+const RSAEncrypt = (text, keypair) => {
+  let { n, e } = keypair.publickey;
+
+  // console.log(n, e);
+
+  const ciphertext = text
+    .split("")
+    .map(l => l.charCodeAt(0))
+    .map(c => modPow(c, e, n))
+    .join(" ");
+
   return {
     plaintext: text,
+    ciphertext: ciphertext,
+    solution: keypair
+  };
+};
+
+const RSADecrypt = (text, keypair) => {
+  let { n, d } = keypair.privatekey;
+
+  // console.log(n, d);
+
+  const plaintext = text
+    .split(" ")
+    .map(x => parseInt(x))
+    .map(c => modPow(c, d, n))
+    .map(num => String.fromCharCode(num))
+    .join("");
+
+  return {
+    plaintext: plaintext,
     ciphertext: text,
     solution: keypair
   };
@@ -201,5 +232,6 @@ module.exports = {
   baconian,
   affine,
   hill,
-  RSA
+  RSAEncrypt,
+  RSADecrypt
 };

@@ -310,6 +310,89 @@ const transpose = matrix => {
   return result;
 };
 
+const primesTo100 = (() => {
+  const primeArray = new Array(100).fill(true);
+  let p = 2;
+  while (p < primeArray.length / 2) {
+    for (let q = 2; q < primeArray.length / p; q++) {
+      primeArray[p * q] = false;
+    }
+    p++;
+    while (!primeArray[p]) {
+      p++;
+    }
+  }
+  const primes = primeArray
+    .map((v, i) => (v ? i : -1))
+    .filter((v, i) => i > 1)
+    .filter(v => v > 0);
+  return primes;
+})();
+
+const multiplicativeInverse = (x, n) => {
+  if (gcd(x, n) != 1) {
+    throw `${x} and ${n} are not coprime!`;
+  }
+
+  let a = n;
+  let b = x;
+  let p0 = 0;
+  let p1 = 1;
+
+  while (b != 0) {
+    let a_ = b;
+    let b_ = a % b;
+    let q_ = parseInt(a / b); // integer division
+    a = a_;
+    b = b_;
+    let q = q_;
+
+    let p0_ = p1;
+    let p1_ = mod(p0 - p1 * q, n);
+    p0 = p0_;
+    p1 = p1_;
+  }
+
+  return p0;
+};
+
+const generateRandomPrimeFromSet = primeSet => {
+  return Array.from(primeSet)[getRandomInt(0, primeSet.length - 1)];
+};
+
+const generateKeyPair = (p, q) => {
+  const n = p * q;
+  const phi = (p - 1) * (q - 1);
+  let e = getRandomInt(1, phi);
+
+  let g = gcd(e, phi);
+  while (g != 1) {
+    e = getRandomInt(1, phi);
+    g = gcd(e, phi);
+  }
+
+  let d = multiplicativeInverse(e, phi);
+
+  return {
+    publickey: {
+      e,
+      n
+    },
+    privatekey: {
+      d,
+      n
+    }
+  };
+};
+
+const modPow = (a, b, n) => {
+  let res = 1;
+  for (let i = 0; i < b; i++) {
+    res = mod(res * a, n);
+  }
+  return res;
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -325,11 +408,19 @@ module.exports = {
   addLetters,
   extendKey,
   baconianDict,
+  gcd,
   areCoprime,
   affineLetter,
   isInvertible,
+  invertibleValues,
   generateRandomInvertibleMatrix,
   matrixMultiply,
+  mod,
   modMatrix,
-  transpose
+  transpose,
+  primesTo100,
+  multiplicativeInverse,
+  generateRandomPrimeFromSet,
+  generateKeyPair,
+  modPow
 };
