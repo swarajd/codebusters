@@ -3,7 +3,7 @@ import {
   multiplicativeInverse,
   invertibleValues,
   letters,
-  generateRandomPrimeFromSet,
+  generateRandomResultFromSet,
   generateKeyPair,
   gcd,
   modPow
@@ -73,8 +73,8 @@ describe("multiplicative inverse", () => {
 });
 
 test("keypair generation", () => {
-  const p = generateRandomPrimeFromSet(primesTo100);
-  const q = generateRandomPrimeFromSet(primesTo100);
+  const p = generateRandomResultFromSet(primesTo100);
+  const q = generateRandomResultFromSet(primesTo100);
 
   const keypair = generateKeyPair(p, q);
   const e = keypair.publickey.e;
@@ -95,8 +95,8 @@ test("testing modpow", () => {
 });
 
 test("encryption/decryption", () => {
-  const p = generateRandomPrimeFromSet(primesTo100);
-  const q = generateRandomPrimeFromSet(primesTo100);
+  const p = generateRandomResultFromSet(primesTo100);
+  const q = generateRandomResultFromSet(primesTo100);
 
   const plaintext = "ABCD";
 

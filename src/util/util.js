@@ -356,7 +356,7 @@ const multiplicativeInverse = (x, n) => {
   return p0;
 };
 
-const generateRandomPrimeFromSet = primeSet => {
+const generateRandomResultFromSet = primeSet => {
   return Array.from(primeSet)[getRandomInt(0, primeSet.length - 1)];
 };
 
@@ -420,7 +420,7 @@ module.exports = {
   transpose,
   primesTo100,
   multiplicativeInverse,
-  generateRandomPrimeFromSet,
+  generateRandomResultFromSet,
   generateKeyPair,
   modPow
 };
