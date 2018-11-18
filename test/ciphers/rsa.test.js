@@ -30,7 +30,7 @@ describe("multiplicative inverse", () => {
     }
   });
 
-  test("should find the proper inverse", () => {
+  test("should find the proper inverse for a regular alphabet", () => {
     const inverses = [
       [1, 1],
       [3, 9],
@@ -53,6 +53,22 @@ describe("multiplicative inverse", () => {
 
       expect(multiplicativeInverse(val, letters.length)).toEqual(inverse);
     }
+  });
+
+  test("should find the inverses for a few irregular cases too", () => {
+    let a = 5;
+    let b = 3;
+    let n = 7;
+
+    expect(multiplicativeInverse(a, n)).toEqual(b);
+    expect(multiplicativeInverse(b, n)).toEqual(a);
+
+    a = 10;
+    b = 12;
+    n = 17;
+
+    expect(multiplicativeInverse(a, n)).toEqual(b);
+    expect(multiplicativeInverse(b, n)).toEqual(a);
   });
 });
 
