@@ -357,7 +357,7 @@ const multiplicativeInverse = (x, n) => {
 };
 
 const generateRandomResultFromSet = set => {
-  return Array.from(set)[getRandomInt(0, s.length - 1)];
+  return Array.from(set)[getRandomInt(0, set.length - 1)];
 };
 
 const generateKeyPair = (p, q) => {
