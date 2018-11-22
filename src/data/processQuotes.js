@@ -22,7 +22,7 @@ let readFileLines = contents => {
 let jsonifyQuotes = quotes => {
   return {
     quotes: quotes.map(q => ({
-      text: q.toUpperCase(),
+      text: q.replace(/\n/g, " ").toUpperCase(),
       length: q.length
     }))
   };
