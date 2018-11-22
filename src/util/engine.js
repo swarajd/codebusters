@@ -9,7 +9,7 @@ import {
 import quotes from "../data/quotes.json";
 import words from "../data/words.json";
 
-const engine = (cypherType, cypherDirection) => {
+const engine = (cypherType, direction, xenocrypt) => {
   let cipherInformation = {};
 
   switch (cypherType) {
