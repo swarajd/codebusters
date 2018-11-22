@@ -1,5 +1,8 @@
 import { getRandomInt } from "./util.js";
 
+import { monoalphabetic } from "./ciphers.js";
+import quotes from "../data/quotes.json";
+
 const engine = (cypherType, cypherDirection) => {
   let cipherInformation = {};
 
@@ -52,11 +55,39 @@ const engine = (cypherType, cypherDirection) => {
       let chosenOption;
 
       for (let i = 0; i < options.length; i++) {
-        if (options[i].percentile <= optionPercentile) {
+        if (optionPercentile <= options[i].percentile) {
           chosenOption = options[i];
           break;
         }
       }
+
+      console.log(chosenOption);
+
+      // grab a random plaintext
+      const plaintextIdx = Math.floor(Math.random() * quotes.quotes.length);
+      let plaintextObj = quotes.quotes[plaintextIdx];
+
+      let hintWord = "";
+
+      if (chosenOption.hint) {
+        const words = plaintextObj.text.split(" ");
+        let wordIdx;
+        do {
+          wordIdx = Math.floor(Math.random() * words.length);
+        } while (
+          !(words[wordIdx].match(/^[A-Z]+$/g) && words[wordIdx].length >= 4)
+        );
+
+        hintWord = words[wordIdx];
+      }
+
+      console.log(hintWord);
+
+      if (!chosenOption.spaces) {
+        plaintextObj.text = plaintextObj.text.replace(/\s/g, "");
+      }
+
+      console.log(plaintextObj);
 
       break;
     case "affine":
@@ -73,3 +104,5 @@ const engine = (cypherType, cypherDirection) => {
       throw "unknown cipher type";
   }
 };
+
+export default engine;
