@@ -1,6 +1,11 @@
 import { getRandomInt } from "./util.js";
-
 import { monoalphabetic } from "./ciphers.js";
+import {
+  hintGenerator,
+  valueGenerator,
+  ciphertextGenerator
+} from "./latexGenerators.js";
+
 import quotes from "../data/quotes.json";
 import words from "../data/words.json";
 
@@ -18,37 +23,43 @@ const engine = (cypherType, cypherDirection) => {
           spaces: true,
           hint: true,
           errors: false,
-          percentile: 10
+          percentile: 10,
+          points: 125
         },
         {
           spaces: true,
           hint: false,
           errors: false,
-          percentile: 40
+          percentile: 40,
+          points: 200
         },
         {
           spaces: true,
           hint: true,
           errors: true,
-          percentile: 50
+          percentile: 50,
+          points: 150
         },
         {
           spaces: true,
           hint: false,
           errors: true,
-          percentile: 60
+          percentile: 60,
+          points: 225
         },
         {
           spaces: false,
           hint: true,
           errors: false,
-          percentile: 80
+          percentile: 80,
+          points: 300
         },
         {
           spaces: false,
           hint: false,
           errors: false,
-          percentile: 100
+          percentile: 100,
+          points: 350
         }
       ];
 
@@ -68,6 +79,7 @@ const engine = (cypherType, cypherDirection) => {
       const plaintextIdx = Math.floor(Math.random() * quotes.quotes.length);
       let plaintextObj = quotes.quotes[plaintextIdx];
 
+      // choose a variant of the monoalphabetic scramble
       const variants = ["k1", "k2", "random"];
       const chosenVariantIdx = getRandomInt(0, 2);
       const chosenVariant = variants[chosenVariantIdx];
@@ -79,10 +91,12 @@ const engine = (cypherType, cypherDirection) => {
         keyword = words.words[keywordIdx];
       }
 
+      // choose a hint word if relevant
       let hintWord = "";
 
+      const quote = plaintextObj.text.split("--")[0];
       if (chosenOption.hint) {
-        const words = plaintextObj.text.split(" ");
+        const words = quote.split(" ");
         let wordIdx;
         do {
           wordIdx = Math.floor(Math.random() * words.length);
@@ -95,19 +109,24 @@ const engine = (cypherType, cypherDirection) => {
 
       // console.log(hintWord);
 
+      // omit spaces, if relevant
       if (!chosenOption.spaces) {
         plaintextObj.text = plaintextObj.text.replace(/\s/g, "");
       }
 
       // console.log(plaintextObj);
 
+      // execute the actual encryption
       const cipherResult = monoalphabetic(
         plaintextObj.text,
         chosenVariant,
         keyword
       );
 
-      console.log(cipherResult);
+      console.log(hintGenerator(hintWord));
+      console.log(valueGenerator(chosenOption.points));
+      console.log(ciphertextGenerator(cipherResult.ciphertext));
+      // console.log(cipherResult);
 
       break;
     case "affine":
