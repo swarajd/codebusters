@@ -9,6 +9,35 @@ import {
 import { quotes } from "../data/quotes.json";
 import words from "../data/words.json";
 
+/*
+
+options pop up based on which cipher is picked
+
+options would probably have
+
+- cipher type
+- generate latex
+- cipher specific options
+  - monoalphabetic
+    - spaces
+    - hint
+    - grammar errors
+  - affine
+    - encryption/analysis
+  - vigenere
+    - encryption/decryption/crib analysis
+  - hill
+    - decryption given matrix
+      - matrix size
+    - decryption given 4 plaintext-ciphertext pairs
+    - encrypting given matrix
+      - matrix size
+
+  return value would probably be
+  - problem text
+  - solution text
+*/
+
 const engine = (cypherType, options) => {
   switch (cypherType) {
     case "atbash":
