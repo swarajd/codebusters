@@ -1,3 +1,5 @@
+import { getRandomInt } from "./util.js";
+
 const engine = (cypherType, cypherDirection) => {
   let cipherInformation = {};
 
@@ -45,6 +47,16 @@ const engine = (cypherType, cypherDirection) => {
           percentile: 100
         }
       ];
+
+      const optionPercentile = getRandomInt(0, 100);
+      let chosenOption;
+
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].percentile <= optionPercentile) {
+          chosenOption = options[i];
+          break;
+        }
+      }
 
       break;
     case "affine":
