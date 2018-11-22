@@ -1,5 +1,5 @@
 export default {
-  ciphertype: "",
+  cipherType: "",
   monoalphabetic: {
     spaces: true,
     hint: true,

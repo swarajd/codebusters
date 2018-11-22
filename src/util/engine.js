@@ -38,8 +38,10 @@ options would probably have
   - solution text
 */
 
-const engine = (cypherType, options) => {
-  switch (cypherType) {
+const engine = state => {
+  const cipherType = state.cipherType;
+
+  switch (cipherType) {
     case "atbash":
       console.log("atbash");
       break;
@@ -95,7 +97,9 @@ const engine = (cypherType, options) => {
         keyword
       );
 
-      const points = options.hasOwnProperty("points") ? options.points : 0;
+      const monoalphabeticOptions = state.monoalphabetic;
+
+      const points = state.hasOwnProperty("points") ? state.points : 0;
 
       console.log(hintGenerator(hintWord));
       console.log(valueGenerator(points));
