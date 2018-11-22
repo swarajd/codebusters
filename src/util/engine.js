@@ -6,78 +6,21 @@ import {
   ciphertextGenerator
 } from "./latexGenerators.js";
 
-import quotes from "../data/quotes.json";
+import { quotes } from "../data/quotes.json";
 import words from "../data/words.json";
 
-const engine = (cypherType, direction, xenocrypt) => {
-  let cipherInformation = {};
-
+const engine = (cypherType, options) => {
   switch (cypherType) {
     case "atbash":
+      console.log("atbash");
       break;
     case "caesar":
+      console.log("caesar");
       break;
     case "monoalphabetic":
-      const options = [
-        {
-          spaces: true,
-          hint: true,
-          errors: false,
-          percentile: 10,
-          points: 125
-        },
-        {
-          spaces: true,
-          hint: false,
-          errors: false,
-          percentile: 40,
-          points: 200
-        },
-        {
-          spaces: true,
-          hint: true,
-          errors: true,
-          percentile: 50,
-          points: 150
-        },
-        {
-          spaces: true,
-          hint: false,
-          errors: true,
-          percentile: 60,
-          points: 225
-        },
-        {
-          spaces: false,
-          hint: true,
-          errors: false,
-          percentile: 80,
-          points: 300
-        },
-        {
-          spaces: false,
-          hint: false,
-          errors: false,
-          percentile: 100,
-          points: 350
-        }
-      ];
-
-      const optionPercentile = getRandomInt(0, 100);
-      let chosenOption;
-
-      for (let i = 0; i < options.length; i++) {
-        if (optionPercentile <= options[i].percentile) {
-          chosenOption = options[i];
-          break;
-        }
-      }
-
-      // console.log(chosenOption);
-
       // grab a random plaintext
-      const plaintextIdx = Math.floor(Math.random() * quotes.quotes.length);
-      let plaintextObj = quotes.quotes[plaintextIdx];
+      const plaintextIdx = Math.floor(Math.random() * quotes.length);
+      let plaintextObj = quotes[plaintextIdx];
 
       // choose a variant of the monoalphabetic scramble
       const variants = ["k1", "k2", "random"];
@@ -95,7 +38,7 @@ const engine = (cypherType, direction, xenocrypt) => {
       let hintWord = "";
 
       const quote = plaintextObj.text.split("--")[0];
-      if (chosenOption.hint) {
+      if (true /*options.hasOwnProperty("hint") && options.hint */) {
         const words = quote.split(" ");
         let wordIdx;
         do {
@@ -110,7 +53,7 @@ const engine = (cypherType, direction, xenocrypt) => {
       // console.log(hintWord);
 
       // omit spaces, if relevant
-      if (!chosenOption.spaces) {
+      if (false /*options.hasOwnProperty("spaces") && options.spaces */) {
         plaintextObj.text = plaintextObj.text.replace(/\s/g, "");
       }
 
@@ -123,21 +66,28 @@ const engine = (cypherType, direction, xenocrypt) => {
         keyword
       );
 
+      const points = options.hasOwnProperty("points") ? options.points : 0;
+
       console.log(hintGenerator(hintWord));
-      console.log(valueGenerator(chosenOption.points));
+      console.log(valueGenerator(points));
       console.log(ciphertextGenerator(cipherResult.ciphertext));
       // console.log(cipherResult);
 
       break;
     case "affine":
+      console.log("affine");
       break;
     case "vigenere":
+      console.log("vigenere");
       break;
     case "baconian":
+      console.log("baconian");
       break;
     case "hill":
+      console.log("hill");
       break;
     case "RSA":
+      console.log("RSA");
       break;
     default:
       throw "unknown cipher type";
