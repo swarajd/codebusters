@@ -1,4 +1,4 @@
-import { getRandomInt } from "./util.js";
+import { getRandomInt, getOrError } from "./util.js";
 import { monoalphabetic } from "./ciphers.js";
 import {
   hintGenerator,

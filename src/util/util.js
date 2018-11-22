@@ -404,6 +404,14 @@ const modPow = (a, b, n) => {
   return res;
 };
 
+const getOrError = (options, property) => {
+  if (options.hasOwnProperty(property)) {
+    return options[property];
+  } else {
+    throw `options dictionary does not have option ${property} defined`;
+  }
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -435,5 +443,6 @@ module.exports = {
   multiplicativeInverse,
   generateRandomResultFromSet,
   generateKeyPair,
-  modPow
+  modPow,
+  getOrError
 };
