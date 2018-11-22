@@ -11,32 +11,38 @@ const engine = (cypherType, cypherDirection) => {
         {
           spaces: true,
           hint: true,
-          errors: false
+          errors: false,
+          percentile: 10
         },
         {
           spaces: true,
           hint: false,
-          errors: false
+          errors: false,
+          percentile: 40
         },
         {
           spaces: true,
           hint: true,
-          errors: true
+          errors: true,
+          percentile: 50
         },
         {
           spaces: true,
           hint: false,
-          errors: true
+          errors: true,
+          percentile: 60
         },
         {
           spaces: false,
           hint: true,
-          errors: false
+          errors: false,
+          percentile: 80
         },
         {
           spaces: false,
           hint: false,
-          errors: false
+          errors: false,
+          percentile: 100
         }
       ];
 
