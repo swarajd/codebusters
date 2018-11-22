@@ -10,7 +10,7 @@ const hintGenerator = hintWord => {
 };
 
 const valueGenerator = value => {
-  return `\\textbf{Value:} ${value} points`;
+  return `\\textbf{Value:} ${value} points \\newline`;
 };
 
 const ciphertextGenerator = ciphertext => {
