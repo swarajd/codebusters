@@ -2,6 +2,7 @@ import { getRandomInt } from "./util.js";
 
 import { monoalphabetic } from "./ciphers.js";
 import quotes from "../data/quotes.json";
+import words from "../data/words.json";
 
 const engine = (cypherType, cypherDirection) => {
   let cipherInformation = {};
@@ -61,11 +62,22 @@ const engine = (cypherType, cypherDirection) => {
         }
       }
 
-      console.log(chosenOption);
+      // console.log(chosenOption);
 
       // grab a random plaintext
       const plaintextIdx = Math.floor(Math.random() * quotes.quotes.length);
       let plaintextObj = quotes.quotes[plaintextIdx];
+
+      const variants = ["k1", "k2", "random"];
+      const chosenVariantIdx = getRandomInt(0, 2);
+      const chosenVariant = variants[chosenVariantIdx];
+
+      let keyword = "";
+
+      if (chosenVariant == "k1" || chosenVariant == "k2") {
+        const keywordIdx = Math.floor(Math.random() * words.words.length);
+        keyword = words.words[keywordIdx];
+      }
 
       let hintWord = "";
 
@@ -81,13 +93,21 @@ const engine = (cypherType, cypherDirection) => {
         hintWord = words[wordIdx];
       }
 
-      console.log(hintWord);
+      // console.log(hintWord);
 
       if (!chosenOption.spaces) {
         plaintextObj.text = plaintextObj.text.replace(/\s/g, "");
       }
 
-      console.log(plaintextObj);
+      // console.log(plaintextObj);
+
+      const cipherResult = monoalphabetic(
+        plaintextObj.text,
+        chosenVariant,
+        keyword
+      );
+
+      console.log(cipherResult);
 
       break;
     case "affine":
