@@ -21,7 +21,7 @@ let readFileLines = contents => {
 // convert each quote into an easily accessibly JSON object and wrap it
 let jsonifyQuotes = quotes => {
   return {
-    quotes: quotes.map(q => ({
+    english_quotes: quotes.map(q => ({
       text: q
         .replace(/\n/g, " ")
         .replace(/\\/g, "")
