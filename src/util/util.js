@@ -417,7 +417,6 @@ module.exports = {
   dedupe,
   extractLetters,
   zipToDict,
-  getRandomInt,
   generateK1Dict,
   flipDict,
   randomDerangementDict,
@@ -439,6 +438,5 @@ module.exports = {
   generateRandomResultFromSet,
   generateKeyPair,
   modPow,
-  getOrError,
   chooseRandomFromArray
 };

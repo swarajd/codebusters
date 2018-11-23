@@ -1,4 +1,4 @@
-import { getRandomInt, getOrError, chooseRandomFromArray } from "./util.js";
+import { chooseRandomFromArray } from "./util.js";
 import { monoalphabetic, atbash, caesar } from "./ciphers.js";
 import {
   hintGenerator,
@@ -52,10 +52,11 @@ const engine = state => {
 
   const cipherType = chooseRandomFromArray(state.cipherTypes);
   let plaintextObj = chooseRandomFromArray(englishQuotes);
+  let res = {};
 
   switch (cipherType) {
     case "atbash":
-      const res = atbash(plaintextObj.text);
+      res = atbash(plaintextObj.text);
 
       generatedProblem = {
         problem: {
@@ -67,7 +68,7 @@ const engine = state => {
 
       break;
     case "caesar":
-      const res = caesar(plaintextObj.text);
+      res = caesar(plaintextObj.text);
 
       generatedProblem = {
         problem: {
