@@ -1,4 +1,4 @@
-import { getRandomInt, getOrError } from "./util.js";
+import { getRandomInt, getOrError, chooseRandomFromArray } from "./util.js";
 import { monoalphabetic } from "./ciphers.js";
 import {
   hintGenerator,
@@ -7,7 +7,7 @@ import {
 } from "./latexGenerators.js";
 
 import { quotes } from "../data/quotes.json";
-import words from "../data/words.json";
+import { words } from "../data/words.json";
 
 /*
 
@@ -27,19 +27,29 @@ options would probably have
   - vigenere
     - encryption/decryption/crib analysis
   - hill
-    - decryption given matrix
-      - matrix size
-    - decryption given 4 plaintext-ciphertext pairs
+    - decryption matrix given encryption matrix
+    - decryption matrix given 4 plaintext-ciphertext pairs
     - encrypting given matrix
       - matrix size
 
   return value would probably be
-  - problem text
-  - solution text
+  - problem
+    - ciphertext
+    - hint/extra info
+  - solution
+    - plaintext
 */
 
 const engine = state => {
-  const cipherType = state.cipherType;
+  const generatedProblem = {
+    problem: {
+      ciphertext: "",
+      hint: ""
+    },
+    solution: ""
+  };
+
+  const cipherType = chooseRandomFromArray(state.cipherTypes);
 
   switch (cipherType) {
     case "atbash":
@@ -50,19 +60,16 @@ const engine = state => {
       break;
     case "monoalphabetic":
       // grab a random plaintext
-      const plaintextIdx = Math.floor(Math.random() * quotes.length);
-      let plaintextObj = quotes[plaintextIdx];
+      let plaintextObj = chooseRandomFromArray(quotes);
 
       // choose a variant of the monoalphabetic scramble
       const variants = ["k1", "k2", "random"];
-      const chosenVariantIdx = getRandomInt(0, 2);
-      const chosenVariant = variants[chosenVariantIdx];
+      const chosenVariant = chooseRandomFromArray(variants);
 
       let keyword = "";
 
       if (chosenVariant == "k1" || chosenVariant == "k2") {
-        const keywordIdx = Math.floor(Math.random() * words.words.length);
-        keyword = words.words[keywordIdx];
+        keyword = chooseRandomFromArray(words);
       }
 
       // choose a hint word if relevant

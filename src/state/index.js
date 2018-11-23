@@ -1,9 +1,24 @@
 export default {
-  cipherType: "",
+  problem: {
+    ciphertext: "",
+    hint: ""
+  },
+  solution: "",
+  cypherTypes: [
+    "atbash",
+    "caesar",
+    "monoalphabetic",
+    "affine",
+    "vigenere",
+    "baconian",
+    "hill",
+    "RSA"
+  ],
   monoalphabetic: {
     spaces: true,
     hint: true,
-    errors: false
+    errors: false,
+    xenocrypt: false
   },
   /*
   types are:
