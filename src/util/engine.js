@@ -41,7 +41,7 @@ options would probably have
 */
 
 const engine = state => {
-  const generatedProblem = {
+  let generatedProblem = {
     problem: {
       ciphertext: "",
       hint: ""
@@ -62,19 +62,20 @@ const engine = state => {
       // grab a random plaintext
       let plaintextObj = chooseRandomFromArray(quotes);
 
+      // grab the options
+      const monoalphabeticOptions = state.monoalphabetic;
+
       // choose a variant of the monoalphabetic scramble
       const variants = ["k1", "k2", "random"];
       const chosenVariant = chooseRandomFromArray(variants);
 
       let keyword = "";
-
       if (chosenVariant == "k1" || chosenVariant == "k2") {
         keyword = chooseRandomFromArray(words);
       }
 
       // choose a hint word if relevant
       let hintWord = "";
-
       const quote = plaintextObj.text.split("--")[0];
       if (true /*options.hasOwnProperty("hint") && options.hint */) {
         const words = quote.split(" ");
@@ -88,30 +89,22 @@ const engine = state => {
         hintWord = words[wordIdx];
       }
 
-      // console.log(hintWord);
-
       // omit spaces, if relevant
-      if (false /*options.hasOwnProperty("spaces") && options.spaces */) {
-        plaintextObj.text = plaintextObj.text.replace(/\s/g, "");
+      let plaintext = plaintextObj.text;
+      if (!monoalphabeticOptions.spaces) {
+        plaintext = plaintext.replace(/\s/g, "");
       }
 
-      // console.log(plaintextObj);
-
       // execute the actual encryption
-      const cipherResult = monoalphabetic(
-        plaintextObj.text,
-        chosenVariant,
-        keyword
-      );
+      const cipherResult = monoalphabetic(plaintext, chosenVariant, keyword);
 
-      const monoalphabeticOptions = state.monoalphabetic;
-
-      const points = state.hasOwnProperty("points") ? state.points : 0;
-
-      console.log(hintGenerator(hintWord));
-      console.log(valueGenerator(points));
-      console.log(ciphertextGenerator(cipherResult.ciphertext));
-      // console.log(cipherResult);
+      generatedProblem = {
+        problem: {
+          ciphertext: cipherResult.ciphertext,
+          hint: `This phrase contains the word ${hintWord}`
+        },
+        solution: plaintext
+      };
 
       break;
     case "affine":
@@ -132,6 +125,8 @@ const engine = state => {
     default:
       throw "unknown cipher type";
   }
+
+  return generatedProblem;
 };
 
 export default engine;
