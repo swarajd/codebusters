@@ -1,5 +1,5 @@
 import { getRandomInt, getOrError, chooseRandomFromArray } from "./util.js";
-import { monoalphabetic } from "./ciphers.js";
+import { monoalphabetic, atbash, caesar } from "./ciphers.js";
 import {
   hintGenerator,
   valueGenerator,
@@ -7,6 +7,7 @@ import {
 } from "./latexGenerators.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
+import { spanishQuotes } from "../data/spanishQuotes.json";
 import { words } from "../data/words.json";
 
 /*
@@ -50,20 +51,40 @@ const engine = state => {
   };
 
   const cipherType = chooseRandomFromArray(state.cipherTypes);
+  let plaintextObj = chooseRandomFromArray(englishQuotes);
 
   switch (cipherType) {
     case "atbash":
-      console.log("atbash");
+      const res = atbash(plaintextObj.text);
+
+      generatedProblem = {
+        problem: {
+          ciphertext: res.ciphertext,
+          hint: ""
+        },
+        solution: res.plaintext
+      };
+
       break;
     case "caesar":
-      console.log("caesar");
+      const res = caesar(plaintextObj.text);
+
+      generatedProblem = {
+        problem: {
+          ciphertext: res.ciphertext,
+          hint: ""
+        },
+        solution: res.plaintext
+      };
       break;
     case "monoalphabetic":
-      // grab a random plaintext
-      let plaintextObj = chooseRandomFromArray(englishQuotes);
-
       // grab the options
       const monoalphabeticOptions = state.monoalphabetic;
+
+      // switch to spanish quote, if relevant
+      if (monoalphabeticOptions.xenocrypt) {
+        plaintextObj = chooseRandomFromArray(spanishQuotes);
+      }
 
       // choose a variant of the monoalphabetic scramble
       const variants = ["k1", "k2", "random"];
