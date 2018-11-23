@@ -35,18 +35,18 @@ let jsonifyQuotes = quotes => {
 // write the JSON to a file
 let writeQuotes = quoteJSON => {
   return fs.writeFileAsync(
-    "quotes.json",
+    "english_quotes.json",
     JSON.stringify(quoteJSON, null, 2),
     "utf-8"
   );
 };
 
 // run the full workflow
-fs.readFileAsync("quotes.txt", "utf-8")
+fs.readFileAsync("english_quotes.txt", "utf-8")
   .then(readFileLines)
   .then(jsonifyQuotes)
   .then(writeQuotes)
   .then(err => {
     if (err) throw err;
-    console.log("converted quotes.txt to quotes.json");
+    console.log("converted english_quotes.txt to english_quotes.json");
   });
