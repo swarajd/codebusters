@@ -76,21 +76,25 @@ const engine = state => {
 
       // choose a hint word if relevant
       let hintWord = "";
-      const quote = plaintextObj.text.split("--")[0];
-      if (true /*options.hasOwnProperty("hint") && options.hint */) {
-        const words = quote.split(" ");
-        let wordIdx;
-        do {
-          wordIdx = Math.floor(Math.random() * words.length);
-        } while (
-          !(words[wordIdx].match(/^[A-Z]+$/g) && words[wordIdx].length >= 4)
-        );
+      let quote = plaintextObj.text.split("--")[0];
+      if (monoalphabeticOptions.hint) {
+        const words = quote.split(/\s+/);
+        const validWords = words
+          .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
+          .filter(w => w.match(/^[A-Z]+$/g))
+          .filter(w => w.length >= 4);
 
-        hintWord = words[wordIdx];
+        hintWord = chooseRandomFromArray(validWords);
+      }
+
+      // introduce an error/errors, if relevant
+      let filteredPlaintext = plaintextObj.text;
+      if (monoalphabeticOptions.errors) {
+        filteredPlaintext = filteredPlaintext.replace(/[^\w\s]/g, "");
       }
 
       // omit spaces, if relevant
-      let plaintext = plaintextObj.text;
+      let plaintext = filteredPlaintext;
       if (!monoalphabeticOptions.spaces) {
         plaintext = plaintext.replace(/\s/g, "");
       }
@@ -103,7 +107,7 @@ const engine = state => {
           ciphertext: cipherResult.ciphertext,
           hint: hintWord
         },
-        solution: plaintext
+        solution: plaintextObj.text
       };
 
       break;

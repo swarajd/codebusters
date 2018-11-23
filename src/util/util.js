@@ -170,17 +170,6 @@ const randomDerangement = arr => {
   return A;
 };
 
-const shuffle = a => {
-  var j, x, i;
-  for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
-    x = a[i];
-    a[i] = a[j];
-    a[j] = x;
-  }
-  return a;
-};
-
 const randomDerangementDict = () => {
   return zipToDict(letters, randomDerangement(letters));
 };
@@ -413,6 +402,9 @@ const getOrError = (options, property) => {
 };
 
 const chooseRandomFromArray = arr => {
+  if (arr.length == 0) {
+    throw "no elements in the array!";
+  }
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
@@ -429,7 +421,6 @@ module.exports = {
   generateK1Dict,
   flipDict,
   randomDerangementDict,
-  shuffle,
   addLetters,
   extendKey,
   baconianDict,
