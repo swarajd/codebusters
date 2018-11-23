@@ -6,7 +6,7 @@ import {
   ciphertextGenerator
 } from "./latexGenerators.js";
 
-import { english_quotes } from "../data/english_quotes.json";
+import { englishQuotes } from "../data/englishQuotes.json";
 import { words } from "../data/words.json";
 
 /*
@@ -60,7 +60,7 @@ const engine = state => {
       break;
     case "monoalphabetic":
       // grab a random plaintext
-      let plaintextObj = chooseRandomFromArray(english_quotes);
+      let plaintextObj = chooseRandomFromArray(englishQuotes);
 
       // grab the options
       const monoalphabeticOptions = state.monoalphabetic;

@@ -21,7 +21,7 @@ let readFileLines = contents => {
 // convert each quote into an easily accessibly JSON object and wrap it
 let jsonifyQuotes = quotes => {
   return {
-    english_quotes: quotes.map(q => ({
+    englishQuotes: quotes.map(q => ({
       text: q
         .replace(/\n/g, " ")
         .replace(/\\/g, "")
@@ -35,18 +35,18 @@ let jsonifyQuotes = quotes => {
 // write the JSON to a file
 let writeQuotes = quoteJSON => {
   return fs.writeFileAsync(
-    "english_quotes.json",
+    "englishQuotes.json",
     JSON.stringify(quoteJSON, null, 2),
     "utf-8"
   );
 };
 
 // run the full workflow
-fs.readFileAsync("english_quotes.txt", "utf-8")
+fs.readFileAsync("englishQuotes.txt", "utf-8")
   .then(readFileLines)
   .then(jsonifyQuotes)
   .then(writeQuotes)
   .then(err => {
     if (err) throw err;
-    console.log("converted english_quotes.txt to english_quotes.json");
+    console.log("converted englishQuotes.txt to englishQuotes.json");
   });
