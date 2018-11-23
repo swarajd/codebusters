@@ -1,4 +1,4 @@
-import engine from "./../src/util/engine.js";
+import engine from "../../src/util/engine.js";
 
 test("testing monoalphabetic result of engine (*nothing given*)", () => {
   const state = {
@@ -76,6 +76,29 @@ test("testing monoalphabetic result of engine (spaces, hint, error)", () => {
       hint: true,
       errors: true,
       xenocrypt: false
+    }
+  };
+  for (let i = 0; i < 10; i++) {
+    const generatedProblem = engine(state);
+
+    const plaintext = generatedProblem.solution;
+    const ciphertext = generatedProblem.problem.ciphertext;
+    const hint = generatedProblem.problem.hint;
+
+    expect(plaintext.includes(hint)).toEqual(true);
+    expect(ciphertext.length).toBeLessThan(plaintext.length);
+    expect(ciphertext.includes(" ")).toEqual(true);
+  }
+});
+
+test("testing monoalphabetic result of engine (spaces, hint, error, xenocrypt)", () => {
+  const state = {
+    cipherTypes: ["monoalphabetic"],
+    monoalphabetic: {
+      spaces: true,
+      hint: true,
+      errors: true,
+      xenocrypt: true
     }
   };
   for (let i = 0; i < 10; i++) {
