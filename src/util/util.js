@@ -321,8 +321,8 @@ const transpose = matrix => {
   return result;
 };
 
-const primesTo100 = (() => {
-  const primeArray = new Array(100).fill(true);
+const primesTo20 = (() => {
+  const primeArray = new Array(20).fill(true);
   let p = 2;
   while (p < primeArray.length / 2) {
     for (let q = 2; q < primeArray.length / p; q++) {
@@ -412,6 +412,10 @@ const getOrError = (options, property) => {
   }
 };
 
+const chooseRandomFromArray = arr => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -439,10 +443,11 @@ module.exports = {
   mod,
   modMatrix,
   transpose,
-  primesTo100,
+  primesTo20,
   multiplicativeInverse,
   generateRandomResultFromSet,
   generateKeyPair,
   modPow,
-  getOrError
+  getOrError,
+  chooseRandomFromArray
 };

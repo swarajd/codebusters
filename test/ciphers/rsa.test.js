@@ -1,5 +1,5 @@
 import {
-  primesTo100,
+  primesTo20,
   multiplicativeInverse,
   invertibleValues,
   letters,
@@ -12,11 +12,9 @@ import {
 import { RSAEncrypt, RSADecrypt } from "./../../src/util/ciphers.js";
 
 test("check what the primes are", () => {
-  const primeList = "2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97"
-    .split(",")
-    .map(x => parseInt(x));
+  const primeList = "2,3,5,7,11,13,17,19".split(",").map(x => parseInt(x));
 
-  expect(primesTo100).toEqual(primeList);
+  expect(primesTo20).toEqual(primeList);
 });
 
 describe("multiplicative inverse", () => {
@@ -73,8 +71,8 @@ describe("multiplicative inverse", () => {
 });
 
 test("keypair generation", () => {
-  const p = generateRandomResultFromSet(primesTo100);
-  const q = generateRandomResultFromSet(primesTo100);
+  const p = generateRandomResultFromSet(primesTo20);
+  const q = generateRandomResultFromSet(primesTo20);
 
   const keypair = generateKeyPair(p, q);
   const e = keypair.publickey.e;
@@ -95,9 +93,12 @@ test("testing modpow", () => {
 });
 
 test("encryption/decryption", () => {
-  const p = generateRandomResultFromSet(primesTo100);
-  const q = generateRandomResultFromSet(primesTo100);
+  const p = generateRandomResultFromSet(primesTo20);
 
+  let q = generateRandomResultFromSet(primesTo20);
+  while (p == q || p * q <= 128) {
+    q = generateRandomResultFromSet(primesTo20);
+  }
   const plaintext = "ABCD";
 
   for (let i = 0; i < 10; i++) {
