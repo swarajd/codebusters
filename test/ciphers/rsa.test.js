@@ -93,10 +93,10 @@ test("testing modpow", () => {
 });
 
 test("encryption/decryption", () => {
-  const p = generateRandomResultFromSet(primesTo20);
-
+  let p = generateRandomResultFromSet(primesTo20);
   let q = generateRandomResultFromSet(primesTo20);
   while (p == q || p * q <= 128) {
+    p = generateRandomResultFromSet(primesTo20);
     q = generateRandomResultFromSet(primesTo20);
   }
   const plaintext = "ABCD";
