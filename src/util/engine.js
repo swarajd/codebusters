@@ -101,7 +101,7 @@ const engine = state => {
       generatedProblem = {
         problem: {
           ciphertext: cipherResult.ciphertext,
-          hint: `This phrase contains the word ${hintWord}`
+          hint: hintWord
         },
         solution: plaintext
       };
