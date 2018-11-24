@@ -26,7 +26,7 @@ export default {
   - analysis
   */
   affine: {
-    type: "encryption"
+    types: ["encryption", "analysis"]
   },
   /*
   types are:
@@ -35,7 +35,7 @@ export default {
   - crib
   */
   vigenere: {
-    type: "decryption"
+    types: ["encryption", "decryption", "crib"]
   },
   /*
     types are:
@@ -47,8 +47,8 @@ export default {
     - pairs
   */
   hill: {
-    type: "decryption",
-    method: "matrix",
-    matrixSize: 2
+    type: ["encryption", "decryption", "produce"],
+    methods: ["matrix", "pairs"],
+    matrixSizes: [2, 3]
   }
 };
