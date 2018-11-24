@@ -3,6 +3,7 @@ import {
   modMatrix,
   transpose,
   generateRandomInvertibleMatrix,
+  invertMatrix,
   isInvertible
 } from "./../../src/util/util.js";
 
@@ -110,4 +111,14 @@ test("checking for invertibility on a 4x4 matrix", () => {
   } catch (e) {
     expect(e).toEqual("this size: " + size + " is unsupported");
   }
+});
+
+test("checking if matrix inverse calculation works", () => {
+  const matrix = [[1, 5], [3, 4]];
+
+  const size = 2;
+
+  const invertedMatrix = invertMatrix(matrix, size);
+
+  expect(invertedMatrix).toEqual([[2, 17], [5, 7]]);
 });
