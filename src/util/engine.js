@@ -163,6 +163,26 @@ const engine = state => {
 
           generatedProblem = {
             problem: {
+              ciphertext: res.plaintext,
+              hint: `a: ${a}, b: ${b}`
+            },
+            solution: {
+              plaintext: res.ciphertext
+            }
+          };
+
+          break;
+        case "analysis":
+          let a = getRandomInt(1, 26);
+          while (!areCoprime(a, letters.length)) {
+            a = getRandomInt(1, 26);
+          }
+          let b = getRandomInt(1, 26);
+
+          res = affine(plaintextObj.text, a, b);
+
+          generatedProblem = {
+            problem: {
               ciphertext: res.ciphertext,
               hint: ""
             },
@@ -172,9 +192,6 @@ const engine = state => {
               b: b
             }
           };
-
-          break;
-        case "analysis":
           break;
         default:
           throw `option '${problemType}' for affine not found`;
