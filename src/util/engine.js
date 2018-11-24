@@ -2,7 +2,10 @@ import {
   chooseRandomFromArray,
   getRandomInt,
   areCoprime,
-  letters
+  letters,
+  generateRandomResultFromSet,
+  generateKeyPair,
+  primesTo20
 } from "./util.js";
 import {
   monoalphabetic,
@@ -10,7 +13,8 @@ import {
   caesar,
   baconian,
   affine,
-  vigenere
+  vigenere,
+  RSAEncrypt
 } from "./ciphers.js";
 import {
   hintGenerator,
@@ -238,25 +242,38 @@ const engine = state => {
 
           break;
         case "crib":
-          //TODO: implement
+          const wordOffset = Math.floor(chosenWord.length / 2);
+
+          // there is a slim chance for a collision
+          // but for practice purposes it doesn't matter
+          let cribPlaintext = chooseRandomFromArray(englishQuotes).text;
+          let cribCiphertext = vigenere(cribPlaintext, chosenWord);
+
+          let cribPlaintextSlice = cribPlaintext.slice(
+            wordOffset,
+            wordOffset + chosenWord.length
+          );
+          let cribCiphertextSlice = cribCiphertext.ciphertext.slice(
+            wordOffset,
+            wordOffset + chosenWord.length
+          );
+
+          res = vigenere(plaintextObj.text, chosenWord);
+
+          generatedProblem = {
+            problem: {
+              ciphertext: res.ciphertext,
+              hint: `${cribPlaintextSlice} => ${cribCiphertextSlice}`
+            },
+            solution: {
+              plaintext: plaintextObj.text
+            }
+          };
 
           break;
         default:
           throw `option '${problemType}' for vigenere not found`;
       }
-
-      // res = vigenere(plaintextObj.text, chosenWord);
-
-      // generatedProblem = {
-      //   problem: {
-      //     ciphertext: res.ciphertext,
-      //     hint: ""
-      //   },
-      //   solution: {
-      //     plaintext: res.plaintext,
-      //     key: res.key
-      //   }
-      // };
       break;
     case "baconian":
       res = baconian(plaintextObj.text);
@@ -275,7 +292,28 @@ const engine = state => {
       console.log("hill");
       break;
     case "RSA":
-      console.log("RSA");
+      let p = generateRandomResultFromSet(primesTo20);
+      let q = generateRandomResultFromSet(primesTo20);
+      while (p == q || p * q < 26) {
+        p = generateRandomResultFromSet(primesTo20);
+        q = generateRandomResultFromSet(primesTo20);
+      }
+
+      const keypair = generateKeyPair(p, q);
+      const publickey = keypair.publickey;
+      const RSAword = chooseRandomFromArray(words);
+      res = RSAEncrypt(RSAword, keypair);
+
+      generatedProblem = {
+        problem: {
+          ciphertext: res.plaintext,
+          hint: `publickey = { e: ${publickey.e}, n: ${publickey.n} }`
+        },
+        solution: {
+          plaintext: res.ciphertext
+        }
+      };
+
       break;
     default:
       throw "unknown cipher type";
