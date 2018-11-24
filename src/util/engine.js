@@ -1,5 +1,5 @@
 import { chooseRandomFromArray } from "./util.js";
-import { monoalphabetic, atbash, caesar } from "./ciphers.js";
+import { monoalphabetic, atbash, caesar, baconian } from "./ciphers.js";
 import {
   hintGenerator,
   valueGenerator,
@@ -140,7 +140,15 @@ const engine = state => {
       console.log("vigenere");
       break;
     case "baconian":
-      console.log("baconian");
+      res = baconian(plaintextObj.text);
+
+      generatedProblem = {
+        problem: {
+          ciphertext: res.ciphertext,
+          hint: ""
+        },
+        solution: res.plaintext
+      };
       break;
     case "hill":
       console.log("hill");
