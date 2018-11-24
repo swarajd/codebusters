@@ -238,6 +238,8 @@ const engine = state => {
 
           break;
         case "crib":
+          //TODO: implement
+
           break;
         default:
           throw `option '${problemType}' for vigenere not found`;
