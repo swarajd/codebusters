@@ -189,8 +189,9 @@ const RSAEncrypt = (text, keypair) => {
   // console.log(n, e);
 
   const ciphertext = text
+    .toUpperCase()
     .split("")
-    .map(l => l.charCodeAt(0))
+    .map(l => l.charCodeAt(0) - 64)
     .map(c => modPow(c, e, n))
     .join(" ");
 
@@ -209,7 +210,7 @@ const RSADecrypt = (text, keypair) => {
   const plaintext = text
     .split(" ")
     .map(x => parseInt(x))
-    .map(c => modPow(c, d, n))
+    .map(c => modPow(c, d, n) + 64)
     .map(num => String.fromCharCode(num))
     .join("");
 

@@ -95,7 +95,7 @@ test("testing modpow", () => {
 test("encryption/decryption", () => {
   let p = generateRandomResultFromSet(primesTo20);
   let q = generateRandomResultFromSet(primesTo20);
-  while (p == q || p * q <= 128) {
+  while (p == q || p * q < 26) {
     p = generateRandomResultFromSet(primesTo20);
     q = generateRandomResultFromSet(primesTo20);
   }
