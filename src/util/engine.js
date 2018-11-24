@@ -4,7 +4,14 @@ import {
   areCoprime,
   letters
 } from "./util.js";
-import { monoalphabetic, atbash, caesar, baconian, affine } from "./ciphers.js";
+import {
+  monoalphabetic,
+  atbash,
+  caesar,
+  baconian,
+  affine,
+  vigenere
+} from "./ciphers.js";
 import {
   hintGenerator,
   valueGenerator,
@@ -147,18 +154,18 @@ const engine = state => {
       break;
     case "affine":
       // grab the options
-      const affineOptions = state.affineOptions;
+      const affineOptions = state.affine;
 
       problemType = chooseRandomFromArray(affineOptions.types);
 
+      let a = getRandomInt(1, 26);
+      while (!areCoprime(a, letters.length)) {
+        a = getRandomInt(1, 26);
+      }
+      let b = getRandomInt(1, 26);
+
       switch (problemType) {
         case "encryption":
-          let a = getRandomInt(1, 26);
-          while (!areCoprime(a, letters.length)) {
-            a = getRandomInt(1, 26);
-          }
-          let b = getRandomInt(1, 26);
-
           res = affine(plaintextObj.text, a, b);
 
           generatedProblem = {
@@ -173,12 +180,6 @@ const engine = state => {
 
           break;
         case "analysis":
-          let a = getRandomInt(1, 26);
-          while (!areCoprime(a, letters.length)) {
-            a = getRandomInt(1, 26);
-          }
-          let b = getRandomInt(1, 26);
-
           res = affine(plaintextObj.text, a, b);
 
           generatedProblem = {
@@ -198,7 +199,21 @@ const engine = state => {
       }
       break;
     case "vigenere":
-      console.log("vigenere");
+      // grab a random word
+      const chosenWord = chooseRandomFromArray(words);
+
+      // res = vigenere(plaintextObj.text, chosenWord);
+
+      // generatedProblem = {
+      //   problem: {
+      //     ciphertext: res.ciphertext,
+      //     hint: ""
+      //   },
+      //   solution: {
+      //     plaintext: res.plaintext,
+      //     key: res.key
+      //   }
+      // };
       break;
     case "baconian":
       res = baconian(plaintextObj.text);
