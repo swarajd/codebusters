@@ -64,6 +64,7 @@ const engine = state => {
 
   const cipherType = chooseRandomFromArray(state.cipherTypes);
   let plaintextObj = chooseRandomFromArray(englishQuotes);
+  let options = {};
   let res = {};
   let problemType = "";
 
@@ -97,10 +98,10 @@ const engine = state => {
       break;
     case "monoalphabetic":
       // grab the options
-      const monoalphabeticOptions = state.monoalphabetic;
+      options = state.monoalphabetic;
 
       // switch to spanish quote, if relevant
-      if (monoalphabeticOptions.xenocrypt) {
+      if (options.xenocrypt) {
         plaintextObj = chooseRandomFromArray(spanishQuotes);
       }
 
@@ -116,7 +117,7 @@ const engine = state => {
       // choose a hint word if relevant
       let hintWord = "";
       let quote = plaintextObj.text.split("--")[0];
-      if (monoalphabeticOptions.hint) {
+      if (options.hint) {
         const words = quote.split(/\s+/);
         const validWords = words
           .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
@@ -128,13 +129,13 @@ const engine = state => {
 
       // introduce an error/errors, if relevant
       let filteredPlaintext = plaintextObj.text;
-      if (monoalphabeticOptions.errors) {
+      if (options.errors) {
         filteredPlaintext = filteredPlaintext.replace(/[^\w\s]/g, "");
       }
 
       // omit spaces, if relevant
       let plaintext = filteredPlaintext;
-      if (!monoalphabeticOptions.spaces) {
+      if (!options.spaces) {
         plaintext = plaintext.replace(/\s/g, "");
       }
 
@@ -154,9 +155,9 @@ const engine = state => {
       break;
     case "affine":
       // grab the options
-      const affineOptions = state.affine;
+      options = state.affine;
 
-      problemType = chooseRandomFromArray(affineOptions.types);
+      problemType = chooseRandomFromArray(options.types);
 
       let a = getRandomInt(1, 26);
       while (!areCoprime(a, letters.length)) {
@@ -199,8 +200,48 @@ const engine = state => {
       }
       break;
     case "vigenere":
+      // grab the options
+      options = state.vigenere;
+
+      // choose a random problem type
+      problemType = chooseRandomFromArray(options.types);
+
       // grab a random word
       const chosenWord = chooseRandomFromArray(words);
+
+      switch (problemType) {
+        case "encryption":
+          res = vigenere(plaintextObj.text, chosenWord);
+
+          generatedProblem = {
+            problem: {
+              ciphertext: plaintextObj.text,
+              hint: chosenWord
+            },
+            solution: {
+              plaintext: res.ciphertext
+            }
+          };
+          break;
+        case "decryption":
+          res = vigenere(plaintextObj.text, chosenWord);
+
+          generatedProblem = {
+            problem: {
+              ciphertext: res.ciphertext,
+              hint: chosenWord
+            },
+            solution: {
+              plaintext: plaintextObj.text
+            }
+          };
+
+          break;
+        case "crib":
+          break;
+        default:
+          throw `option '${problemType}' for vigenere not found`;
+      }
 
       // res = vigenere(plaintextObj.text, chosenWord);
 
