@@ -417,6 +417,7 @@ module.exports = {
   dedupe,
   extractLetters,
   zipToDict,
+  getRandomInt,
   generateK1Dict,
   flipDict,
   randomDerangementDict,

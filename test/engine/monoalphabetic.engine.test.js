@@ -13,7 +13,7 @@ test("testing monoalphabetic result of engine (*nothing given*)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 
@@ -36,7 +36,7 @@ test("testing monoalphabetic result of engine (hint)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 
@@ -59,7 +59,7 @@ test("testing monoalphabetic result of engine (spaces, hint)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 
@@ -81,7 +81,7 @@ test("testing monoalphabetic result of engine (spaces, hint, error)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 
@@ -104,7 +104,7 @@ test("testing monoalphabetic result of engine (spaces, hint, error, xenocrypt)",
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 

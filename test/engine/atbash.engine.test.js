@@ -14,7 +14,7 @@ test("testing the atbash cipher", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 

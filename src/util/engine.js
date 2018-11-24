@@ -1,5 +1,10 @@
-import { chooseRandomFromArray } from "./util.js";
-import { monoalphabetic, atbash, caesar, baconian } from "./ciphers.js";
+import {
+  chooseRandomFromArray,
+  getRandomInt,
+  areCoprime,
+  letters
+} from "./util.js";
+import { monoalphabetic, atbash, caesar, baconian, affine } from "./ciphers.js";
 import {
   hintGenerator,
   valueGenerator,
@@ -47,12 +52,13 @@ const engine = state => {
       ciphertext: "",
       hint: ""
     },
-    solution: ""
+    solution: {}
   };
 
   const cipherType = chooseRandomFromArray(state.cipherTypes);
   let plaintextObj = chooseRandomFromArray(englishQuotes);
   let res = {};
+  let problemType = "";
 
   switch (cipherType) {
     case "atbash":
@@ -63,7 +69,9 @@ const engine = state => {
           ciphertext: res.ciphertext,
           hint: ""
         },
-        solution: res.plaintext
+        solution: {
+          plaintext: res.plaintext
+        }
       };
 
       break;
@@ -75,7 +83,9 @@ const engine = state => {
           ciphertext: res.ciphertext,
           hint: ""
         },
-        solution: res.plaintext
+        solution: {
+          plaintext: res.plaintext
+        }
       };
       break;
     case "monoalphabetic":
@@ -129,12 +139,46 @@ const engine = state => {
           ciphertext: cipherResult.ciphertext,
           hint: hintWord
         },
-        solution: plaintextObj.text
+        solution: {
+          plaintext: plaintextObj.text
+        }
       };
 
       break;
     case "affine":
-      console.log("affine");
+      // grab the options
+      const affineOptions = state.affineOptions;
+
+      problemType = chooseRandomFromArray(affineOptions.types);
+
+      switch (problemType) {
+        case "encryption":
+          let a = getRandomInt(1, 26);
+          while (!areCoprime(a, letters.length)) {
+            a = getRandomInt(1, 26);
+          }
+          let b = getRandomInt(1, 26);
+
+          res = affine(plaintextObj.text, a, b);
+
+          generatedProblem = {
+            problem: {
+              ciphertext: res.ciphertext,
+              hint: ""
+            },
+            solution: {
+              plaintext: res.plaintext,
+              a: a,
+              b: b
+            }
+          };
+
+          break;
+        case "analysis":
+          break;
+        default:
+          throw `option '${problemType}' for affine not found`;
+      }
       break;
     case "vigenere":
       console.log("vigenere");
@@ -147,7 +191,9 @@ const engine = state => {
           ciphertext: res.ciphertext,
           hint: ""
         },
-        solution: res.plaintext
+        solution: {
+          plaintext: res.plaintext
+        }
       };
       break;
     case "hill":
