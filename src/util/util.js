@@ -293,7 +293,8 @@ const generateRandomInvertibleMatrix = size => {
   return result;
 };
 
-const invertMatrix = (mtx, size) => {
+const invertMatrix = mtx => {
+  const size = mtx[0].length;
   if (size != 2) {
     throw `can't currently find the modular inverse of ${size}x${size} matrices`;
   }
@@ -303,7 +304,10 @@ const invertMatrix = (mtx, size) => {
     [mod(-1 * mtx[1][0], letters.length), mtx[0][0]]
   ];
 
-  const determinant = mtx[0][0] * mtx[1][1] - mtx[0][1] * mtx[1][0];
+  const determinant = mod(
+    mtx[0][0] * mtx[1][1] - mtx[0][1] * mtx[1][0],
+    letters.length
+  );
   const detInverse = multiplicativeInverse(determinant, letters.length);
 
   const result = Array(size)
@@ -434,6 +438,23 @@ const chooseRandomFromArray = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
+const condenseStr = str => {
+  return str
+    .split("")
+    .map(l => (isLetter(l) ? l : ""))
+    .join("");
+};
+
+const matrixToStr = mtx => {
+  const rendered = mtx
+    .map(row => {
+      return `[ ${row.join(", ")} ]`;
+    })
+    .join(", ");
+
+  return `[ ${rendered} ]`;
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -466,5 +487,7 @@ module.exports = {
   generateRandomResultFromSet,
   generateKeyPair,
   modPow,
-  chooseRandomFromArray
+  chooseRandomFromArray,
+  condenseStr,
+  matrixToStr
 };

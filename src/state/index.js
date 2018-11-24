@@ -47,7 +47,7 @@ export default {
     - pairs
   */
   hill: {
-    type: ["encryption", "decryption", "produce"],
+    types: ["encryption", "decryption", "produce"],
     methods: ["matrix", "pairs"],
     matrixSizes: [2, 3]
   }

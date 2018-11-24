@@ -5,7 +5,12 @@ import {
   letters,
   generateRandomResultFromSet,
   generateKeyPair,
-  primesTo20
+  primesTo20,
+  invertMatrix,
+  generateRandomInvertibleMatrix,
+  isLetter,
+  condenseStr,
+  matrixToStr
 } from "./util.js";
 import {
   monoalphabetic,
@@ -14,7 +19,8 @@ import {
   baconian,
   affine,
   vigenere,
-  RSAEncrypt
+  RSAEncrypt,
+  hill
 } from "./ciphers.js";
 import {
   hintGenerator,
@@ -289,7 +295,83 @@ const engine = state => {
       };
       break;
     case "hill":
-      console.log("hill");
+      // grab the options
+      options = state.hill;
+
+      // choose a random problem type
+      problemType = chooseRandomFromArray(options.types);
+
+      // chose a random method type
+      const methodType = chooseRandomFromArray(options.methods);
+
+      // choose options based on if it's enc/dec or production
+      let matrixSize = 0;
+      if (problemType === "produce") {
+        matrixSize = 2;
+      } else if (problemType === "encryption" || problemType === "decryption") {
+        matrixSize = chooseRandomFromArray(options.matrixSizes);
+      } else {
+        throw `unknown problem type '${problemType}'`;
+      }
+
+      // encrypt some string
+      const randomMatrix = generateRandomInvertibleMatrix(matrixSize);
+      const invertedMatrix = invertMatrix(randomMatrix);
+      let condensedPlaintext = condenseStr(plaintextObj.text);
+
+      while (condensedPlaintext.length % matrixSize != 0) {
+        plaintextObj = chooseRandomFromArray(englishQuotes);
+        condensedPlaintext = condenseStr(plaintextObj.text);
+      }
+
+      // encrypt the text using the specified matrix size
+      res = hill(condensedPlaintext, randomMatrix);
+
+      // generate pairs if relevant
+      let pairs = [];
+      let pairLetterSet = new Set();
+      if (methodType == "pairs") {
+        for (let i = 0; i < 4; i++) {
+          let randomIdx = getRandomInt(0, condensedPlaintext.length);
+          let randomPlaintextChar = condensedPlaintext[randomIdx];
+          while (
+            pairLetterSet.has(randomPlaintextChar) ||
+            !isLetter(randomPlaintextChar)
+          ) {
+            randomIdx = getRandomInt(0, condensedPlaintext.length);
+            randomPlaintextChar = condensedPlaintext[randomIdx];
+          }
+
+          let randomCiphertextChar = res.ciphertext[randomIdx];
+
+          pairs.push([randomPlaintextChar, randomCiphertextChar]);
+          pairLetterSet.add(randomPlaintextChar);
+        }
+      }
+
+      let hillCiphertext = "";
+      let hillPlaintext = "";
+      let hillHint = "";
+
+      if (problemType === "encryption" || problemType === "decryption") {
+        hillCiphertext = condensedPlaintext;
+        hillHint = matrixToStr(randomMatrix);
+        hillPlaintext = res.ciphertext;
+      } else {
+        hillCiphertext = matrixToStr(randomMatrix);
+        hillPlaintext = matrixToStr(invertedMatrix);
+      }
+
+      generatedProblem = {
+        problem: {
+          ciphertext: hillCiphertext,
+          hint: hillHint
+        },
+        solution: {
+          plaintext: hillPlaintext
+        }
+      };
+
       break;
     case "RSA":
       let p = generateRandomResultFromSet(primesTo20);
