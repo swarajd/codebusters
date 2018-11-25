@@ -4,7 +4,7 @@ export default {
     hint: ""
   },
   solution: "",
-  cypherTypes: [
+  cipherTypes: [
     "atbash",
     "caesar",
     "monoalphabetic",
