@@ -51,6 +51,7 @@ options would probably have
       - matrix size
 
   return value would probably be
+  - cipherType
   - problem
     - ciphertext
     - hint/extra info
@@ -60,6 +61,7 @@ options would probably have
 
 const engine = state => {
   let generatedProblem = {
+    cipherType: "",
     problem: {
       ciphertext: "",
       hint: ""
@@ -68,16 +70,22 @@ const engine = state => {
   };
 
   const cipherType = chooseRandomFromArray(state.cipherTypes);
-  let plaintextObj = chooseRandomFromArray(englishQuotes);
+  let plaintextObj;
+  do {
+    plaintextObj = chooseRandomFromArray(englishQuotes);
+  } while (plaintextObj.text.length > 250);
   let options = {};
   let res = {};
   let problemType = "";
+  let condensedPlaintext = "";
+  let chosenWord;
 
   switch (cipherType) {
     case "atbash":
       res = atbash(plaintextObj.text);
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: res.ciphertext,
           hint: ""
@@ -92,6 +100,7 @@ const engine = state => {
       res = caesar(plaintextObj.text);
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: res.ciphertext,
           hint: ""
@@ -148,12 +157,13 @@ const engine = state => {
       const cipherResult = monoalphabetic(plaintext, chosenVariant, keyword);
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: cipherResult.ciphertext,
           hint: hintWord
         },
         solution: {
-          plaintext: plaintextObj.text
+          plaintext: cipherResult.plaintext
         }
       };
 
@@ -172,9 +182,12 @@ const engine = state => {
 
       switch (problemType) {
         case "encryption":
-          res = affine(plaintextObj.text, a, b);
+          const affineWord = chooseRandomFromArray(words);
+
+          res = affine(affineWord, a, b);
 
           generatedProblem = {
+            cipherType: cipherType,
             problem: {
               ciphertext: res.plaintext,
               hint: `a: ${a}, b: ${b}`
@@ -189,6 +202,7 @@ const engine = state => {
           res = affine(plaintextObj.text, a, b);
 
           generatedProblem = {
+            cipherType: cipherType,
             problem: {
               ciphertext: res.ciphertext,
               hint: ""
@@ -212,15 +226,18 @@ const engine = state => {
       problemType = chooseRandomFromArray(options.types);
 
       // grab a random word
-      const chosenWord = chooseRandomFromArray(words);
+      chosenWord = chooseRandomFromArray(words);
+
+      condensedPlaintext = condenseStr(plaintextObj.text);
 
       switch (problemType) {
         case "encryption":
-          res = vigenere(plaintextObj.text, chosenWord);
+          res = vigenere(condensedPlaintext, chosenWord);
 
           generatedProblem = {
+            cipherType: cipherType,
             problem: {
-              ciphertext: plaintextObj.text,
+              ciphertext: condensedPlaintext,
               hint: chosenWord
             },
             solution: {
@@ -229,15 +246,16 @@ const engine = state => {
           };
           break;
         case "decryption":
-          res = vigenere(plaintextObj.text, chosenWord);
+          res = vigenere(condensedPlaintext, chosenWord);
 
           generatedProblem = {
+            cipherType: cipherType,
             problem: {
               ciphertext: res.ciphertext,
               hint: chosenWord
             },
             solution: {
-              plaintext: plaintextObj.text
+              plaintext: condensedPlaintext
             }
           };
 
@@ -262,12 +280,13 @@ const engine = state => {
           res = vigenere(plaintextObj.text, chosenWord);
 
           generatedProblem = {
+            cipherType: cipherType,
             problem: {
               ciphertext: res.ciphertext,
               hint: `${cribPlaintextSlice} => ${cribCiphertextSlice}`
             },
             solution: {
-              plaintext: plaintextObj.text
+              plaintext: res.plaintext
             }
           };
 
@@ -277,9 +296,12 @@ const engine = state => {
       }
       break;
     case "baconian":
-      res = baconian(plaintextObj.text);
+      chosenWord = chooseRandomFromArray(words);
+
+      res = baconian(chosenWord);
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: res.ciphertext,
           hint: ""
@@ -317,7 +339,7 @@ const engine = state => {
       const randomMatrix = generateRandomInvertibleMatrix(matrixSize);
       let invertedMatrix = [];
       invertedMatrix = invertMatrix(randomMatrix);
-      let condensedPlaintext = condenseStr(plaintextObj.text);
+      condensedPlaintext = condenseStr(plaintextObj.text);
 
       while (condensedPlaintext.length % matrixSize != 0) {
         plaintextObj = chooseRandomFromArray(englishQuotes);
@@ -372,6 +394,7 @@ const engine = state => {
       }
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: hillCiphertext,
           hint: hillHint
@@ -396,6 +419,7 @@ const engine = state => {
       res = RSAEncrypt(RSAword, keypair);
 
       generatedProblem = {
+        cipherType: cipherType,
         problem: {
           ciphertext: res.plaintext,
           hint: `publickey = { e: ${publickey.e}, n: ${publickey.n} }`
