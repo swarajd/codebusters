@@ -22,11 +22,6 @@ import {
   RSAEncrypt,
   hill
 } from "./ciphers.js";
-import {
-  hintGenerator,
-  valueGenerator,
-  ciphertextGenerator
-} from "./latexGenerators.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";
@@ -412,7 +407,7 @@ const engine = state => {
 
       break;
     default:
-      throw "unknown cipher type";
+      throw `unknown cipher type '${cipherType}'`;
   }
 
   return generatedProblem;

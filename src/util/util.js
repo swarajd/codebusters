@@ -350,6 +350,8 @@ const invertMatrix = mtx => {
       .fill(0)
       .map(x => Array(size).fill(0));
 
+    mtx = transpose(mtx);
+
     const determinant =
       mtx[0][0] * (mtx[1][1] * mtx[2][2] - mtx[1][2] * mtx[2][1]) -
       mtx[0][1] * (mtx[1][0] * mtx[2][2] - mtx[1][2] * mtx[2][0]) +
@@ -358,12 +360,17 @@ const invertMatrix = mtx => {
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size; j++) {
         let tempAdjMtx = getAdjugate(mtx, i, j);
-        result[i][j] = mod(
-          (tempAdjMtx[0][0] * tempAdjMtx[1][1] -
-            tempAdjMtx[0][1] * tempAdjMtx[1][0]) *
-            determinant,
+        let curVal = mod(
+          tempAdjMtx[0][0] * tempAdjMtx[1][1] -
+            tempAdjMtx[0][1] * tempAdjMtx[1][0],
           letters.length
         );
+
+        if ((i + j) % 2 == 1) {
+          curVal *= -1;
+        }
+
+        result[i][j] = mod(curVal * determinant, letters.length);
       }
     }
   } else {
@@ -471,14 +478,6 @@ const modPow = (a, b, n) => {
     res = mod(res * a, n);
   }
   return res;
-};
-
-const getOrError = (options, property) => {
-  if (options.hasOwnProperty(property)) {
-    return options[property];
-  } else {
-    throw `options dictionary does not have option ${property} defined`;
-  }
 };
 
 const chooseRandomFromArray = arr => {

@@ -167,3 +167,21 @@ test("testing the hill cipher (decryption, matrix, 3x3)", () => {
     ).toBeTruthy();
   }
 });
+
+test("testing the hill cipher (unknown problem type)", () => {
+  const problemType = "asdf";
+
+  const state = {
+    cipherTypes: ["hill"],
+    hill: {
+      types: [problemType],
+      methods: ["matrix"]
+    }
+  };
+
+  try {
+    engine(state);
+  } catch (e) {
+    expect(e).toEqual(`unknown problem type '${problemType}'`);
+  }
+});

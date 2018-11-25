@@ -113,12 +113,34 @@ test("checking for invertibility on a 4x4 matrix", () => {
   }
 });
 
-test("checking if matrix inverse calculation works", () => {
+test("checking if matrix inverse calculation works for 2x2", () => {
   const matrix = [[1, 5], [3, 4]];
-
-  const size = 2;
-
-  const invertedMatrix = invertMatrix(matrix, size);
+  const invertedMatrix = invertMatrix(matrix);
 
   expect(invertedMatrix).toEqual([[2, 17], [5, 7]]);
+});
+
+test("checking if matrix inverse calculation works for 3x3", () => {
+  const matrix = [[6, 24, 1], [13, 16, 10], [20, 17, 15]];
+  const invertedMatrix = invertMatrix(matrix);
+
+  expect(invertedMatrix).toEqual([[8, 5, 10], [21, 8, 21], [21, 12, 8]]);
+});
+
+test("crash matrix inverse on anything not 2 or 3", () => {
+  const size = 4;
+  const matrix = [
+    [6, 24, 1, 0],
+    [13, 16, 10, 0],
+    [20, 17, 15, 0],
+    [0, 0, 0, 0]
+  ];
+
+  try {
+    invertMatrix(matrix);
+  } catch (e) {
+    expect(e).toEqual(
+      `can't currently find the modular inverse of ${size}x${size} matrices`
+    );
+  }
 });
