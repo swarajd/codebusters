@@ -302,21 +302,26 @@ const engine = state => {
       problemType = chooseRandomFromArray(options.types);
 
       // chose a random method type
-      const methodType = chooseRandomFromArray(options.methods);
+      const method = chooseRandomFromArray(options.methods);
 
       // choose options based on if it's enc/dec or production
       let matrixSize = 0;
       if (problemType === "produce") {
         matrixSize = 2;
       } else if (problemType === "encryption" || problemType === "decryption") {
-        matrixSize = chooseRandomFromArray(options.matrixSizes);
+        try {
+          matrixSize = chooseRandomFromArray(options.matrixSizes);
+        } catch (e) {
+          throw "must choose at least one matrix size";
+        }
       } else {
         throw `unknown problem type '${problemType}'`;
       }
 
       // encrypt some string
       const randomMatrix = generateRandomInvertibleMatrix(matrixSize);
-      const invertedMatrix = invertMatrix(randomMatrix);
+      let invertedMatrix = [];
+      invertedMatrix = invertMatrix(randomMatrix);
       let condensedPlaintext = condenseStr(plaintextObj.text);
 
       while (condensedPlaintext.length % matrixSize != 0) {
@@ -330,7 +335,7 @@ const engine = state => {
       // generate pairs if relevant
       let pairs = [];
       let pairLetterSet = new Set();
-      if (methodType == "pairs") {
+      if (method == "pairs") {
         for (let i = 0; i < 4; i++) {
           let randomIdx = getRandomInt(0, condensedPlaintext.length);
           let randomPlaintextChar = condensedPlaintext[randomIdx];
@@ -353,12 +358,21 @@ const engine = state => {
       let hillPlaintext = "";
       let hillHint = "";
 
-      if (problemType === "encryption" || problemType === "decryption") {
-        hillCiphertext = condensedPlaintext;
+      if (problemType === "encryption") {
+        hillCiphertext = res.ciphertext;
         hillHint = matrixToStr(randomMatrix);
+        hillPlaintext = condensedPlaintext;
+      } else if (problemType === "decryption") {
+        hillCiphertext = condensedPlaintext;
+        hillHint = matrixToStr(invertedMatrix);
         hillPlaintext = res.ciphertext;
       } else {
-        hillCiphertext = matrixToStr(randomMatrix);
+        if (method === "pairs") {
+          hillCiphertext = matrixToStr(pairs);
+        } else {
+          hillCiphertext = matrixToStr(randomMatrix);
+        }
+
         hillPlaintext = matrixToStr(invertedMatrix);
       }
 

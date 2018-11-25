@@ -293,31 +293,81 @@ const generateRandomInvertibleMatrix = size => {
   return result;
 };
 
-const invertMatrix = mtx => {
-  const size = mtx[0].length;
-  if (size != 2) {
-    throw `can't currently find the modular inverse of ${size}x${size} matrices`;
+const getAdjugate = (mtx, p, q) => {
+  let i = 0;
+  let j = 0;
+
+  let size = mtx.length;
+
+  let result = Array(size - 1)
+    .fill(0)
+    .map(x => Array(size - 1).fill(0));
+
+  for (let row = 0; row < size; row++) {
+    for (let col = 0; col < size; col++) {
+      if (row != p && col != q) {
+        result[i][j++] = mtx[row][col];
+
+        if (j == size - 1) {
+          j = 0;
+          i++;
+        }
+      }
+    }
   }
 
-  let shifted = [
-    [mtx[1][1], mod(-1 * mtx[0][1], letters.length)],
-    [mod(-1 * mtx[1][0], letters.length), mtx[0][0]]
-  ];
+  return result;
+};
 
-  const determinant = mod(
-    mtx[0][0] * mtx[1][1] - mtx[0][1] * mtx[1][0],
-    letters.length
-  );
-  const detInverse = multiplicativeInverse(determinant, letters.length);
+const invertMatrix = mtx => {
+  const size = mtx[0].length;
 
-  const result = Array(size)
-    .fill(0)
-    .map(x => Array(size).fill(0));
+  let result = [];
 
-  for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size; j++) {
-      result[i][j] = mod(shifted[i][j] * detInverse, letters.length);
+  if (size == 2) {
+    let shifted = [
+      [mtx[1][1], mod(-1 * mtx[0][1], letters.length)],
+      [mod(-1 * mtx[1][0], letters.length), mtx[0][0]]
+    ];
+
+    const determinant = mod(
+      mtx[0][0] * mtx[1][1] - mtx[0][1] * mtx[1][0],
+      letters.length
+    );
+    const detInverse = multiplicativeInverse(determinant, letters.length);
+
+    result = Array(size)
+      .fill(0)
+      .map(x => Array(size).fill(0));
+
+    for (let i = 0; i < size; i++) {
+      for (let j = 0; j < size; j++) {
+        result[i][j] = mod(shifted[i][j] * detInverse, letters.length);
+      }
     }
+  } else if (size == 3) {
+    result = Array(size)
+      .fill(0)
+      .map(x => Array(size).fill(0));
+
+    const determinant =
+      mtx[0][0] * (mtx[1][1] * mtx[2][2] - mtx[1][2] * mtx[2][1]) -
+      mtx[0][1] * (mtx[1][0] * mtx[2][2] - mtx[1][2] * mtx[2][0]) +
+      mtx[0][2] * (mtx[1][0] * mtx[2][1] - mtx[1][1] * mtx[2][0]);
+
+    for (let i = 0; i < size; i++) {
+      for (let j = 0; j < size; j++) {
+        let tempAdjMtx = getAdjugate(mtx, i, j);
+        result[i][j] = mod(
+          (tempAdjMtx[0][0] * tempAdjMtx[1][1] -
+            tempAdjMtx[0][1] * tempAdjMtx[1][0]) *
+            determinant,
+          letters.length
+        );
+      }
+    }
+  } else {
+    throw `can't currently find the modular inverse of ${size}x${size} matrices`;
   }
 
   return result;
