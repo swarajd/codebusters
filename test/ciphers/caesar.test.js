@@ -1,4 +1,4 @@
-import { caesar } from "./../../src/util/ciphers.js";
+import { caesar } from "./../../src/util/ciphers/caesar.js";
 
 /*
     The caesar cipher works as follows:
