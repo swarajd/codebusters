@@ -1,12 +1,14 @@
 import {
-  problemTextGenerator,
+  splitText,
+  categoryGenerator,
   matrixGenerator,
-  pairsGenerator
+  pairsGenerator,
+  cipherTypeGenerator
 } from "../../src/util/latexGenerators.js";
 
 test("testing cipher text category labelling", () => {
   const problemType = "Ciphertext";
-  const res = problemTextGenerator(problemType, "abc");
+  const res = categoryGenerator(problemType, "abc");
   const lines = res.split("\n").filter(line => line !== "");
 
   const titleLine = lines[0];
@@ -14,8 +16,8 @@ test("testing cipher text category labelling", () => {
 });
 
 test("testing cipher text generation with short text", () => {
-  const problemText = "hello";
-  const res = problemTextGenerator("", problemText);
+  const problemText = splitText("hello");
+  const res = categoryGenerator("", problemText);
   const lines = res.split("\n").filter(line => line !== "");
 
   const cipherTextLine = lines[1];
@@ -25,7 +27,8 @@ test("testing cipher text generation with short text", () => {
 test("testing cipher text generation with long text", () => {
   const problemText =
     'LISP HAS JOKINGLY BEEN CALLED "THE MOST INTELLIGENT WAY TO MISUSE A COMPUTER". I THINK THAT DESCRIPTION IS A GREAT COMPLIMENT BECAUSE IT TRANSMITS THE FULL FLAVOR OF LIBERATION: IT HAS ASSISTED A NUMBER OF OUR MOST GIFTED FELLOW HUMANS IN THINKING PREVIOUSLY IMPOSSIBLE THOUGHTS. -- EDSGER DIJKSTRA, CACM, 15:10';
-  const res = problemTextGenerator("", problemText);
+  const splitProblemText = splitText(problemText);
+  const res = categoryGenerator("", splitProblemText);
   const lines = res.split("\n").filter(line => line !== "");
 
   const rebuiltCipherText = lines.slice(1, -1).join("");
@@ -71,4 +74,11 @@ test("testing pairs generation", () => {
       expect(lines[i].includes(pairs[i][j])).toBeTruthy();
     }
   }
+});
+
+test("testing cipher type generation", () => {
+  const type = "asdf";
+  const res = cipherTypeGenerator(type);
+
+  expect(res.includes(type)).toBeTruthy();
 });

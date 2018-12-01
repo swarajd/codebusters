@@ -1,7 +1,3 @@
-// const cipherTypeGenerator = type => {
-//   return `\\textbf{Cipher Type:} ${type} \\newline`;
-// };
-
 // const hintGenerator = (hint, cipherType) => {
 //   const template = "\\textbf{Hint:} <REPLACEME> \\newline";
 //   let replace = "";
@@ -30,15 +26,18 @@
 
 // =====
 
-const problemTextGenerator = (type, text) => {
-  const escapedText = text.replace(/\%/g, "");
+const splitText = text => {
+  return text
+    .replace(/\%/g, "")
+    .match(/.{1,60}/g)
+    .join("\n");
+};
 
-  const splitText = escapedText.match(/.{1,60}/g).join("\n");
-
+const categoryGenerator = (type, tex) => {
   const template = `
 \\textbf{${type}:} \\newline
 
-${splitText}
+${tex}
 
 \\hfill`;
 
@@ -65,8 +64,14 @@ const pairsGenerator = pairs => {
     .join("\n");
 };
 
+const cipherTypeGenerator = type => {
+  return `\\textbf{Cipher Type:} ${type} \\newline`;
+};
+
 module.exports = {
-  problemTextGenerator,
+  splitText,
+  categoryGenerator,
   matrixGenerator,
-  pairsGenerator
+  pairsGenerator,
+  cipherTypeGenerator
 };
