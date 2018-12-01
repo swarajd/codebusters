@@ -11,12 +11,12 @@ test("testing the vigenere cipher (encryption)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const solution = generatedProblem.solution;
-    const ciphertext = generatedProblem.problem.ciphertext;
+    const ciphertext = generatedProblem.solution.ciphertext;
+    const plaintext = generatedProblem.problem.plaintext;
     const hint = generatedProblem.problem.hint;
 
     expect(hint.length).toBeGreaterThan(4);
-    expect(ciphertext.length).toEqual(solution.plaintext.length);
+    expect(ciphertext.length).toEqual(plaintext.length);
   }
 });
 
@@ -51,12 +51,12 @@ test("testing the vigenere cipher (crib)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const solution = generatedProblem.solution;
+    const plaintext = generatedProblem.solution.plaintext;
     const ciphertext = generatedProblem.problem.ciphertext;
     const hint = generatedProblem.problem.hint;
 
     expect(hint.includes("=>")).toEqual(true);
-    expect(ciphertext.length).toEqual(solution.plaintext.length);
+    expect(ciphertext.length).toEqual(plaintext.length);
   }
 });
 

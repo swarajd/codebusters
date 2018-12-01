@@ -8,11 +8,11 @@ test("testing the RSA cipher", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
+    const plaintext = generatedProblem.problem.plaintext;
+    const ciphertext = generatedProblem.solution.ciphertext;
     const hint = generatedProblem.problem.hint;
 
     expect(hint.includes("publickey")).toEqual(true);
-    expect(ciphertext.length).toEqual(plaintext.split(" ").length);
+    expect(plaintext.length).toEqual(ciphertext.split(" ").length);
   }
 });

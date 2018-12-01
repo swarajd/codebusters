@@ -11,8 +11,8 @@ test("testing the affine cipher (encryption)", () => {
   for (let i = 0; i < 10; i++) {
     const generatedProblem = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
+    const ciphertext = generatedProblem.solution.ciphertext;
+    const plaintext = generatedProblem.problem.plaintext;
     const hint = generatedProblem.problem.hint;
 
     expect(hint.includes("a:")).toEqual(true);

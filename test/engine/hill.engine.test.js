@@ -22,7 +22,9 @@ test("testing the hill cipher (produce, pairs)", () => {
         /^\[ \[ \w, \w \], \[ \w, \w \], \[ \w, \w \], \[ \w, \w \] ]$/
       )
     );
-    expect(hint).toEqual("");
+    expect(hint).toEqual(
+      "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs"
+    );
   }
 });
 
@@ -48,7 +50,9 @@ test("testing the hill cipher (produce, matrix)", () => {
     expect(
       ciphertext.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/)
     ).toBeTruthy();
-    expect(hint).toEqual("");
+    expect(hint).toEqual(
+      "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs"
+    );
   }
 });
 

@@ -18,7 +18,7 @@ test("testing monoalphabetic result of engine (*nothing given*)", () => {
     const hint = generatedProblem.problem.hint;
 
     expect(hint).toEqual("");
-    expect(ciphertext.length).toBeLessThan(plaintext.length);
+    expect(ciphertext.length).toEqual(plaintext.length);
     expect(!ciphertext.includes(" ")).toEqual(true);
   }
 });
@@ -41,7 +41,7 @@ test("testing monoalphabetic result of engine (hint)", () => {
     const hint = generatedProblem.problem.hint;
 
     expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toBeLessThan(plaintext.length);
+    expect(ciphertext.length).toEqual(plaintext.length);
     expect(!ciphertext.includes(" ")).toEqual(true);
   }
 });
@@ -86,7 +86,7 @@ test("testing monoalphabetic result of engine (spaces, hint, error)", () => {
     const hint = generatedProblem.problem.hint;
 
     expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toBeLessThan(plaintext.length);
+    expect(ciphertext.length).toBeLessThanOrEqual(plaintext.length);
     expect(ciphertext.includes(" ")).toEqual(true);
   }
 });
@@ -109,7 +109,7 @@ test("testing monoalphabetic result of engine (spaces, hint, error, xenocrypt)",
     const hint = generatedProblem.problem.hint;
 
     expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toBeLessThan(plaintext.length);
+    expect(ciphertext.length).toBeLessThanOrEqual(plaintext.length);
     expect(ciphertext.includes(" ")).toEqual(true);
   }
 });

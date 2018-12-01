@@ -62,10 +62,7 @@ options would probably have
 const engine = state => {
   let generatedProblem = {
     cipherType: "",
-    problem: {
-      ciphertext: "",
-      hint: ""
-    },
+    problem: {},
     solution: {}
   };
 
@@ -154,16 +151,16 @@ const engine = state => {
       }
 
       // execute the actual encryption
-      const cipherResult = monoalphabetic(plaintext, chosenVariant, keyword);
+      res = monoalphabetic(plaintext, chosenVariant, keyword);
 
       generatedProblem = {
         cipherType: cipherType,
         problem: {
-          ciphertext: cipherResult.ciphertext,
+          ciphertext: res.ciphertext,
           hint: hintWord
         },
         solution: {
-          plaintext: cipherResult.plaintext
+          plaintext: res.plaintext
         }
       };
 
@@ -189,11 +186,11 @@ const engine = state => {
           generatedProblem = {
             cipherType: cipherType,
             problem: {
-              ciphertext: res.plaintext,
+              plaintext: res.plaintext,
               hint: `a: ${a}, b: ${b}`
             },
             solution: {
-              plaintext: res.ciphertext
+              ciphertext: res.ciphertext
             }
           };
 
@@ -237,11 +234,11 @@ const engine = state => {
           generatedProblem = {
             cipherType: cipherType,
             problem: {
-              ciphertext: condensedPlaintext,
+              plaintext: condensedPlaintext,
               hint: chosenWord
             },
             solution: {
-              plaintext: res.ciphertext
+              ciphertext: res.ciphertext
             }
           };
           break;
@@ -391,6 +388,8 @@ const engine = state => {
         }
 
         hillPlaintext = matrixToStr(invertedMatrix);
+        hillHint =
+          "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs";
       }
 
       generatedProblem = {
@@ -421,11 +420,11 @@ const engine = state => {
       generatedProblem = {
         cipherType: cipherType,
         problem: {
-          ciphertext: res.plaintext,
+          plaintext: res.plaintext,
           hint: `publickey = { e: ${publickey.e}, n: ${publickey.n} }`
         },
         solution: {
-          plaintext: res.ciphertext
+          ciphertext: res.ciphertext
         }
       };
 

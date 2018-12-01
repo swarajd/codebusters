@@ -1,33 +1,51 @@
-const hintGenerator = hintWord => {
+const cipherTypeGenerator = type => {
+  return `\\textbf{Cipher Type:} ${type} \\newline`;
+};
+
+const hintGenerator = (hint, cipherType) => {
   const template = "\\textbf{Hint:} <REPLACEME> \\newline";
   let replace = "";
-  if (hintWord == "") {
+  if (hint == "") {
     replace = "No hint provided for this question";
   } else {
-    replace = `This phrase contains the word '${hintWord}'`;
+    if (cipherType == "monoalphabetic") {
+      replace = `This phrase contains the word '${hint}'`;
+    } else if (cipherType == "affine") {
+      replace = `The coefficients are: '${hint}'`;
+    } else if (cipherType == "vigenere") {
+      replace = `The word to encrypt/decrypt this phrase is '${hint}'`;
+    } else if (cipherType == "hill") {
+      replace = hint;
+    }
   }
   return template.replace("<REPLACEME>", replace);
 };
 
-const valueGenerator = value => {
-  return `\\textbf{Value:} ${value} points \\newline`;
-};
+const problemTextGenerator = problemText => {
+  const escapedText = problemText.replace(/\%/g, "");
 
-const ciphertextGenerator = ciphertext => {
-  const splitCiphertext = ciphertext.split("").join(" ");
+  const splitText = escapedText.match(/.{1,60}/g).join("\n");
 
   const template = `
-\\textbf{Ciphertext:} \\newline
+\\textbf{Problem:} \\newline
 
-${splitCiphertext}
+${splitText}
 
 \\hfill`;
 
   return template;
 };
 
+const solutionGenerator = solution => {
+  let keys = Object.keys(solution);
+  return `\\textbf{Solution:} ${keys.map(
+    k => `${k}: ${solution[k]}`
+  )} \\newline`;
+};
+
 module.exports = {
+  cipherTypeGenerator,
   hintGenerator,
-  valueGenerator,
-  ciphertextGenerator
+  problemTextGenerator,
+  solutionGenerator
 };
