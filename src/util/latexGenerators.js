@@ -68,10 +68,19 @@ const cipherTypeGenerator = type => {
   return `\\textbf{Cipher Type:} ${type} \\newline`;
 };
 
+const solutionLines = `
+\\textbf{Solution:}  \\newline \\newline 
+\\noindent\\makebox[\\linewidth]{\\rule{\\textwidth}{0.5pt}} \\newline \\newline
+\\noindent\\makebox[\\linewidth]{\\rule{\\textwidth}{0.5pt}} \\newline \\newline
+\\noindent\\makebox[\\linewidth]{\\rule{\\textwidth}{0.5pt}} \\newline \\newline
+\\noindent\\makebox[\\linewidth]{\\rule{\\textwidth}{0.5pt}} \\newline \\newline
+`;
+
 module.exports = {
   splitText,
   categoryGenerator,
   matrixGenerator,
   pairsGenerator,
-  cipherTypeGenerator
+  cipherTypeGenerator,
+  solutionLines
 };
