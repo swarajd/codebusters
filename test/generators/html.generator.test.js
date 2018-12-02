@@ -1,6 +1,6 @@
 import {
-  matrixHTMLGenerator,
-  categoryHTMLGenerator
+  matrixHTMLGenerator
+  //   categoryHTMLGenerator
 } from "../../src/util/htmlGenerators.js";
 
 import { renderToString } from "hyperapp-render";
