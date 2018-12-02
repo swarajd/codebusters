@@ -33,7 +33,7 @@ const splitText = text => {
     .join("\n");
 };
 
-const categoryGenerator = (type, tex) => {
+const categoryTeXGenerator = (type, tex) => {
   const template = `
 \\textbf{${type}:} \\newline
 
@@ -78,7 +78,7 @@ const solutionLines = `
 
 module.exports = {
   splitText,
-  categoryGenerator,
+  categoryTeXGenerator,
   matrixGenerator,
   pairsGenerator,
   cipherTypeGenerator,

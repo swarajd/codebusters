@@ -2,6 +2,13 @@ import { shiftText, zipToDict, letters } from "../util.js";
 
 import { h } from "hyperapp";
 
+import {
+  splitText,
+  categoryTeXGenerator,
+  cipherTypeGenerator,
+  solutionLines
+} from "../latexGenerators.js";
+
 const caesar = text => {
   return {
     plaintext: text,
@@ -30,13 +37,22 @@ const caesarHTML = caesarDict => {
   );
 };
 
-const caesarTeX = caesarDict => {
-  let { ciphertext, plaintext, ..._ } = caesarDict;
+const caesarProblemTeX = caesarDict => {
+  let { ciphertext, ..._ } = caesarDict;
+  return `
+${cipherTypeGenerator("Caesar")}
+${categoryTeXGenerator("Ciphertext", splitText(ciphertext))}
+${solutionLines}
+  `;
+};
+
+const caesarSolutionTeX = caesarDict => {
   return ``;
 };
 
 module.exports = {
   caesar,
   caesarHTML,
-  caesarTeX
+  caesarProblemTeX,
+  caesarSolutionTeX
 };
