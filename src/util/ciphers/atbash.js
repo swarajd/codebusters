@@ -27,17 +27,17 @@ const atbash = text => {
   };
 };
 
-const atbashProblemTeX = caesarDict => {
-  let { ciphertext, ..._ } = caesarDict;
+const atbashProblemTeX = atbashDict => {
+  let { ciphertext, ..._ } = atbashDict;
   return generateQuestion(
-    cipherTypeGenerator("Caesar"),
+    cipherTypeGenerator("Atbash"),
     categoryTeXGenerator("Ciphertext", splitText(ciphertext)),
     ""
   );
 };
 
-const atbashSolutionTeX = caesarDict => {
-  let { plaintext, ..._ } = caesarDict;
+const atbashSolutionTeX = atbashDict => {
+  let { plaintext, ..._ } = atbashDict;
   return `
 ${categoryTeXGenerator("Plaintext", splitText(plaintext))}
   `;
