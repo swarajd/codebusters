@@ -20,7 +20,6 @@ const letterDict = (() => {
 
 const reverseLetters = letters.slice().reverse();
 
-// create a map that goes from A->Z, B->Y, ... Y->B, Z->A
 const atBashDict = (() => {
   const result = {};
   letters.forEach((letter, i) => (result[letter] = reverseLetters[i]));
@@ -504,6 +503,18 @@ const matrixToStr = mtx => {
   return `[ ${rendered} ]`;
 };
 
+const getOrDefault = (dictionary, property, defaultValueFn) => {
+  if (dictionary.hasOwnProperty(property)) {
+    const value = dictionary[property];
+
+    if (value == null || value == undefined || value == "") {
+      return defaultValueFn();
+    }
+  } else {
+    return defaultValueFn();
+  }
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -538,5 +549,6 @@ module.exports = {
   modPow,
   chooseRandomFromArray,
   condenseStr,
-  matrixToStr
+  matrixToStr,
+  getOrDefault
 };

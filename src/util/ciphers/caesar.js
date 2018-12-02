@@ -1,4 +1,10 @@
-import { shiftText, zipToDict, letters } from "../util.js";
+import {
+  shiftText,
+  zipToDict,
+  letters,
+  getOrDefault,
+  chooseRandomFromArray
+} from "../util.js";
 
 import { categoryHTMLGenerator, solutionButton } from "../htmlGenerators.js";
 
@@ -11,6 +17,8 @@ import {
   generateQuestion,
   generateSolution
 } from "../latexGenerators.js";
+
+import { englishQuotes } from "../data/englishQuotes.json";
 
 const caesar = text => {
   return {
@@ -61,9 +69,23 @@ const caesarSolutionTeX = caesarDict => {
   );
 };
 
+const caesarEngine = state => {
+  const plaintext = getOrDefault(state, "plaintext", () =>
+    chooseRandomFromArray(englishQuotes)
+  );
+
+  const result = caesar(plaintext);
+
+  return {
+    ciphertext: result.ciphertext,
+    plaintext: result.plaintext
+  };
+};
+
 module.exports = {
   caesar,
   caesarHTML,
   caesarProblemTeX,
-  caesarSolutionTeX
+  caesarSolutionTeX,
+  caesarEngine
 };
