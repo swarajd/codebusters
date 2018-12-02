@@ -27,7 +27,7 @@ const atbash = text => {
   };
 };
 
-const caesarProblemTeX = caesarDict => {
+const atbashProblemTeX = caesarDict => {
   let { ciphertext, ..._ } = caesarDict;
   return generateQuestion(
     cipherTypeGenerator("Caesar"),
