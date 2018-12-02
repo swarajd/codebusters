@@ -8,7 +8,8 @@ import {
   splitText,
   categoryTeXGenerator,
   cipherTypeGenerator,
-  solutionLines
+  generateQuestion,
+  generateSolution
 } from "../latexGenerators.js";
 
 const caesar = text => {
@@ -46,15 +47,18 @@ const caesarHTML = (caesarDict, showSolution) => {
 
 const caesarProblemTeX = caesarDict => {
   let { ciphertext, ..._ } = caesarDict;
-  return `
-${cipherTypeGenerator("Caesar")}
-${categoryTeXGenerator("Ciphertext", splitText(ciphertext))}
-${solutionLines}
-  `;
+  return generateQuestion(
+    cipherTypeGenerator("Caesar"),
+    categoryTeXGenerator("Ciphertext", splitText(ciphertext)),
+    ""
+  );
 };
 
 const caesarSolutionTeX = caesarDict => {
-  return ``;
+  let { plaintext, ..._ } = caesarDict;
+  return generateSolution(
+    categoryTeXGenerator("Plaintext", splitText(plaintext))
+  );
 };
 
 module.exports = {

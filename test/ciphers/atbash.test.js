@@ -1,4 +1,4 @@
-import { atbash } from "./../../src/util/ciphers.js";
+import { atbash } from "./../../src/util/ciphers/atbash.js";
 
 /*
     The atbash cipher works as follows:
