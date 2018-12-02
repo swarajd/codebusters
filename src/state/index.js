@@ -1,9 +1,5 @@
 export default {
-  problem: {
-    ciphertext: "",
-    hint: ""
-  },
-  solution: "",
+  showSolution: false,
   cipherTypes: [
     "atbash",
     "caesar",
