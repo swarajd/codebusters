@@ -44,7 +44,7 @@ ${tex}
   return template;
 };
 
-const matrixGenerator = matrix => {
+const matrixTeXGenerator = matrix => {
   const matrix_body = matrix.map(row => row.join(" & ") + " \\\\").join("\n");
 
   const template = `
@@ -79,7 +79,7 @@ const solutionLines = `
 module.exports = {
   splitText,
   categoryTeXGenerator,
-  matrixGenerator,
+  matrixTeXGenerator,
   pairsGenerator,
   cipherTypeGenerator,
   solutionLines

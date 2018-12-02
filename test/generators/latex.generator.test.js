@@ -1,7 +1,7 @@
 import {
   splitText,
   categoryTeXGenerator,
-  matrixGenerator,
+  matrixTeXGenerator,
   pairsGenerator,
   cipherTypeGenerator
 } from "../../src/util/latexGenerators.js";
@@ -38,7 +38,7 @@ test("testing cipher text generation with long text", () => {
 test("testing matrix generation with 2x2 matrix", () => {
   const matrix = [[1, 2], [3, 4]];
 
-  const res = matrixGenerator(matrix);
+  const res = matrixTeXGenerator(matrix);
   const lines = res.split("\n").filter(line => line !== "");
 
   const matrixLines = lines.slice(2, -2);
@@ -52,7 +52,7 @@ test("testing matrix generation with 2x2 matrix", () => {
 test("testing matrix generation with 3x3 matrix", () => {
   const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-  const res = matrixGenerator(matrix);
+  const res = matrixTeXGenerator(matrix);
   const lines = res.split("\n").filter(line => line !== "");
 
   const matrixLines = lines.slice(2, -2);

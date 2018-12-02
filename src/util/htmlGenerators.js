@@ -1,6 +1,6 @@
 import { h } from "hyperapp";
 
-const matrixGenerator = matrix => {
+const matrixHTMLGenerator = matrix => {
   return (
     <table class="matrix">
       {matrix.map(row => (
@@ -16,5 +16,5 @@ const matrixGenerator = matrix => {
 };
 
 module.exports = {
-  matrixGenerator
+  matrixHTMLGenerator
 };
