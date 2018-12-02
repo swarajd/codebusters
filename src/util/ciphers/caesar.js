@@ -18,7 +18,7 @@ import {
   generateSolution
 } from "../latexGenerators.js";
 
-import { englishQuotes } from "../data/englishQuotes.json";
+import { englishQuotes } from "../../data/englishQuotes.json";
 
 const caesar = text => {
   return {
