@@ -1,24 +1,84 @@
 import engine from "../../src/util/engine.js";
 
-test("testing the atbash cipher", () => {
+import {
+  atbashEngine,
+  atbashProblemTeX,
+  atbashSolutionTeX
+} from "../../src/util/ciphers/atbash.js";
+
+test("testing the overall engine with atbash", () => {
+  const plaintext = "ABCD";
   const state = {
-    cipherTypes: ["atbash"],
-    monoalphabetic: {
-      spaces: false,
-      hint: false,
-      errors: false,
-      xenocrypt: false
-    }
+    plaintext,
+    cipherTypes: ["atbash"]
   };
 
-  for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+  const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+  expect(ciphertype).toEqual("Atbash");
+  expect(problemtext).toEqual("");
+  expect(problem).toEqual("ZYXW");
+  expect(hint).toEqual("");
+  expect(solution).toEqual(plaintext);
+});
 
-    expect(hint).toEqual("");
-    expect(ciphertext.length).toEqual(plaintext.length);
-  }
+test("testing the atbash engine given plaintext", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["atbash"]
+  };
+
+  const { ciphertype, problemtext, problem, hint, solution } = atbashEngine(
+    state
+  );
+
+  expect(ciphertype).toEqual("Atbash");
+  expect(problemtext).toEqual("");
+  expect(problem).toEqual("ZYXW");
+  expect(hint).toEqual("");
+  expect(solution).toEqual(plaintext);
+});
+
+test("testing the atbash engine without a given plaintext", () => {
+  const state = {
+    cipherTypes: ["atbash"]
+  };
+
+  const { ciphertype, problemtext, problem, hint, solution } = atbashEngine(
+    state
+  );
+
+  expect(ciphertype).toEqual("Atbash");
+  expect(problemtext).toEqual("");
+  expect(hint).toEqual("");
+  expect(problem.length).toEqual(solution.length);
+});
+
+test("testing the atbash TeX problem generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["atbash"]
+  };
+
+  const problemDict = atbashEngine(state);
+  const problemTeX = atbashProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+
+  expect(problemLines[4]).toEqual("ZYXW");
+});
+
+test("testing the atbash TeX solution generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["atbash"]
+  };
+
+  const problemDict = atbashEngine(state);
+  const solutionTeX = atbashSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+
+  expect(solutionLines[3]).toEqual("ABCD");
 });

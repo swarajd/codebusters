@@ -1,11 +1,14 @@
-import { letters } from "../util.js";
+import { letters, getOrDefault, chooseRandomFromArray } from "../util.js";
 
 import {
   splitText,
   categoryTeXGenerator,
   cipherTypeGenerator,
-  generateQuestion
+  generateQuestion,
+  generateSolution
 } from "../latexGenerators.js";
+
+import { englishQuotes } from "../../data/englishQuotes.json";
 
 const reverseLetters = letters.slice().reverse();
 
@@ -29,25 +32,51 @@ const atbash = text => {
 };
 
 const atbashProblemTeX = atbashDict => {
-  let { ciphertext, ..._ } = atbashDict;
+  let { problem, ..._ } = atbashDict;
   return generateQuestion(
     cipherTypeGenerator("Atbash"),
-    categoryTeXGenerator("Ciphertext", splitText(ciphertext)),
+    categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
   );
 };
 
 const atbashSolutionTeX = atbashDict => {
-  let { plaintext, ..._ } = atbashDict;
-  return `
-${categoryTeXGenerator("Plaintext", splitText(plaintext))}
-  `;
+  let { solution, ..._ } = atbashDict;
+  return generateSolution(
+    categoryTeXGenerator("Plaintext", splitText(solution))
+  );
 };
 
-const atbashEngine = state => {};
+const atbashEngine = state => {
+  let ciphertype = "Atbash";
+  let problemtext = "";
+  let problem = "";
+  let hint = "";
+  let solution = "";
+
+  const plaintext = getOrDefault(
+    state,
+    "plaintext",
+    () => chooseRandomFromArray(englishQuotes).text
+  );
+
+  const result = atbash(plaintext);
+
+  problem = result.ciphertext;
+  solution = result.plaintext;
+
+  return {
+    ciphertype,
+    problemtext,
+    problem,
+    hint,
+    solution
+  };
+};
 
 module.exports = {
   atbash,
   atbashProblemTeX,
-  atbashSolutionTeX
+  atbashSolutionTeX,
+  atbashEngine
 };

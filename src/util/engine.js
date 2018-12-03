@@ -27,6 +27,7 @@ import { spanishQuotes } from "../data/spanishQuotes.json";
 import { words } from "../data/words.json";
 
 import { caesarEngine } from "./ciphers/caesar.js";
+import { atbashEngine } from "./ciphers/atbash.js";
 
 /*
 
@@ -80,20 +81,7 @@ const engine = state => {
 
   switch (cipherType) {
     case "atbash":
-      res = atbash(plaintextObj.text);
-
-      generatedProblem = {
-        cipherType: cipherType,
-        problem: {
-          ciphertext: res.ciphertext,
-          hint: ""
-        },
-        solution: {
-          plaintext: res.plaintext
-        }
-      };
-
-      break;
+      return atbashEngine(state);
     case "caesar":
       return caesarEngine(state);
     case "monoalphabetic":
