@@ -2,7 +2,7 @@ import {
   splitText,
   categoryTeXGenerator,
   matrixTeXGenerator,
-  pairsGenerator,
+  pairsTeXGenerator,
   cipherTypeGenerator
 } from "../../src/util/latexGenerators.js";
 
@@ -66,7 +66,7 @@ test("testing matrix generation with 3x3 matrix", () => {
 test("testing pairs generation", () => {
   const pairs = [["a", "b"], ["c", "d"], ["e", "f"], ["g", "h"]];
 
-  const res = pairsGenerator(pairs);
+  const res = pairsTeXGenerator(pairs);
   const lines = res.split("\n").filter(line => line !== "");
 
   for (let i = 0; i < 4; i++) {
