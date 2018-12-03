@@ -15,7 +15,6 @@ import {
 import {
   monoalphabetic,
   atbash,
-  caesar,
   baconian,
   affine,
   vigenere,
@@ -26,6 +25,8 @@ import {
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";
 import { words } from "../data/words.json";
+
+import { caesarEngine } from "./ciphers/caesar.js";
 
 /*
 
@@ -94,19 +95,7 @@ const engine = state => {
 
       break;
     case "caesar":
-      res = caesar(plaintextObj.text);
-
-      generatedProblem = {
-        cipherType: cipherType,
-        problem: {
-          ciphertext: res.ciphertext,
-          hint: ""
-        },
-        solution: {
-          plaintext: res.plaintext
-        }
-      };
-      break;
+      return caesarEngine(state);
     case "monoalphabetic":
       // grab the options
       options = state.monoalphabetic;

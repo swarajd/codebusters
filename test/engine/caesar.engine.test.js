@@ -6,21 +6,20 @@ import {
   caesarSolutionTeX
 } from "../../src/util/ciphers/caesar.js";
 
-test("testing the caesarian cipher", () => {
+test("testing the overall engine with caesar", () => {
+  const plaintext = "ABCD";
   const state = {
+    plaintext,
     cipherTypes: ["caesar"]
   };
 
-  for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+  const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
-
-    expect(hint).toEqual("");
-    expect(ciphertext.length).toEqual(plaintext.length);
-  }
+  expect(ciphertype).toEqual("Caesar");
+  expect(problemtext).toEqual("");
+  expect(problem).toEqual("NOPQ");
+  expect(hint).toEqual("");
+  expect(solution).toEqual(plaintext);
 });
 
 test("testing the caesarian engine given plaintext", () => {
@@ -81,7 +80,5 @@ test("testing the caesarian TeX solution generator", () => {
   const solutionTeX = caesarSolutionTeX(problemDict);
   const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
 
-  console.log(solutionLines);
-
-  expect(solutionLines[1]).toEqual("ABCD");
+  expect(solutionLines[3]).toEqual("ABCD");
 });
