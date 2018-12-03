@@ -1,6 +1,10 @@
 import engine from "../../src/util/engine.js";
 
-import { caesarEngine } from "../../src/util/ciphers/caesar.js";
+import {
+  caesarEngine,
+  caesarProblemTeX,
+  caesarSolutionTeX
+} from "../../src/util/ciphers/caesar.js";
 
 test("testing the caesarian cipher", () => {
   const state = {
@@ -42,9 +46,42 @@ test("testing the caesarian engine without a given plaintext", () => {
     cipherTypes: ["caesar"]
   };
 
-  const { ciphertype, problemtext, hint, ..._ } = caesarEngine(state);
+  const { ciphertype, problemtext, problem, hint, solution } = caesarEngine(
+    state
+  );
 
   expect(ciphertype).toEqual("Caesar");
   expect(problemtext).toEqual("");
   expect(hint).toEqual("");
+  expect(problem.length).toEqual(solution.length);
+});
+
+test("testing the caesarian TeX problem generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["caesar"]
+  };
+
+  const problemDict = caesarEngine(state);
+  const problemTeX = caesarProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+
+  expect(problemLines[4]).toEqual("NOPQ");
+});
+
+test("testing the caesarian TeX solution generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["caesar"]
+  };
+
+  const problemDict = caesarEngine(state);
+  const solutionTeX = caesarSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+
+  console.log(solutionLines);
+
+  expect(solutionLines[1]).toEqual("ABCD");
 });

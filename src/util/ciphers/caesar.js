@@ -28,8 +28,8 @@ const caesar = text => {
   };
 };
 
-// const caesarHTML = (caesarDict, showSolution) => {
-//   let { ciphertext, plaintext, ..._ } = caesarDict;
+// const caesarHTML = (problemDict, showSolution) => {
+//   let { ciphertext, plaintext, ..._ } = problemDict;
 //   return (
 //     <div class="problem">
 //       <div class="card">
@@ -53,19 +53,19 @@ const caesar = text => {
 //   );
 // };
 
-const caesarProblemTeX = caesarDict => {
-  let { ciphertext, ..._ } = caesarDict;
+const caesarProblemTeX = problemDict => {
+  let { problem, ..._ } = problemDict;
   return generateQuestion(
     cipherTypeGenerator("Caesar"),
-    categoryTeXGenerator("Ciphertext", splitText(ciphertext)),
+    categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
   );
 };
 
-const caesarSolutionTeX = caesarDict => {
-  let { plaintext, ..._ } = caesarDict;
+const caesarSolutionTeX = problemDict => {
+  let { solution, ..._ } = problemDict;
   return generateSolution(
-    categoryTeXGenerator("Plaintext", splitText(plaintext))
+    categoryTeXGenerator("Plaintext", splitText(solution))
   );
 };
 
