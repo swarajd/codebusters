@@ -509,6 +509,8 @@ const getOrDefault = (dictionary, property, defaultValueFn) => {
 
     if (value == null || value == undefined || value == "") {
       return defaultValueFn();
+    } else {
+      return value;
     }
   } else {
     return defaultValueFn();
