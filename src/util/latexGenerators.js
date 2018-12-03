@@ -58,11 +58,17 @@ ${matrix_body}
   return template;
 };
 
-const pairsGenerator = pairs => {
+const pairsTeXGenerator = pairs => {
   return pairs
     .map(pair => `$ ${pair[0]} \\Rightarrow ${pair[1]} $ \\newline`)
     .join("\n");
 };
+
+const affineKeyGenerator = key => {};
+
+const cribGenerator = crib => {};
+
+const RSAKeyPairGenerator = keypair => {};
 
 const cipherTypeGenerator = type => {
   return `\\textbf{Cipher Type:} ${type} \\newline`;
@@ -273,7 +279,7 @@ module.exports = {
   splitText,
   categoryTeXGenerator,
   matrixTeXGenerator,
-  pairsGenerator,
+  pairsTeXGenerator,
   cipherTypeGenerator,
   solutionLines,
   generateTestHeader,
