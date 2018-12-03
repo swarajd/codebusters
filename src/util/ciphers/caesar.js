@@ -70,15 +70,27 @@ const caesarSolutionTeX = caesarDict => {
 };
 
 const caesarEngine = state => {
+  let ciphertype = "Caesar";
+  let problemtext = "";
+  let problem = "";
+  let hint = "";
+  let solution = "";
+
   const plaintext = getOrDefault(state, "plaintext", () =>
     chooseRandomFromArray(englishQuotes)
   );
 
   const result = caesar(plaintext);
 
+  problem = result.ciphertext;
+  solution = result.plaintext;
+
   return {
-    ciphertext: result.ciphertext,
-    plaintext: result.plaintext
+    ciphertype,
+    problemtext,
+    problem,
+    hint,
+    solution
   };
 };
 
