@@ -19,14 +19,32 @@ test("testing the caesarian cipher", () => {
   }
 });
 
-test("testing the caesarian engine", () => {
-  const plaintext = "abcd";
+test("testing the caesarian engine given plaintext", () => {
+  const plaintext = "ABCD";
   const state = {
     plaintext,
     cipherTypes: ["caesar"]
   };
 
-  const result = caesarEngine(state);
+  const { ciphertype, problemtext, problem, hint, solution } = caesarEngine(
+    state
+  );
 
-  console.log(result);
+  expect(ciphertype).toEqual("Caesar");
+  expect(problemtext).toEqual("");
+  expect(problem).toEqual("NOPQ");
+  expect(hint).toEqual("");
+  expect(solution).toEqual(plaintext);
+});
+
+test("testing the caesarian engine without a given plaintext", () => {
+  const state = {
+    cipherTypes: ["caesar"]
+  };
+
+  const { ciphertype, problemtext, hint, ..._ } = caesarEngine(state);
+
+  expect(ciphertype).toEqual("Caesar");
+  expect(problemtext).toEqual("");
+  expect(hint).toEqual("");
 });

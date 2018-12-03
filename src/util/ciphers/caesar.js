@@ -28,30 +28,30 @@ const caesar = text => {
   };
 };
 
-const caesarHTML = (caesarDict, showSolution) => {
-  let { ciphertext, plaintext, ..._ } = caesarDict;
-  return (
-    <div class="problem">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title h3">Problem</div>
-        </div>
-        <div class="card-body">
-          {categoryHTMLGenerator("Ciphertext", <p>{ciphertext}</p>)}
-        </div>
-        {solutionButton}
-      </div>
-      <div class="card" hidden={showSolution}>
-        <div class="card-header">
-          <div class="card-title h3">Solution</div>
-        </div>
-        <div class="card-body">
-          {categoryHTMLGenerator("Plaintext", <p>{plaintext}</p>)}
-        </div>
-      </div>
-    </div>
-  );
-};
+// const caesarHTML = (caesarDict, showSolution) => {
+//   let { ciphertext, plaintext, ..._ } = caesarDict;
+//   return (
+//     <div class="problem">
+//       <div class="card">
+//         <div class="card-header">
+//           <div class="card-title h3">Problem</div>
+//         </div>
+//         <div class="card-body">
+//           {categoryHTMLGenerator("Ciphertext", <p>{ciphertext}</p>)}
+//         </div>
+//         {solutionButton}
+//       </div>
+//       <div class="card" hidden={showSolution}>
+//         <div class="card-header">
+//           <div class="card-title h3">Solution</div>
+//         </div>
+//         <div class="card-body">
+//           {categoryHTMLGenerator("Plaintext", <p>{plaintext}</p>)}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const caesarProblemTeX = caesarDict => {
   let { ciphertext, ..._ } = caesarDict;
@@ -76,8 +76,10 @@ const caesarEngine = state => {
   let hint = "";
   let solution = "";
 
-  const plaintext = getOrDefault(state, "plaintext", () =>
-    chooseRandomFromArray(englishQuotes)
+  const plaintext = getOrDefault(
+    state,
+    "plaintext",
+    () => chooseRandomFromArray(englishQuotes).text
   );
 
   const result = caesar(plaintext);
@@ -96,7 +98,7 @@ const caesarEngine = state => {
 
 module.exports = {
   caesar,
-  caesarHTML,
+  // caesarHTML,
   caesarProblemTeX,
   caesarSolutionTeX,
   caesarEngine
