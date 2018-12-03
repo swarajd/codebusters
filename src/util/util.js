@@ -522,8 +522,13 @@ const typeDetector = value => {
   } else if (constructor === "[object Array]") {
     if (value.length === 4) {
       return "Pairs";
-    } else {
+    } else if (
+      (values.length === 2 && values[0].length === 2) ||
+      (values.length === 3 && values[0].length === 3)
+    ) {
       return "Matrix";
+    } else {
+      throw "unknown type";
     }
   } else if (constructor === "[object Object]") {
     if (value.hasOwnProperty("a")) {
