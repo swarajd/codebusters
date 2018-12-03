@@ -66,9 +66,28 @@ const pairsTeXGenerator = pairs => {
 
 const affineKeyGenerator = key => {};
 
+const RSAKeyPairGenerator = keypair => {};
+
 const cribGenerator = crib => {};
 
-const RSAKeyPairGenerator = keypair => {};
+const generateTeXForTypedValue = (type, value) => {
+  if (type === "String") {
+    return splitText(value);
+  } else if (type === "Matrix") {
+    return matrixTeXGenerator(value);
+  } else if (type === "AffineKey") {
+    //TODO: implement
+    return "";
+  } else if (type === "RSAKeyPair") {
+    //TODO: implement
+    return "";
+  } else if (type === "Crib") {
+    //TODO: implement
+    return "";
+  } else {
+    throw "unknown type";
+  }
+};
 
 const cipherTypeGenerator = type => {
   return `\\textbf{Cipher Type:} ${type} \\newline`;
