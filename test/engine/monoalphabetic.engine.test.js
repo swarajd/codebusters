@@ -11,15 +11,16 @@ test("testing monoalphabetic result of engine (*nothing given*)", () => {
     }
   };
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintWord = hint.substring(
+      hint.indexOf("'") + 1,
+      hint.lastIndexOf("'")
+    );
 
-    expect(hint).toEqual("");
-    expect(ciphertext.length).toEqual(plaintext.length);
-    expect(!ciphertext.includes(" ")).toEqual(true);
+    expect(hintWord).toEqual("");
+    expect(problem.length).toBeLessThanOrEqual(solution.length);
+    expect(!problem.includes(" ")).toEqual(true);
   }
 });
 
@@ -34,15 +35,16 @@ test("testing monoalphabetic result of engine (hint)", () => {
     }
   };
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintWord = hint.substring(
+      hint.indexOf("'") + 1,
+      hint.lastIndexOf("'")
+    );
 
-    expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toEqual(plaintext.length);
-    expect(!ciphertext.includes(" ")).toEqual(true);
+    expect(solution.includes(hintWord)).toEqual(true);
+    expect(problem.length).toBeLessThanOrEqual(solution.length);
+    expect(!problem.includes(" ")).toEqual(true);
   }
 });
 
@@ -57,14 +59,15 @@ test("testing monoalphabetic result of engine (spaces, hint)", () => {
     }
   };
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintWord = hint.substring(
+      hint.indexOf("'") + 1,
+      hint.lastIndexOf("'")
+    );
 
-    expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toEqual(plaintext.length);
+    expect(solution.includes(hintWord)).toEqual(true);
+    expect(problem.length).toEqual(solution.length);
   }
 });
 
@@ -79,15 +82,16 @@ test("testing monoalphabetic result of engine (spaces, hint, error)", () => {
     }
   };
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintWord = hint.substring(
+      hint.indexOf("'") + 1,
+      hint.lastIndexOf("'")
+    );
 
-    expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toBeLessThanOrEqual(plaintext.length);
-    expect(ciphertext.includes(" ")).toEqual(true);
+    expect(solution.includes(hintWord)).toEqual(true);
+    expect(problem.length).toBeLessThanOrEqual(solution.length);
+    expect(problem.includes(" ")).toEqual(true);
   }
 });
 
@@ -102,14 +106,15 @@ test("testing monoalphabetic result of engine (spaces, hint, error, xenocrypt)",
     }
   };
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintWord = hint.substring(
+      hint.indexOf("'") + 1,
+      hint.lastIndexOf("'")
+    );
 
-    expect(plaintext.includes(hint)).toEqual(true);
-    expect(ciphertext.length).toBeLessThanOrEqual(plaintext.length);
-    expect(ciphertext.includes(" ")).toEqual(true);
+    expect(solution.includes(hintWord)).toEqual(true);
+    expect(problem.length).toBeLessThanOrEqual(solution.length);
+    expect(problem.includes(" ")).toEqual(true);
   }
 });

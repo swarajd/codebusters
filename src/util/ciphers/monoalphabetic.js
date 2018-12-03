@@ -1,4 +1,22 @@
-import { letters, getRandomInt, zipToDict } from "../util.js";
+import {
+  letters,
+  getRandomInt,
+  zipToDict,
+  chooseRandomFromArray,
+  getOrDefault
+} from "../util.js";
+
+import {
+  splitText,
+  categoryTeXGenerator,
+  cipherTypeGenerator,
+  generateQuestion,
+  generateSolution
+} from "../latexGenerators.js";
+
+import { englishQuotes } from "../../data/englishQuotes.json";
+import { spanishQuotes } from "../../data/spanishQuotes.json";
+import { words } from "../../data/words.json";
 
 const dedupe = keyword => {
   const letterSet = new Set();
@@ -166,7 +184,96 @@ const monoalphabetic = (text, setting, keyword) => {
   };
 };
 
+const monoalphabeticProblemTeX = problemDict => {
+  let { problem, ..._ } = problemDict;
+  return generateQuestion(
+    cipherTypeGenerator("Monoalphabetic"),
+    categoryTeXGenerator("Ciphertext", splitText(problem)),
+    ""
+  );
+};
+
+const monoalphabeticSolutionTeX = problemDict => {
+  let { solution, ..._ } = problemDict;
+  return generateSolution(
+    categoryTeXGenerator("Plaintext", splitText(solution))
+  );
+};
+
+const monoalphabeticEngine = state => {
+  let ciphertype = "Monoalphabetic";
+  let problemtext = "";
+  let problem = "";
+  let hint = "";
+  let solution = "";
+
+  const options = state.monoalphabetic;
+
+  // pick the plaintext
+  if (options.xenocrypt) {
+    solution = chooseRandomFromArray(spanishQuotes).text;
+  } else {
+    solution = getOrDefault(state, "plaintext", () => {
+      let result = "";
+      do {
+        result = chooseRandomFromArray(englishQuotes).text;
+      } while (result.length > 250);
+      return result;
+    });
+  }
+
+  // choose a variant of the monoalphabetic scramble
+  const variants = ["k1", "k2", "random"];
+  const chosenVariant = chooseRandomFromArray(variants);
+
+  // grab a keyword for k1/k2 encryption
+  let keyword = "";
+  if (chosenVariant == "k1" || chosenVariant == "k2") {
+    keyword = getOrDefault(state, "word", () => chooseRandomFromArray(words));
+  }
+
+  // choose a hint word if relevant
+  let hintWord = "";
+  let quote = solution.split("--")[0];
+  if (options.hint) {
+    const words = quote.split(/\s+/);
+    const validWords = words
+      .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
+      .filter(w => w.match(/^[A-Z]+$/g))
+      .filter(w => w.length >= 4);
+
+    hintWord = chooseRandomFromArray(validWords);
+  }
+
+  // introduce an error/errors, if relevant
+  let plaintext = solution;
+  if (options.errors) {
+    plaintext = solution.replace(/[^\w\s]/g, "");
+  }
+
+  // omit spaces, if relevant
+  if (!options.spaces) {
+    plaintext = plaintext.replace(/\s/g, "");
+  }
+
+  const result = monoalphabetic(plaintext, chosenVariant, keyword);
+
+  problem = result.ciphertext;
+  hint = `The phrase contains the word '${hintWord}'.`;
+
+  return {
+    ciphertype,
+    problemtext,
+    problem,
+    hint,
+    solution
+  };
+};
+
 module.exports = {
   randomDerangementDict,
-  monoalphabetic
+  monoalphabetic,
+  monoalphabeticProblemTeX,
+  monoalphabeticSolutionTeX,
+  monoalphabeticEngine
 };

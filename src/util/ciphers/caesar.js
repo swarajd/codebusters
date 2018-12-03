@@ -6,9 +6,9 @@ import {
   chooseRandomFromArray
 } from "../util.js";
 
-import { categoryHTMLGenerator, solutionButton } from "../htmlGenerators.js";
+// import { categoryHTMLGenerator, solutionButton } from "../htmlGenerators.js";
 
-import { h } from "hyperapp";
+// import { h } from "hyperapp";
 
 import {
   splitText,

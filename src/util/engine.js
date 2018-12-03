@@ -20,8 +20,7 @@ import { words } from "../data/words.json";
 
 import { caesarEngine } from "./ciphers/caesar.js";
 import { atbashEngine } from "./ciphers/atbash.js";
-
-import { monoalphabetic } from "./ciphers/monoalphabetic.js";
+import { monoalphabeticEngine } from "./ciphers/monoalphabetic.js";
 
 /*
 
@@ -79,63 +78,62 @@ const engine = state => {
     case "caesar":
       return caesarEngine(state);
     case "monoalphabetic":
-      // grab the options
-      options = state.monoalphabetic;
+      // // grab the options
+      // options = state.monoalphabetic;
 
-      // switch to spanish quote, if relevant
-      if (options.xenocrypt) {
-        plaintextObj = chooseRandomFromArray(spanishQuotes);
-      }
+      // // switch to spanish quote, if relevant
+      // if (options.xenocrypt) {
+      //   plaintextObj = chooseRandomFromArray(spanishQuotes);
+      // }
 
-      // choose a variant of the monoalphabetic scramble
-      const variants = ["k1", "k2", "random"];
-      const chosenVariant = chooseRandomFromArray(variants);
+      // // choose a variant of the monoalphabetic scramble
+      // const variants = ["k1", "k2", "random"];
+      // const chosenVariant = chooseRandomFromArray(variants);
 
-      let keyword = "";
-      if (chosenVariant == "k1" || chosenVariant == "k2") {
-        keyword = chooseRandomFromArray(words);
-      }
+      // let keyword = "";
+      // if (chosenVariant == "k1" || chosenVariant == "k2") {
+      //   keyword = chooseRandomFromArray(words);
+      // }
 
-      // choose a hint word if relevant
-      let hintWord = "";
-      let quote = plaintextObj.text.split("--")[0];
-      if (options.hint) {
-        const words = quote.split(/\s+/);
-        const validWords = words
-          .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
-          .filter(w => w.match(/^[A-Z]+$/g))
-          .filter(w => w.length >= 4);
+      // // choose a hint word if relevant
+      // let hintWord = "";
+      // let quote = plaintextObj.text.split("--")[0];
+      // if (options.hint) {
+      //   const words = quote.split(/\s+/);
+      //   const validWords = words
+      //     .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
+      //     .filter(w => w.match(/^[A-Z]+$/g))
+      //     .filter(w => w.length >= 4);
 
-        hintWord = chooseRandomFromArray(validWords);
-      }
+      //   hintWord = chooseRandomFromArray(validWords);
+      // }
 
-      // introduce an error/errors, if relevant
-      let filteredPlaintext = plaintextObj.text;
-      if (options.errors) {
-        filteredPlaintext = filteredPlaintext.replace(/[^\w\s]/g, "");
-      }
+      // // introduce an error/errors, if relevant
+      // let filteredPlaintext = plaintextObj.text;
+      // if (options.errors) {
+      //   filteredPlaintext = filteredPlaintext.replace(/[^\w\s]/g, "");
+      // }
 
-      // omit spaces, if relevant
-      let plaintext = filteredPlaintext;
-      if (!options.spaces) {
-        plaintext = plaintext.replace(/\s/g, "");
-      }
+      // // omit spaces, if relevant
+      // let plaintext = filteredPlaintext;
+      // if (!options.spaces) {
+      //   plaintext = plaintext.replace(/\s/g, "");
+      // }
 
-      // execute the actual encryption
-      res = monoalphabetic(plaintext, chosenVariant, keyword);
+      // // execute the actual encryption
+      // res = monoalphabetic(plaintext, chosenVariant, keyword);
 
-      generatedProblem = {
-        cipherType: cipherType,
-        problem: {
-          ciphertext: res.ciphertext,
-          hint: hintWord
-        },
-        solution: {
-          plaintext: res.plaintext
-        }
-      };
-
-      break;
+      // generatedProblem = {
+      //   cipherType: cipherType,
+      //   problem: {
+      //     ciphertext: res.ciphertext,
+      //     hint: hintWord
+      //   },
+      //   solution: {
+      //     plaintext: res.plaintext
+      //   }
+      // };
+      return monoalphabeticEngine(state);
     case "affine":
       // grab the options
       options = state.affine;
