@@ -1,4 +1,9 @@
 export default {
+  plaintext: "",
+  word: "",
+  keypair: {},
+  RSApq: {},
+  affineKey: {},
   showSolution: false,
   cipherTypes: [
     "atbash",
