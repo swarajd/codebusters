@@ -515,6 +515,31 @@ const getOrDefault = (dictionary, property, defaultValueFn) => {
   }
 };
 
+const typeDetector = value => {
+  const constructor = Object.prototype.toString.call(value);
+  if (constructor === "[object String]") {
+    return "String";
+  } else if (constructor === "[object Array]") {
+    if (value.length === 4) {
+      return "Pairs";
+    } else {
+      return "Matrix";
+    }
+  } else if (constructor === "[object Object]") {
+    if (value.hasOwnProperty("a")) {
+      return "AffineKey";
+    } else if (value.hasOwnProperty("publickey")) {
+      return "RSAKeyPair";
+    } else if (value.hasOwnProperty("plaintext")) {
+      return "Crib";
+    } else {
+      throw "unknown type";
+    }
+  } else {
+    throw "unknown type";
+  }
+};
+
 module.exports = {
   letters,
   letterDict,
@@ -550,5 +575,6 @@ module.exports = {
   chooseRandomFromArray,
   condenseStr,
   matrixToStr,
-  getOrDefault
+  getOrDefault,
+  typeDetector
 };
