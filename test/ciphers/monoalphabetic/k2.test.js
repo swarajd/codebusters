@@ -1,4 +1,4 @@
-import { monoalphabetic } from '../../../src/util/ciphers.js'
+import { monoalphabetic } from "../../../src/util/ciphers/monoalphabetic.js";
 
 const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
@@ -16,10 +16,10 @@ global.Math = mockMath;
 
     asdf -> VHXZ
 */
-test('no repeated characters, rotation not required', () => {
-    let result = monoalphabetic('asdf', 'k2', 'cryptogm');
-    expect(result.ciphertext).toEqual('VHXZ');
-})
+test("no repeated characters, rotation not required", () => {
+  let result = monoalphabetic("asdf", "k2", "cryptogm");
+  expect(result.ciphertext).toEqual("VHXZ");
+});
 
 /*
     setting: k2
@@ -33,10 +33,10 @@ test('no repeated characters, rotation not required', () => {
 
     asdf -> TRNV
 */
-test('no repeated characters, rotation required', () => {
-    let result = monoalphabetic('asdf', 'k2', 'wodebust');
-    expect(result.ciphertext).toEqual('TRNV');
-})
+test("no repeated characters, rotation required", () => {
+  let result = monoalphabetic("asdf", "k2", "wodebust");
+  expect(result.ciphertext).toEqual("TRNV");
+});
 
 /*
 
@@ -51,11 +51,10 @@ test('no repeated characters, rotation required', () => {
 
     asdf -> UHXZ
 */
-test('repeated characters, rotation not required', () => {
-    let result = monoalphabetic('asdf', 'k2', 'cryptogram');
-    expect(result.ciphertext).toEqual('UHXZ');
-})
-
+test("repeated characters, rotation not required", () => {
+  let result = monoalphabetic("asdf", "k2", "cryptogram");
+  expect(result.ciphertext).toEqual("UHXZ");
+});
 
 /*
 
@@ -70,8 +69,7 @@ test('repeated characters, rotation not required', () => {
 
         asdf -> URNV
     */
-test('repeated characters, rotation required', () => {
-    let result = monoalphabetic('asdf', 'k2', 'codebusters');
-    expect(result.ciphertext).toEqual('URNV');
-})
-
+test("repeated characters, rotation required", () => {
+  let result = monoalphabetic("asdf", "k2", "codebusters");
+  expect(result.ciphertext).toEqual("URNV");
+});

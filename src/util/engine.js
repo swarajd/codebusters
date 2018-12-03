@@ -12,15 +12,7 @@ import {
   condenseStr,
   matrixToStr
 } from "./util.js";
-import {
-  monoalphabetic,
-  atbash,
-  baconian,
-  affine,
-  vigenere,
-  RSAEncrypt,
-  hill
-} from "./ciphers.js";
+import { baconian, affine, vigenere, RSAEncrypt, hill } from "./ciphers.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";
@@ -28,6 +20,8 @@ import { words } from "../data/words.json";
 
 import { caesarEngine } from "./ciphers/caesar.js";
 import { atbashEngine } from "./ciphers/atbash.js";
+
+import { monoalphabetic } from "./ciphers/monoalphabetic.js";
 
 /*
 

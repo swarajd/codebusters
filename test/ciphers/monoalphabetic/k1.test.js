@@ -1,9 +1,8 @@
-import { monoalphabetic } from '../../../src/util/ciphers.js'
+import { monoalphabetic } from "../../../src/util/ciphers/monoalphabetic.js";
 
 const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
 global.Math = mockMath;
-
 
 /*
     setting: k1
@@ -25,10 +24,10 @@ global.Math = mockMath;
 
     asdf -> HOKN
 */
-test('no repeated characters, rotation not required', () => {
-    let result = monoalphabetic('asdf', 'k1', 'cryptogm');
-    expect(result.ciphertext).toEqual('HOKN');
-})
+test("no repeated characters, rotation not required", () => {
+  let result = monoalphabetic("asdf", "k1", "cryptogm");
+  expect(result.ciphertext).toEqual("HOKN");
+});
 
 /*
     setting: k1
@@ -60,10 +59,10 @@ test('no repeated characters, rotation not required', () => {
 
     asdf -> KTNQ
 */
-test('no repeated characters, rotation required', () => {
-    let result = monoalphabetic('asdf', 'k1', 'wodebust');
-    expect(result.ciphertext).toEqual('KTNQ');
-})
+test("no repeated characters, rotation required", () => {
+  let result = monoalphabetic("asdf", "k1", "wodebust");
+  expect(result.ciphertext).toEqual("KTNQ");
+});
 
 /*
     setting: k1
@@ -87,10 +86,10 @@ test('no repeated characters, rotation required', () => {
     asdf -> HOKN
     
 */
-test('repeated characters, rotation not required', () => {
-    let result = monoalphabetic('asdf', 'k1', 'cryptogram');
-    expect(result.ciphertext).toEqual('HOKN');
-})
+test("repeated characters, rotation not required", () => {
+  let result = monoalphabetic("asdf", "k1", "cryptogram");
+  expect(result.ciphertext).toEqual("HOKN");
+});
 
 /*
     setting: k1
@@ -123,8 +122,7 @@ test('repeated characters, rotation not required', () => {
 
     asdf -> KTNQ
 */
-test('repeated characters, rotation required', () => {
-    let result = monoalphabetic('asdf', 'k1', 'codebusters');
-    expect(result.ciphertext).toEqual('KTNQ');
-})
-
+test("repeated characters, rotation required", () => {
+  let result = monoalphabetic("asdf", "k1", "codebusters");
+  expect(result.ciphertext).toEqual("KTNQ");
+});
