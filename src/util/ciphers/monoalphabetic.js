@@ -259,7 +259,7 @@ const monoalphabeticEngine = state => {
   const result = monoalphabetic(plaintext, chosenVariant, keyword);
 
   problem = result.ciphertext;
-  hint = `The phrase contains the word '${hintWord}'.`;
+  hint = hintWord !== "" ? `The phrase contains the word '${hintWord}'.` : "";
 
   return {
     ciphertype,

@@ -1,5 +1,11 @@
 import engine from "../../src/util/engine.js";
 
+import {
+  monoalphabeticEngine,
+  monoalphabeticProblemTeX,
+  monoalphabeticSolutionTeX
+} from "../../src/util/ciphers/monoalphabetic.js";
+
 test("testing monoalphabetic result of engine (*nothing given*)", () => {
   const state = {
     cipherTypes: ["monoalphabetic"],
@@ -13,12 +19,7 @@ test("testing monoalphabetic result of engine (*nothing given*)", () => {
   for (let i = 0; i < 10; i++) {
     const { problem, hint, solution, ..._ } = engine(state);
 
-    const hintWord = hint.substring(
-      hint.indexOf("'") + 1,
-      hint.lastIndexOf("'")
-    );
-
-    expect(hintWord).toEqual("");
+    expect(hint).toEqual("");
     expect(problem.length).toBeLessThanOrEqual(solution.length);
     expect(!problem.includes(" ")).toEqual(true);
   }
@@ -117,4 +118,49 @@ test("testing monoalphabetic result of engine (spaces, hint, error, xenocrypt)",
     expect(problem.length).toBeLessThanOrEqual(solution.length);
     expect(problem.includes(" ")).toEqual(true);
   }
+});
+
+test("testing the monoalphabetic TeX problem generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["monoalphabetic"],
+    monoalphabetic: {
+      spaces: true,
+      hint: true,
+      errors: false,
+      xenocrypt: false
+    }
+  };
+
+  const problemDict = monoalphabeticEngine(state);
+  const problemTeX = monoalphabeticProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+
+  const ciphertext = problemLines[4];
+  expect(ciphertext.length).toEqual(plaintext.length);
+
+  for (let i = 0; i < ciphertext.length; i++) {
+    expect(plaintext[i]).not.toBe(ciphertext[i]);
+  }
+});
+
+test("testing the monoalphabetic TeX solution generator", () => {
+  const plaintext = "ABCD";
+  const state = {
+    plaintext,
+    cipherTypes: ["monoalphabetic"],
+    monoalphabetic: {
+      spaces: true,
+      hint: true,
+      errors: false,
+      xenocrypt: false
+    }
+  };
+
+  const problemDict = monoalphabeticEngine(state);
+  const solutionTeX = monoalphabeticSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+
+  expect(solutionLines[3]).toEqual("ABCD");
 });
