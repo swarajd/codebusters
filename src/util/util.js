@@ -409,9 +409,15 @@ const detectType = value => {
   } else if (constructor === "[object Object]") {
     if (value.hasOwnProperty("a") && value.hasOwnProperty("b")) {
       return "AffineKey";
-    } else if (value.hasOwnProperty("publickey")) {
+    } else if (
+      value.hasOwnProperty("publickey") &&
+      value.hasOwnProperty("privatekey")
+    ) {
       return "RSAKeyPair";
-    } else if (value.hasOwnProperty("plaintext")) {
+    } else if (
+      value.hasOwnProperty("plaintext") &&
+      value.hasOwnProperty("ciphertext")
+    ) {
       return "Crib";
     } else {
       throw "unknown type";
