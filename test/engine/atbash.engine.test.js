@@ -66,6 +66,8 @@ test("testing the atbash TeX problem generator", () => {
   const problemTeX = atbashProblemTeX(problemDict);
   const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
 
+  expect(problemTeX.includes("Atbash")).toBeTruthy();
+  expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
   expect(problemLines[4]).toEqual("ZYXW");
 });
 
@@ -80,5 +82,6 @@ test("testing the atbash TeX solution generator", () => {
   const solutionTeX = atbashSolutionTeX(problemDict);
   const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
 
+  expect(solutionTeX.includes("Plaintext:")).toBeTruthy();
   expect(solutionLines[3]).toEqual("ABCD");
 });

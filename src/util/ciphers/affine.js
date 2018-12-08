@@ -5,11 +5,21 @@ import {
   mod,
   getOrDefault,
   getRandomInt,
-  chooseRandomFromArray
+  chooseRandomFromArray,
+  detectType
 } from "../util.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
 import { words } from "../../data/words.json";
+
+import {
+  splitText,
+  categoryTeXGenerator,
+  cipherTypeGenerator,
+  generateQuestion,
+  generateSolution,
+  generateTeXForTypedValue
+} from "../latexGenerators.js";
 
 const areCoprime = (a, b) => {
   return gcd(a, b) === 1;
@@ -106,8 +116,64 @@ const affineEngine = state => {
   };
 };
 
+const affineProblemTeX = problemDict => {
+  let { problem, hint, ..._ } = problemDict;
+
+  const hintType = detectType(hint);
+
+  // cryptanalysis
+  if (hintType === "String") {
+    return generateQuestion(
+      cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Ciphertext", splitText(problem)),
+      ""
+    );
+  }
+
+  // encryption
+  else if (hintType === "AffineKey") {
+    return generateQuestion(
+      cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Plaintext", splitText(problem)),
+      categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))
+    );
+  }
+
+  // unknown problem type
+  else {
+    throw "unknown hint type";
+  }
+};
+
+const affineSolutionTeX = problemDict => {
+  let { solution, hint, ..._ } = problemDict;
+
+  const hintType = detectType(hint);
+
+  // cryptanalysis
+  if (hintType === "String") {
+    return generateSolution(
+      categoryTeXGenerator("Plaintext", splitText(solution))
+    );
+  }
+
+  // encryption
+  else if (hintType === "AffineKey") {
+    return generateSolution(
+      categoryTeXGenerator("Ciphertext", splitText(solution))
+    );
+  }
+
+  // unknown problem type
+  else {
+    throw "unknown hint type";
+  }
+};
+
 module.exports = {
   areCoprime,
   affine,
-  affineEngine
+  affineEngine,
+  affineProblemTeX,
+  affineSolutionTeX
 };

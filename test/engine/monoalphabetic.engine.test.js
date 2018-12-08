@@ -137,6 +137,8 @@ test("testing the monoalphabetic TeX problem generator", () => {
   const problemTeX = monoalphabeticProblemTeX(problemDict);
   const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
 
+  expect(problemTeX.includes("Monoalphabetic")).toBeTruthy();
+  expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
   const ciphertext = problemLines[4];
   expect(ciphertext.length).toEqual(plaintext.length);
 
@@ -162,5 +164,6 @@ test("testing the monoalphabetic TeX solution generator", () => {
   const solutionTeX = monoalphabeticSolutionTeX(problemDict);
   const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
 
+  expect(solutionTeX.includes("Plaintext:")).toBeTruthy();
   expect(solutionLines[3]).toEqual("ABCD");
 });

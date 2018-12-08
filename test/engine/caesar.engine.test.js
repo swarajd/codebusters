@@ -66,6 +66,8 @@ test("testing the caesarian TeX problem generator", () => {
   const problemTeX = caesarProblemTeX(problemDict);
   const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
 
+  expect(problemTeX.includes("Caesar")).toBeTruthy();
+  expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
   expect(problemLines[4]).toEqual("NOPQ");
 });
 
@@ -80,5 +82,6 @@ test("testing the caesarian TeX solution generator", () => {
   const solutionTeX = caesarSolutionTeX(problemDict);
   const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
 
+  expect(solutionTeX.includes("Plaintext:")).toBeTruthy();
   expect(solutionLines[3]).toEqual("ABCD");
 });

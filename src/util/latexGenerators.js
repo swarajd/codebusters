@@ -65,7 +65,7 @@ const pairsTeXGenerator = pairs => {
 };
 
 const affineKeyGenerator = key => {
-  return `$ a = ${key.a}, b = ${key.b}`;
+  return `$ a = ${key.a}, b = ${key.b} $`;
 };
 
 const RSAKeyPairGenerator = keypair => {};
@@ -306,5 +306,6 @@ module.exports = {
   generateSolutionsHeader,
   utilitiesPage,
   generateQuestion,
-  generateSolution
+  generateSolution,
+  generateTeXForTypedValue
 };

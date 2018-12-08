@@ -391,7 +391,7 @@ const getOrDefault = (dictionary, property, defaultValueFn) => {
   }
 };
 
-const typeDetector = value => {
+const detectType = value => {
   const constructor = Object.prototype.toString.call(value);
   if (constructor === "[object String]") {
     return "String";
@@ -399,15 +399,15 @@ const typeDetector = value => {
     if (value.length === 4) {
       return "Pairs";
     } else if (
-      (values.length === 2 && values[0].length === 2) ||
-      (values.length === 3 && values[0].length === 3)
+      (value.length === 2 && value[0].length === 2) ||
+      (value.length === 3 && value[0].length === 3)
     ) {
       return "Matrix";
     } else {
       throw "unknown type";
     }
   } else if (constructor === "[object Object]") {
-    if (value.hasOwnProperty("a")) {
+    if (value.hasOwnProperty("a") && value.hasOwnProperty("b")) {
       return "AffineKey";
     } else if (value.hasOwnProperty("publickey")) {
       return "RSAKeyPair";
@@ -450,5 +450,5 @@ module.exports = {
   condenseStr,
   matrixToStr,
   getOrDefault,
-  typeDetector
+  detectType
 };
