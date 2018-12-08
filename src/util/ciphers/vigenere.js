@@ -1,4 +1,4 @@
-import { extendKey, addLetters } from "../util.js";
+import { mod } from "../util.js";
 
 import {
   splitText,
@@ -6,6 +6,26 @@ import {
   cipherTypeGenerator,
   generateQuestion
 } from "../latexGenerators.js";
+
+const addLetters = (a, b) => {
+  const aNum = a.charCodeAt(0) - 65;
+  const bNum = b.charCodeAt(0) - 65;
+
+  const sum = mod(aNum + bNum, 26);
+
+  return String.fromCharCode(sum + 65);
+};
+
+const extendKey = (key, strLen) => {
+  if (key.length > strLen) {
+    throw "string too short to extend key";
+  }
+  const keyLen = key.length;
+  const quotient = Math.floor(strLen / keyLen);
+  const remainder = strLen % keyLen;
+
+  return key.repeat(quotient) + key.substring(0, remainder);
+};
 
 const vigenere = (text, key) => {
   if (key === undefined) {
@@ -102,10 +122,11 @@ ${categoryTeXGenerator("Plaintext", splitText(plaintext))}
   `;
 };
 
-const vigenereEngine = state => {};
-
 module.exports = {
+  addLetters,
+  extendKey,
   vigenere,
+  vigenereEngine,
   vigenereProblemTeX,
   vigenereSolutionTeX
 };

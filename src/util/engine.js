@@ -11,9 +11,9 @@ import {
   condenseStr,
   matrixToStr
 } from "./util.js";
-import { baconian, vigenere, RSAEncrypt, hill } from "./ciphers.js";
+import { baconian, RSAEncrypt, hill } from "./ciphers.js";
 
-// import { affine, areCoprime } from "./ciphers/affine.js";
+import { vigenere } from "./ciphers/vigenere.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";

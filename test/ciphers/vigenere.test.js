@@ -1,5 +1,8 @@
-import { vigenere } from "./../../src/util/ciphers.js";
-import { addLetters, extendKey } from "./../../src/util/util.js";
+import {
+  vigenere,
+  addLetters,
+  extendKey
+} from "./../../src/util/ciphers/vigenere.js";
 
 test("key should be provided", () => {
   try {

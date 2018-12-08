@@ -63,25 +63,6 @@ const mod = (n, m) => ((n % m) + m) % m;
     assuming both letters are capitalized, 
     adding them and returning the 'sum'
 */
-const addLetters = (a, b) => {
-  const aNum = a.charCodeAt(0) - 65;
-  const bNum = b.charCodeAt(0) - 65;
-
-  const sum = mod(aNum + bNum, 26);
-
-  return String.fromCharCode(sum + 65);
-};
-
-const extendKey = (key, strLen) => {
-  if (key.length > strLen) {
-    throw "string too short to extend key";
-  }
-  const keyLen = key.length;
-  const quotient = Math.floor(strLen / keyLen);
-  const remainder = strLen % keyLen;
-
-  return key.repeat(quotient) + key.substring(0, remainder);
-};
 
 const baconianDict = (() => {
   const baconianArr = letters
@@ -435,8 +416,6 @@ module.exports = {
   shiftText,
   zipToDict,
   getRandomInt,
-  addLetters,
-  extendKey,
   baconianDict,
   gcd,
   isInvertible,
