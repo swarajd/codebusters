@@ -106,16 +106,6 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const areCoprime = (a, b) => {
-  return gcd(a, b) === 1;
-};
-
-const affineLetter = (letter, a, b) => {
-  const letterNum = letter.charCodeAt(0) - 65;
-  const affined = mod(letterNum * a + b, letters.length);
-  return String.fromCharCode(affined + 65);
-};
-
 const matrixMultiply = (A, B) => {
   if (A[0].length != B.length) {
     throw "incompatible matrices";
@@ -443,8 +433,6 @@ module.exports = {
   extendKey,
   baconianDict,
   gcd,
-  areCoprime,
-  affineLetter,
   isInvertible,
   invertibleValues,
   generateRandomInvertibleMatrix,

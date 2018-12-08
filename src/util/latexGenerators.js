@@ -64,7 +64,9 @@ const pairsTeXGenerator = pairs => {
     .join("\n");
 };
 
-const affineKeyGenerator = key => {};
+const affineKeyGenerator = key => {
+  return `$ a = ${key.a}, b = ${key.b}`;
+};
 
 const RSAKeyPairGenerator = keypair => {};
 
@@ -76,8 +78,7 @@ const generateTeXForTypedValue = (type, value) => {
   } else if (type === "Matrix") {
     return matrixTeXGenerator(value);
   } else if (type === "AffineKey") {
-    //TODO: implement
-    return "";
+    return affineKeyGenerator(value);
   } else if (type === "RSAKeyPair") {
     //TODO: implement
     return "";

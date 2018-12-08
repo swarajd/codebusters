@@ -1,7 +1,6 @@
 import {
   chooseRandomFromArray,
   getRandomInt,
-  areCoprime,
   letters,
   generateRandomResultFromSet,
   generateKeyPair,
@@ -12,7 +11,9 @@ import {
   condenseStr,
   matrixToStr
 } from "./util.js";
-import { baconian, affine, vigenere, RSAEncrypt, hill } from "./ciphers.js";
+import { baconian, vigenere, RSAEncrypt, hill } from "./ciphers.js";
+
+// import { affine, areCoprime } from "./ciphers/affine.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";
@@ -21,6 +22,7 @@ import { words } from "../data/words.json";
 import { caesarEngine } from "./ciphers/caesar.js";
 import { atbashEngine } from "./ciphers/atbash.js";
 import { monoalphabeticEngine } from "./ciphers/monoalphabetic.js";
+import { affineEngine } from "./ciphers/affine.js";
 
 /*
 
@@ -78,112 +80,9 @@ const engine = state => {
     case "caesar":
       return caesarEngine(state);
     case "monoalphabetic":
-      // // grab the options
-      // options = state.monoalphabetic;
-
-      // // switch to spanish quote, if relevant
-      // if (options.xenocrypt) {
-      //   plaintextObj = chooseRandomFromArray(spanishQuotes);
-      // }
-
-      // // choose a variant of the monoalphabetic scramble
-      // const variants = ["k1", "k2", "random"];
-      // const chosenVariant = chooseRandomFromArray(variants);
-
-      // let keyword = "";
-      // if (chosenVariant == "k1" || chosenVariant == "k2") {
-      //   keyword = chooseRandomFromArray(words);
-      // }
-
-      // // choose a hint word if relevant
-      // let hintWord = "";
-      // let quote = plaintextObj.text.split("--")[0];
-      // if (options.hint) {
-      //   const words = quote.split(/\s+/);
-      //   const validWords = words
-      //     .map(w => w.replace(/(^\W)?(\W$)?/g, ""))
-      //     .filter(w => w.match(/^[A-Z]+$/g))
-      //     .filter(w => w.length >= 4);
-
-      //   hintWord = chooseRandomFromArray(validWords);
-      // }
-
-      // // introduce an error/errors, if relevant
-      // let filteredPlaintext = plaintextObj.text;
-      // if (options.errors) {
-      //   filteredPlaintext = filteredPlaintext.replace(/[^\w\s]/g, "");
-      // }
-
-      // // omit spaces, if relevant
-      // let plaintext = filteredPlaintext;
-      // if (!options.spaces) {
-      //   plaintext = plaintext.replace(/\s/g, "");
-      // }
-
-      // // execute the actual encryption
-      // res = monoalphabetic(plaintext, chosenVariant, keyword);
-
-      // generatedProblem = {
-      //   cipherType: cipherType,
-      //   problem: {
-      //     ciphertext: res.ciphertext,
-      //     hint: hintWord
-      //   },
-      //   solution: {
-      //     plaintext: res.plaintext
-      //   }
-      // };
       return monoalphabeticEngine(state);
     case "affine":
-      // grab the options
-      options = state.affine;
-
-      problemType = chooseRandomFromArray(options.types);
-
-      let a = getRandomInt(1, 26);
-      while (!areCoprime(a, letters.length)) {
-        a = getRandomInt(1, 26);
-      }
-      let b = getRandomInt(1, 26);
-
-      switch (problemType) {
-        case "encryption":
-          const affineWord = chooseRandomFromArray(words);
-
-          res = affine(affineWord, a, b);
-
-          generatedProblem = {
-            cipherType: cipherType,
-            problem: {
-              plaintext: res.plaintext,
-              hint: `a: ${a}, b: ${b}`
-            },
-            solution: {
-              ciphertext: res.ciphertext
-            }
-          };
-
-          break;
-        case "analysis":
-          res = affine(plaintextObj.text, a, b);
-
-          generatedProblem = {
-            cipherType: cipherType,
-            problem: {
-              ciphertext: res.ciphertext,
-              hint: ""
-            },
-            solution: {
-              plaintext: res.plaintext,
-              a: a,
-              b: b
-            }
-          };
-          break;
-        default:
-          throw `option '${problemType}' for affine not found`;
-      }
-      break;
+      return affineEngine(state);
     case "vigenere":
       // grab the options
       options = state.vigenere;

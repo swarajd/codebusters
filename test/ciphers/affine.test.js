@@ -1,4 +1,4 @@
-import { affine } from "./../../src/util/ciphers.js";
+import { affine } from "./../../src/util/ciphers/affine.js";
 
 test("affine cipher with proper a & b", () => {
   let result = affine("defendtheeastwallofthecastle", 5, 7);

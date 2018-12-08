@@ -6,16 +6,11 @@ import {
   letters,
   letterDict,
   isLetter,
-  zipToDict,
-  atBashDict,
-  shiftText,
   addLetters,
   extendKey,
   baconianDict,
   areCoprime,
-  affineLetter,
   matrixMultiply,
-  mod,
   modMatrix,
   transpose,
   modPow
@@ -24,26 +19,6 @@ import {
 /*
     CIPHER SECTION
 */
-
-const caesar = text => {
-  return {
-    plaintext: text,
-    ciphertext: shiftText(text, 13),
-    solution: zipToDict(letters, shiftText(letters.join(""), 13).split(""))
-  };
-};
-
-const atbash = text => {
-  return {
-    plaintext: text,
-    ciphertext: text
-      .toUpperCase()
-      .split("")
-      .map(c => (atBashDict.hasOwnProperty(c) ? atBashDict[c] : c))
-      .join(""),
-    solution: atBashDict
-  };
-};
 
 const vigenere = (text, key) => {
   if (key === undefined) {
@@ -172,11 +147,8 @@ const RSADecrypt = (text, keypair) => {
 */
 
 module.exports = {
-  caesar,
-  atbash,
   vigenere,
   baconian,
-  affine,
   hill,
   RSAEncrypt,
   RSADecrypt
