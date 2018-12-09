@@ -1,13 +1,12 @@
 import {
+  hill,
   matrixMultiply,
   modMatrix,
   transpose,
   generateRandomInvertibleMatrix,
   invertMatrix,
   isInvertible
-} from "./../../src/util/util.js";
-
-import { hill } from "./../../src/util/ciphers.js";
+} from "./../../src/util/ciphers/hill.js";
 
 describe("test matrix multiplication", () => {
   test("matrix multiply error", () => {

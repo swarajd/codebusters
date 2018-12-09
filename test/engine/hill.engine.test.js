@@ -1,5 +1,7 @@
 import engine from "../../src/util/engine.js";
 
+import { detectType } from "../../src/util/util.js";
+
 test("testing the hill cipher (produce, pairs)", () => {
   const state = {
     cipherTypes: ["hill"],
@@ -10,21 +12,18 @@ test("testing the hill cipher (produce, pairs)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const problemType = detectType(problem);
+    const solutionType = detectType(solution);
 
-    expect(plaintext.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/));
-    expect(
-      ciphertext.match(
-        /^\[ \[ \w, \w \], \[ \w, \w \], \[ \w, \w \], \[ \w, \w \] ]$/
-      )
-    );
-    expect(hint).toEqual(
+    expect(ciphertype).toEqual("Hill");
+    expect(problemType).toEqual("Pairs");
+    expect(solutionType).toEqual("Matrix");
+    expect(problemtext).toEqual(
       "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs"
     );
+    expect(hint).toEqual("");
   }
 });
 
@@ -38,21 +37,18 @@ test("testing the hill cipher (produce, matrix)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const problemType = detectType(problem);
+    const solutionType = detectType(solution);
 
-    expect(
-      plaintext.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/)
-    ).toBeTruthy();
-    expect(
-      ciphertext.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/)
-    ).toBeTruthy();
-    expect(hint).toEqual(
+    expect(ciphertype).toEqual("Hill");
+    expect(problemType).toEqual("Matrix");
+    expect(solutionType).toEqual("Matrix");
+    expect(problemtext).toEqual(
       "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs"
     );
+    expect(hint).toEqual("");
   }
 });
 
@@ -83,19 +79,18 @@ test("testing the hill cipher (encryption, matrix, 2x2)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintType = detectType(hint);
 
-    expect(ciphertext.includes(" ")).toBeFalsy();
-    expect(plaintext.includes(" ")).toBeFalsy();
-    expect(hint.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/)).toBeTruthy();
+    expect(problem.includes(" ")).toBeFalsy();
+    expect(solution.includes(" ")).toBeFalsy();
+    expect(hintType).toEqual("Matrix");
+    expect(hint.length).toEqual(2);
   }
 });
 
-test("testing the hill cipher (encryption, matrix, 3x3)", () => {
+test("testing the hill cipher (encryption, matrix, 2x2)", () => {
   const state = {
     cipherTypes: ["hill"],
     hill: {
@@ -106,19 +101,14 @@ test("testing the hill cipher (encryption, matrix, 3x3)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintType = detectType(hint);
 
-    expect(ciphertext.includes(" ")).toBeFalsy();
-    expect(plaintext.includes(" ")).toBeFalsy();
-    expect(
-      hint.match(
-        /^\[ \[ \d+, \d+, \d+ \], \[ \d+, \d+, \d+ \], \[ \d+, \d+, \d+ \] \]$/
-      )
-    ).toBeTruthy();
+    expect(problem.includes(" ")).toBeFalsy();
+    expect(solution.includes(" ")).toBeFalsy();
+    expect(hintType).toEqual("Matrix");
+    expect(hint.length).toEqual(3);
   }
 });
 
@@ -133,15 +123,14 @@ test("testing the hill cipher (decryption, matrix, 2x2)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintType = detectType(hint);
 
-    expect(ciphertext.includes(" ")).toBeFalsy();
-    expect(plaintext.includes(" ")).toBeFalsy();
-    expect(hint.match(/^\[ \[ \d+, \d+ \], \[ \d+, \d+ ] ]$/)).toBeTruthy();
+    expect(problem.includes(" ")).toBeFalsy();
+    expect(solution.includes(" ")).toBeFalsy();
+    expect(hintType).toEqual("Matrix");
+    expect(hint.length).toEqual(2);
   }
 });
 
@@ -156,19 +145,14 @@ test("testing the hill cipher (decryption, matrix, 3x3)", () => {
   };
 
   for (let i = 0; i < 10; i++) {
-    const generatedProblem = engine(state);
+    const { problem, hint, solution, ..._ } = engine(state);
 
-    const plaintext = generatedProblem.solution.plaintext;
-    const ciphertext = generatedProblem.problem.ciphertext;
-    const hint = generatedProblem.problem.hint;
+    const hintType = detectType(hint);
 
-    expect(ciphertext.includes(" ")).toBeFalsy();
-    expect(plaintext.includes(" ")).toBeFalsy();
-    expect(
-      hint.match(
-        /^\[ \[ \d+, \d+, \d+ \], \[ \d+, \d+, \d+ \], \[ \d+, \d+, \d+ \] \]$/
-      )
-    ).toBeTruthy();
+    expect(problem.includes(" ")).toBeFalsy();
+    expect(solution.includes(" ")).toBeFalsy();
+    expect(hintType).toEqual("Matrix");
+    expect(hint.length).toEqual(3);
   }
 });
 

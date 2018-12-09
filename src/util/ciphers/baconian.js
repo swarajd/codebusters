@@ -65,11 +65,13 @@ const baconianEngine = state => {
   let hint = "";
   let solution = "";
 
-  const plaintext = getOrDefault(
-    state,
-    "plaintext",
-    () => chooseRandomFromArray(englishQuotes).text
-  );
+  const plaintext = getOrDefault(state, "plaintext", () => {
+    let result = "";
+    do {
+      result = chooseRandomFromArray(englishQuotes).text;
+    } while (result.length > 250);
+    return result;
+  });
 
   const result = baconian(plaintext);
 

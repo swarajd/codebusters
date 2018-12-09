@@ -1,16 +1,10 @@
 import {
   chooseRandomFromArray,
-  getRandomInt,
   generateRandomResultFromSet,
   generateKeyPair,
-  primesTo20,
-  invertMatrix,
-  generateRandomInvertibleMatrix,
-  isLetter,
-  condenseStr,
-  matrixToStr
+  primesTo20
 } from "./util.js";
-import { RSAEncrypt, hill } from "./ciphers.js";
+import { RSAEncrypt } from "./ciphers.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { words } from "../data/words.json";
@@ -21,6 +15,7 @@ import { monoalphabeticEngine } from "./ciphers/monoalphabetic.js";
 import { affineEngine } from "./ciphers/affine.js";
 import { vigenereEngine } from "./ciphers/vigenere.js";
 import { baconianEngine } from "./ciphers/baconian.js";
+import { hillEngine } from "./ciphers/hill.js";
 
 /*
 
@@ -66,11 +61,7 @@ const engine = state => {
   do {
     plaintextObj = chooseRandomFromArray(englishQuotes);
   } while (plaintextObj.text.length > 250);
-  let options = {};
   let res = {};
-  let problemType = "";
-  let condensedPlaintext = "";
-  let chosenWord;
 
   switch (cipherType) {
     case "atbash":
@@ -86,101 +77,7 @@ const engine = state => {
     case "baconian":
       return baconianEngine(state);
     case "hill":
-      // grab the options
-      options = state.hill;
-
-      // choose a random problem type
-      problemType = chooseRandomFromArray(options.types);
-
-      // chose a random method type
-      const method = chooseRandomFromArray(options.methods);
-
-      // choose options based on if it's enc/dec or production
-      let matrixSize = 0;
-      if (problemType === "produce") {
-        matrixSize = 2;
-      } else if (problemType === "encryption" || problemType === "decryption") {
-        try {
-          matrixSize = chooseRandomFromArray(options.matrixSizes);
-        } catch (e) {
-          throw "must choose at least one matrix size";
-        }
-      } else {
-        throw `unknown problem type '${problemType}'`;
-      }
-
-      // encrypt some string
-      const randomMatrix = generateRandomInvertibleMatrix(matrixSize);
-      let invertedMatrix = [];
-      invertedMatrix = invertMatrix(randomMatrix);
-      condensedPlaintext = condenseStr(plaintextObj.text);
-
-      while (condensedPlaintext.length % matrixSize != 0) {
-        plaintextObj = chooseRandomFromArray(englishQuotes);
-        condensedPlaintext = condenseStr(plaintextObj.text);
-      }
-
-      // encrypt the text using the specified matrix size
-      res = hill(condensedPlaintext, randomMatrix);
-
-      // generate pairs if relevant
-      let pairs = [];
-      let pairLetterSet = new Set();
-      if (method == "pairs") {
-        for (let i = 0; i < 4; i++) {
-          let randomIdx = getRandomInt(0, condensedPlaintext.length);
-          let randomPlaintextChar = condensedPlaintext[randomIdx];
-          while (
-            pairLetterSet.has(randomPlaintextChar) ||
-            !isLetter(randomPlaintextChar)
-          ) {
-            randomIdx = getRandomInt(0, condensedPlaintext.length);
-            randomPlaintextChar = condensedPlaintext[randomIdx];
-          }
-
-          let randomCiphertextChar = res.ciphertext[randomIdx];
-
-          pairs.push([randomPlaintextChar, randomCiphertextChar]);
-          pairLetterSet.add(randomPlaintextChar);
-        }
-      }
-
-      let hillCiphertext = "";
-      let hillPlaintext = "";
-      let hillHint = "";
-
-      if (problemType === "encryption") {
-        hillCiphertext = res.ciphertext;
-        hillHint = matrixToStr(randomMatrix);
-        hillPlaintext = condensedPlaintext;
-      } else if (problemType === "decryption") {
-        hillCiphertext = condensedPlaintext;
-        hillHint = matrixToStr(invertedMatrix);
-        hillPlaintext = res.ciphertext;
-      } else {
-        if (method === "pairs") {
-          hillCiphertext = matrixToStr(pairs);
-        } else {
-          hillCiphertext = matrixToStr(randomMatrix);
-        }
-
-        hillPlaintext = matrixToStr(invertedMatrix);
-        hillHint =
-          "generate a decryption matrix given either an encryption matrix or four plaintext/ciphertext pairs";
-      }
-
-      generatedProblem = {
-        cipherType: cipherType,
-        problem: {
-          ciphertext: hillCiphertext,
-          hint: hillHint
-        },
-        solution: {
-          plaintext: hillPlaintext
-        }
-      };
-
-      break;
+      return hillEngine(state);
     case "RSA":
       let p = generateRandomResultFromSet(primesTo20);
       let q = generateRandomResultFromSet(primesTo20);
