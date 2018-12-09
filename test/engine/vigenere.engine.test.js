@@ -152,8 +152,10 @@ test("testing the vigenere cipher (unknown)", () => {
 
 test("testing the vigenere TeX problem generator (encryption)", () => {
   const plaintext = "ATTACKATDAWN";
+  const word = "LEMON";
   const state = {
     plaintext,
+    word,
     cipherTypes: ["vigenere"],
     vigenere: {
       types: ["encryption"]

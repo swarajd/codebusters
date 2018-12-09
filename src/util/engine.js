@@ -10,7 +10,7 @@ import {
   condenseStr,
   matrixToStr
 } from "./util.js";
-import { baconian, RSAEncrypt, hill } from "./ciphers.js";
+import { RSAEncrypt, hill } from "./ciphers.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { words } from "../data/words.json";
@@ -20,6 +20,7 @@ import { atbashEngine } from "./ciphers/atbash.js";
 import { monoalphabeticEngine } from "./ciphers/monoalphabetic.js";
 import { affineEngine } from "./ciphers/affine.js";
 import { vigenereEngine } from "./ciphers/vigenere.js";
+import { baconianEngine } from "./ciphers/baconian.js";
 
 /*
 
@@ -83,21 +84,7 @@ const engine = state => {
     case "vigenere":
       return vigenereEngine(state);
     case "baconian":
-      chosenWord = chooseRandomFromArray(words);
-
-      res = baconian(chosenWord);
-
-      generatedProblem = {
-        cipherType: cipherType,
-        problem: {
-          ciphertext: res.ciphertext,
-          hint: ""
-        },
-        solution: {
-          plaintext: res.plaintext
-        }
-      };
-      break;
+      return baconianEngine(state);
     case "hill":
       // grab the options
       options = state.hill;
