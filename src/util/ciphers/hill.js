@@ -335,14 +335,14 @@ const hillEngine = state => {
   };
 };
 
-const hillProblemTex = hillDict => {
+const hillProblemTeX = hillDict => {
   let { problemtext, problem, hint, ..._ } = hillDict;
 
   const problemType = detectType(problem);
   const hintType = detectType(hint);
 
   const problemTeX = generateTeXForTypedValue(problemType, problem);
-  const hintTeX = generateTeXForTypedValue(hintType, hint);
+  const hintTeX = hint !== "" ? generateTeXForTypedValue(hintType, hint) : "";
 
   let problemHeader = "";
 
@@ -357,7 +357,7 @@ const hillProblemTex = hillDict => {
   }
 
   return generateQuestion(
-    cypherTypeGenerator("Hill"),
+    cipherTypeGenerator("Hill"),
     categoryTeXGenerator(problemHeader, problemTeX),
     categoryTeXGenerator("Hint", hintTeX)
   );
@@ -393,6 +393,6 @@ module.exports = {
   generateRandomInvertibleMatrix,
   hill,
   hillEngine,
-  hillProblemTex,
+  hillProblemTeX,
   hillSolutionTeX
 };

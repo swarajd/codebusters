@@ -58,7 +58,7 @@ ${matrix_body}
   return template;
 };
 
-const pairsTeXGenerator = pairs => {
+const pairsGenerator = pairs => {
   return pairs
     .map(pair => `$ ${pair[0]} \\Rightarrow ${pair[1]} $ \\newline`)
     .join("\n");
@@ -79,6 +79,8 @@ const generateTeXForTypedValue = (type, value) => {
     return splitText(value);
   } else if (type === "Matrix") {
     return matrixTeXGenerator(value);
+  } else if (type === "Pairs") {
+    return pairsGenerator(value);
   } else if (type === "AffineKey") {
     return affineKeyGenerator(value);
   } else if (type === "RSAKeyPair") {
@@ -300,7 +302,7 @@ module.exports = {
   splitText,
   categoryTeXGenerator,
   matrixTeXGenerator,
-  pairsTeXGenerator,
+  pairsGenerator,
   cipherTypeGenerator,
   solutionLines,
   generateTestHeader,

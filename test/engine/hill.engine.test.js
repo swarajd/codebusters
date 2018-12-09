@@ -2,6 +2,12 @@ import engine from "../../src/util/engine.js";
 
 import { detectType } from "../../src/util/util.js";
 
+import {
+  hillEngine,
+  hillProblemTeX,
+  hillSolutionTeX
+} from "../../src/util/ciphers/hill.js";
+
 test("testing the hill cipher (produce, pairs)", () => {
   const state = {
     cipherTypes: ["hill"],
@@ -172,4 +178,221 @@ test("testing the hill cipher (unknown problem type)", () => {
   } catch (e) {
     expect(e).toEqual(`unknown problem type '${problemType}'`);
   }
+});
+
+test("testing the hill TeX problem generator (encryption w/ 2x2)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["encryption"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\\\"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Plaintext:")).toBeTruthy();
+  expect(problemLines[4]).toEqual(plaintext);
+  expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX problem generator (encryption w/ 3x3)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["encryption"],
+      methods: ["matrix"],
+      matrixSizes: [3]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\\\"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Plaintext:")).toBeTruthy();
+  expect(problemLines[4]).toEqual(plaintext);
+  expect(matrixLines.length).toEqual(3);
+});
+
+test("testing the hill TeX problem generator (decryption w/ 2x2)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["decryption"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\\\"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
+  expect(problemLines[4].length).toEqual(plaintext.length);
+  expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX problem generator (decryption w/ 3x3)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["decryption"],
+      methods: ["matrix"],
+      matrixSizes: [3]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\\\"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
+  expect(problemLines[4].length).toEqual(plaintext.length);
+  expect(matrixLines.length).toEqual(3);
+});
+
+test("testing the hill TeX problem generator (produce w/ matrix)", () => {
+  const state = {
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["produce"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\\\"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Matrix:")).toBeTruthy();
+  expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX problem generator (produce w/ pairs)", () => {
+  const state = {
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["produce"],
+      methods: ["pairs"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const problemTeX = hillProblemTeX(problemDict);
+  const problemLines = problemTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = problemLines.filter(l => l.includes("\\Rightarrow"));
+
+  expect(problemTeX.includes("Hill")).toBeTruthy();
+  expect(problemTeX.includes("Pairs:")).toBeTruthy();
+  expect(matrixLines.length).toEqual(4);
+});
+
+test("testing the hill TeX solution generator (encryption w/ 2x2)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["encryption"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const solutionTeX = hillSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+  // const matrixLines = solutionLines.filter(l => l.includes("\\Rightarrow"));
+
+  expect(solutionTeX.includes("Ciphertext:")).toBeTruthy();
+  // expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX solution generator (decryption w/ 2x2)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["decryption"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const solutionTeX = hillSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+  // const matrixLines = solutionLines.filter(l => l.includes("\\Rightarrow"));
+
+  expect(solutionTeX.includes("Plaintext:")).toBeTruthy();
+  expect(solutionLines[3]).toEqual(plaintext);
+  // expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX solution generator (produce w/ 2x2)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["produce"],
+      methods: ["matrix"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const solutionTeX = hillSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = solutionLines.filter(l => l.includes("\\\\"));
+
+  expect(solutionTeX.includes("Matrix:")).toBeTruthy();
+  expect(matrixLines.length).toEqual(2);
+});
+
+test("testing the hill TeX solution generator (produce w/ pairs)", () => {
+  const plaintext = "ATTACKATDAWN";
+  const state = {
+    plaintext,
+    cipherTypes: ["hill"],
+    hill: {
+      types: ["produce"],
+      methods: ["pairs"],
+      matrixSizes: [2]
+    }
+  };
+
+  const problemDict = hillEngine(state);
+  const solutionTeX = hillSolutionTeX(problemDict);
+  const solutionLines = solutionTeX.split("\n").filter(line => line.length > 0);
+  const matrixLines = solutionLines.filter(l => l.includes("\\\\"));
+
+  expect(solutionTeX.includes("Matrix:")).toBeTruthy();
+  expect(matrixLines.length).toEqual(2);
 });

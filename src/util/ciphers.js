@@ -2,49 +2,11 @@
     UTILITIES SECTION
 */
 
-import {
-  letters,
-  letterDict,
-  matrixMultiply,
-  modMatrix,
-  transpose,
-  modPow
-} from "./util.js";
+import { modPow } from "./util.js";
 
 /*
     CIPHER SECTION
 */
-
-const hill = (text, matrix) => {
-  if (text.length % matrix.length != 0) {
-    throw "please provide a plaintext that can be cleanly divided into " +
-      matrix.length +
-      " parts";
-  }
-
-  const chunks = [];
-  for (let i = 0; i < text.length; i += matrix.length) {
-    chunks.push(text.substring(i, i + matrix.length));
-  }
-
-  const ciphertext = chunks
-    .map(chunk => chunk.split(""))
-    .map(splitChunk => [splitChunk.map(letter => letterDict[letter])])
-    .map(transpose)
-    .map(transposedChunk => {
-      return modMatrix(matrixMultiply(matrix, transposedChunk), letters.length);
-    })
-    .map(transpose)
-    .map(splitChunk => splitChunk[0].map(num => letters[num]))
-    .map(chunk => chunk.join(""))
-    .join("");
-
-  return {
-    plaintext: text,
-    ciphertext: ciphertext,
-    solution: matrix
-  };
-};
 
 const RSAEncrypt = (text, keypair) => {
   let { n, e } = keypair.publickey;
@@ -89,7 +51,6 @@ const RSADecrypt = (text, keypair) => {
 */
 
 module.exports = {
-  hill,
   RSAEncrypt,
   RSADecrypt
 };
