@@ -158,16 +158,6 @@ const chooseRandomFromArray = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-const matrixToStr = mtx => {
-  const rendered = mtx
-    .map(row => {
-      return `[ ${row.join(", ")} ]`;
-    })
-    .join(", ");
-
-  return `[ ${rendered} ]`;
-};
-
 const getOrDefault = (dictionary, property, defaultValueFn) => {
   if (dictionary.hasOwnProperty(property)) {
     const value = dictionary[property];
@@ -235,7 +225,6 @@ module.exports = {
   generateKeyPair,
   modPow,
   chooseRandomFromArray,
-  matrixToStr,
   getOrDefault,
   detectType
 };
