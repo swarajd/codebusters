@@ -70,7 +70,9 @@ const affineKeyGenerator = key => {
 
 const RSAKeyPairGenerator = keypair => {};
 
-const cribGenerator = crib => {};
+const cribGenerator = crib => {
+  return `${crib.plaintext} $ \\Rightarrow $ ${crib.ciphertext}`;
+};
 
 const generateTeXForTypedValue = (type, value) => {
   if (type === "String") {
@@ -83,8 +85,7 @@ const generateTeXForTypedValue = (type, value) => {
     //TODO: implement
     return "";
   } else if (type === "Crib") {
-    //TODO: implement
-    return "";
+    return cribGenerator(value);
   } else {
     throw "unknown type";
   }

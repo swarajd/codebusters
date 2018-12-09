@@ -87,6 +87,13 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
+const condenseStr = str => {
+  return str
+    .split("")
+    .map(l => (isLetter(l) ? l : ""))
+    .join("");
+};
+
 const matrixMultiply = (A, B) => {
   if (A[0].length != B.length) {
     throw "incompatible matrices";
@@ -341,13 +348,6 @@ const chooseRandomFromArray = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-const condenseStr = str => {
-  return str
-    .split("")
-    .map(l => (isLetter(l) ? l : ""))
-    .join("");
-};
-
 const matrixToStr = mtx => {
   const rendered = mtx
     .map(row => {
@@ -424,6 +424,7 @@ module.exports = {
   invertMatrix,
   matrixMultiply,
   mod,
+  condenseStr,
   modMatrix,
   transpose,
   primesTo20,
@@ -432,7 +433,6 @@ module.exports = {
   generateKeyPair,
   modPow,
   chooseRandomFromArray,
-  condenseStr,
   matrixToStr,
   getOrDefault,
   detectType

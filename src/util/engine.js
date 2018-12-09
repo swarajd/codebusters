@@ -13,8 +13,6 @@ import {
 } from "./util.js";
 import { baconian, RSAEncrypt, hill } from "./ciphers.js";
 
-import { vigenere } from "./ciphers/vigenere.js";
-
 import { englishQuotes } from "../data/englishQuotes.json";
 import { spanishQuotes } from "../data/spanishQuotes.json";
 import { words } from "../data/words.json";
@@ -23,6 +21,7 @@ import { caesarEngine } from "./ciphers/caesar.js";
 import { atbashEngine } from "./ciphers/atbash.js";
 import { monoalphabeticEngine } from "./ciphers/monoalphabetic.js";
 import { affineEngine } from "./ciphers/affine.js";
+import { vigenereEngine } from "./ciphers/vigenere.js";
 
 /*
 
@@ -84,82 +83,83 @@ const engine = state => {
     case "affine":
       return affineEngine(state);
     case "vigenere":
-      // grab the options
-      options = state.vigenere;
+      return vigenereEngine(state);
+    // // grab the options
+    // options = state.vigenere;
 
-      // choose a random problem type
-      problemType = chooseRandomFromArray(options.types);
+    // // choose a random problem type
+    // problemType = chooseRandomFromArray(options.types);
 
-      // grab a random word
-      chosenWord = chooseRandomFromArray(words);
+    // // grab a random word
+    // chosenWord = chooseRandomFromArray(words);
 
-      condensedPlaintext = condenseStr(plaintextObj.text);
+    // condensedPlaintext = condenseStr(plaintextObj.text);
 
-      switch (problemType) {
-        case "encryption":
-          res = vigenere(condensedPlaintext, chosenWord);
+    // switch (problemType) {
+    //   case "encryption":
+    //     res = vigenere(condensedPlaintext, chosenWord);
 
-          generatedProblem = {
-            cipherType: cipherType,
-            problem: {
-              plaintext: condensedPlaintext,
-              hint: chosenWord
-            },
-            solution: {
-              ciphertext: res.ciphertext
-            }
-          };
-          break;
-        case "decryption":
-          res = vigenere(condensedPlaintext, chosenWord);
+    //     generatedProblem = {
+    //       cipherType: cipherType,
+    //       problem: {
+    //         plaintext: condensedPlaintext,
+    //         hint: chosenWord
+    //       },
+    //       solution: {
+    //         ciphertext: res.ciphertext
+    //       }
+    //     };
+    //     break;
+    //   case "decryption":
+    //     res = vigenere(condensedPlaintext, chosenWord);
 
-          generatedProblem = {
-            cipherType: cipherType,
-            problem: {
-              ciphertext: res.ciphertext,
-              hint: chosenWord
-            },
-            solution: {
-              plaintext: condensedPlaintext
-            }
-          };
+    //     generatedProblem = {
+    //       cipherType: cipherType,
+    //       problem: {
+    //         ciphertext: res.ciphertext,
+    //         hint: chosenWord
+    //       },
+    //       solution: {
+    //         plaintext: condensedPlaintext
+    //       }
+    //     };
 
-          break;
-        case "crib":
-          const wordOffset = Math.floor(chosenWord.length / 2);
+    //     break;
+    //   case "crib":
+    //     const wordOffset = Math.floor(chosenWord.length / 2);
 
-          // there is a slim chance for a collision
-          // but for practice purposes it doesn't matter
-          let cribPlaintext = chooseRandomFromArray(englishQuotes).text;
-          let cribCiphertext = vigenere(cribPlaintext, chosenWord);
+    //     // there is a slim chance for a collision
+    //     // but for practice purposes it doesn't matter
+    //     let cribPlaintext = chooseRandomFromArray(englishQuotes).text;
+    //     let cribCiphertext = vigenere(cribPlaintext, chosenWord);
 
-          let cribPlaintextSlice = cribPlaintext.slice(
-            wordOffset,
-            wordOffset + chosenWord.length
-          );
-          let cribCiphertextSlice = cribCiphertext.ciphertext.slice(
-            wordOffset,
-            wordOffset + chosenWord.length
-          );
+    //     let cribPlaintextSlice = cribPlaintext.slice(
+    //       wordOffset,
+    //       wordOffset + chosenWord.length
+    //     );
+    //     let cribCiphertextSlice = cribCiphertext.ciphertext.slice(
+    //       wordOffset,
+    //       wordOffset + chosenWord.length
+    //     );
 
-          res = vigenere(plaintextObj.text, chosenWord);
+    //     res = vigenere(plaintextObj.text, chosenWord);
 
-          generatedProblem = {
-            cipherType: cipherType,
-            problem: {
-              ciphertext: res.ciphertext,
-              hint: `${cribPlaintextSlice} => ${cribCiphertextSlice}`
-            },
-            solution: {
-              plaintext: res.plaintext
-            }
-          };
+    //     generatedProblem = {
+    //       cipherType: cipherType,
+    //       problem: {
+    //         ciphertext: res.ciphertext,
+    //         hint: `${cribPlaintextSlice} => ${cribCiphertextSlice}`
+    //       },
+    //       solution: {
+    //         plaintext: res.plaintext
+    //       }
+    //     };
 
-          break;
-        default:
-          throw `option '${problemType}' for vigenere not found`;
-      }
-      break;
+    //     break;
+    //   default:
+    //     throw `option '${problemType}' for vigenere not found`;
+    // }
+    // break;
     case "baconian":
       chosenWord = chooseRandomFromArray(words);
 

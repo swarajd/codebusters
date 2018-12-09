@@ -1,10 +1,21 @@
-import { mod } from "../util.js";
+import {
+  mod,
+  chooseRandomFromArray,
+  getOrDefault,
+  condenseStr,
+  detectType
+} from "../util.js";
+
+import { englishQuotes } from "../../data/englishQuotes.json";
+import { words } from "../../data/words.json";
 
 import {
   splitText,
   categoryTeXGenerator,
   cipherTypeGenerator,
-  generateQuestion
+  generateQuestion,
+  generateSolution,
+  generateTeXForTypedValue
 } from "../latexGenerators.js";
 
 const addLetters = (a, b) => {
@@ -89,37 +100,82 @@ const vigenereEngine = state => {
     solution = result.plaintext;
     hint = `The word used for decryption is: '${word}'`;
   } else if (problemType === "crib") {
-    problemtext = "Decrypt the following ciphertext with the given crib";
+    problemtext = "decrypt the following ciphertext with the given crib";
 
     problem = result.ciphertext;
     solution = result.plaintext;
 
     const offset = Math.floor(word.length / 2);
-    let cribPlaintextSlice = solution.slice(offset, offset + chosenWord.length);
-    let cribCiphertextSlice = problem.slice(offset, offset + chosenWord.length);
+    let cribPlaintextSlice = solution.slice(offset, offset + word.length);
+    let cribCiphertextSlice = problem.slice(offset, offset + word.length);
 
     hint = {
       plaintext: cribPlaintextSlice,
       ciphertext: cribCiphertextSlice
     };
   } else {
+    throw "unknown problem type";
   }
+
+  return {
+    ciphertype,
+    problemtext,
+    problem,
+    hint,
+    solution
+  };
 };
 
 const vigenereProblemTeX = vigenereDict => {
-  let { ciphertext, ..._ } = vigenereDict;
-  return generateQuestion(
-    cipherTypeGenerator("Vigenere"),
-    categoryTeXGenerator("Ciphertext", splitText(ciphertext)),
-    ""
-  );
+  let { problem, problemtext, hint, ..._ } = vigenereDict;
+
+  const hintType = detectType(hint);
+  const hintTeX = generateTeXForTypedValue(hintType, hint);
+
+  // the problem is a standard decryption (decrypt or crib)
+  if (problemtext.includes("decrypt")) {
+    return generateQuestion(
+      cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Ciphertext", splitText(problem)),
+      categoryTeXGenerator("Hint", hintTeX)
+    );
+  }
+
+  // the problem is encryption
+  else if (problemtext.includes("encrypt")) {
+    return generateQuestion(
+      cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Plaintext", splitText(problem)),
+      categoryTeXGenerator("Hint", hintTeX)
+    );
+  }
+
+  // unknown problem type
+  else {
+    throw "unknown problem type";
+  }
 };
 
 const vigenereSolutionTeX = vigenereDict => {
-  let { plaintext, ..._ } = vigenereDict;
-  return `
-${categoryTeXGenerator("Plaintext", splitText(plaintext))}
-  `;
+  let { solution, problemtext, ..._ } = vigenereDict;
+
+  if (problemtext.includes("decrypt")) {
+    return generateSolution(
+      `${categoryTeXGenerator("Plaintext", splitText(solution))}`
+    );
+  }
+
+  // the problem is encryption
+  else if (problemtext.includes("encrypt")) {
+    return generateSolution(
+      `${categoryTeXGenerator("Ciphertext", splitText(solution))}`
+    );
+  }
+
+  // unknown problem type
+  else {
+    throw "unknown problem type";
+  }
 };
 
 module.exports = {
