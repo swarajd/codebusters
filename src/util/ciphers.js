@@ -5,11 +5,6 @@
 import {
   letters,
   letterDict,
-  isLetter,
-  addLetters,
-  extendKey,
-  baconianDict,
-  areCoprime,
   matrixMultiply,
   modMatrix,
   transpose,
@@ -19,59 +14,6 @@ import {
 /*
     CIPHER SECTION
 */
-
-const vigenere = (text, key) => {
-  if (key === undefined) {
-    throw "key missing for vigenere cipher";
-  }
-
-  const extendedKey = extendKey(key, text.length);
-
-  let ciphertext = text
-    .toUpperCase()
-    .split("")
-    .map((l, i) => addLetters(l, extendedKey[i]))
-    .join("");
-
-  return {
-    plaintext: text,
-    ciphertext: ciphertext,
-    solution: key
-  };
-};
-
-const baconian = text => {
-  return {
-    plaintext: text,
-    ciphertext: text
-      .toUpperCase()
-      .split("")
-      .map(letter => baconianDict[letter])
-      .join(""),
-    solution: "baconian"
-  };
-};
-
-const affine = (text, a, b) => {
-  if (!areCoprime(a, letters.length)) {
-    throw "invalid value for 'a'";
-  }
-
-  const ciphertext = text
-    .toUpperCase()
-    .split("")
-    .map(letter => (isLetter(letter) ? affineLetter(letter, a, b) : letter))
-    .join("");
-
-  return {
-    plaintext: text,
-    ciphertext: ciphertext,
-    solution: {
-      a,
-      b
-    }
-  };
-};
 
 const hill = (text, matrix) => {
   if (text.length % matrix.length != 0) {
@@ -147,8 +89,6 @@ const RSADecrypt = (text, keypair) => {
 */
 
 module.exports = {
-  vigenere,
-  baconian,
   hill,
   RSAEncrypt,
   RSADecrypt
