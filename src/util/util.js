@@ -51,26 +51,6 @@ const getRandomInt = (min, max) => {
 
 const mod = (n, m) => ((n % m) + m) % m;
 
-/*
-    assuming both letters are capitalized, 
-    adding them and returning the 'sum'
-*/
-
-const baconianDict = (() => {
-  const baconianArr = letters
-    .map((_, i) => i)
-    .map(num => num.toString(2).padStart(5, "0"))
-    .map(binStr =>
-      binStr
-        .split("")
-        .map(chr => (chr === "1" ? "B" : "A"))
-        .join("")
-    );
-
-  const baconianDict = zipToDict(letters, baconianArr);
-  return baconianDict;
-})();
-
 const gcd = (a, b) => {
   if (!b) {
     return a;
@@ -407,7 +387,6 @@ module.exports = {
   shiftText,
   zipToDict,
   getRandomInt,
-  baconianDict,
   gcd,
   isInvertible,
   invertibleValues,
