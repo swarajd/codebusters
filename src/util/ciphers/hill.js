@@ -8,8 +8,18 @@ import {
   getOrDefault,
   chooseRandomFromArray,
   condenseStr,
-  isLetter
+  isLetter,
+  detectType
 } from "../util.js";
+
+import {
+  splitText,
+  categoryTeXGenerator,
+  cipherTypeGenerator,
+  generateQuestion,
+  generateSolution,
+  generateTeXForTypedValue
+} from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
 
@@ -325,6 +335,54 @@ const hillEngine = state => {
   };
 };
 
+const hillProblemTex = hillDict => {
+  let { problemtext, problem, hint, ..._ } = hillDict;
+
+  const problemType = detectType(problem);
+  const hintType = detectType(hint);
+
+  const problemTeX = generateTeXForTypedValue(problemType, problem);
+  const hintTeX = generateTeXForTypedValue(hintType, hint);
+
+  let problemHeader = "";
+
+  if (problemType === "String") {
+    if (problemtext.includes("Encrypt")) {
+      problemHeader = "Plaintext";
+    } else {
+      problemHeader = "Ciphertext";
+    }
+  } else {
+    problemHeader = problemType;
+  }
+
+  return generateQuestion(
+    cypherTypeGenerator("Hill"),
+    categoryTeXGenerator(problemHeader, problemTeX),
+    categoryTeXGenerator("Hint", hintTeX)
+  );
+};
+
+const hillSolutionTeX = hillDict => {
+  let { problemtext, solution, ..._ } = hillDict;
+  const solutionType = detectType(solution);
+  const solutionTeX = generateTeXForTypedValue(solutionType, solution);
+
+  let solutionHeader = "";
+
+  if (solutionType === "String") {
+    if (problemtext.includes("Encrypt")) {
+      solutionHeader = "Ciphertext";
+    } else {
+      solutionHeader = "Plaintext";
+    }
+  } else {
+    solutionHeader = solutionType;
+  }
+
+  return generateSolution(categoryTeXGenerator(solutionHeader, solutionTeX));
+};
+
 module.exports = {
   matrixMultiply,
   modMatrix,
@@ -334,5 +392,7 @@ module.exports = {
   isInvertible,
   generateRandomInvertibleMatrix,
   hill,
-  hillEngine
+  hillEngine,
+  hillProblemTex,
+  hillSolutionTeX
 };
