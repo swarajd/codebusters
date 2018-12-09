@@ -68,25 +68,6 @@ const condenseStr = str => {
 
 const invertibleValues = new Set([1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25]);
 
-const primesTo20 = (() => {
-  const primeArray = new Array(20).fill(true);
-  let p = 2;
-  while (p < primeArray.length / 2) {
-    for (let q = 2; q < primeArray.length / p; q++) {
-      primeArray[p * q] = false;
-    }
-    p++;
-    while (!primeArray[p]) {
-      p++;
-    }
-  }
-  const primes = primeArray
-    .map((v, i) => (v ? i : -1))
-    .filter((v, i) => i > 1)
-    .filter(v => v > 0);
-  return primes;
-})();
-
 const multiplicativeInverse = (x, n) => {
   if (gcd(x, n) != 1) {
     throw `${x} and ${n} are not coprime!`;
@@ -116,39 +97,6 @@ const multiplicativeInverse = (x, n) => {
 
 const generateRandomResultFromSet = set => {
   return Array.from(set)[getRandomInt(0, set.length - 1)];
-};
-
-const generateKeyPair = (p, q) => {
-  const n = p * q;
-  const phi = (p - 1) * (q - 1);
-  let e = getRandomInt(1, phi);
-
-  let g = gcd(e, phi);
-  while (g != 1) {
-    e = getRandomInt(1, phi);
-    g = gcd(e, phi);
-  }
-
-  let d = multiplicativeInverse(e, phi);
-
-  return {
-    publickey: {
-      e,
-      n
-    },
-    privatekey: {
-      d,
-      n
-    }
-  };
-};
-
-const modPow = (a, b, n) => {
-  let res = 1;
-  for (let i = 0; i < b; i++) {
-    res = mod(res * a, n);
-  }
-  return res;
 };
 
 const chooseRandomFromArray = arr => {
@@ -219,11 +167,8 @@ module.exports = {
   invertibleValues,
   mod,
   condenseStr,
-  primesTo20,
   multiplicativeInverse,
   generateRandomResultFromSet,
-  generateKeyPair,
-  modPow,
   chooseRandomFromArray,
   getOrDefault,
   detectType

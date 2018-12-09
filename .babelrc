@@ -1,7 +1,8 @@
 {
   "plugins": [
     ["transform-react-jsx", { "pragma": "h" }],
-    "dynamic-import-webpack"
+    "dynamic-import-webpack",
+    "transform-object-rest-spread"
   ],
   "presets": [
     ["env", { "modules": false }]

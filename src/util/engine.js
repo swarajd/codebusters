@@ -1,10 +1,5 @@
-import {
-  chooseRandomFromArray,
-  generateRandomResultFromSet,
-  generateKeyPair,
-  primesTo20
-} from "./util.js";
-import { RSAEncrypt } from "./ciphers.js";
+import { chooseRandomFromArray, generateRandomResultFromSet } from "./util.js";
+import { RSAEncrypt, primesTo20, generateKeyPair } from "./ciphers/rsa.js";
 
 import { englishQuotes } from "../data/englishQuotes.json";
 import { words } from "../data/words.json";

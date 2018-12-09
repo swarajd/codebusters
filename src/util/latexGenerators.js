@@ -30,7 +30,7 @@ const splitText = text => {
   return text
     .replace(/\%/g, "")
     .match(/.{1,60}/g)
-    .join("\n");
+    .join("\n\n");
 };
 
 const categoryTeXGenerator = (type, tex) => {
@@ -133,7 +133,13 @@ Team Number: \\newline \\par
 \\begin{flushleft}
 \\textbf{Warning:} Do not open this packet until instructed! \\newline
 
-\\textbf{Note:} Depending on your division, there may be helpful information on the next page.
+\\textbf{Note:} Depending on your division, there may be helpful information on the next page. \\newline
+
+\\textbf{Note:} The first question is TIMED, so be ready! \\newline
+
+\\textbf{Note:} Some of the displayed text in this test may have a situation where
+one part of a word is one one line, and the second part of a word is on the next line,
+due to each line of ciphertext being a maximum of 60 characters long. Be wary of that!.
 \\end{flushleft}
 
 \\newpage

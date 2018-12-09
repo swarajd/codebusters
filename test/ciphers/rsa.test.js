@@ -1,15 +1,17 @@
 import {
-  primesTo20,
   multiplicativeInverse,
-  invertibleValues,
   letters,
   generateRandomResultFromSet,
-  generateKeyPair,
-  gcd,
-  modPow
+  gcd
 } from "./../../src/util/util.js";
 
-import { RSAEncrypt, RSADecrypt } from "./../../src/util/ciphers.js";
+import {
+  modPow,
+  RSAEncrypt,
+  RSADecrypt,
+  generateKeyPair,
+  primesTo20
+} from "./../../src/util/ciphers/rsa.js";
 
 test("check what the primes are", () => {
   const primeList = "2,3,5,7,11,13,17,19".split(",").map(x => parseInt(x));
