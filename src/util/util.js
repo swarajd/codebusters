@@ -18,14 +18,6 @@ const letterDict = (() => {
   return res;
 })();
 
-const reverseLetters = letters.slice().reverse();
-
-const atBashDict = (() => {
-  const result = {};
-  letters.forEach((letter, i) => (result[letter] = reverseLetters[i]));
-  return result;
-})();
-
 const isLetter = c => /[A-Z]/.test(c);
 
 const shiftChar = (c, n) => {
@@ -412,7 +404,6 @@ module.exports = {
   letters,
   letterDict,
   isLetter,
-  atBashDict,
   shiftText,
   zipToDict,
   getRandomInt,

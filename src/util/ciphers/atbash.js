@@ -13,7 +13,7 @@ import { englishQuotes } from "../../data/englishQuotes.json";
 const reverseLetters = letters.slice().reverse();
 
 // create a map that goes from A->Z, B->Y, ... Y->B, Z->A
-const atBashDict = (() => {
+const atbashDict = (() => {
   const result = {};
   letters.forEach((letter, i) => (result[letter] = reverseLetters[i]));
   return result;
@@ -25,9 +25,9 @@ const atbash = text => {
     ciphertext: text
       .toUpperCase()
       .split("")
-      .map(c => (atBashDict.hasOwnProperty(c) ? atBashDict[c] : c))
+      .map(c => (atbashDict.hasOwnProperty(c) ? atbashDict[c] : c))
       .join(""),
-    solution: atBashDict
+    solution: atbashDict
   };
 };
 
@@ -76,6 +76,7 @@ const atbashEngine = state => {
 
 module.exports = {
   atbash,
+  atbashDict,
   atbashProblemTeX,
   atbashSolutionTeX,
   atbashEngine
