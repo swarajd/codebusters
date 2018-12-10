@@ -93,8 +93,8 @@ const generateTeXForTypedValue = (type, value) => {
   }
 };
 
-const cipherTypeGenerator = type => {
-  return `\\textbf{Cipher Type:} ${type} \\newline`;
+const tagGenerator = (name, type) => {
+  return `\\textbf{${name}:} ${type} \\newline`;
 };
 
 const solutionLines = `
@@ -319,7 +319,7 @@ module.exports = {
   categoryTeXGenerator,
   matrixTeXGenerator,
   pairsGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   solutionLines,
   generateTestHeader,
   generateSolutionsHeader,

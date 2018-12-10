@@ -15,7 +15,7 @@ import {
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution,
   generateTeXForTypedValue
@@ -361,8 +361,8 @@ const hillProblemTeX = hillDict => {
   }
 
   return generateQuestion(
-    cipherTypeGenerator("Hill"),
-    categoryTeXGenerator("Points", points),
+    tagGenerator("Cipher Type", "Hill"),
+    tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator(problemHeader, problemTeX),
     hintTeX

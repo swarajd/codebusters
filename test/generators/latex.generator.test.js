@@ -3,7 +3,7 @@ import {
   categoryTeXGenerator,
   matrixTeXGenerator,
   pairsGenerator,
-  cipherTypeGenerator
+  tagGenerator
 } from "../../src/util/latexGenerators.js";
 
 test("testing cipher text category labelling", () => {
@@ -78,7 +78,7 @@ test("testing pairs generation", () => {
 
 test("testing cipher type generation", () => {
   const type = "asdf";
-  const res = cipherTypeGenerator(type);
+  const res = tagGenerator("Cipher Type", type);
 
   expect(res.includes(type)).toBeTruthy();
 });

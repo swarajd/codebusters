@@ -68,7 +68,7 @@ test("testing the caesarian TeX problem generator", () => {
 
   expect(problemTeX.includes("Caesar")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[10]).toEqual("NOPQ");
+  expect(problemLines[8]).toEqual("NOPQ");
 });
 
 test("testing the caesarian TeX solution generator", () => {

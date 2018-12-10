@@ -12,7 +12,7 @@ import { words } from "../../data/words.json";
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution,
   generateTeXForTypedValue
@@ -137,8 +137,8 @@ const vigenereProblemTeX = vigenereDict => {
   // the problem is a standard decryption (decrypt or crib)
   if (problemtext.includes("decrypt")) {
     return generateQuestion(
-      cipherTypeGenerator("Vigenere"),
-      categoryTeXGenerator("Points", points),
+      tagGenerator("Cipher Type", "Vigenere"),
+      tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       categoryTeXGenerator("Word/Crib", hintTeX)
@@ -148,8 +148,8 @@ const vigenereProblemTeX = vigenereDict => {
   // the problem is encryption
   else if (problemtext.includes("encrypt")) {
     return generateQuestion(
-      cipherTypeGenerator("Vigenere"),
-      categoryTeXGenerator("Points", points),
+      tagGenerator("Cipher Type", "Vigenere"),
+      tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Word", hintTeX)

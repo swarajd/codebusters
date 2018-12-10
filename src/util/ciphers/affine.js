@@ -15,7 +15,7 @@ import { words } from "../../data/words.json";
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution,
   generateTeXForTypedValue
@@ -129,8 +129,8 @@ const affineProblemTeX = problemDict => {
   // cryptanalysis
   if (hintType === "String") {
     return generateQuestion(
-      cipherTypeGenerator("Affine"),
-      categoryTeXGenerator("Points", points),
+      tagGenerator("Cipher Type", "Affine"),
+      tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       ""
@@ -140,8 +140,8 @@ const affineProblemTeX = problemDict => {
   // encryption
   else if (hintType === "AffineKey") {
     return generateQuestion(
-      cipherTypeGenerator("Affine"),
-      categoryTeXGenerator("Points", points),
+      tagGenerator("Cipher Type", "Affine"),
+      tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))

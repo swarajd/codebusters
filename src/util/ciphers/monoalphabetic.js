@@ -9,7 +9,7 @@ import {
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution
 } from "../latexGenerators.js";
@@ -190,8 +190,8 @@ const monoalphabeticProblemTeX = problemDict => {
   let hintTeX = hint !== "" ? categoryTeXGenerator("Hint", hint) : "";
 
   return generateQuestion(
-    cipherTypeGenerator("Monoalphabetic"),
-    categoryTeXGenerator("Points", points),
+    tagGenerator("Cipher Type", "Monoalphabetic"),
+    tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     hintTeX

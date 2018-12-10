@@ -8,7 +8,7 @@ import {
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution
 } from "../latexGenerators.js";
@@ -45,8 +45,8 @@ const baconian = text => {
 const baconianProblemTeX = baconianDict => {
   let { problemtext, problem, points, ..._ } = baconianDict;
   return generateQuestion(
-    cipherTypeGenerator("Baconian"),
-    categoryTeXGenerator("Points", points),
+    tagGenerator("Cipher Type", "Baconian"),
+    tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""

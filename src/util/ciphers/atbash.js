@@ -3,7 +3,7 @@ import { letters, getOrDefault, chooseRandomFromArray } from "../util.js";
 import {
   splitText,
   categoryTeXGenerator,
-  cipherTypeGenerator,
+  tagGenerator,
   generateQuestion,
   generateSolution
 } from "../latexGenerators.js";
@@ -34,8 +34,8 @@ const atbash = text => {
 const atbashProblemTeX = atbashDict => {
   let { problemtext, problem, points, ..._ } = atbashDict;
   return generateQuestion(
-    cipherTypeGenerator("Atbash"),
-    categoryTeXGenerator("Points", points),
+    tagGenerator("Cipher Type", "Atbash"),
+    tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
