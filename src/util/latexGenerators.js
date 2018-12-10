@@ -28,7 +28,7 @@
 
 const splitText = text => {
   return text
-    .replace(/\%/g, "")
+    .replace(/\%/g, "\\%")
     .match(/.{1,60}/g)
     .join("\n\n");
 };

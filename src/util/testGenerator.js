@@ -24,7 +24,7 @@ const sanitizeText = title => {
   return title.replace(/[/\-?%*:|"<>. ]/g, "");
 };
 
-const { title, author, date, questions } = test;
+const { title, author, date, questions, redacted } = test;
 
 const testFileName = `${sanitizeText(title)}_Test.tex`;
 // console.log(testFileName);
@@ -83,7 +83,15 @@ solutionsArray.push(generateSolutionsHeader(title, author, date));
 
 for (let i = 0; i < questions.length; i++) {
   const problemDict = engine(questions[i]);
-  const { problemTeX, solutionTeX } = processDict(problemDict);
+  let { problemTeX, solutionTeX } = processDict(problemDict);
+
+  if (i === redacted - 1) {
+    problemTeX = problemTeX.replace(
+      /\\textbf{Cipher Type:} \w+/g,
+      "CIPHER TYPE REDACTED"
+    );
+  }
+
   testArray.push(problemTeX);
   solutionsArray.push(solutionTeX);
 }

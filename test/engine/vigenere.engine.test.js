@@ -168,7 +168,7 @@ test("testing the vigenere TeX problem generator (encryption)", () => {
 
   expect(problemTeX.includes("Vigenere")).toBeTruthy();
   expect(problemTeX.includes("Plaintext:")).toBeTruthy();
-  expect(problemTeX.includes("Hint:")).toBeTruthy();
+  expect(problemTeX.includes("Word:")).toBeTruthy();
   expect(problemLines[7]).toEqual(plaintext);
 });
 
@@ -190,7 +190,7 @@ test("testing the vigenere TeX problem generator (decryption)", () => {
 
   expect(problemTeX.includes("Vigenere")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemTeX.includes("Hint:")).toBeTruthy();
+  expect(problemTeX.includes("Word/Crib:")).toBeTruthy();
   expect(problemLines[7]).toEqual(problemDict.problem);
 });
 
@@ -212,7 +212,7 @@ test("testing the vigenere TeX problem generator (crib)", () => {
 
   expect(problemTeX.includes("Vigenere")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemTeX.includes("Hint:")).toBeTruthy();
+  expect(problemTeX.includes("Word/Crib:")).toBeTruthy();
 
   expect(problemLines[7]).toEqual(problemDict.problem);
   expect(problemLines[10].match(/\w{5} \$ \\Rightarrow \$ \w{5}/)).toBeTruthy();

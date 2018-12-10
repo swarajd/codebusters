@@ -24,7 +24,9 @@ test("testing the affine cipher (encryption), word given, key given", () => {
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Affine");
-  expect(problemtext).toEqual("Encrypt the word using the given key");
+  expect(problemtext).toEqual(
+    "Encrypt the given text using the given coefficients"
+  );
   expect(problem).toEqual(word);
   expect(hint).toEqual(affineKey);
   expect(solution).toEqual("GNUB");
@@ -44,7 +46,9 @@ test("testing the affine cipher (encryption), word given, key not given", () => 
     const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
     expect(ciphertype).toEqual("Affine");
-    expect(problemtext).toEqual("Encrypt the word using the given key");
+    expect(problemtext).toEqual(
+      "Encrypt the given text using the given coefficients"
+    );
     expect(problem).toEqual(word);
     expect(hint).toHaveProperty("a");
     expect(hint).toHaveProperty("b");
@@ -63,7 +67,9 @@ test("testing the affine cipher (encryption), word not given, key not given", ()
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Affine");
-  expect(problemtext).toEqual("Encrypt the word using the given key");
+  expect(problemtext).toEqual(
+    "Encrypt the given text using the given coefficients"
+  );
   expect(problem.includes(" ")).toBeFalsy();
   expect(hint).toHaveProperty("a");
   expect(hint).toHaveProperty("b");

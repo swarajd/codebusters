@@ -138,7 +138,7 @@ const vigenereProblemTeX = vigenereDict => {
       cipherTypeGenerator("Vigenere"),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
-      categoryTeXGenerator("Hint", hintTeX)
+      categoryTeXGenerator("Word/Crib", hintTeX)
     );
   }
 
@@ -148,7 +148,7 @@ const vigenereProblemTeX = vigenereDict => {
       cipherTypeGenerator("Vigenere"),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
-      categoryTeXGenerator("Hint", hintTeX)
+      categoryTeXGenerator("Word", hintTeX)
     );
   }
 
