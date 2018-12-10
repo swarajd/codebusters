@@ -27,10 +27,13 @@
 // =====
 
 const splitText = text => {
-  return text
-    .replace(/\%/g, "\\%")
-    .match(/.{1,60}/g)
-    .join("\n\n");
+  let escapedText = text.replace(/\%/g, "\\%");
+
+  if (!escapedText.includes(" ") && escapedText.length >= 60) {
+    return `\\seqsplit{${escapedText}}`;
+  } else {
+    return escapedText;
+  }
 };
 
 const categoryTeXGenerator = (type, tex) => {
@@ -112,6 +115,7 @@ const generateTestHeader = (title, author, date) => {
 \\usepackage[margin=1in]{geometry}
 \\usepackage{graphics}
 \\usepackage{amsmath}
+\\usepackage{seqsplit}
 
 \\title{${title}}
 \\author{${author}}
@@ -137,9 +141,6 @@ Team Number: \\newline \\par
 
 \\textbf{Note:} The first question is TIMED, so be ready! \\newline
 
-\\textbf{Note:} Some of the displayed text in this test may have a situation where
-one part of a word is one one line, and the second part of a word is on the next line,
-due to each line of ciphertext being a maximum of 60 characters long. Be wary of that!.
 \\end{flushleft}
 
 \\newpage
