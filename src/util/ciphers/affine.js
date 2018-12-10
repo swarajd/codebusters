@@ -88,7 +88,6 @@ const affineEngine = state => {
 
     const result = affine(word, a, b);
 
-    problemtext = "Encrypt the word using the given key";
     problem = result.plaintext;
     hint = key;
     solution = result.ciphertext;
