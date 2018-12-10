@@ -199,7 +199,7 @@ test("testing the hill TeX problem generator (encryption w/ 2x2)", () => {
 
   expect(problemTeX.includes("Hill")).toBeTruthy();
   expect(problemTeX.includes("Plaintext:")).toBeTruthy();
-  expect(problemLines[4]).toEqual(plaintext);
+  expect(problemLines[7]).toEqual(plaintext);
   expect(matrixLines.length).toEqual(2);
 });
 
@@ -222,7 +222,7 @@ test("testing the hill TeX problem generator (encryption w/ 3x3)", () => {
 
   expect(problemTeX.includes("Hill")).toBeTruthy();
   expect(problemTeX.includes("Plaintext:")).toBeTruthy();
-  expect(problemLines[4]).toEqual(plaintext);
+  expect(problemLines[7]).toEqual(plaintext);
   expect(matrixLines.length).toEqual(3);
 });
 
@@ -245,7 +245,7 @@ test("testing the hill TeX problem generator (decryption w/ 2x2)", () => {
 
   expect(problemTeX.includes("Hill")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[4].length).toEqual(plaintext.length);
+  expect(problemLines[7].length).toEqual(plaintext.length);
   expect(matrixLines.length).toEqual(2);
 });
 
@@ -268,7 +268,7 @@ test("testing the hill TeX problem generator (decryption w/ 3x3)", () => {
 
   expect(problemTeX.includes("Hill")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[4].length).toEqual(plaintext.length);
+  expect(problemLines[7].length).toEqual(plaintext.length);
   expect(matrixLines.length).toEqual(3);
 });
 

@@ -16,7 +16,7 @@ test("testing the overall engine with atbash", () => {
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Atbash");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem).toEqual("ZYXW");
   expect(hint).toEqual("");
   expect(solution).toEqual(plaintext);
@@ -34,7 +34,7 @@ test("testing the atbash engine given plaintext", () => {
   );
 
   expect(ciphertype).toEqual("Atbash");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem).toEqual("ZYXW");
   expect(hint).toEqual("");
   expect(solution).toEqual(plaintext);
@@ -50,7 +50,7 @@ test("testing the atbash engine without a given plaintext", () => {
   );
 
   expect(ciphertype).toEqual("Atbash");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(hint).toEqual("");
   expect(problem.length).toEqual(solution.length);
 });
@@ -68,7 +68,7 @@ test("testing the atbash TeX problem generator", () => {
 
   expect(problemTeX.includes("Atbash")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[4]).toEqual("ZYXW");
+  expect(problemLines[7]).toEqual("ZYXW");
 });
 
 test("testing the atbash TeX solution generator", () => {

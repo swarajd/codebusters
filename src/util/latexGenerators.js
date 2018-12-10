@@ -276,12 +276,19 @@ ${tabulaRecta}
 
 ${baconianKey}`;
 
-const generateQuestion = (cipherTypeTex, problemTeX, hintTeX) => {
+const generateQuestion = (
+  cipherTypeTex,
+  problemTextTeX,
+  problemTeX,
+  hintTeX
+) => {
   return `
 \\section{}
 \\begin{flushleft}
 
 ${cipherTypeTex}
+
+${problemTextTeX}
 
 ${problemTeX}
 

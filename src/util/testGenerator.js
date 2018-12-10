@@ -16,10 +16,7 @@ import {
   monoalphabeticProblemTeX,
   monoalphabeticSolutionTeX
 } from "./ciphers/monoalphabetic";
-import {
-  vigenereProblemTeX,
-  vigenereSolutionTeX
-} from "./ciphers/monoalphabetic";
+import { vigenereProblemTeX, vigenereSolutionTeX } from "./ciphers/vigenere";
 
 import test from "./test.json";
 

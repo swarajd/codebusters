@@ -139,7 +139,7 @@ test("testing the monoalphabetic TeX problem generator", () => {
 
   expect(problemTeX.includes("Monoalphabetic")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  const ciphertext = problemLines[4];
+  const ciphertext = problemLines[7];
   expect(ciphertext.length).toEqual(plaintext.length);
 
   for (let i = 0; i < ciphertext.length; i++) {

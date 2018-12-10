@@ -136,6 +136,7 @@ const vigenereProblemTeX = vigenereDict => {
   if (problemtext.includes("decrypt")) {
     return generateQuestion(
       cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       categoryTeXGenerator("Hint", hintTeX)
     );
@@ -145,6 +146,7 @@ const vigenereProblemTeX = vigenereDict => {
   else if (problemtext.includes("encrypt")) {
     return generateQuestion(
       cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Hint", hintTeX)
     );

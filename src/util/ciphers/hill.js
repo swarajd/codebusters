@@ -342,8 +342,10 @@ const hillProblemTeX = hillDict => {
   const hintType = detectType(hint);
 
   const problemTeX = generateTeXForTypedValue(problemType, problem);
-  const hintTeX = hint !== "" ? generateTeXForTypedValue(hintType, hint) : "";
-
+  const hintTeX =
+    hint !== ""
+      ? categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))
+      : "";
   let problemHeader = "";
 
   if (problemType === "String") {
@@ -358,8 +360,9 @@ const hillProblemTeX = hillDict => {
 
   return generateQuestion(
     cipherTypeGenerator("Hill"),
+    categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator(problemHeader, problemTeX),
-    categoryTeXGenerator("Hint", hintTeX)
+    hintTeX
   );
 };
 

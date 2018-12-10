@@ -54,9 +54,10 @@ const caesar = text => {
 // };
 
 const caesarProblemTeX = problemDict => {
-  let { problem, ..._ } = problemDict;
+  let { problemtext, problem, ..._ } = problemDict;
   return generateQuestion(
     cipherTypeGenerator("Caesar"),
+    categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
   );
@@ -71,7 +72,7 @@ const caesarSolutionTeX = problemDict => {
 
 const caesarEngine = state => {
   let ciphertype = "Caesar";
-  let problemtext = "";
+  let problemtext = "Decrypt the given text";
   let problem = "";
   let hint = "";
   let solution = "";

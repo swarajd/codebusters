@@ -16,7 +16,7 @@ test("testing the overall engine with baconian", () => {
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Baconian");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem).toEqual("AAAAAAAAABAAABAAAABB");
   expect(hint).toEqual("");
   expect(solution).toEqual(plaintext);
@@ -34,7 +34,7 @@ test("testing the baconian engine given plaintext", () => {
   );
 
   expect(ciphertype).toEqual("Baconian");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem).toEqual("AAAAAAAAABAAABAAAABB");
   expect(hint).toEqual("");
   expect(solution).toEqual(plaintext);
@@ -50,7 +50,7 @@ test("testing the baconian engine without a given plaintext", () => {
   );
 
   expect(ciphertype).toEqual("Baconian");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(hint).toEqual("");
 
   const problemLetters = problem
@@ -73,7 +73,7 @@ test("testing the baconian TeX problem generator", () => {
 
   expect(problemTeX.includes("Baconian")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[4]).toEqual("AAAAAAAAABAAABAAAABB");
+  expect(problemLines[7]).toEqual("AAAAAAAAABAAABAAAABB");
 });
 
 test("testing the baconian TeX solution generator", () => {

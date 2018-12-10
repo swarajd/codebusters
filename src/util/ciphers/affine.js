@@ -79,6 +79,8 @@ const affineEngine = state => {
   let problemType = chooseRandomFromArray(options.types);
 
   if (problemType === "encryption") {
+    problemtext = "Encrypt the given text using the given coefficients";
+
     // grab the word to encrypt
     let word = getOrDefault(state, "word", () => {
       return chooseRandomFromArray(words);
@@ -91,6 +93,8 @@ const affineEngine = state => {
     hint = key;
     solution = result.ciphertext;
   } else if (problemType === "analysis") {
+    problemtext = "Decrypt the given text";
+
     let text = getOrDefault(state, "plaintext", () => {
       let result = "";
       do {
@@ -117,7 +121,7 @@ const affineEngine = state => {
 };
 
 const affineProblemTeX = problemDict => {
-  let { problem, hint, ..._ } = problemDict;
+  let { problemtext, problem, hint, ..._ } = problemDict;
 
   const hintType = detectType(hint);
 
@@ -125,6 +129,7 @@ const affineProblemTeX = problemDict => {
   if (hintType === "String") {
     return generateQuestion(
       cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       ""
     );
@@ -134,6 +139,7 @@ const affineProblemTeX = problemDict => {
   else if (hintType === "AffineKey") {
     return generateQuestion(
       cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))
     );

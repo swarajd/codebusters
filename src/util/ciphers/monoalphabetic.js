@@ -185,12 +185,13 @@ const monoalphabetic = (text, setting, keyword) => {
 };
 
 const monoalphabeticProblemTeX = problemDict => {
-  let { problem, hint, ..._ } = problemDict;
+  let { problemtext, problem, hint, ..._ } = problemDict;
 
   let hintTeX = hint !== "" ? categoryTeXGenerator("Hint", hint) : "";
 
   return generateQuestion(
     cipherTypeGenerator("Monoalphabetic"),
+    categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     hintTeX
   );
@@ -205,7 +206,7 @@ const monoalphabeticSolutionTeX = problemDict => {
 
 const monoalphabeticEngine = state => {
   let ciphertype = "Monoalphabetic";
-  let problemtext = "";
+  let problemtext = "Decrypt the given text";
   let problem = "";
   let hint = "";
   let solution = "";

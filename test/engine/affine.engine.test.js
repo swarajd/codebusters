@@ -88,7 +88,7 @@ test("testing the affine cipher (analysis), plaintext given, key given", () => {
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Affine");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem).toEqual("JDKC KC JILJ");
   expect(hint).toEqual("");
   expect(solution).toEqual(plaintext);
@@ -110,7 +110,7 @@ test("testing the affine cipher (analysis), plaintext not given, key given", () 
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Affine");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem.includes(" ")).toBeTruthy();
   expect(hint).toEqual("");
   expect(solution.length).toEqual(problem.length);
@@ -127,7 +127,7 @@ test("testing the affine cipher (analysis), plaintext not given, key not given",
   const { ciphertype, problemtext, problem, hint, solution } = engine(state);
 
   expect(ciphertype).toEqual("Affine");
-  expect(problemtext).toEqual("");
+  expect(problemtext).toEqual("Decrypt the given text");
   expect(problem.includes(" ")).toBeTruthy();
   expect(hint).toEqual("");
   expect(solution.length).toEqual(problem.length);
@@ -192,8 +192,8 @@ test("testing affine problem generation (encryption)", () => {
   expect(problemTeX.includes("Affine")).toBeTruthy();
   expect(problemTeX.includes("Plaintext:")).toBeTruthy();
   expect(problemTeX.includes("Hint:")).toBeTruthy();
-  expect(problemLines[4]).toEqual(word);
-  expect(problemLines[7]).toEqual("$ a = 7, b = 6 $");
+  expect(problemLines[7]).toEqual(word);
+  expect(problemLines[10]).toEqual("$ a = 7, b = 6 $");
 });
 
 test("testing the affine TeX solution generator (encryption)", () => {
@@ -240,7 +240,7 @@ test("testing affine problem generation (analysis)", () => {
 
   expect(problemTeX.includes("Affine")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[4]).toEqual(problemDict.problem);
+  expect(problemLines[7]).toEqual(problemDict.problem);
 });
 
 test("testing the affine TeX problem generator (ERROR)", () => {
