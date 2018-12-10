@@ -68,7 +68,7 @@ test("testing the atbash TeX problem generator", () => {
 
   expect(problemTeX.includes("Atbash")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[7]).toEqual("ZYXW");
+  expect(problemLines[10]).toEqual("ZYXW");
 });
 
 test("testing the atbash TeX solution generator", () => {

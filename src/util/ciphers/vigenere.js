@@ -60,6 +60,7 @@ const vigenere = (text, key) => {
 
 const vigenereEngine = state => {
   let ciphertype = "Vigenere";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "";
   let problem = "";
   let hint = "";
@@ -119,6 +120,7 @@ const vigenereEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,
@@ -127,7 +129,7 @@ const vigenereEngine = state => {
 };
 
 const vigenereProblemTeX = vigenereDict => {
-  let { problem, problemtext, hint, ..._ } = vigenereDict;
+  let { problem, problemtext, hint, points, ..._ } = vigenereDict;
 
   const hintType = detectType(hint);
   const hintTeX = generateTeXForTypedValue(hintType, hint);
@@ -136,6 +138,7 @@ const vigenereProblemTeX = vigenereDict => {
   if (problemtext.includes("decrypt")) {
     return generateQuestion(
       cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       categoryTeXGenerator("Word/Crib", hintTeX)
@@ -146,6 +149,7 @@ const vigenereProblemTeX = vigenereDict => {
   else if (problemtext.includes("encrypt")) {
     return generateQuestion(
       cipherTypeGenerator("Vigenere"),
+      categoryTeXGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Word", hintTeX)

@@ -73,7 +73,7 @@ test("testing the baconian TeX problem generator", () => {
 
   expect(problemTeX.includes("Baconian")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[7]).toEqual("AAAAAAAAABAAABAAAABB");
+  expect(problemLines[10]).toEqual("AAAAAAAAABAAABAAAABB");
 });
 
 test("testing the baconian TeX solution generator", () => {

@@ -32,9 +32,10 @@ const atbash = text => {
 };
 
 const atbashProblemTeX = atbashDict => {
-  let { problemtext, problem, ..._ } = atbashDict;
+  let { problemtext, problem, points, ..._ } = atbashDict;
   return generateQuestion(
     cipherTypeGenerator("Atbash"),
+    categoryTeXGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
@@ -50,6 +51,7 @@ const atbashSolutionTeX = atbashDict => {
 
 const atbashEngine = state => {
   let ciphertype = "Atbash";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "Decrypt the given text";
   let problem = "";
   let hint = "";
@@ -68,6 +70,7 @@ const atbashEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,

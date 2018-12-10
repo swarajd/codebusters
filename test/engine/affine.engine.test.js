@@ -198,8 +198,8 @@ test("testing affine problem generation (encryption)", () => {
   expect(problemTeX.includes("Affine")).toBeTruthy();
   expect(problemTeX.includes("Plaintext:")).toBeTruthy();
   expect(problemTeX.includes("Hint:")).toBeTruthy();
-  expect(problemLines[7]).toEqual(word);
-  expect(problemLines[10]).toEqual("$ a = 7, b = 6 $");
+  expect(problemLines[10]).toEqual(word);
+  expect(problemLines[13]).toEqual("$ a = 7, b = 6 $");
 });
 
 test("testing the affine TeX solution generator (encryption)", () => {
@@ -246,7 +246,7 @@ test("testing affine problem generation (analysis)", () => {
 
   expect(problemTeX.includes("Affine")).toBeTruthy();
   expect(problemTeX.includes("Ciphertext:")).toBeTruthy();
-  expect(problemLines[7]).toEqual(problemDict.problem);
+  expect(problemLines[10]).toEqual(problemDict.problem);
 });
 
 test("testing the affine TeX problem generator (ERROR)", () => {

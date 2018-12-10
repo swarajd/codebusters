@@ -54,6 +54,7 @@ const affine = (text, a, b) => {
 
 const affineEngine = state => {
   let ciphertype = "Affine";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "";
   let problem = "";
   let hint = "";
@@ -112,6 +113,7 @@ const affineEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,
@@ -120,7 +122,7 @@ const affineEngine = state => {
 };
 
 const affineProblemTeX = problemDict => {
-  let { problemtext, problem, hint, ..._ } = problemDict;
+  let { problemtext, problem, hint, points, ..._ } = problemDict;
 
   const hintType = detectType(hint);
 
@@ -128,6 +130,7 @@ const affineProblemTeX = problemDict => {
   if (hintType === "String") {
     return generateQuestion(
       cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Ciphertext", splitText(problem)),
       ""
@@ -138,6 +141,7 @@ const affineProblemTeX = problemDict => {
   else if (hintType === "AffineKey") {
     return generateQuestion(
       cipherTypeGenerator("Affine"),
+      categoryTeXGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
       categoryTeXGenerator("Plaintext", splitText(problem)),
       categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))

@@ -1,4 +1,5 @@
 export default {
+  points: 0,
   plaintext: "",
   word: "",
   keypair: {},

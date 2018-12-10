@@ -54,9 +54,10 @@ const caesar = text => {
 // };
 
 const caesarProblemTeX = problemDict => {
-  let { problemtext, problem, ..._ } = problemDict;
+  let { problemtext, problem, points, ..._ } = problemDict;
   return generateQuestion(
     cipherTypeGenerator("Caesar"),
+    categoryTeXGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
@@ -72,6 +73,7 @@ const caesarSolutionTeX = problemDict => {
 
 const caesarEngine = state => {
   let ciphertype = "Caesar";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "Decrypt the given text";
   let problem = "";
   let hint = "";
@@ -90,6 +92,7 @@ const caesarEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,

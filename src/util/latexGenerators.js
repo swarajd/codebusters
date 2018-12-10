@@ -278,6 +278,7 @@ ${baconianKey}`;
 
 const generateQuestion = (
   cipherTypeTex,
+  pointsTeX,
   problemTextTeX,
   problemTeX,
   hintTeX
@@ -287,6 +288,8 @@ const generateQuestion = (
 \\begin{flushleft}
 
 ${cipherTypeTex}
+
+${pointsTeX}
 
 ${problemTextTeX}
 

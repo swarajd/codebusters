@@ -43,9 +43,10 @@ const baconian = text => {
 };
 
 const baconianProblemTeX = baconianDict => {
-  let { problemtext, problem, ..._ } = baconianDict;
+  let { problemtext, problem, points, ..._ } = baconianDict;
   return generateQuestion(
     cipherTypeGenerator("Baconian"),
+    categoryTeXGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator("Ciphertext", splitText(problem)),
     ""
@@ -61,6 +62,7 @@ const baconianSolutionTeX = baconianDict => {
 
 const baconianEngine = state => {
   let ciphertype = "Baconian";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "Decrypt the given text";
   let problem = "";
   let hint = "";
@@ -81,6 +83,7 @@ const baconianEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,

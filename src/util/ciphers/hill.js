@@ -218,6 +218,7 @@ const hill = (text, matrix) => {
 
 const hillEngine = state => {
   let ciphertype = "Hill";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "";
   let problem = "";
   let hint = "";
@@ -328,6 +329,7 @@ const hillEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,
@@ -336,7 +338,7 @@ const hillEngine = state => {
 };
 
 const hillProblemTeX = hillDict => {
-  let { problemtext, problem, hint, ..._ } = hillDict;
+  let { problemtext, problem, hint, points, ..._ } = hillDict;
 
   const problemType = detectType(problem);
   const hintType = detectType(hint);
@@ -360,6 +362,7 @@ const hillProblemTeX = hillDict => {
 
   return generateQuestion(
     cipherTypeGenerator("Hill"),
+    categoryTeXGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
     categoryTeXGenerator(problemHeader, problemTeX),
     hintTeX
