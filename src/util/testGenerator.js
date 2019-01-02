@@ -79,7 +79,7 @@ const testArray = [];
 testArray.push(generateTestHeader(title, author, date));
 
 const solutionsArray = [];
-solutionsArray.push(generateProblemSectionsHeader(title, author, date));
+solutionsArray.push(generateSolutionsHeader(title, author, date));
 
 for (let i = 0; i < questions.length; i++) {
   const problemDict = engine(questions[i]);

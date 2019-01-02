@@ -149,7 +149,7 @@ Time taken for Question 1: \\newline \\par
 `;
 };
 
-const generateProblemSectionsHeader = (title, author, date) => {
+const generateSolutionsHeader = (title, author, date) => {
   return `
 \\documentclass{article}
 \\usepackage[utf8]{inputenc}
@@ -299,7 +299,7 @@ module.exports = {
   tagGenerator,
   solutionLines,
   generateTestHeader,
-  generateProblemSectionsHeader,
+  generateSolutionsHeader,
   utilitiesPage,
   generateProblemSection,
   generateTeXForTypedValue
