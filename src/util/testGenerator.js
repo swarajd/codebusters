@@ -4,7 +4,8 @@ import engine from "./engine.js";
 
 import {
   generateTestHeader,
-  generateSolutionsHeader
+  generateSolutionsHeader,
+  utilitiesPage
 } from "./latexGenerators.js";
 
 import { affineProblemTeX, affineSolutionTeX } from "./ciphers/affine";
@@ -24,7 +25,7 @@ const sanitizeText = title => {
   return title.replace(/[/\-?%*:|"<>. ]/g, "");
 };
 
-const { title, author, date, questions, redacted } = test;
+const { title, author, date, division, questions, redacted } = test;
 
 const testFileName = `${sanitizeText(title)}_Test.tex`;
 // console.log(testFileName);
@@ -77,9 +78,13 @@ const processDict = dict => {
 
 const testArray = [];
 testArray.push(generateTestHeader(title, author, date));
+if (division === "B") {
+  testArray.push(utilitiesPage);
+}
 
 const solutionsArray = [];
 solutionsArray.push(generateSolutionsHeader(title, author, date));
+solutionsArray.push(utilitiesPage);
 
 for (let i = 0; i < questions.length; i++) {
   const problemDict = engine(questions[i]);
@@ -88,7 +93,7 @@ for (let i = 0; i < questions.length; i++) {
   if (i === redacted - 1) {
     problemTeX = problemTeX.replace(
       /\\textbf{Cipher Type:} \w+/g,
-      "CIPHER TYPE REDACTED"
+      "CIPHER TYPE NOT SPECIFIED"
     );
   }
 
