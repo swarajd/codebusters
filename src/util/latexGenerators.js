@@ -26,11 +26,13 @@
 
 // =====
 
-const splitText = text => {
+const splitText = (text, large = false) => {
   let escapedText = text.replace(/\%/g, "\\%");
 
   if (!escapedText.includes(" ") && escapedText.length >= 60) {
-    return `\\seqsplit{${escapedText}}`;
+    return `\\begin{spacing}{2} \\Large \\seqsplit{${escapedText}} \\end{spacing}`;
+  } else if (large) {
+    return `\\begin{spacing}{2} \\Large ${escapedText} \\end{spacing}`;
   } else {
     return escapedText;
   }
@@ -116,6 +118,7 @@ const generateTestHeader = (title, author, date) => {
 \\usepackage{graphics}
 \\usepackage{amsmath}
 \\usepackage{seqsplit}
+\\usepackage{setspace}
 
 \\title{${title}}
 \\author{${author}}
@@ -276,8 +279,9 @@ M & ABBAA & Z & BBAAB \\\\
 
 const utilitiesPage = `
 ${tabulaRecta}
-
-${baconianKey}`;
+\\newpage
+${baconianKey}
+\\newpage`;
 
 const generateProblemSection = (...TeX) => {
   const joinedTeX = TeX.join("\n\n");
