@@ -139,7 +139,7 @@ const vigenereProblemTeX = vigenereDict => {
       tagGenerator("Cipher Type", "Vigenere"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
-      categoryTeXGenerator("Ciphertext", splitText(problem)),
+      categoryTeXGenerator("Ciphertext", splitText(problem, true)),
       categoryTeXGenerator("Word/Crib", hintTeX)
     );
   }
@@ -150,7 +150,7 @@ const vigenereProblemTeX = vigenereDict => {
       tagGenerator("Cipher Type", "Vigenere"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
-      categoryTeXGenerator("Plaintext", splitText(problem)),
+      categoryTeXGenerator("Plaintext", splitText(problem, true)),
       categoryTeXGenerator("Word", hintTeX)
     );
   }
@@ -166,7 +166,7 @@ const vigenereSolutionTeX = vigenereDict => {
 
   if (problemtext.includes("decrypt")) {
     return generateProblemSection(
-      `${categoryTeXGenerator("Plaintext", splitText(solution))}`
+      `${categoryTeXGenerator("Plaintext", splitText(solution, true))}`
     );
   }
 

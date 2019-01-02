@@ -131,7 +131,7 @@ const affineProblemTeX = problemDict => {
       tagGenerator("Cipher Type", "Affine"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
-      categoryTeXGenerator("Ciphertext", splitText(problem)),
+      categoryTeXGenerator("Ciphertext", splitText(problem, true)),
       ""
     );
   }
@@ -142,7 +142,7 @@ const affineProblemTeX = problemDict => {
       tagGenerator("Cipher Type", "Affine"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
-      categoryTeXGenerator("Plaintext", splitText(problem)),
+      categoryTeXGenerator("Plaintext", splitText(problem, true)),
       categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))
     );
   }

@@ -192,7 +192,7 @@ const monoalphabeticProblemTeX = problemDict => {
     tagGenerator("Cipher Type", "Monoalphabetic"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
-    categoryTeXGenerator("Ciphertext", splitText(problem)),
+    categoryTeXGenerator("Ciphertext", splitText(problem, true)),
     hintTeX
   );
 };

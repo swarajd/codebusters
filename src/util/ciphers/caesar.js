@@ -58,7 +58,7 @@ const caesarProblemTeX = problemDict => {
     tagGenerator("Cipher Type", "Caesar"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
-    categoryTeXGenerator("Ciphertext", splitText(problem)),
+    categoryTeXGenerator("Ciphertext", splitText(problem, true)),
     ""
   );
 };

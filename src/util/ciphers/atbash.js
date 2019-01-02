@@ -36,7 +36,7 @@ const atbashProblemTeX = atbashDict => {
     tagGenerator("Cipher Type", "Atbash"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
-    categoryTeXGenerator("Ciphertext", splitText(problem)),
+    categoryTeXGenerator("Ciphertext", splitText(problem, true)),
     ""
   );
 };
