@@ -16,8 +16,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution,
+  generateProblemSection,
   generateTeXForTypedValue
 } from "../latexGenerators.js";
 
@@ -281,17 +280,18 @@ const hillEngine = state => {
   let pairLetterSet = new Set();
   if (method == "pairs") {
     for (let i = 0; i < 4; i++) {
-      let randomIdx = getRandomInt(0, condensedPlaintext.length);
-      let randomPlaintextChar = condensedPlaintext[randomIdx];
-      while (
-        pairLetterSet.has(randomPlaintextChar) ||
-        !isLetter(randomPlaintextChar)
-      ) {
+      let randomIdx;
+      let randomPlaintextChar;
+      let randomCiphertextChar;
+      do {
         randomIdx = getRandomInt(0, condensedPlaintext.length);
         randomPlaintextChar = condensedPlaintext[randomIdx];
-      }
-
-      let randomCiphertextChar = result.ciphertext[randomIdx];
+        randomCiphertextChar = result.ciphertext[randomIdx];
+      } while (
+        pairLetterSet.has(randomPlaintextChar) ||
+        !isLetter(randomPlaintextChar) ||
+        randomPlaintextChar == randomCiphertextChar
+      );
 
       pairs.push([randomPlaintextChar, randomCiphertextChar]);
       pairLetterSet.add(randomPlaintextChar);
@@ -360,7 +360,7 @@ const hillProblemTeX = hillDict => {
     problemHeader = problemType;
   }
 
-  return generateQuestion(
+  return generateProblemSection(
     tagGenerator("Cipher Type", "Hill"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
@@ -386,7 +386,9 @@ const hillSolutionTeX = hillDict => {
     solutionHeader = solutionType;
   }
 
-  return generateSolution(categoryTeXGenerator(solutionHeader, solutionTeX));
+  return generateProblemSection(
+    categoryTeXGenerator(solutionHeader, solutionTeX)
+  );
 };
 
 module.exports = {

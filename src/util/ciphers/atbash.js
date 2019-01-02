@@ -4,8 +4,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution
+  generateProblemSection
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -33,7 +32,7 @@ const atbash = text => {
 
 const atbashProblemTeX = atbashDict => {
   let { problemtext, problem, points, ..._ } = atbashDict;
-  return generateQuestion(
+  return generateProblemSection(
     tagGenerator("Cipher Type", "Atbash"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
@@ -44,7 +43,7 @@ const atbashProblemTeX = atbashDict => {
 
 const atbashSolutionTeX = atbashDict => {
   let { solution, ..._ } = atbashDict;
-  return generateSolution(
+  return generateProblemSection(
     categoryTeXGenerator("Plaintext", splitText(solution))
   );
 };

@@ -10,8 +10,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution
+  generateProblemSection
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -189,7 +188,7 @@ const monoalphabeticProblemTeX = problemDict => {
 
   let hintTeX = hint !== "" ? categoryTeXGenerator("Hint", hint) : "";
 
-  return generateQuestion(
+  return generateProblemSection(
     tagGenerator("Cipher Type", "Monoalphabetic"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
@@ -200,7 +199,7 @@ const monoalphabeticProblemTeX = problemDict => {
 
 const monoalphabeticSolutionTeX = problemDict => {
   let { solution, ..._ } = problemDict;
-  return generateSolution(
+  return generateProblemSection(
     categoryTeXGenerator("Plaintext", splitText(solution))
   );
 };
@@ -254,7 +253,14 @@ const monoalphabeticEngine = state => {
   // introduce an error/errors, if relevant
   let plaintext = solution;
   if (options.errors) {
-    plaintext = solution.replace(/[^\w\s]/g, "");
+    let idx = 0;
+    let chosenChar = "";
+    do {
+      idx = getRandomInt(0, solution.length);
+      chosenChar = solution[idx];
+    } while (chosenChar != " ");
+
+    plaintext = solution.slice(0, idx - 1) + solution.slice(idx);
   }
 
   // omit spaces, if relevant

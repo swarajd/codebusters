@@ -16,8 +16,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution,
+  generateProblemSection,
   generateTeXForTypedValue
 } from "../latexGenerators.js";
 
@@ -128,7 +127,7 @@ const affineProblemTeX = problemDict => {
 
   // cryptanalysis
   if (hintType === "String") {
-    return generateQuestion(
+    return generateProblemSection(
       tagGenerator("Cipher Type", "Affine"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
@@ -139,7 +138,7 @@ const affineProblemTeX = problemDict => {
 
   // encryption
   else if (hintType === "AffineKey") {
-    return generateQuestion(
+    return generateProblemSection(
       tagGenerator("Cipher Type", "Affine"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
@@ -161,14 +160,14 @@ const affineSolutionTeX = problemDict => {
 
   // cryptanalysis
   if (hintType === "String") {
-    return generateSolution(
+    return generateProblemSection(
       categoryTeXGenerator("Plaintext", splitText(solution))
     );
   }
 
   // encryption
   else if (hintType === "AffineKey") {
-    return generateSolution(
+    return generateProblemSection(
       categoryTeXGenerator("Ciphertext", splitText(solution))
     );
   }

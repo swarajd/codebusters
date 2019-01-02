@@ -14,8 +14,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution
+  generateProblemSection
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -55,7 +54,7 @@ const caesar = text => {
 
 const caesarProblemTeX = problemDict => {
   let { problemtext, problem, points, ..._ } = problemDict;
-  return generateQuestion(
+  return generateProblemSection(
     tagGenerator("Cipher Type", "Caesar"),
     tagGenerator("Points", points),
     categoryTeXGenerator("Question", problemtext),
@@ -66,7 +65,7 @@ const caesarProblemTeX = problemDict => {
 
 const caesarSolutionTeX = problemDict => {
   let { solution, ..._ } = problemDict;
-  return generateSolution(
+  return generateProblemSection(
     categoryTeXGenerator("Plaintext", splitText(solution))
   );
 };

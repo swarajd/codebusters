@@ -13,8 +13,7 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateQuestion,
-  generateSolution,
+  generateProblemSection,
   generateTeXForTypedValue
 } from "../latexGenerators.js";
 
@@ -136,7 +135,7 @@ const vigenereProblemTeX = vigenereDict => {
 
   // the problem is a standard decryption (decrypt or crib)
   if (problemtext.includes("decrypt")) {
-    return generateQuestion(
+    return generateProblemSection(
       tagGenerator("Cipher Type", "Vigenere"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
@@ -147,7 +146,7 @@ const vigenereProblemTeX = vigenereDict => {
 
   // the problem is encryption
   else if (problemtext.includes("encrypt")) {
-    return generateQuestion(
+    return generateProblemSection(
       tagGenerator("Cipher Type", "Vigenere"),
       tagGenerator("Points", points),
       categoryTeXGenerator("Question", problemtext),
@@ -166,14 +165,14 @@ const vigenereSolutionTeX = vigenereDict => {
   let { solution, problemtext, ..._ } = vigenereDict;
 
   if (problemtext.includes("decrypt")) {
-    return generateSolution(
+    return generateProblemSection(
       `${categoryTeXGenerator("Plaintext", splitText(solution))}`
     );
   }
 
   // the problem is encryption
   else if (problemtext.includes("encrypt")) {
-    return generateSolution(
+    return generateProblemSection(
       `${categoryTeXGenerator("Ciphertext", splitText(solution))}`
     );
   }

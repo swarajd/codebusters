@@ -132,6 +132,8 @@ Name of Participants: \\newline \\par
 School Name: \\newline \\par
 \\underline{\\hspace{6cm}} \\newline \\par
 Team Number: \\newline \\par
+\\underline{\\hspace{3cm}} \\newline \\par
+Time taken for Question 1: \\newline \\par
 \\underline{\\hspace{3cm}} \\newline \\newline \\newline \\par
 
 \\begin{flushleft}
@@ -147,7 +149,7 @@ Team Number: \\newline \\par
 `;
 };
 
-const generateSolutionsHeader = (title, author, date) => {
+const generateProblemSectionsHeader = (title, author, date) => {
   return `
 \\documentclass{article}
 \\usepackage[utf8]{inputenc}
@@ -277,39 +279,13 @@ ${tabulaRecta}
 
 ${baconianKey}`;
 
-const generateQuestion = (
-  cipherTypeTex,
-  pointsTeX,
-  problemTextTeX,
-  problemTeX,
-  hintTeX
-) => {
+const generateProblemSection = (...TeX) => {
+  const joinedTeX = TeX.join("\n\n");
   return `
 \\section{}
 \\begin{flushleft}
 
-${cipherTypeTex}
-
-${pointsTeX}
-
-${problemTextTeX}
-
-${problemTeX}
-
-${hintTeX}
-
-${solutionLines}
-
-\\end{flushleft}
-\\newpage`;
-};
-
-const generateSolution = solutionTeX => {
-  return `
-\\section{}
-\\begin{flushleft}
-
-${solutionTeX}
+${joinedTeX}
 
 \\end{flushleft}
 \\newpage`;
@@ -323,9 +299,8 @@ module.exports = {
   tagGenerator,
   solutionLines,
   generateTestHeader,
-  generateSolutionsHeader,
+  generateProblemSectionsHeader,
   utilitiesPage,
-  generateQuestion,
-  generateSolution,
+  generateProblemSection,
   generateTeXForTypedValue
 };

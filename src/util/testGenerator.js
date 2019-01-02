@@ -18,7 +18,7 @@ import {
 } from "./ciphers/monoalphabetic";
 import { vigenereProblemTeX, vigenereSolutionTeX } from "./ciphers/vigenere";
 
-import test from "./test.json";
+import test from "./vt-divc-test.json";
 
 const sanitizeText = title => {
   return title.replace(/[/\-?%*:|"<>. ]/g, "");
@@ -79,7 +79,7 @@ const testArray = [];
 testArray.push(generateTestHeader(title, author, date));
 
 const solutionsArray = [];
-solutionsArray.push(generateSolutionsHeader(title, author, date));
+solutionsArray.push(generateProblemSectionsHeader(title, author, date));
 
 for (let i = 0; i < questions.length; i++) {
   const problemDict = engine(questions[i]);
