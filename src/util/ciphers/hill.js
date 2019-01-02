@@ -277,25 +277,30 @@ const hillEngine = state => {
 
   // generate pairs if relevant
   let pairs = [];
-  let pairLetterSet = new Set();
   if (method == "pairs") {
-    for (let i = 0; i < 4; i++) {
-      let randomIdx;
-      let randomPlaintextChar;
-      let randomCiphertextChar;
-      do {
-        randomIdx = getRandomInt(0, condensedPlaintext.length);
-        randomPlaintextChar = condensedPlaintext[randomIdx];
-        randomCiphertextChar = result.ciphertext[randomIdx];
-      } while (
-        pairLetterSet.has(randomPlaintextChar) ||
-        !isLetter(randomPlaintextChar) ||
-        randomPlaintextChar == randomCiphertextChar
-      );
+    // grab a valid plaintext slice
+    let startIdx;
+    let plaintextSlice;
+    let validMatrix;
+    do {
+      startIdx = getRandomInt(0, condensedPlaintext.length - 4);
+      plaintextSlice = condensedPlaintext
+        .slice(startIdx, startIdx + 4)
+        .split("");
 
-      pairs.push([randomPlaintextChar, randomCiphertextChar]);
-      pairLetterSet.add(randomPlaintextChar);
-    }
+      // validate the slice
+      let numArr = plaintextSlice.map(l => letterDict[l.toUpperCase()]);
+      let numMatrix = [[numArr[0], numArr[2]], [numArr[1], numArr[3]]];
+
+      validMatrix = isInvertible(numMatrix, 2);
+    } while (!validMatrix);
+
+    let ciphertextSlice = result.ciphertext
+      .slice(startIdx, startIdx + 4)
+      .split("");
+    pairs = plaintextSlice.map((c, i) => {
+      return [c, ciphertextSlice[i]];
+    });
   }
 
   // encrypting a string given a 2x2 matrix
