@@ -146,6 +146,8 @@ Time taken for Question 1: \\newline \\par
 
 \\textbf{Note:} The first question is TIMED, so be ready! \\newline
 
+\\textbf{Note:} Make sure you draw a box around your final answer, and that it is legible, or it won't be graded correctly! \\newline
+
 \\end{flushleft}
 
 \\newpage
@@ -295,6 +297,45 @@ ${joinedTeX}
 \\newpage`;
 };
 
+const generateScoringLegend = (points, letters = true) => {
+  let legend;
+  if (letters) {
+    let rowNum = Math.ceil(points / 100) + 1;
+    let rows = new Array(rowNum).fill(0);
+    rows = rows.map((_, i) => {
+      let pointNum = points - i * 100 >= 0 ? points - i * 100 : 0;
+      let errNum;
+      if (i === 0) {
+        errNum = "0-2";
+      } else if (i === rowNum - 1) {
+        errNum = `$>=$ ${i + 2}`;
+      } else {
+        errNum = `${i + 2}`;
+      }
+      return `
+${errNum} & ${pointNum} pts \\\\
+\\hline`;
+    });
+
+    let rowStr = rows.join("\n");
+
+    legend = `
+\\begin{tabular}{ |c|c| }
+\\hline
+\\textbf{ERRORS} & \\textbf{MARKS} \\\\
+\\hline
+${rowStr}
+\\end{tabular}`;
+  } else {
+    legend = `${points} points, all or nothing `;
+  }
+  return `\\textbf{Scoring legend:} \\newline
+
+${legend}
+
+\\hfill`;
+};
+
 module.exports = {
   splitText,
   categoryTeXGenerator,
@@ -306,5 +347,6 @@ module.exports = {
   generateSolutionsHeader,
   utilitiesPage,
   generateProblemSection,
-  generateTeXForTypedValue
+  generateTeXForTypedValue,
+  generateScoringLegend
 };

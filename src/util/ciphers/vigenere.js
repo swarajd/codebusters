@@ -14,7 +14,8 @@ import {
   categoryTeXGenerator,
   tagGenerator,
   generateProblemSection,
-  generateTeXForTypedValue
+  generateTeXForTypedValue,
+  generateScoringLegend
 } from "../latexGenerators.js";
 
 const addLetters = (a, b) => {
@@ -162,7 +163,7 @@ const vigenereProblemTeX = vigenereDict => {
 };
 
 const vigenereSolutionTeX = vigenereDict => {
-  let { solution, problemtext, ..._ } = vigenereDict;
+  let { solution, problemtext, points, ..._ } = vigenereDict;
 
   if (problemtext.includes("decrypt")) {
     return generateProblemSection(
@@ -173,7 +174,8 @@ const vigenereSolutionTeX = vigenereDict => {
   // the problem is encryption
   else if (problemtext.includes("encrypt")) {
     return generateProblemSection(
-      `${categoryTeXGenerator("Ciphertext", splitText(solution))}`
+      `${categoryTeXGenerator("Ciphertext", splitText(solution))}`,
+      generateScoringLegend(points)
     );
   }
 

@@ -17,7 +17,8 @@ import {
   categoryTeXGenerator,
   tagGenerator,
   generateProblemSection,
-  generateTeXForTypedValue
+  generateTeXForTypedValue,
+  generateScoringLegend
 } from "../latexGenerators.js";
 
 const areCoprime = (a, b) => {
@@ -154,28 +155,27 @@ const affineProblemTeX = problemDict => {
 };
 
 const affineSolutionTeX = problemDict => {
-  let { solution, hint, ..._ } = problemDict;
+  let { solution, hint, points, ..._ } = problemDict;
 
   const hintType = detectType(hint);
+  let solutionTeX;
 
   // cryptanalysis
   if (hintType === "String") {
-    return generateProblemSection(
-      categoryTeXGenerator("Plaintext", splitText(solution))
-    );
+    solutionTeX = categoryTeXGenerator("Plaintext", splitText(solution));
   }
 
   // encryption
   else if (hintType === "AffineKey") {
-    return generateProblemSection(
-      categoryTeXGenerator("Ciphertext", splitText(solution))
-    );
+    solutionTeX = categoryTeXGenerator("Ciphertext", splitText(solution));
   }
 
   // unknown problem type
   else {
     throw "unknown hint type";
   }
+
+  return generateProblemSection(solutionTeX, generateScoringLegend(points));
 };
 
 module.exports = {

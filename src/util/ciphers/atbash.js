@@ -4,7 +4,8 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateProblemSection
+  generateProblemSection,
+  generateScoringLegend
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -42,9 +43,10 @@ const atbashProblemTeX = atbashDict => {
 };
 
 const atbashSolutionTeX = atbashDict => {
-  let { solution, ..._ } = atbashDict;
+  let { solution, points, ..._ } = atbashDict;
   return generateProblemSection(
-    categoryTeXGenerator("Plaintext", splitText(solution))
+    categoryTeXGenerator("Plaintext", splitText(solution)),
+    generateScoringLegend(points)
   );
 };
 

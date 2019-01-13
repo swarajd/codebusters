@@ -10,7 +10,8 @@ import {
   splitText,
   categoryTeXGenerator,
   tagGenerator,
-  generateProblemSection
+  generateProblemSection,
+  generateScoringLegend
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -198,9 +199,10 @@ const monoalphabeticProblemTeX = problemDict => {
 };
 
 const monoalphabeticSolutionTeX = problemDict => {
-  let { solution, ..._ } = problemDict;
+  let { solution, points, ..._ } = problemDict;
   return generateProblemSection(
-    categoryTeXGenerator("Plaintext", splitText(solution))
+    categoryTeXGenerator("Plaintext", splitText(solution)),
+    generateScoringLegend(points)
   );
 };
 

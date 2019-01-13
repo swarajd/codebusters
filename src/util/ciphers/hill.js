@@ -17,7 +17,8 @@ import {
   categoryTeXGenerator,
   tagGenerator,
   generateProblemSection,
-  generateTeXForTypedValue
+  generateTeXForTypedValue,
+  generateScoringLegend
 } from "../latexGenerators.js";
 
 import { englishQuotes } from "../../data/englishQuotes.json";
@@ -375,7 +376,7 @@ const hillProblemTeX = hillDict => {
 };
 
 const hillSolutionTeX = hillDict => {
-  let { problemtext, solution, ..._ } = hillDict;
+  let { problemtext, solution, points, ..._ } = hillDict;
   const solutionType = detectType(solution);
   const solutionTeX = generateTeXForTypedValue(solutionType, solution);
 
@@ -392,7 +393,8 @@ const hillSolutionTeX = hillDict => {
   }
 
   return generateProblemSection(
-    categoryTeXGenerator(solutionHeader, solutionTeX)
+    categoryTeXGenerator(solutionHeader, solutionTeX),
+    generateScoringLegend(points, false)
   );
 };
 
