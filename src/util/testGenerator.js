@@ -19,7 +19,7 @@ import {
 } from "./ciphers/monoalphabetic";
 import { vigenereProblemTeX, vigenereSolutionTeX } from "./ciphers/vigenere";
 
-import test from "./2019-regional-divb-test.json";
+import test from "./2019-regional-vt-test.json";
 
 const sanitizeText = title => {
   return title.replace(/[/\-?%*:|"<>. ]/g, "");
