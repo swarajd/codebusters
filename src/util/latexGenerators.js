@@ -73,7 +73,15 @@ const affineKeyGenerator = key => {
   return `$ a = ${key.a}, b = ${key.b} $`;
 };
 
-const RSAKeyPairGenerator = keypair => {};
+const RSAKeyPairGenerator = keypair => {
+  return `
+    public key: $e = ${keypair.publickey.e}, n = ${
+    keypair.publickey.n
+  }$ \\newline
+    private key: $d = ${keypair.privatekey.d}, n = ${
+    keypair.privatekey.n
+  }$ \\newline`;
+};
 
 const cribGenerator = crib => {
   return `${crib.plaintext} $ \\Rightarrow $ ${crib.ciphertext}`;
@@ -89,8 +97,7 @@ const generateTeXForTypedValue = (type, value) => {
   } else if (type === "AffineKey") {
     return affineKeyGenerator(value);
   } else if (type === "RSAKeyPair") {
-    //TODO: implement
-    return "";
+    return RSAKeyPairGenerator(value);
   } else if (type === "Crib") {
     return cribGenerator(value);
   } else {
@@ -161,6 +168,8 @@ const generateSolutionsHeader = (title, author, date) => {
 \\usepackage[margin=1in]{geometry}
 \\usepackage{graphics}
 \\usepackage{amsmath}
+\\usepackage{seqsplit}
+\\usepackage{setspace}
 
 \\title{${title} - Solutions}
 \\author{${author}}

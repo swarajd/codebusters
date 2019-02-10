@@ -3,11 +3,25 @@ import {
   getRandomInt,
   gcd,
   multiplicativeInverse,
-  getOrDefault
+  getOrDefault,
+  generateRandomResultFromSet,
+  chooseRandomFromArray,
+  detectType
 } from "../util.js";
 
-const primesTo20 = (() => {
-  const primeArray = new Array(20).fill(true);
+import {
+  splitText,
+  categoryTeXGenerator,
+  tagGenerator,
+  generateProblemSection,
+  generateTeXForTypedValue,
+  generateScoringLegend
+} from "../latexGenerators.js";
+
+import { words } from "../../data/words.json";
+
+const primesTo15 = (() => {
+  const primeArray = new Array(15).fill(true);
   let p = 2;
   while (p < primeArray.length / 2) {
     for (let q = 2; q < primeArray.length / p; q++) {
@@ -98,6 +112,7 @@ const RSADecrypt = (text, keypair) => {
 
 const RSAEngine = state => {
   let ciphertype = "RSA";
+  let points = getOrDefault(state, "points", () => 9999);
   let problemtext = "Encrypt the following word using the given key pair";
   let problem = "";
   let hint = "";
@@ -105,11 +120,11 @@ const RSAEngine = state => {
 
   // grab the options
   const pq = getOrDefault(state, "RSApq", () => {
-    let p = generateRandomResultFromSet(primesTo20);
-    let q = generateRandomResultFromSet(primesTo20);
-    while (p == q || p * q < 26) {
-      p = generateRandomResultFromSet(primesTo20);
-      q = generateRandomResultFromSet(primesTo20);
+    let p = generateRandomResultFromSet(primesTo15);
+    let q = generateRandomResultFromSet(primesTo15);
+    while (p == q || p * q <= 26 || p * q > 40) {
+      p = generateRandomResultFromSet(primesTo15);
+      q = generateRandomResultFromSet(primesTo15);
     }
     return { p, q };
   });
@@ -117,13 +132,18 @@ const RSAEngine = state => {
   let { p, q } = pq;
 
   const keypair = getOrDefault(state, "keypair", () => {
-    generateKeyPair(p, q);
+    return generateKeyPair(p, q);
   });
 
   const word = getOrDefault(state, "word", () => {
-    return chooseRandomFromArray(words);
+    let word = "";
+    do {
+      word = chooseRandomFromArray(words);
+    } while (word.length > 8);
+    return word;
   });
-  res = RSAEncrypt(word, keypair);
+
+  const res = RSAEncrypt(word, keypair);
 
   problem = word;
   hint = keypair;
@@ -131,6 +151,7 @@ const RSAEngine = state => {
 
   return {
     ciphertype,
+    points,
     problemtext,
     problem,
     hint,
@@ -138,11 +159,50 @@ const RSAEngine = state => {
   };
 };
 
+const RSAProblemTeX = RSADict => {
+  let { problemtext, problem, hint, points, ..._ } = RSADict;
+  const problemType = detectType(problem);
+  const hintType = detectType(hint);
+
+  const problemTeX = generateTeXForTypedValue(problemType, problem);
+  const hintTeX =
+    hint !== ""
+      ? categoryTeXGenerator("Hint", generateTeXForTypedValue(hintType, hint))
+      : "";
+
+  const problemHeader = "Word";
+
+  return generateProblemSection(
+    tagGenerator("Cipher Type", "RSA"),
+    tagGenerator("Points", points),
+    categoryTeXGenerator("Question", problemtext),
+    categoryTeXGenerator(problemHeader, problemTeX),
+    hintTeX
+  );
+};
+
+const RSASolutionTeX = RSADict => {
+  let { problemtext, solution, points, ..._ } = RSADict;
+  // console.log(problemtext, solution, hint, points);
+
+  const solutionType = detectType(solution);
+  const solutionTeX = generateTeXForTypedValue(solutionType, solution);
+
+  let solutionHeader = "Ciphertext";
+
+  return generateProblemSection(
+    categoryTeXGenerator(solutionHeader, solutionTeX),
+    generateScoringLegend(points, true)
+  );
+};
+
 module.exports = {
   modPow,
   generateKeyPair,
-  primesTo20,
+  primesTo15,
   RSAEncrypt,
   RSADecrypt,
-  RSAEngine
+  RSAEngine,
+  RSAProblemTeX,
+  RSASolutionTeX
 };

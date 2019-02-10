@@ -18,8 +18,9 @@ import {
   monoalphabeticSolutionTeX
 } from "./ciphers/monoalphabetic";
 import { vigenereProblemTeX, vigenereSolutionTeX } from "./ciphers/vigenere";
+import { RSAProblemTeX, RSASolutionTeX } from "./ciphers/rsa";
 
-import test from "./2019-regional-vt-test.json";
+import test from "./2019-state-TEST-test.json";
 
 const sanitizeText = title => {
   return title.replace(/[/\-?%*:|"<>. ]/g, "");
@@ -70,6 +71,11 @@ const processDict = dict => {
     return {
       problemTeX: vigenereProblemTeX(dict),
       solutionTeX: vigenereSolutionTeX(dict)
+    };
+  } else if (cipherType === "RSA") {
+    return {
+      problemTeX: RSAProblemTeX(dict),
+      solutionTeX: RSASolutionTeX(dict)
     };
   } else {
     throw "unknown cipher type";

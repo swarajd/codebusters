@@ -13,7 +13,6 @@ import {
 } from "../util.js";
 
 import {
-  splitText,
   categoryTeXGenerator,
   tagGenerator,
   generateProblemSection,
@@ -94,29 +93,38 @@ const invertMatrix = mtx => {
       .fill(0)
       .map(x => Array(size).fill(0));
 
-    mtx = transpose(mtx);
-
-    const determinant =
+    const determinant = mod(
       mtx[0][0] * (mtx[1][1] * mtx[2][2] - mtx[1][2] * mtx[2][1]) -
-      mtx[0][1] * (mtx[1][0] * mtx[2][2] - mtx[1][2] * mtx[2][0]) +
-      mtx[0][2] * (mtx[1][0] * mtx[2][1] - mtx[1][1] * mtx[2][0]);
+        mtx[0][1] * (mtx[1][0] * mtx[2][2] - mtx[1][2] * mtx[2][0]) +
+        mtx[0][2] * (mtx[1][0] * mtx[2][1] - mtx[1][1] * mtx[2][0]),
+      letters.length
+    );
+
+    const detInverse = multiplicativeInverse(determinant, letters.length);
+
+    const cofactorMtx = Array(size)
+      .fill(0)
+      .map(x => Array(size).fill(0));
 
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size; j++) {
-        let tempAdjMtx = getAdjugate(mtx, i, j);
-        let curVal = mod(
+        let tempAdjMtx = getCofactor(mtx, i, j);
+        let curDet =
           tempAdjMtx[0][0] * tempAdjMtx[1][1] -
-            tempAdjMtx[0][1] * tempAdjMtx[1][0],
-          letters.length
-        );
+          tempAdjMtx[0][1] * tempAdjMtx[1][0];
 
         if ((i + j) % 2 == 1) {
-          curVal *= -1;
+          curDet *= -1;
         }
 
-        result[i][j] = mod(curVal * determinant, letters.length);
+        cofactorMtx[i][j] = curDet;
       }
     }
+
+    const adjugateMtx = transpose(cofactorMtx);
+    result = adjugateMtx.map(row =>
+      row.map(x => mod(x * detInverse, letters.length))
+    );
   } else {
     throw `can't currently find the modular inverse of ${size}x${size} matrices`;
   }
@@ -124,7 +132,7 @@ const invertMatrix = mtx => {
   return result;
 };
 
-const getAdjugate = (mtx, p, q) => {
+const getCofactor = (mtx, p, q) => {
   let i = 0;
   let j = 0;
 
@@ -137,8 +145,9 @@ const getAdjugate = (mtx, p, q) => {
   for (let row = 0; row < size; row++) {
     for (let col = 0; col < size; col++) {
       if (row != p && col != q) {
-        result[i][j++] = mtx[row][col];
+        result[i][j] = mtx[row][col];
 
+        j++;
         if (j == size - 1) {
           j = 0;
           i++;
@@ -232,7 +241,7 @@ const hillEngine = state => {
     let result = "";
     do {
       result = chooseRandomFromArray(englishQuotes).text;
-    } while (result.length > 250);
+    } while (result.length > 50);
     return result;
   });
 
@@ -265,10 +274,7 @@ const hillEngine = state => {
   let condensedPlaintext = condenseStr(plaintext);
 
   // regenerate matrix while incompatible
-  while (
-    condensedPlaintext.length % matrixSize != 0 ||
-    plaintext.length > 250
-  ) {
+  while (condensedPlaintext.length % matrixSize != 0 || plaintext.length > 50) {
     plaintext = chooseRandomFromArray(englishQuotes).text;
     condensedPlaintext = condenseStr(plaintext);
   }
@@ -382,19 +388,21 @@ const hillSolutionTeX = hillDict => {
 
   let solutionHeader = "";
 
+  let scoring = false;
   if (solutionType === "String") {
     if (problemtext.includes("Encrypt")) {
       solutionHeader = "Ciphertext";
     } else {
       solutionHeader = "Plaintext";
     }
+    scoring = true;
   } else {
     solutionHeader = solutionType;
   }
 
   return generateProblemSection(
     categoryTeXGenerator(solutionHeader, solutionTeX),
-    generateScoringLegend(points, false)
+    generateScoringLegend(points, scoring)
   );
 };
 
@@ -403,7 +411,7 @@ module.exports = {
   modMatrix,
   transpose,
   invertMatrix,
-  getAdjugate,
+  getCofactor,
   isInvertible,
   generateRandomInvertibleMatrix,
   hill,

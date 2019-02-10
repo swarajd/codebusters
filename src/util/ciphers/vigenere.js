@@ -167,7 +167,8 @@ const vigenereSolutionTeX = vigenereDict => {
 
   if (problemtext.includes("decrypt")) {
     return generateProblemSection(
-      `${categoryTeXGenerator("Plaintext", splitText(solution, true))}`
+      `${categoryTeXGenerator("Plaintext", splitText(solution, true))}`,
+      generateScoringLegend(points)
     );
   }
 
